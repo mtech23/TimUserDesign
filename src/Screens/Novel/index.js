@@ -57,6 +57,9 @@ export const Novel = () => {
     const settingsForFiveItems = reusableSetting(5, false);
     const settingsForThreeItems = reusableSetting(3, false);
 
+
+
+    console.log("novel" , novel)
     return (
         <UserLayout>
             <section className="inner_page_banner_img">
@@ -78,7 +81,13 @@ export const Novel = () => {
                                 <Slider {...settingsForFiveItems}>
                                     {novel && novel.map((item, index) => (
                                         <div className="item novel_rated_card text-center position-relative">
-                                            <img src={base_url + item?.image} className="img-fluid" alt="" />
+      <img
+      src={item?.image ? base_url + item.image : 'URL_OF_YOUR_PLACEHOLDER_IMAGE'}
+      className="img-fluid"
+      alt={item?.image ? '' : 'No Image Available'}
+    />
+ 
+                                        
                                             {item?.reviews != 0 ? (
                                                 <div className="rating">
                                                     {item?.reviews && item?.reviews.map((count, index) => (
@@ -88,12 +97,13 @@ export const Novel = () => {
                                             ) : (
                                                 <div className="rating">No Reviews</div>
                                             )}
-
+                                            <p>{item?.category?.name || "Dummy Word"}</p>
+                                            
                                             <h4>{item?.name}</h4>
-                                            <p>{item?.category?.name}</p>
+
                                             <div className="shoping_cart">
-                                                <h5>Price Here:</h5>
-                                                <h2>{`$ ${item?.price}`}</h2>
+                                                <p>Price Here:</p>
+                                                <h2> {`$ ${item?.price || 0}`}</h2>
                                                 <i className="fa-solid fa-cart-shopping"></i>
                                             </div>
                                         </div>
@@ -142,7 +152,14 @@ export const Novel = () => {
                                     </div>
                                     <div className="content_div">
                                         <div className="category">
-                                            <span><a href="javascript:;">{item?.category?.name}</a></span>
+                                            <div>
+                                                {item?.category?.name && (
+                                                    <span>
+                                                        <a href="javascript:;">{item.category.name}</a>
+                                                    </span>
+                                                )}
+                                            </div>
+
 
                                             {item?.reviews && (
                                                 <span className="rating">
@@ -154,11 +171,11 @@ export const Novel = () => {
 
 
 
-                                            <span className="rating_p">{item?.reviews?.length}</span>
+                                            {/* <span className="rating_p">{item?.reviews?.length}</span> */}
                                         </div>
                                         <h4>{item?.name}</h4>
                                         <p className='shortDescription'>{item?.description}</p>
-                                        <h2>{`$ ${item?.price}`}</h2>
+                                        <h2>{`$ ${item?.price || 0}`}</h2>
 
                                     </div>
                                 </div>
@@ -189,11 +206,18 @@ export const Novel = () => {
                                             </div>
                                             <div className="content_div">
                                                 <div className="category">
-                                                    <span><a href="javascript:;">{item?.category?.name}</a></span>
+
+                                                    <div>
+                                                        {item?.category?.name && (
+                                                            <span>
+                                                                <a href="javascript:;">{item.category.name}</a>
+                                                            </span>
+                                                        )}
+                                                    </div>
                                                 </div>
                                                 <h4>{item?.name}</h4>
                                                 <p>{item?.category?.name}</p>
-                                                <h2>{`$ ${item?.price}`}</h2>
+                                                <h2>{`$ ${item?.price || 0}`}</h2>
                                                 {item?.reviews && (
                                                     <span className="rating">
                                                         {item?.reviews.map((count, index) => (

@@ -10,6 +10,8 @@ export const Home = () => {
     const [selectedGenre, setSelectedGenre] = useState(null);
     const base_url = 'https://custom.mystagingserver.site/Tim-WDLLC/public/'
     const adsListing = () => {
+        
+    document.querySelector('.loaderBox').classList.remove("d-none");
         fetch('https://custom.mystagingserver.site/Tim-WDLLC/public/api/ads_listing',
             {
                 method: 'GET',
@@ -24,14 +26,17 @@ export const Home = () => {
                 response.json()
             )
             .then((data) => {
+                document.querySelector('.loaderBox').classList.add("d-none");
                 setAds(data.data);
             })
             .catch((error) => {
+                document.querySelector('.loaderBox').classList.add("d-none");
                 console.log(error)
             })
     }
 
     const BookListing = () => {
+        document.querySelector('.loaderBox').classList.remove("d-none");
         fetch('https://custom.mystagingserver.site/Tim-WDLLC/public/api/book_listing',
             {
                 method: 'GET',
@@ -46,18 +51,22 @@ export const Home = () => {
                 response.json()
             )
             .then((data) => {
+                document.querySelector('.loaderBox').classList.add("d-none");
                 console.log(data.data)
                 setBooks(data.data);
             })
             .catch((error) => {
+                document.querySelector('.loaderBox').classList.add("d-none");
                 console.log(error)
             })
     }
 
     const GenreData = () => {
+        document.querySelector('.loaderBox').classList.remove("d-none");
         fetch('https://custom.mystagingserver.site/Tim-WDLLC/public/api/genre_listing')
             .then((response) => response.json())
             .then((data) => {
+                document.querySelector('.loaderBox').classList.add("d-none");
                 console.log(data)
                 setGenres(data.data);
                 if (data.data.length > 0) {
@@ -65,6 +74,7 @@ export const Home = () => {
                   }
             })
             .catch((error) => {
+                document.querySelector('.loaderBox').classList.add("d-none");
                 console.error('Error fetching data: ', error);
             });
     }
@@ -110,7 +120,7 @@ export const Home = () => {
                                                 <div className="book-category-price">
                                                     <div>
                                                         <h6>Price</h6>
-                                                        <h5>{`$ ${item?.price}`}</h5>
+                                                        <h5>    {`$ ${item?.price || 0}`}</h5>
                                                     </div>
                                                     <div className="arrow-icon">
                                                         <Link to={`/book-listing/product-detail/${item?.id}`}><i className="fa-solid fa-arrow-right"></i></Link>

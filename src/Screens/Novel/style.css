@@ -61,3 +61,64 @@ button.slick-arrow {
 .novel_first_wrap .slick-prev {
     left: -50px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+element.style {
+}
+.novel_first_wrap .novel_rated_card p {
+    font-family: 'Poppins', sans-serif;
+    color: #34424c;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 36px;
+}
+p {
+    margin-top: none;
+    margin-bottom: none;
+} */
+h1, h2, h3, h4, h5, h6, p, span, ul, li, a, .btn-default, textarea {
+    margin: none;
+    padding: none;
+}
+p {
+    margin-top: inherit;
+    margin-bottom: inherit;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}

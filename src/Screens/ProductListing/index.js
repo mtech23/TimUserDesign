@@ -2,6 +2,8 @@ import { React, useState, useEffect } from 'react'
 import { UserLayout } from '../../Components/Layout/UserLayout'
 import { BookListingCover } from '../../Assets/images'
 import { Dropdown } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -14,6 +16,7 @@ export const ProductListing = () => {
     const LoginToken = localStorage.getItem('loginUser');
 
     const BookListing = () => {
+        document.querySelector('.loaderBox').classList.remove("d-none");
         fetch('https://custom.mystagingserver.site/Tim-WDLLC/public/api/book_listing',
             {
                 method: 'GET',
@@ -28,16 +31,20 @@ export const ProductListing = () => {
                 response.json()
             )
             .then((data) => {
+                document.querySelector('.loaderBox').classList.add("d-none");
                 console.log(data.data)
                 setBooks(data.data);
                 setBookFilter(data.data);
             })
             .catch((error) => {
+
+                document.querySelector('.loaderBox').classList.add("d-none");
                 console.log(error)
             })
     }
 
     const BookListingUser = () => {
+        document.querySelector('.loaderBox').classList.remove("d-none");
         fetch('https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/book_listing',
             {
                 method: 'GET',
@@ -53,16 +60,22 @@ export const ProductListing = () => {
                 response.json()
             )
             .then((data) => {
+                document.querySelector('.loaderBox').classList.add("d-none");
                 console.log(data.data)
                 setBooks(data.data);
                 setBookFilter(data.data);
             })
             .catch((error) => {
+                document.querySelector('.loaderBox').classList.add("d-none");
                 console.log(error)
             })
     }
 
+
+
+    //                                                         <Link to={`/book-listing/product-detail/${item?.id}`}><i className="fa-solid fa-arrow-right"></i></Link>
     const categoriesListing = () => {
+        document.querySelector('.loaderBox').classList.remove("d-none");
         fetch('https://custom.mystagingserver.site/Tim-WDLLC/public/api/category_listing',
             {
                 method: 'GET',
@@ -77,10 +90,12 @@ export const ProductListing = () => {
                 response.json()
             )
             .then((data) => {
+                document.querySelector('.loaderBox').classList.add("d-none");
                 console.log(data.data)
                 setCategores(data.data);
             })
             .catch((error) => {
+                document.querySelector('.loaderBox').classList.add("d-none");
                 console.log(error)
             })
     }
@@ -215,12 +230,12 @@ export const ProductListing = () => {
                         </div>
                         <div className="col-md-9">
                             <div className="popular_tabing">
-                                <div className="row tabing_top">
+                                <Row className="justify-content-between d-flex w-100 tabing_top ">
                                     <div className="col-md-4">
                                         <h4>Popular By Genre</h4>
                                     </div>
                                     <div className="col-md-8">
-                                        <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                        <ul className="nav nav-pills mb-3 justify-content-end" id="pills-tab" role="tablist">
                                             {
                                                 categories && categories.map((item, index) => (
                                                     <li className="nav-item" key={index}>
@@ -231,14 +246,16 @@ export const ProductListing = () => {
 
                                         </ul>
                                     </div>
-                                </div>
+                                </Row>
                                 <div className='row popular_tabing mt-5'>
 
                                     {books && books.map((item, index) => (
-                                        <div className="col-md-6">
+
+                                        <Col xl={6} md={6}>
+                                            <Link to={`/book-listing/product-detail/${item?.id}`}>
                                             <div className="tab_card">
                                                 <div className="row">
-                                                    <div className="col-md-4">
+                                                    <div className="col-md-4"  >
                                                         <div className="book_logo">
                                                             <img src={base_url + item?.image} className="img-fluid" alt="" />
                                                         </div>
@@ -262,7 +279,7 @@ export const ProductListing = () => {
                                                                 </div>
 
                                                             </div>
-                                                            <h5>{`$ ${item?.price}`}</h5>
+                                                            <h5>{`$ ${item?.price || 0}`} </h5>
                                                             {
                                                                 item.reviews != 0 && (
                                                                     <div className="rating_star">
@@ -295,16 +312,18 @@ export const ProductListing = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                            </Link>
+                                        </Col>
+
                                     ))}
 
-                                </div>
-
                             </div>
+
                         </div>
                     </div>
                 </div>
-            </section>
-        </UserLayout>
+            </div>
+        </section>
+        </UserLayout >
     )
 }

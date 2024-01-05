@@ -103,7 +103,7 @@ export const Header = (props) => {
           </div>
           <ul className="navlinks p-0 mt-4">
             <li><Link to="#" className="active">Home</Link></li>
-            <li><Link to="#">Author</Link></li>
+            <li><Link to="/novel-listing">Author</Link></li>
             <li><Link to="/book-listing">Our Books</Link></li>
             <li><Link to="#">Client's Reviews</Link></li>
             <li><Link to="#">Blogs</Link></li>
@@ -156,7 +156,7 @@ export const Header = (props) => {
                 <div className="navBar">
                   <ul>
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="#">Author</Link></li>
+                    <li><Link to="/novel-listing">Author</Link></li>
                     <li><Link to="/book-listing">Our Books</Link></li>
                     <li><Link to="#">Client's Reviews</Link></li>
                     <li><Link to="#">Blogs</Link></li>
