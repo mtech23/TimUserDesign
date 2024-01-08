@@ -16,7 +16,7 @@ import { BookListingCover } from "../../Assets/images";
 import { useContext } from 'react';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 
-export const ProductDetail = ({eventKey , children}) => {
+export const ProductDetail = ({ eventKey, children }) => {
   const { activeEventKey } = useContext(AccordionContext);
 
   const { id } = useParams();
@@ -25,6 +25,8 @@ export const ProductDetail = ({eventKey , children}) => {
 
   const [data, setData] = useState({});
 
+
+  console.log("data", data)
   const [showModal, setShowModal] = useState(false);
   const [showModal1, setShowModal1] = useState(false);
   const [formData, setFormData] = useState({});
@@ -74,17 +76,6 @@ export const ProductDetail = ({eventKey , children}) => {
 
 
 
-//     return (
-//     <button
-//       type="button"
-//       style={{ backgroundColor: isCurrentEventKey ? PINK : BLUE }}
-//       onClick={decoratedOnClick}
-//     >
-//       {children}
-//     </button>
-//   );
-// }
-
 
   const chapterDataLogin = (LoginparamId) => {
     document.title = 'Tim User | Book Detail';
@@ -116,19 +107,15 @@ export const ProductDetail = ({eventKey , children}) => {
   }
 
   const BuyChapter = (chapterID) => {
-    // Show loader
     document.querySelector('.loaderBox').classList.remove("d-none");
 
-    // Create FormData and append chapter_id
     const formData = new FormData();
     formData.append("chapter_id", chapterID);
 
-    // Make the API request
     fetch(`https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/book_purchase/${id}`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${LoginToken}`
-        // Add other necessary headers if needed
       },
       body: formData
     })
@@ -139,7 +126,6 @@ export const ProductDetail = ({eventKey , children}) => {
         return response.json();
       })
       .then((data) => {
-        // Hide loader on successful response
         document.querySelector('.loaderBox').classList.add("d-none");
         console.log(data);
         setShowModal(false);
@@ -150,10 +136,8 @@ export const ProductDetail = ({eventKey , children}) => {
         chapterDataLogin(id)
       })
       .catch((error) => {
-        // Handle errors
         document.querySelector('.loaderBox').classList.add("d-none");
         console.error('Error during fetch:', error);
-        // You might want to handle errors more gracefully, show a message to the user, etc.
       });
   };
 
@@ -176,7 +160,6 @@ export const ProductDetail = ({eventKey , children}) => {
         document.querySelector('.loaderBox').classList.add("d-none");
         console.log('order', data)
 
-        // setData(data.data)
 
       })
       .catch((error) => {
@@ -209,15 +192,127 @@ export const ProductDetail = ({eventKey , children}) => {
 
 
 
+
+
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const [dec, setDec] = useState("")
+  console.log("dec", dec)
+
+
+
+  // const utterance = new SpeechSynthesisUtterance(dec);
+
+  // const handleStart = (chapterId) => {
+  //   const chapter = data?.chapters[chapterId];
+  //   const newUtterance = new SpeechSynthesisUtterance(chapter?.description);
+
+  //   newUtterance.onend = () => {
+  //     setIsPlaying(false);
+  //     setIsPaused(false);
+  //   };
+
+  //   window.speechSynthesis.speak(newUtterance);
+  //   setIsPlaying(true);
+  //   setDec(chapter?.description);
+  // };
+
+
+  const handleStart = (chapterId) => {
+    const chapter = data?.chapters[chapterId];
+    utterance.text = chapter?.description;
+    utterance.onend = () => {
+      setIsPlaying(false);
+      setIsPaused(false);
+    };
+    window.speechSynthesis.speak(utterance);
+    setIsPlaying(true);
+    setDec(chapter?.description);
+  };
+
+  const handlePause = () => {
+    if (!isPaused) {
+      window.speechSynthesis.pause();
+      setIsPaused(true);
+      setIsPlaying(false);
+    }
+  };
+
+  const handleResume = () => {
+    if (isPaused) {
+      window.speechSynthesis.resume();
+      setIsPlaying(true);
+      setIsPaused(false);
+    }
+  };
+
+  const handleStop = () => {
+    window.speechSynthesis.cancel();
+    setIsPlaying(false);
+    setIsPaused(false);
+  };
+
+
+
+
+
+
+
+
+
+
+  
+  const utterance = new SpeechSynthesisUtterance(data?.description);
+
+  const handleStarts = () => {
+    console.log("utterance" , utterance?.text)
+    const newUtterance = new SpeechSynthesisUtterance(utterance?.text);
+
+    newUtterance.onend = () => {
+      setIsPlaying(false);
+      setIsPaused(false);
+    };
+
+    window.speechSynthesis.speak(newUtterance);
+    setIsPlaying(true);
+ 
+  };
+
+  const handlePauses = () => {
+    if (!isPaused) {
+      window.speechSynthesis.pause();
+      setIsPaused(true);
+      setIsPlaying(false);
+    }
+  };
+
+  const handleResumes = () => {
+    if (isPaused) {
+      window.speechSynthesis.resume();
+      setIsPlaying(true);
+      setIsPaused(false);
+    }
+  };
+
+  const handleStops = () => {
+    window.speechSynthesis.cancel();
+    setIsPlaying(false);
+    setIsPaused(false);
+  };
+
+
+  // WHEN CLICK ON PAUSE NOT SHOW START SHOW RESUME  AND STOP
+
+
   return (
     <>
-          <button
-      type="button"
-      style={{ backgroundColor: isCurrentEventKey ? PINK : BLUE }}
-      onClick={decoratedOnClick}
-    >
-      {children}
-    </button>
+      <button
+        type="button"
+        style={{ backgroundColor: isCurrentEventKey ? PINK : BLUE }}
+        onClick={decoratedOnClick}
+      >
+        {children}
+      </button>
       <UserLayout subHeader={BookListingCover}>
         <div className="container">
           <div className="dashCard my-4">
@@ -232,27 +327,49 @@ export const ProductDetail = ({eventKey , children}) => {
                   </div>
                   <div className="col-md-8 mb-4">
                     <div className="productInfo">
-                      <h3 className="text-capitalize">{data?.name}</h3>
+                      <div className="adiobtn d-flex">
+                        <h3 className="text-capitalize">{data?.name}</h3>
+
+                        <div className="playbtns d-flex gap-12"  >
+                                          <div className="actionBtn">
+                                            <button
+                                              className="play"
+                                              onClick={handleStarts}
+                                              style={{ display: !isPlaying ? 'inline' : 'none' }}
+                                            >
+                                              <i className="fa-solid fa-play"></i>
+                                            </button>
+                                          </div>
+                                          <div className="actionBtn">
+                                            <button className="pause" onClick={handlePauses} style={{ display: isPlaying && !isPaused ? 'inline' : 'none' }}>
+                                              <i className="fa-regular fa-circle-pause"></i>
+                                            </button>
+                                          </div>
+                                          <div className="actionBtn">
+                                            <button className="resume" onClick={handleResumes} style={{ display: isPlaying && isPaused ? 'inline' : 'none' }}>
+                                              <i className="fa-solid fa-play"></i>
+                                            </button>
+                                          </div>
+                                          <div className="actionBtn">
+                                            <button className="stop" onClick={handleStops} style={{ display: isPlaying ? 'inline' : 'none' }}>
+                                              <i className="fa-solid fa-stop"></i>
+                                            </button>
+                                          </div>
+                                        </div>
+
+
+                      </div>
                       {data?.price && (
                         <h4><span className="font-weight-bold">Price:</span>{` $ ${data?.price}`}</h4>
                       )}
                       <p>{data?.description}</p>
                       <p><span className="font-weight-bold">Category:</span> <span>{data?.category?.name}</span></p>
-
                     </div>
                   </div>
                 </div>
 
                 {CapterShow ? (
                   <div className="row">
-                    {/* <div className="col-md-12">
-                                            <div className="d-flex justify-content-between">
-                                                <h2 className="mainTitle mb-4">
-                                                    Book Chapters
-                                                </h2>
-                                            </div>
-                                        </div> */}
-
 
                     <Tabs
                       defaultActiveKey="home"
@@ -268,7 +385,34 @@ export const ProductDetail = ({eventKey , children}) => {
                                 <Accordion.Body>
                                   {item?.isPay ? (
                                     <>
-                                      <h3 className="text-capitalize">{item?.title}</h3>
+                                      <div className="adiobtn d-flex">     <h3 className="text-capitalize">{item?.title}</h3>
+                                        <div className="playbtns d-flex gap-12"  >
+                                          <div className="actionBtn">
+                                            <button
+                                              className="play"
+                                              onClick={() => handleStart(index)}
+                                              style={{ display: !isPlaying ? 'inline' : 'none' }}
+                                            >
+                                              <i className="fa-solid fa-play"></i>
+                                            </button>
+                                          </div>
+                                          <div className="actionBtn">
+                                            <button className="pause" onClick={handlePause} style={{ display: isPlaying && !isPaused ? 'inline' : 'none' }}>
+                                              <i className="fa-regular fa-circle-pause"></i>
+                                            </button>
+                                          </div>
+                                          <div className="actionBtn">
+                                            <button className="resume" onClick={handleResume} style={{ display: isPlaying && isPaused ? 'inline' : 'none' }}>
+                                              <i className="fa-solid fa-play"></i>
+                                            </button>
+                                          </div>
+                                          <div className="actionBtn">
+                                            <button className="stop" onClick={handleStop} style={{ display: isPlaying ? 'inline' : 'none' }}>
+                                              <i className="fa-solid fa-stop"></i>
+                                            </button>
+                                          </div>
+                                        </div></div>
+
                                       <p> {item?.description}</p>
                                     </>
                                   ) : (
@@ -304,7 +448,6 @@ export const ProductDetail = ({eventKey , children}) => {
                                         class="rounded-circle img-fluid shadow-1" alt="woman avatar" width="200" height="200" />
                                     </div>
                                     <div class="col-lg-8">
-
                                       <p class="fw-bold lead mb-1"><strong>Anna Smith</strong></p>
                                       <p class="text-muted  mb-2">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
@@ -336,22 +479,12 @@ export const ProductDetail = ({eventKey , children}) => {
                           </div>
                         </section>
                       </Tab>
-
-
-
-
                       <Tab eventKey="Poster" title="Poster Reviews">
-                        <section class="   text-center text-lg-start shadow-1-strong rounded"
-
-                        >
+                        <section class="   text-center text-lg-start shadow-1-strong rounded">
                           <div class="row d-flex justify-content-center">
                             <div class="col-md-12">
                               <div class="card">
                                 <div class="card-body ">
-       
-
-
-
                                   <div class="row d-flex  ">
                                     <div class="col-md-10 col-lg-8 col- xl-6">
                                       <div class=" ">
@@ -447,7 +580,7 @@ export const ProductDetail = ({eventKey , children}) => {
 
                         <section >
                           <div class="container my-5 py-5 text-dark">
-                            </div>
+                          </div>
                         </section>
                       </Tab>
 

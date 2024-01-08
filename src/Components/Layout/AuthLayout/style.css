@@ -71,3 +71,16 @@
 .authForm h1 {
     font-size: 3rem !important;
 }
+
+
+.accordion-button:not(.collapsed) {
+    color: #ffffff !important;
+    background-color: #8f8d91 !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #ffffff !important;
+    background-color: #99969b !important;
+    box-shadow: none !important;
+}

@@ -61,6 +61,22 @@ button.slick-arrow {
 .novel_first_wrap .slick-prev {
     left: -50px;
 }
+.actionBtn button {
+    background-color: #978e9d;
+    border-radius: 10px;
+    padding: 7px 20px;
+    border: none;
+}
+
+
+
+.adiobtn.d-flex {
+    justify-content: space-between;
+}
+
+.playbtns.d-flex.gap-12 {
+    gap: 4px;
+}
 
 
 
@@ -79,14 +95,11 @@ button.slick-arrow {
 
 
 
-
-
-
-
-
-
-
-
+.accordion-button:not(.collapsed) {
+    color: #ffffff !important;
+    background-color: #978e9d !important;
+    box-shadow: none !important;
+}
 
 
 

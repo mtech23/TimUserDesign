@@ -22,7 +22,6 @@ export const Novel = () => {
                 },
             }
         )
-
             .then(response =>
                 response.json()
             )
@@ -47,19 +46,18 @@ export const Novel = () => {
             dots: false,
             infinite: true,
             speed: 500,
-            slidesToShow: item, // Number of items to display at once
-            slidesToScroll: 1, // Number of items to scroll at a time
+            slidesToShow: item,
+            slidesToScroll: 1,
             centerMode: centerMode
         };
     };
 
-    const settingsForTwoItems = reusableSetting(2, true); // Example for 3 items
+    const settingsForTwoItems = reusableSetting(2, true);
     const settingsForFiveItems = reusableSetting(5, false);
     const settingsForThreeItems = reusableSetting(3, false);
 
 
 
-    console.log("novel" , novel)
     return (
         <UserLayout>
             <section className="inner_page_banner_img">
@@ -72,7 +70,6 @@ export const Novel = () => {
                         <div className="col-md-10">
                             <h1>Top 10 Rated Novels</h1>
                         </div>
-
                     </div>
                     <div className="row">
                         <div className="col-md-12">
@@ -81,13 +78,13 @@ export const Novel = () => {
                                 <Slider {...settingsForFiveItems}>
                                     {novel && novel.map((item, index) => (
                                         <div className="item novel_rated_card text-center position-relative">
-      <img
-      src={item?.image ? base_url + item.image : 'URL_OF_YOUR_PLACEHOLDER_IMAGE'}
-      className="img-fluid"
-      alt={item?.image ? '' : 'No Image Available'}
-    />
- 
-                                        
+                                            <img
+                                                src={item?.image ? base_url + item.image : 'URL_OF_YOUR_PLACEHOLDER_IMAGE'}
+                                                className="img-fluid"
+                                                alt={item?.image ? '' : 'No Image Available'}
+                                            />
+
+
                                             {item?.reviews != 0 ? (
                                                 <div className="rating">
                                                     {item?.reviews && item?.reviews.map((count, index) => (
@@ -98,7 +95,7 @@ export const Novel = () => {
                                                 <div className="rating">No Reviews</div>
                                             )}
                                             <p>{item?.category?.name || "Dummy Word"}</p>
-                                            
+
                                             <h4>{item?.name}</h4>
 
                                             <div className="shoping_cart">

@@ -17,7 +17,7 @@ const CustomModal = (props) => {
                     {props?.children ? (
                         ''
                     ) : (
-                        // You can add alternative content here, like an image or text
+ 
                         props?.success ? (
                             <FontAwesomeIcon icon={faCheckCircle} className='checkMark' />
                         ) : (

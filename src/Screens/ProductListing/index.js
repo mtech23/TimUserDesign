@@ -73,7 +73,7 @@ export const ProductListing = () => {
 
 
 
-    //                                                         <Link to={`/book-listing/product-detail/${item?.id}`}><i className="fa-solid fa-arrow-right"></i></Link>
+ 
     const categoriesListing = () => {
         document.querySelector('.loaderBox').classList.remove("d-none");
         fetch('https://custom.mystagingserver.site/Tim-WDLLC/public/api/category_listing',
@@ -253,77 +253,76 @@ export const ProductListing = () => {
 
                                         <Col xl={6} md={6}>
                                             <Link to={`/book-listing/product-detail/${item?.id}`}>
-                                            <div className="tab_card">
-                                                <div className="row">
-                                                    <div className="col-md-4"  >
-                                                        <div className="book_logo">
-                                                            <img src={base_url + item?.image} className="img-fluid" alt="" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div className="col-md-8">
-                                                        <div className="content">
-                                                            <div className='cardHeader'>
-                                                                <h4>{item?.name}</h4>
-                                                                <div className="dots_dropdown">
-                                                                    <Dropdown className="tableDropdown">
-                                                                        <Dropdown.Toggle variant="transparent" className="notButton classicToggle">
-                                                                            <FontAwesomeIcon icon={faEllipsisV} />
-                                                                        </Dropdown.Toggle>
-                                                                        <Dropdown.Menu align="end" className="tableDropdownMenu">
-
-                                                                            <Link to={`/book-listing/product-detail/${item?.id}`} className="tableAction">View</Link>
-
-                                                                        </Dropdown.Menu>
-                                                                    </Dropdown>
-                                                                </div>
-
+                                                <div className="tab_card">
+                                                    <div className="row">
+                                                        <div className="col-md-4"  >
+                                                            <div className="book_logo">
+                                                                <img src={base_url + item?.image} className="img-fluid" alt="" />
                                                             </div>
-                                                            <h5>{`$ ${item?.price || 0}`} </h5>
-                                                            {
-                                                                item.reviews != 0 && (
-                                                                    <div className="rating_star">
-                                                                        {item?.reviews && item?.reviews.map((review, index) => (
-                                                                            <i className="fa-solid fa-star active"></i>
+                                                        </div>
+                                                        <div className="col-md-8">
+                                                            <div className="content">
+                                                                <div className='cardHeader'>
+                                                                    <h4>{item?.name}</h4>
+                                                                    <div className="dots_dropdown">
+                                                                        <Dropdown className="tableDropdown">
+                                                                            <Dropdown.Toggle variant="transparent" className="notButton classicToggle">
+                                                                                <FontAwesomeIcon icon={faEllipsisV} />
+                                                                            </Dropdown.Toggle>
+                                                                            <Dropdown.Menu align="end" className="tableDropdownMenu">
 
-                                                                        ))}
+                                                                                <Link to={`/book-listing/product-detail/${item?.id}`} className="tableAction">View</Link>
 
-                                                                        <span>{item?.reviews?.length}</span>
+                                                                            </Dropdown.Menu>
+                                                                        </Dropdown>
                                                                     </div>
-                                                                )
-                                                            }
+
+                                                                </div>
+                                                                <h5>{`$ ${item?.price || 0}`} </h5>
+                                                                {
+                                                                    item.reviews != 0 && (
+                                                                        <div className="rating_star">
+                                                                            {item?.reviews && item?.reviews.map((review, index) => (
+                                                                                <i className="fa-solid fa-star active"></i>
+
+                                                                            ))}
+
+                                                                            <span>{item?.reviews?.length}</span>
+                                                                        </div>
+                                                                    )
+                                                                }
 
 
-                                                            <p className='shortDescription'>{item?.description}</p>
-                                                            {item?.isPay && (
-                                                                <p className='text-success'>Free</p>
-                                                            )}
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-12 p-0">
-                                                        <div className="tab_card_bottom">
-                                                            <div className="user_img">
-                                                                <img src="./images/user_img.png" className="img-fluid" alt="" />
+                                                                <p className='shortDescription'>{item?.description}</p>
+                                                                {item?.isPay && (
+                                                                    <p className='text-success'>Free</p>
+                                                                )}
                                                             </div>
-                                                            <div className="user_name">
-                                                                <h5>Micheal James <span>Last Added In Library</span></h5>
+                                                        </div>
+                                                        <div className="col-md-12 p-0">
+                                                            <div className="tab_card_bottom">
+                                                                <div className="user_img">
+                                                                    <img src="./images/user_img.png" className="img-fluid" alt="" />
+                                                                </div>
+                                                                <div className="user_name">
+                                                                    <h5>Micheal James <span>Last Added In Library</span></h5>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
                                             </Link>
                                         </Col>
 
                                     ))}
 
-                            </div>
+                                </div>
 
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
         </UserLayout >
     )
 }

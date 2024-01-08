@@ -13,45 +13,36 @@ export const Header = (props) => {
   console.log(Logintoken);
 
   const handleLogout = async (event) => {
-    // Prevent the default form submission behavior
+
     event.preventDefault();
 
-    // Show loader or loading indicator
     document.querySelector('.loaderBox').classList.remove("d-none");
 
-    // Define the API URL for the logout endpoint
     const apiUrl = 'https://custom.mystagingserver.site/Tim-WDLLC/public/api/logout';
 
     try {
-      // Make a POST request to the logout API endpoint
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${Logintoken}` // Fix typo: 'barear' -> 'Bearer'
+          'Authorization': `Bearer ${Logintoken}`
         }
       });
 
-      // Check if the request was successful (status code 2xx)
       if (response.ok) {
         // Parse the response data as JSON
         const responseData = await response.json();
 
-        // Remove user login information from local storage
         localStorage.removeItem('login');
         localStorage.removeItem('loginUser');
 
-        // Log the logout response data
         console.log('Logout Response:', responseData);
 
-        // Hide the loader or loading indicator
         document.querySelector('.loaderBox').classList.add("d-none");
         UserCredit()
 
-        // Navigate to the home page (assuming 'Navigate' is a function from your routing library)
         navigate('/');
       }
     } catch (error) {
-      // Handle errors by logging them to the console
       document.querySelector('.loaderBox').classList.add("d-none");
       console.error('Error:', error);
     }
@@ -82,7 +73,7 @@ export const Header = (props) => {
   }
 
   useEffect(() => {
-    if(Logintoken) {
+    if (Logintoken) {
       UserCredit()
     }
   }, [])
@@ -117,9 +108,6 @@ export const Header = (props) => {
                 <li><Link to="/login">Login / Sign up</Link></li>
               )
             }
-
-
-
             {Logintoken && (
               <li>
                 <button className="border-0 bg-transparent" onClick={((event) => { handleLogout(event) })}>Logout</button>
@@ -170,9 +158,6 @@ export const Header = (props) => {
                         <li><Link to="/login">Login / Sign up</Link></li>
                       )
                     }
-
-
-
                     {Logintoken && (
                       <li>
                         <button className="border-0 bg-transparent" onClick={((event) => { handleLogout(event) })}>Logout</button>
