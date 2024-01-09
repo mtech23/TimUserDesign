@@ -200,24 +200,6 @@ export const ProductDetail = ({ eventKey, children }) => {
   console.log("dec", dec)
 
 
-
-  // const utterance = new SpeechSynthesisUtterance(dec);
-
-  // const handleStart = (chapterId) => {
-  //   const chapter = data?.chapters[chapterId];
-  //   const newUtterance = new SpeechSynthesisUtterance(chapter?.description);
-
-  //   newUtterance.onend = () => {
-  //     setIsPlaying(false);
-  //     setIsPaused(false);
-  //   };
-
-  //   window.speechSynthesis.speak(newUtterance);
-  //   setIsPlaying(true);
-  //   setDec(chapter?.description);
-  // };
-
-
   const handleStart = (chapterId) => {
     const chapter = data?.chapters[chapterId];
     utterance.text = chapter?.description;
@@ -254,54 +236,60 @@ export const ProductDetail = ({ eventKey, children }) => {
 
 
 
+  // shatgpt when click on resume then not show start button only show resume button Pauses
 
 
 
 
 
+  const [isPlay, setIsPlay] = useState(false);
+  const [isPause, setIsPause] = useState(false);
 
-
-  
   const utterance = new SpeechSynthesisUtterance(data?.description);
 
   const handleStarts = () => {
-    console.log("utterance" , utterance?.text)
+    console.log("utterance", utterance?.text);
     const newUtterance = new SpeechSynthesisUtterance(utterance?.text);
 
     newUtterance.onend = () => {
-      setIsPlaying(false);
-      setIsPaused(false);
+      setIsPlay(false);
+      setIsPause(false);
     };
 
     window.speechSynthesis.speak(newUtterance);
-    setIsPlaying(true);
- 
+    setIsPlay(true);
+    setIsPause(false);
   };
 
   const handlePauses = () => {
-    if (!isPaused) {
+    if (!isPause) {
       window.speechSynthesis.pause();
-      setIsPaused(true);
-      setIsPlaying(false);
+      setIsPlay(false);
+      setIsPause(true);
     }
   };
 
   const handleResumes = () => {
-    if (isPaused) {
+    if (isPause) {
       window.speechSynthesis.resume();
-      setIsPlaying(true);
-      setIsPaused(false);
+      setIsPlay(true);
+      setIsPause(false);
     }
   };
 
   const handleStops = () => {
     window.speechSynthesis.cancel();
-    setIsPlaying(false);
-    setIsPaused(false);
+    setIsPlay(false);
+    setIsPause(false);
   };
 
 
-  // WHEN CLICK ON PAUSE NOT SHOW START SHOW RESUME  AND STOP
+
+
+
+
+
+
 
 
   return (
@@ -330,32 +318,32 @@ export const ProductDetail = ({ eventKey, children }) => {
                       <div className="adiobtn d-flex">
                         <h3 className="text-capitalize">{data?.name}</h3>
 
+
                         <div className="playbtns d-flex gap-12"  >
-                                          <div className="actionBtn">
-                                            <button
-                                              className="play"
-                                              onClick={handleStarts}
-                                              style={{ display: !isPlaying ? 'inline' : 'none' }}
-                                            >
-                                              <i className="fa-solid fa-play"></i>
-                                            </button>
-                                          </div>
-                                          <div className="actionBtn">
-                                            <button className="pause" onClick={handlePauses} style={{ display: isPlaying && !isPaused ? 'inline' : 'none' }}>
-                                              <i className="fa-regular fa-circle-pause"></i>
-                                            </button>
-                                          </div>
-                                          <div className="actionBtn">
-                                            <button className="resume" onClick={handleResumes} style={{ display: isPlaying && isPaused ? 'inline' : 'none' }}>
-                                              <i className="fa-solid fa-play"></i>
-                                            </button>
-                                          </div>
-                                          <div className="actionBtn">
-                                            <button className="stop" onClick={handleStops} style={{ display: isPlaying ? 'inline' : 'none' }}>
-                                              <i className="fa-solid fa-stop"></i>
-                                            </button>
-                                          </div>
-                                        </div>
+                          <div className="actionBtn">
+                            <button
+                              className="play"
+                              onClick={handleStarts} disabled={isPlay}
+                            >
+                              <i className="fa-solid fa-play"></i>
+                            </button>
+                          </div>
+                          <div className="actionBtn">
+                            <button className="pause" onClick={handlePauses} disabled={!isPlay || isPause}>
+                              <i className="fa-regular fa-circle-pause"></i>
+                            </button>
+                          </div>
+                          <div className="actionBtn">
+                            <button className="resume" onClick={handleResumes} disabled={!isPause}>
+                              <i className="fa-solid fa-play"></i>
+                            </button>
+                          </div>
+                          <div className="actionBtn">
+                            <button className="stop" onClick={handleStops} disabled={!isPlay && !isPause}>
+                              <i className="fa-solid fa-stop"></i>
+                            </button>
+                          </div>
+                        </div>
 
 
                       </div>
@@ -386,32 +374,37 @@ export const ProductDetail = ({ eventKey, children }) => {
                                   {item?.isPay ? (
                                     <>
                                       <div className="adiobtn d-flex">     <h3 className="text-capitalize">{item?.title}</h3>
+
+ 
+
                                         <div className="playbtns d-flex gap-12"  >
                                           <div className="actionBtn">
                                             <button
                                               className="play"
-                                              onClick={() => handleStart(index)}
-                                              style={{ display: !isPlaying ? 'inline' : 'none' }}
+                                              onClick={() => handleStart(index)} disabled={isPlaying}
                                             >
                                               <i className="fa-solid fa-play"></i>
                                             </button>
                                           </div>
                                           <div className="actionBtn">
-                                            <button className="pause" onClick={handlePause} style={{ display: isPlaying && !isPaused ? 'inline' : 'none' }}>
+                                            <button className="pause" onClick={handlePause} disabled={!isPlaying || isPaused}>
                                               <i className="fa-regular fa-circle-pause"></i>
                                             </button>
                                           </div>
                                           <div className="actionBtn">
-                                            <button className="resume" onClick={handleResume} style={{ display: isPlaying && isPaused ? 'inline' : 'none' }}>
+                                            <button className="resume" onClick={handleResume} disabled={!isPaused}>
                                               <i className="fa-solid fa-play"></i>
                                             </button>
                                           </div>
                                           <div className="actionBtn">
-                                            <button className="stop" onClick={handleStop} style={{ display: isPlaying ? 'inline' : 'none' }}>
+                                            <button className="stop" onClick={handleStop} disabled={!isPlaying && !isPaused}>
                                               <i className="fa-solid fa-stop"></i>
                                             </button>
                                           </div>
-                                        </div></div>
+                                        </div>
+
+
+                                      </div>
 
                                       <p> {item?.description}</p>
                                     </>
@@ -617,3 +610,4 @@ export const ProductDetail = ({ eventKey, children }) => {
     </>
   );
 };
+ 
