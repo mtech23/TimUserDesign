@@ -234,10 +234,7 @@ export const ProductDetail = ({ eventKey, children }) => {
     setIsPaused(false);
   };
 
-
-
-  // shatgpt when click on resume then not show start button only show resume button Pauses
-
+  // play its playing all map button only id related spacific button play fix it 
 
 
 
@@ -375,13 +372,13 @@ export const ProductDetail = ({ eventKey, children }) => {
                                     <>
                                       <div className="adiobtn d-flex">     <h3 className="text-capitalize">{item?.title}</h3>
 
- 
+
 
                                         <div className="playbtns d-flex gap-12"  >
                                           <div className="actionBtn">
                                             <button
                                               className="play"
-                                              onClick={() => handleStart(index)} disabled={isPlaying}
+                                              onClick={() =>  (index)} disabled={isPlaying}
                                             >
                                               <i className="fa-solid fa-play"></i>
                                             </button>
@@ -609,5 +606,4 @@ export const ProductDetail = ({ eventKey, children }) => {
       </UserLayout>
     </>
   );
-};
- 
+}; 

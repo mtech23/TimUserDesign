@@ -1,6 +1,7 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 import AdminLogin from "../Screens/Auth/Login";
+import AdminSignup from "../Screens/Auth/signup";
 
 import Error from "../Screens/Error";
 import { Home } from "../Screens/Home";
@@ -9,7 +10,7 @@ import { Novel } from "../Screens/Novel";
 import { ProductDetail } from "../Screens/ProductListing/productDetail";
 import { MyAccount } from "../Screens/MyAccount";
 import { ProtectedRoutes } from "./ProtectedRoutes";
-
+ 
 export default function UserRouter() {
   return (
     <BrowserRouter basename="/TimUser">
@@ -20,6 +21,7 @@ export default function UserRouter() {
         <Route path="/book-listing/product-detail/:id" element={<ProductDetail />}></Route>
         <Route path="*" element={<Error />} />
         <Route path="/login" element={<AdminLogin />}></Route>
+        <Route path="/sign_up" element={<AdminSignup />}></Route>
         <Route path="/account" element={<ProtectedRoutes Components={MyAccount} />}></Route>
       </Routes>
     </BrowserRouter>

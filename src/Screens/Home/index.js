@@ -10,8 +10,8 @@ export const Home = () => {
     const [selectedGenre, setSelectedGenre] = useState(null);
     const base_url = 'https://custom.mystagingserver.site/Tim-WDLLC/public/'
     const adsListing = () => {
-        
-    document.querySelector('.loaderBox').classList.remove("d-none");
+
+        document.querySelector('.loaderBox').classList.remove("d-none");
         fetch('https://custom.mystagingserver.site/Tim-WDLLC/public/api/ads_listing',
             {
                 method: 'GET',
@@ -21,7 +21,6 @@ export const Home = () => {
                 },
             }
         )
-
             .then(response =>
                 response.json()
             )
@@ -71,7 +70,7 @@ export const Home = () => {
                 setGenres(data.data);
                 if (data.data.length > 0) {
                     setSelectedGenre(data.data[0]); // Select the first genre by default
-                  }
+                }
             })
             .catch((error) => {
                 document.querySelector('.loaderBox').classList.add("d-none");
@@ -153,7 +152,7 @@ export const Home = () => {
                             {genres.map((genre, index) => (
                                 <div
                                     key={genre.title}
-                                    className={`tab ${selectedGenre === genre  ? 'active' : ''}`}
+                                    className={`tab ${selectedGenre === genre ? 'active' : ''}`}
                                     onClick={() => handleTabClick(genre)}
                                 >
                                     {genre.title}
