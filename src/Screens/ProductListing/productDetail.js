@@ -26,7 +26,7 @@ export const ProductDetail = ({ eventKey, children }) => {
   const [data, setData] = useState({});
 
 
-  console.log("data", data)
+
   const [showModal, setShowModal] = useState(false);
   const [showModal1, setShowModal1] = useState(false);
   const [formData, setFormData] = useState({});
@@ -40,10 +40,6 @@ export const ProductDetail = ({ eventKey, children }) => {
   const isCurrentEventKey = activeEventKey === eventKey;
 
 
-  const decoratedOnClick = useAccordionButton(
-    eventKey,
-    () => callback && callback(eventKey),
-  );
 
   const chapterData = (paramId) => {
     document.title = 'Tim User | Book Detail';
@@ -190,26 +186,30 @@ export const ProductDetail = ({ eventKey, children }) => {
     GetOrderHistory()
   }, []);
 
-
-
-
-
   const [isPlaying, setIsPlaying] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
-  const [dec, setDec] = useState("")
-  console.log("dec", dec)
-
+  const [currentChapter, setCurrentChapter] = useState(null);
+  const [isLooping, setIsLooping] = useState(false);
 
   const handleStart = (chapterId) => {
-    const chapter = data?.chapters[chapterId];
-    utterance.text = chapter?.description;
-    utterance.onend = () => {
-      setIsPlaying(false);
+    if (!isPlaying) {
+      const chapter = data?.chapters.find(item => item.id === chapterId);
+      const utterance = new SpeechSynthesisUtterance();
+      utterance.text = chapter?.description;
+      utterance.onend = () => {
+        if (isLooping) {
+          handleStart(chapterId); // Restart the same chapter if looping is enabled
+        } else {
+          setIsPlaying(false);
+          setIsPaused(false);
+          setCurrentChapter(null);
+        }
+      };
+      window.speechSynthesis.speak(utterance);
+      setIsPlaying(true);
       setIsPaused(false);
-    };
-    window.speechSynthesis.speak(utterance);
-    setIsPlaying(true);
-    setDec(chapter?.description);
+      setCurrentChapter(chapterId);
+    }
   };
 
   const handlePause = () => {
@@ -221,7 +221,19 @@ export const ProductDetail = ({ eventKey, children }) => {
   };
 
   const handleResume = () => {
-    if (isPaused) {
+    if (isPaused && currentChapter !== null) {
+      const chapter = data?.chapters.find(item => item.id === currentChapter);
+      const utterance = new SpeechSynthesisUtterance();
+      utterance.text = chapter?.description;
+      utterance.onend = () => {
+        if (isLooping) {
+          handleStart(currentChapter); // Restart the same chapter if looping is enabled
+        } else {
+          setIsPlaying(false);
+          setIsPaused(false);
+          setCurrentChapter(null);
+        }
+      };
       window.speechSynthesis.resume();
       setIsPlaying(true);
       setIsPaused(false);
@@ -232,9 +244,14 @@ export const ProductDetail = ({ eventKey, children }) => {
     window.speechSynthesis.cancel();
     setIsPlaying(false);
     setIsPaused(false);
+    setCurrentChapter(null);
   };
 
+  const handleLoopToggle = () => {
+    setIsLooping(!isLooping);
+  };
 
+ 
 
   // shatgpt when click on resume then not show start button only show resume button Pauses
 
@@ -248,7 +265,7 @@ export const ProductDetail = ({ eventKey, children }) => {
   const utterance = new SpeechSynthesisUtterance(data?.description);
 
   const handleStarts = () => {
-    console.log("utterance", utterance?.text);
+
     const newUtterance = new SpeechSynthesisUtterance(utterance?.text);
 
     newUtterance.onend = () => {
@@ -294,13 +311,7 @@ export const ProductDetail = ({ eventKey, children }) => {
 
   return (
     <>
-      <button
-        type="button"
-        style={{ backgroundColor: isCurrentEventKey ? PINK : BLUE }}
-        onClick={decoratedOnClick}
-      >
-        {children}
-      </button>
+
       <UserLayout subHeader={BookListingCover}>
         <div className="container">
           <div className="dashCard my-4">
@@ -368,20 +379,21 @@ export const ProductDetail = ({ eventKey, children }) => {
                         <div className="col-md-12">
                           <Accordion defaultActiveKey="0">
                             {data?.chapters && data?.chapters.map((item, index) => (
-                              <Accordion.Item eventKey={index}>
+                              <Accordion.Item eventKey={index} key={index}>
                                 <Accordion.Header className="  Button b" style={{ backgroundColor: '#f7944d', color: 'black' }}>{`Chapter ${index + 1}`}</Accordion.Header>
                                 <Accordion.Body>
                                   {item?.isPay ? (
                                     <>
                                       <div className="adiobtn d-flex">     <h3 className="text-capitalize">{item?.title}</h3>
 
- 
+
 
                                         <div className="playbtns d-flex gap-12"  >
                                           <div className="actionBtn">
                                             <button
                                               className="play"
-                                              onClick={() => handleStart(index)} disabled={isPlaying}
+                                              onClick={() => handleStart(item?.id)}
+                                              disabled={isPlaying && currentChapter !== item?.id}
                                             >
                                               <i className="fa-solid fa-play"></i>
                                             </button>
@@ -610,4 +622,3 @@ export const ProductDetail = ({ eventKey, children }) => {
     </>
   );
 };
- 
