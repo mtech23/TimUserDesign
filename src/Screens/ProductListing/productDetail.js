@@ -251,7 +251,7 @@ export const ProductDetail = ({ eventKey, children }) => {
     setIsLooping(!isLooping);
   };
 
- 
+
 
   // shatgpt when click on resume then not show start button only show resume button Pauses
 
@@ -320,12 +320,100 @@ export const ProductDetail = ({ eventKey, children }) => {
                 <div className="row">
                   <div className="col-md-4 mb-4">
 
-                    <div className="productImage">
+                    <div className="productImage mb-4">
                       <img src={base_url + data?.image} />
                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div className="justify-content-center mb-4 m-auto text-center ">
+                      <span className="mb-2  d-flex  justify-content-center  m-auto text-center"><p className=" tabtags w-100 mx-auto p-2 text-center">  BookCategory : {data?.category?.name} </p></span>
+                      <span className="d-flex mb-2 justify-content-center "><p className=" tabtags w-100 mx-auto p-2 text-center">  Type : {data?.types?.name} </p></span>
+                      <span className="d-flex   justify-content-center "><p className=" tabtags w-100 mx-auto p-2 text-center">  Genre  : {data?.genre?.name} </p></span>
+                    </div>
+                    <div className="justify-content-center m-auto text-center ">
+                      <h4>Tags</h4>
+                      <div className=" mb-2 mt-4 gap-4 ">
+                        <div className=" mb-4 ml-4 gap-4 ">
+
+                          <span className=" tabtag px-5  py-2     "> Tag</span>
+                          <span className=" tabtag px-5  py-2     "> Tag</span>
+
+                          <span className=" tabtag px-5  py-2   gap-4  "> Tag</span>
+                        </div>
+
+                        <div className=" mb-4 ml-4 gap-4">
+
+                          <span className=" tabtag px-5  py-2     "> Tag</span>
+                          <span className=" tabtag px-5  py-2     "> Tag</span>
+
+                          <span className=" tabtag px-5  py-2     "> Tag</span>
+                        </div>
+                        <div className=" mb-4 ml-4 gap-4">
+
+                          <span className=" tabtag px-5  py-2     "> Tag</span>
+                          <span className=" tabtag px-5  py-2     "> Tag</span>
+
+                          <span className=" tabtag px-5  py-2     "> Tag</span>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+
+                    <div>
+                      <div className="d-flex  gap-4 mb-2 mt-4 justify-content-center mb-4 m-auto text-center ">
+                        <div>                        <p className="   mb-2" >Author</p><p className="textsha   ">Author Name</p>
+                        </div>
+
+                        <div>                        <p className="mb-2" >Original Language</p>      <p className="textsha">English  </p></div>
+                        <div>                        <p className="mb-2"  >Release Date</p>         <p className="textsha"> 2024  </p></div>
+                      </div>
+                      <div className=" d-flex gap-4 mb-2  justify-content-center mb-4 m-auto text-center ">
+
+
+                      </div>
+                    </div>
+
+
                   </div>
+
+
+
+
+
+
+
+
+
                   <div className="col-md-8 mb-4">
-                    <div className="productInfo">
+                    <div className="productInfo mb-4">
                       <div className="adiobtn d-flex">
                         <h3 className="text-capitalize">{data?.name}</h3>
 
@@ -364,236 +452,267 @@ export const ProductDetail = ({ eventKey, children }) => {
                       <p>{data?.description}</p>
                       <p><span className="font-weight-bold">Category:</span> <span>{data?.category?.name}</span></p>
                     </div>
-                  </div>
-                </div>
-
-                {CapterShow ? (
-                  <div className="row">
-
-                    <Tabs
-                      defaultActiveKey="home"
-                      id="uncontrolled-tab-example"
-                      className="mb-3"
-                    >
-                      <Tab eventKey="home" title=" Book Chapters">
-                        <div className="col-md-12">
-                          <Accordion defaultActiveKey="0">
-                            {data?.chapters && data?.chapters.map((item, index) => (
-                              <Accordion.Item eventKey={index} key={index}>
-                                <Accordion.Header className="  Button b" style={{ backgroundColor: '#f7944d', color: 'black' }}>{`Chapter ${index + 1}`}</Accordion.Header>
-                                <Accordion.Body>
-                                  {item?.isPay ? (
-                                    <>
-                                      <div className="adiobtn d-flex">     <h3 className="text-capitalize">{item?.title}</h3>
 
 
 
-                                        <div className="playbtns d-flex gap-12"  >
-                                          <div className="actionBtn">
-                                            <button
-                                              className="play"
-                                              onClick={() => handleStart(item?.id)}
-                                              disabled={isPlaying && currentChapter !== item?.id}
-                                            >
-                                              <i className="fa-solid fa-play"></i>
-                                            </button>
-                                          </div>
-                                          <div className="actionBtn">
-                                            <button className="pause" onClick={handlePause} disabled={!isPlaying || isPaused}>
-                                              <i className="fa-regular fa-circle-pause"></i>
-                                            </button>
-                                          </div>
-                                          <div className="actionBtn">
-                                            <button className="resume" onClick={handleResume} disabled={!isPaused}>
-                                              <i className="fa-solid fa-play"></i>
-                                            </button>
-                                          </div>
-                                          <div className="actionBtn">
-                                            <button className="stop" onClick={handleStop} disabled={!isPlaying && !isPaused}>
-                                              <i className="fa-solid fa-stop"></i>
-                                            </button>
-                                          </div>
-                                        </div>
 
 
-                                      </div>
 
-                                      <p> {item?.description}</p>
-                                    </>
-                                  ) : (
-                                    <div className="text-center">
-                                      <button
-                                        type="button"
-                                        onClick={() => { PaymentModal(item) }}
-                                        className="primaryButton btn text- white"
-                                        style={{ backgroundColor: '#f7944d', color: 'black' }}
-                                      >
-                                        Pay {item?.price} Mana For this Chapter
-                                      </button>
-                                    </div>
-                                  )}
-                                </Accordion.Body>
-                              </Accordion.Item>
-                            ))}
-                          </Accordion>
-                        </div>
 
-                      </Tab>
-                      <Tab eventKey="profile" title="Book Reviews">
-                        <section class="   text-center text-lg-start shadow-1-strong rounded"
 
+
+
+
+
+
+
+
+
+
+
+                    {CapterShow ? (
+                      <div className="row">
+
+                        <Tabs
+                          defaultActiveKey="home"
+                          id="uncontrolled-tab-example"
+                          className="mb-3"
                         >
-                          <div class="row d-flex justify-content-center">
-                            <div class="col-md-12">
-                              <div class="card">
-                                <div class="card-body ">
-                                  <div class="row">
-                                    <div class="col-lg-2 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
-                                      <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.webp"
-                                        class="rounded-circle img-fluid shadow-1" alt="woman avatar" width="200" height="200" />
-                                    </div>
-                                    <div class="col-lg-8">
-                                      <p class="fw-bold lead mb-1"><strong>Anna Smith</strong></p>
-                                      <p class="text-muted  mb-2">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
-                                        molestiae numquam quas, voluptates omnis nulla ea odio quia similique
-                                        corrupti magnam.
-                                      </p>
-                                      <ul class="list-unstyled d-flex    ">
-                                        <li>
-                                          <i class="fas fa-star fa-sm text-info"></i>
-                                        </li>
-                                        <li>
-                                          <i class="fas fa-star fa-sm text-info"></i>
-                                        </li>
-                                        <li>
-                                          <i class="fas fa-star fa-sm text-info"></i>
-                                        </li>
-                                        <li>
-                                          <i class="fas fa-star fa-sm text-info"></i>
-                                        </li>
-                                        <li>
-                                          <i class="fas fa-star-half-alt fa-sm text-info"></i>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-                      </Tab>
-                      <Tab eventKey="Poster" title="Poster Reviews">
-                        <section class="   text-center text-lg-start shadow-1-strong rounded">
-                          <div class="row d-flex justify-content-center">
-                            <div class="col-md-12">
-                              <div class="card">
-                                <div class="card-body ">
-                                  <div class="row d-flex  ">
-                                    <div class="col-md-10 col-lg-8 col- xl-6">
-                                      <div class=" ">
-                                        <div class="card-body p-4">
-                                          <div class="d-flex flex-start w-100">
-                                            <img class="rounded-circle shadow-1-strong me-3"
-                                              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp" alt="avatar" width="65"
-                                              height="65" />
-                                            <div class="w-100">
-                                              <p class="fw-bold lead mb-1"><strong>John Smith</strong></p>
-                                              <ul class="list-unstyled d-flex    ">
-                                                <li>
-                                                  <i class="fas fa-star fa-sm text-info"></i>
-                                                </li>
-                                                <li>
-                                                  <i class="fas fa-star fa-sm text-info"></i>
-                                                </li>
-                                                <li>
-                                                  <i class="fas fa-star fa-sm text-info"></i>
-                                                </li>
-                                                <li>
-                                                  <i class="fas fa-star fa-sm text-info"></i>
-                                                </li>
-                                                <li>
-                                                  <i class="fas fa-star-half-alt fa-sm text-info"></i>
-                                                </li>
-                                              </ul>
-                                              <div class="form-outline">
-                                                <p class="text-muted  mb-2">
-                                                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
-                                                  molestiae numquam quas, voluptates omnis nulla ea odio quia similique
-                                                  corrupti magnam.
-                                                </p>
-                                              </div>
+                          <Tab eventKey="home" title=" Book Chapters">
+                            <div className="col-md-12">
+                              <Accordion defaultActiveKey="0">
+                                {data?.chapters && data?.chapters.map((item, index) => (
+                                  <Accordion.Item eventKey={index} key={index}>
+                                    <Accordion.Header className="  Button b" style={{ backgroundColor: '#f7944d', color: 'black' }}>{`Chapter ${index + 1}`}</Accordion.Header>
+                                    <Accordion.Body>
+                                      {item?.isPay ? (
+                                        <>
+                                          <div className="adiobtn d-flex">     <h3 className="text-capitalize">{item?.title}</h3>
 
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row d-flex  ">
-                                    <div class="col-md-10 col-lg-8 col- xl-6">
-                                      <div class=" ">
-                                        <div class="card-body p-4">
-                                          <div class="d-flex flex-start w-100">
-                                            <img class="rounded-circle shadow-1-strong me-3"
-                                              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(21).webp" alt="avatar" width="65"
-                                              height="65" />
-                                            <div class="w-100">
-                                              <h5>Add a comment</h5>
-                                              <ul class="rating mb-3 list-unstyled d-flex " data-mdb-toggle="rating">
-                                                <li>
-                                                  <i class="far fa-star fa-sm text-info" title="Bad"></i>
-                                                </li>
-                                                <li>
-                                                  <i class="far fa-star fa-sm text-info" title="Poor"></i>
-                                                </li>
-                                                <li>
-                                                  <i class="far fa-star fa-sm text-info"></i>
-                                                </li>
-                                                <li>
-                                                  <i class="far fa-star fa-sm text-info" title="Good"></i>
-                                                </li>
-                                                <li>
-                                                  <i class="far fa-star fa-sm text-info" title="Excellent"></i>
-                                                </li>
-                                              </ul>
-                                              <div class="form-outline">
-                                                <textarea class="form-control" id="textAreaExample" rows="7"></textarea>
-                                                <label class="form-label" for="textAreaExample">What is your view?</label>
+
+
+                                            <div className="playbtns d-flex gap-12"  >
+                                              <div className="actionBtn">
+                                                <button
+                                                  className="play"
+                                                  onClick={() => handleStart(item?.id)}
+                                                  disabled={isPlaying && currentChapter !== item?.id}
+                                                >
+                                                  <i className="fa-solid fa-play"></i>
+                                                </button>
                                               </div>
-                                              <div class="d-flex justify-content-between mt-3">
-                                                <button type="button" class="btn btn-danger">
-                                                  Send <i class="fas fa-long-arrow-alt-right ms-1"></i>
+                                              <div className="actionBtn">
+                                                <button className="pause" onClick={handlePause} disabled={!isPlaying || isPaused}>
+                                                  <i className="fa-regular fa-circle-pause"></i>
+                                                </button>
+                                              </div>
+                                              <div className="actionBtn">
+                                                <button className="resume" onClick={handleResume} disabled={!isPaused}>
+                                                  <i className="fa-solid fa-play"></i>
+                                                </button>
+                                              </div>
+                                              <div className="actionBtn">
+                                                <button className="stop" onClick={handleStop} disabled={!isPlaying && !isPaused}>
+                                                  <i className="fa-solid fa-stop"></i>
                                                 </button>
                                               </div>
                                             </div>
+
+
                                           </div>
+
+                                          <p> {item?.description}</p>
+                                        </>
+                                      ) : (
+                                        <div className="text-center">
+                                          <button
+                                            type="button"
+                                            onClick={() => { PaymentModal(item) }}
+                                            className="primaryButton btn text- white"
+                                            style={{ backgroundColor: '#f7944d', color: 'black' }}
+                                          >
+                                            Pay {item?.price} Mana For this Chapter
+                                          </button>
+                                        </div>
+                                      )}
+                                    </Accordion.Body>
+                                  </Accordion.Item>
+                                ))}
+                              </Accordion>
+                            </div>
+
+                          </Tab>
+                          <Tab eventKey="profile" title="Book Reviews">
+                            <section class="   text-center text-lg-start shadow-1-strong rounded"
+
+                            >
+                              <div class="row d-flex justify-content-center">
+                                <div class="col-md-12">
+                                  <div class="card">
+                                    <div class="card-body ">
+                                      <div class="row">
+                                        <div class="col-lg-2 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                                          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.webp"
+                                            class="rounded-circle img-fluid shadow-1" alt="woman avatar" width="200" height="200" />
+                                        </div>
+                                        <div class="col-lg-8">
+                                          <p class="fw-bold lead mb-1"><strong>Anna Smith</strong></p>
+                                          <p class="text-muted  mb-2">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
+                                            molestiae numquam quas, voluptates omnis nulla ea odio quia similique
+                                            corrupti magnam.
+                                          </p>
+                                          <ul class="list-unstyled d-flex    ">
+                                            <li>
+                                              <i class="fas fa-star fa-sm text-info"></i>
+                                            </li>
+                                            <li>
+                                              <i class="fas fa-star fa-sm text-info"></i>
+                                            </li>
+                                            <li>
+                                              <i class="fas fa-star fa-sm text-info"></i>
+                                            </li>
+                                            <li>
+                                              <i class="fas fa-star fa-sm text-info"></i>
+                                            </li>
+                                            <li>
+                                              <i class="fas fa-star-half-alt fa-sm text-info"></i>
+                                            </li>
+                                          </ul>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                            </div>
+                            </section>
+                          </Tab>
+                          <Tab eventKey="Poster" title="Poster Reviews">
+                            <section class="   text-center text-lg-start shadow-1-strong rounded">
+                              <div class="row d-flex justify-content-center">
+                                <div class="col-md-12">
+                                  <div class="card">
+                                    <div class="card-body ">
+                                      <div class="row d-flex  ">
+                                        <div class="col-md-10 col-lg-8 col- xl-6">
+                                          <div class=" ">
+                                            <div class="card-body p-4">
+                                              <div class="d-flex flex-start w-100">
+                                                <img class="rounded-circle shadow-1-strong me-3"
+                                                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp" alt="avatar" width="65"
+                                                  height="65" />
+                                                <div class="w-100">
+                                                  <p class="fw-bold lead mb-1"><strong>John Smith</strong></p>
+                                                  <ul class="list-unstyled d-flex    ">
+                                                    <li>
+                                                      <i class="fas fa-star fa-sm text-info"></i>
+                                                    </li>
+                                                    <li>
+                                                      <i class="fas fa-star fa-sm text-info"></i>
+                                                    </li>
+                                                    <li>
+                                                      <i class="fas fa-star fa-sm text-info"></i>
+                                                    </li>
+                                                    <li>
+                                                      <i class="fas fa-star fa-sm text-info"></i>
+                                                    </li>
+                                                    <li>
+                                                      <i class="fas fa-star-half-alt fa-sm text-info"></i>
+                                                    </li>
+                                                  </ul>
+                                                  <div class="form-outline">
+                                                    <p class="text-muted  mb-2">
+                                                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
+                                                      molestiae numquam quas, voluptates omnis nulla ea odio quia similique
+                                                      corrupti magnam.
+                                                    </p>
+                                                  </div>
 
-                          </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="row d-flex  ">
+                                        <div class="col-md-10 col-lg-8 col- xl-6">
+                                          <div class=" ">
+                                            <div class="card-body p-4">
+                                              <div class="d-flex flex-start w-100">
+                                                <img class="rounded-circle shadow-1-strong me-3"
+                                                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(21).webp" alt="avatar" width="65"
+                                                  height="65" />
+                                                <div class="w-100">
+                                                  <h5>Add a comment</h5>
+                                                  <ul class="rating mb-3 list-unstyled d-flex " data-mdb-toggle="rating">
+                                                    <li>
+                                                      <i class="far fa-star fa-sm text-info" title="Bad"></i>
+                                                    </li>
+                                                    <li>
+                                                      <i class="far fa-star fa-sm text-info" title="Poor"></i>
+                                                    </li>
+                                                    <li>
+                                                      <i class="far fa-star fa-sm text-info"></i>
+                                                    </li>
+                                                    <li>
+                                                      <i class="far fa-star fa-sm text-info" title="Good"></i>
+                                                    </li>
+                                                    <li>
+                                                      <i class="far fa-star fa-sm text-info" title="Excellent"></i>
+                                                    </li>
+                                                  </ul>
+                                                  <div class="form-outline">
+                                                    <textarea class="form-control" id="textAreaExample" rows="7"></textarea>
+                                                    <label class="form-label" for="textAreaExample">What is your view?</label>
+                                                  </div>
+                                                  <div class="d-flex justify-content-between mt-3">
+                                                    <button type="button" class="btn btn-danger">
+                                                      Send <i class="fas fa-long-arrow-alt-right ms-1"></i>
+                                                    </button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
 
 
 
-                        </section>
+                            </section>
 
-                        <section >
-                          <div class="container my-5 py-5 text-dark">
-                          </div>
-                        </section>
-                      </Tab>
+                            <section >
+                              <div class="container my-5 py-5 text-dark">
+                              </div>
+                            </section>
+                          </Tab>
 
 
-                    </Tabs>
+                        </Tabs>
+
+                      </div>
+                    ) : (<p className="text-center">Please <Link to="/login">Login</Link> To See Chapters for this Book</p>)}
+
+
+
+
+
+
+
+
+
+
+
 
                   </div>
-                ) : (<p className="text-center">Please <Link to="/login">Login</Link> To See Chapters for this Book</p>)}
+                </div>
+
+
 
               </div>
             </div>
