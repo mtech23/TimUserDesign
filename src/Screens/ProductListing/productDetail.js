@@ -7,6 +7,10 @@ import Accordion from 'react-bootstrap/Accordion';
 import CustomInput from "../../Components/CustomInput";
 import { UserLayout } from "../../Components/Layout/UserLayout";
 import './style.css'
+import 'bootstrap/dist/css/bootstrap.min.css'; // Make sure to import Bootstrap CSS
+
+import { Container, Row, Col } from 'react-bootstrap';
+
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import AccordionContext from 'react-bootstrap/AccordionContext';
@@ -34,10 +38,7 @@ export const ProductDetail = ({ eventKey, children }) => {
   const [CapterShow, setChapterShow] = useState(false);
 
   const LoginToken = localStorage.getItem('loginUser');
-
-  const PINK = 'rgba(255, 192, 203, 0.6)';
-  const BLUE = 'rgba(0, 0, 255, 0.6)';
-  const isCurrentEventKey = activeEventKey === eventKey;
+ 
 
 
 
@@ -185,6 +186,11 @@ export const ProductDetail = ({ eventKey, children }) => {
 
     GetOrderHistory()
   }, []);
+  const tags = [
+    ['Tag ', 'Tag ', 'Tag '],
+    ['Tag ', 'Tag ', 'Tag '],
+    ['Tag ', 'Tag ', 'Tag '],
+  ];
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
@@ -249,9 +255,7 @@ export const ProductDetail = ({ eventKey, children }) => {
 
   const handleLoopToggle = () => {
     setIsLooping(!isLooping);
-  };
-
-
+  }; 
 
   // shatgpt when click on resume then not show start button only show resume button Pauses
 
@@ -324,76 +328,35 @@ export const ProductDetail = ({ eventKey, children }) => {
                       <img src={base_url + data?.image} />
                     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     <div className="justify-content-center mb-4 m-auto text-center ">
                       <span className="mb-2  d-flex  justify-content-center  m-auto text-center"><p className=" tabtags w-100 mx-auto p-2 text-center">  BookCategory : {data?.category?.name} </p></span>
                       <span className="d-flex mb-2 justify-content-center "><p className=" tabtags w-100 mx-auto p-2 text-center">  Type : {data?.types?.name} </p></span>
                       <span className="d-flex   justify-content-center "><p className=" tabtags w-100 mx-auto p-2 text-center">  Genre  : {data?.genre?.name} </p></span>
                     </div>
-                    <div className="justify-content-center m-auto text-center ">
+
+
+
+                    <Container className="justify-content-center m-auto text-center mt-4">
                       <h4>Tags</h4>
-                      <div className=" mb-2 mt-4 gap-4 ">
-                        <div className=" mb-4 ml-4 gap-4 ">
-
-                          <span className=" tabtag px-5  py-2     "> Tag</span>
-                          <span className=" tabtag px-5  py-2     "> Tag</span>
-
-                          <span className=" tabtag px-5  py-2   gap-4  "> Tag</span>
-                        </div>
-
-                        <div className=" mb-4 ml-4 gap-4">
-
-                          <span className=" tabtag px-5  py-2     "> Tag</span>
-                          <span className=" tabtag px-5  py-2     "> Tag</span>
-
-                          <span className=" tabtag px-5  py-2     "> Tag</span>
-                        </div>
-                        <div className=" mb-4 ml-4 gap-4">
-
-                          <span className=" tabtag px-5  py-2     "> Tag</span>
-                          <span className=" tabtag px-5  py-2     "> Tag</span>
-
-                          <span className=" tabtag px-5  py-2     "> Tag</span>
-                        </div>
-                      </div>
-
-                    </div>
-
-
-
+                      <Row className="mb-2 mt-4 gap-4">
+                        {tags.map((tagRow, rowIndex) => (
+                          <Row key={rowIndex} className=" ml-4 gap-3">
+                            {tagRow.map((tag, colIndex) => (
+                              <Col key={colIndex} className="tabtag px-2 py-2">
+                                {tag}
+                              </Col>
+                            ))}
+                          </Row>
+                        ))}
+                      </Row>
+                    </Container>
                     <div>
                       <div className="d-flex  gap-4 mb-2 mt-4 justify-content-center mb-4 m-auto text-center ">
-                        <div>                        <p className="   mb-2" >Author</p><p className="textsha   ">Author Name</p>
+                        <div>  <p className="   mb-2" >Author</p><p className="textsha   ">{data?.user_info?.name}</p>
                         </div>
 
-                        <div>                        <p className="mb-2" >Original Language</p>      <p className="textsha">English  </p></div>
-                        <div>                        <p className="mb-2"  >Release Date</p>         <p className="textsha"> 2024  </p></div>
+                        <div>  <p className="mb-2" >Original Language</p>  <p className="textsha">English  </p></div>
+                        <div>  <p className="mb-2"  >Release Date</p>  <p className="textsha"> {data?.release_date}  </p></div>
                       </div>
                       <div className=" d-flex gap-4 mb-2  justify-content-center mb-4 m-auto text-center ">
 
