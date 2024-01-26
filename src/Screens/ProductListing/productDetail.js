@@ -561,7 +561,15 @@ export const ProductDetail = ({ eventKey, children }) => {
                                               </div>
                                             </div>
                                          ) : (
-                                          <p >Please Buy Text to Speach</p>
+                                         
+                                         
+                                          <div className="actionBtn"> <button
+                                          className="play"
+                                          onClick={() => handleStart(item?.id)}
+                                          disabled
+                                        >
+                                          <i className="fa-solid fa-play"></i>
+                                        </button></div>
                                         )}
                                           </div>
 
