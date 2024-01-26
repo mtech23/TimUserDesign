@@ -27,6 +27,7 @@ export const MyAccount = () => {
     const [usd, setUsd] = useState(.3);
     const base_url = 'https://custom.mystagingserver.site/Tim-WDLLC/public/'
     const LoginToken = localStorage.getItem('loginUser');
+    const [paymentInfo, setPaymentInfo] = useState();
 
 
 
@@ -53,6 +54,10 @@ export const MyAccount = () => {
                 console.log(error)
             })
     }
+
+
+ 
+
 
 
     const GetOrderHistory = () => {
@@ -200,6 +205,54 @@ export const MyAccount = () => {
         UserCredit()
         GetLibrary()
     }, [])
+
+
+    const paymentSend = (tokenData) => {
+        const FormDataMethod = new FormData();
+
+        FormDataMethod.append("mana", mana);
+        FormDataMethod.append("token", tokenData);
+
+        fetch('https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/mana-purchase',
+            {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Authorization': `Bearer ${LoginToken}`
+                },
+                body: FormDataMethod
+            }
+        )
+
+            .then(response =>
+                response.json()
+            )
+            .then((data) => {
+                console.log(data)
+
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    }
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        if (!stripe || !elements) {
+            // Stripe.js has not loaded yet. Make sure to disable form submission until Stripe.js has loaded.
+            return;
+        }
+
+        const { token, error } = await stripe.createToken(elements.getElement(CardElement));
+
+        if (error) {
+            console.error(error);
+        } else {
+            // Send the token to your server for processing
+            console.log(token?.id);
+            paymentSend(token?.id)
+        }
+    };
 
 
 
@@ -412,6 +465,7 @@ export const MyAccount = () => {
                                                             onChange={(event) => {
                                                                 setMana(event.target.value);
                                                                 setUsd((.1 * event.target.value))
+                                                                console.log(mana)
                                                             }}
                                                         />
                                                     </div>
@@ -436,7 +490,7 @@ export const MyAccount = () => {
 
                                                         {/* <InjectedCheckoutForm /> */}
                                                         {/* </Elements> */}
-                                                        <CustomButton text="Buy Now" variant='primaryButton' />
+                                                        <CustomButton text="Buy Now" variant='primaryButton' onClick={handleSubmit} />
                                                     </div>
                                                 </div>
 

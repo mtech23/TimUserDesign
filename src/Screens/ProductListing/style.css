@@ -18,6 +18,11 @@
     font-weight: bold;
 }
 
+
+.prs{
+    margin-left: 8px;
+ 
+}
 .accordion-button:not(.collapsed) {
     color: #ffffff !important;
     background-color: #5a3473 !important;

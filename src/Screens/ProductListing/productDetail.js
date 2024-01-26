@@ -38,7 +38,7 @@ export const ProductDetail = ({ eventKey, children }) => {
   const [CapterShow, setChapterShow] = useState(false);
 
   const LoginToken = localStorage.getItem('loginUser');
- 
+
 
 
 
@@ -102,19 +102,63 @@ export const ProductDetail = ({ eventKey, children }) => {
         console.log(error);
       })
   }
+  const [textToSpeech, setTextToSpeech] = useState(false);
+
+  // const BuyChapter = (chapterID) => {
+  //   document.querySelector('.loaderBox').classList.remove("d-none");
+
+  //   const formData = new FormData();
+  //   formData.append("chapter_id", chapterID);
+
+  //   fetch(`https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/book_purchase/${id}`, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Authorization': `Bearer ${LoginToken}`
+  //     },
+  //     body: formData
+  //   })
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error(`HTTP error! Status: ${response.status}`);
+  //       }
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       document.querySelector('.loaderBox').classList.add("d-none");
+  //       console.log(data);
+  //       setShowModal(false);
+  //       setShowModal1(true);
+  //       setTimeout(() => {
+  //         setShowModal1(false);
+  //       }, 1000);
+  //       chapterDataLogin(id)
+  //     })
+  //     .catch((error) => {
+  //       document.querySelector('.loaderBox').classList.add("d-none");
+  //       console.error('Error during fetch:', error);
+  //     });
+  // };
+
+
+
+  const handleCheckboxChange = () => {
+    // Toggle the state of textToSpeech when the checkbox is clicked
+    setTextToSpeech(!textToSpeech);
+  };
 
   const BuyChapter = (chapterID) => {
-    document.querySelector('.loaderBox').classList.remove("d-none");
+    document.querySelector('.loaderBox').classList.remove('d-none');
 
     const formData = new FormData();
-    formData.append("chapter_id", chapterID);
+    formData.append('chapter_id', chapterID);
+    formData.append('text_to_speech_fee', textToSpeech); // Include the text_to_speech value in the FormData
 
     fetch(`https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/book_purchase/${id}`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${LoginToken}`
+        'Authorization': `Bearer ${LoginToken}`,
       },
-      body: formData
+      body: formData,
     })
       .then((response) => {
         if (!response.ok) {
@@ -123,17 +167,17 @@ export const ProductDetail = ({ eventKey, children }) => {
         return response.json();
       })
       .then((data) => {
-        document.querySelector('.loaderBox').classList.add("d-none");
+        document.querySelector('.loaderBox').classList.add('d-none');
         console.log(data);
         setShowModal(false);
         setShowModal1(true);
         setTimeout(() => {
           setShowModal1(false);
         }, 1000);
-        chapterDataLogin(id)
+        chapterDataLogin(id);
       })
       .catch((error) => {
-        document.querySelector('.loaderBox').classList.add("d-none");
+        document.querySelector('.loaderBox').classList.add('d-none');
         console.error('Error during fetch:', error);
       });
   };
@@ -255,7 +299,7 @@ export const ProductDetail = ({ eventKey, children }) => {
 
   const handleLoopToggle = () => {
     setIsLooping(!isLooping);
-  }; 
+  };
 
   // shatgpt when click on resume then not show start button only show resume button Pauses
 
@@ -306,6 +350,38 @@ export const ProductDetail = ({ eventKey, children }) => {
 
 
 
+  const handleCheckboxClick = (id) => {
+    const formData = new FormData();
+    formData.append("chapter_id", chapterID);
+
+    fetch(`https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/book_purchase/${id}`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${LoginToken}`
+      },
+      body: formData
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        document.querySelector('.loaderBox').classList.add("d-none");
+        console.log(data);
+        setShowModal(false);
+        setShowModal1(true);
+        setTimeout(() => {
+          setShowModal1(false);
+        }, 1000);
+        chapterDataLogin(id)
+      })
+      .catch((error) => {
+        document.querySelector('.loaderBox').classList.add("d-none");
+        console.error('Error during fetch:', error);
+      });
+  };
 
 
 
@@ -453,7 +529,7 @@ export const ProductDetail = ({ eventKey, children }) => {
                                           <div className="adiobtn d-flex">     <h3 className="text-capitalize">{item?.title}</h3>
 
 
-
+                                          {item.text_to_speech === true ? (
                                             <div className="playbtns d-flex gap-12"  >
                                               <div className="actionBtn">
                                                 <button
@@ -465,9 +541,13 @@ export const ProductDetail = ({ eventKey, children }) => {
                                                 </button>
                                               </div>
                                               <div className="actionBtn">
-                                                <button className="pause" onClick={handlePause} disabled={!isPlaying || isPaused}>
-                                                  <i className="fa-regular fa-circle-pause"></i>
-                                                </button>
+                                                <div className="actionBtn">
+                                                  
+                                                    <button className="pause" onClick={handlePause} disabled={!isPlaying || isPaused}>
+                                                      <i className="fa-regular fa-circle-pause"></i>
+                                                    </button>
+                                                 
+                                                </div>
                                               </div>
                                               <div className="actionBtn">
                                                 <button className="resume" onClick={handleResume} disabled={!isPaused}>
@@ -480,8 +560,9 @@ export const ProductDetail = ({ eventKey, children }) => {
                                                 </button>
                                               </div>
                                             </div>
-
-
+                                         ) : (
+                                          <p >Please Buy Text to Speach</p>
+                                        )}
                                           </div>
 
                                           <p> {item?.description}</p>
@@ -688,11 +769,30 @@ export const ProductDetail = ({ eventKey, children }) => {
             <tr>
               <th>Chapter</th>
               <th>Chapter Amount</th>
+              <th>Pay For Audio</th>
+
             </tr>
             <tr>
               <td>{`Chapter ${modalData?.id}`}</td>
               <td>{`Mana ${modalData?.price}`}</td>
+              <td>
+                {/* {modalData?.text_to_speech === true ? "free" : <><input type="checkbox" /> 50</>} */}
+                {modalData?.text_to_speech === true ? "free" :
+                  <div className="">
+                    <input type="checkbox" onChange={handleCheckboxChange}/>
+                    <span className="prs">50</span>
+                    </div>
+                }
+
+
+ 
+
+
+              </td>
+
+
             </tr>
+
           </table>
           <div className="text-left pt-4">
             <button type="button" className="btn bg-success text-white" onClick={(() => { BuyChapter(modalData?.id) })}>Pay Now</button>
