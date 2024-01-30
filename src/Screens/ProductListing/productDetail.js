@@ -386,7 +386,7 @@ export const ProductDetail = ({ eventKey, children }) => {
 
 
 
-
+console.log("data?.chapters" , data?.chapters)
 
 
   return (
@@ -560,16 +560,15 @@ export const ProductDetail = ({ eventKey, children }) => {
                                                 </button>
                                               </div>
                                             </div>
-                                         ) : (
-                                         
-                                         
+                                         ) : ( 
                                           <div className="actionBtn"> <button
                                           className="play"
                                           onClick={() => handleStart(item?.id)}
                                           disabled
                                         >
                                           <i className="fa-solid fa-play"></i>
-                                        </button></div>
+                                        </button>
+                                        </div>
                                         )}
                                           </div>
 
