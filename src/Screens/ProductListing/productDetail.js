@@ -29,6 +29,9 @@ export const ProductDetail = ({ eventKey, children }) => {
 
   const [data, setData] = useState({});
 
+  const [chaptervoice, setChapterVoice] = useState(1);
+
+  const [chapterutterance, setChapterUtterance] = useState(null);
 
 
   const [showModal, setShowModal] = useState(false);
@@ -240,27 +243,69 @@ export const ProductDetail = ({ eventKey, children }) => {
   const [isPaused, setIsPaused] = useState(false);
   const [currentChapter, setCurrentChapter] = useState(null);
   const [isLooping, setIsLooping] = useState(false);
+ 
 
-  const handleStart = (chapterId) => {
-    if (!isPlaying) {
-      const chapter = data?.chapters.find(item => item.id === chapterId);
-      const utterance = new SpeechSynthesisUtterance();
-      utterance.text = chapter?.description;
-      utterance.onend = () => {
-        if (isLooping) {
-          handleStart(chapterId); // Restart the same chapter if looping is enabled
-        } else {
-          setIsPlaying(false);
-          setIsPaused(false);
-          setCurrentChapter(null);
-        }
-      };
-      window.speechSynthesis.speak(utterance);
-      setIsPlaying(true);
-      setIsPaused(false);
-      setCurrentChapter(chapterId);
-    }
-  };
+
+
+
+const handleStart = (chapterId) => {
+  if (!isPlaying) {
+    const chapter = data?.chapters.find(item => item.id === chapterId);
+    const utterance = new SpeechSynthesisUtterance();
+    utterance.text = chapter?.description;
+    utterance.rate = chaptervoice;  
+    utterance.onend = () => {
+      if (isLooping) {
+        handleStart(chapterId);
+      } else {
+        setIsPlaying(false);
+        setIsPaused(false);
+        setCurrentChapter(null);
+      }
+    };
+
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utterance);
+
+    setIsPlaying(true);
+    setIsPaused(false);
+    setCurrentChapter(chapterId);
+    setChapterUtterance(utterance);  
+  }
+};
+
+const chapterupdateSpeechRate = () => {
+  const speeds = [1, 1.5, 2, 2.5];
+  const currentIndex = speeds.indexOf(chaptervoice);
+  let newIndex = currentIndex + 1;
+
+  if (newIndex >= speeds.length) {
+    newIndex = 0;
+  }
+
+  const newVoice = speeds[newIndex];
+  setChapterVoice(newVoice);
+
+  if (chapterutterance) {
+    window.speechSynthesis.cancel();
+    chapterutterance.rate = newVoice; 
+    window.speechSynthesis.speak(chapterutterance);
+
+    setIsPlaying(true);
+    setIsPaused(false);
+  }
+};
+
+useEffect(() => {
+  if (chapterutterance) {
+    setChapterUtterance(chapterutterance);
+    chapterutterance.rate = chaptervoice;
+  }
+}, [chaptervoice]);
+
+ 
+
+
 
   const handlePause = () => {
     if (!isPaused) {
@@ -277,7 +322,7 @@ export const ProductDetail = ({ eventKey, children }) => {
       utterance.text = chapter?.description;
       utterance.onend = () => {
         if (isLooping) {
-          handleStart(currentChapter); // Restart the same chapter if looping is enabled
+          handleStart(currentChapter);
         } else {
           setIsPlaying(false);
           setIsPaused(false);
@@ -301,8 +346,7 @@ export const ProductDetail = ({ eventKey, children }) => {
     setIsLooping(!isLooping);
   };
 
-  // shatgpt when click on resume then not show start button only show resume button Pauses
-
+ 
 
 
 
@@ -310,21 +354,74 @@ export const ProductDetail = ({ eventKey, children }) => {
   const [isPlay, setIsPlay] = useState(false);
   const [isPause, setIsPause] = useState(false);
 
-  // const utterance = new SpeechSynthesisUtterance(data?.description);
-  // let speechRate = 1.0; // Default speed
-  // const handleStarts = () => {
+  const [voice, setVoice] = useState(1);
 
-  //   const newUtterance = new SpeechSynthesisUtterance(utterance?.text);
-  //   newUtterance.rate = speechRate;
-  //   newUtterance.onend = () => {
-  //     setIsPlay(false);
-  //     setIsPause(false);
-  //   };
+  const [utterance, setUtterance] = useState(null);
 
-  //   window.speechSynthesis.speak(newUtterance);
-  //   setIsPlay(true);
-  //   setIsPause(false);
-  // };
+
+ 
+
+
+ 
+
+
+
+
+  const handleStarts = () => {
+    const newUtterance = new SpeechSynthesisUtterance(data?.description);
+    newUtterance.rate = voice;
+    newUtterance.onend = () => {
+      setIsPlay(false);
+      setIsPause(false);
+    };
+
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(newUtterance);
+    setIsPlay(true);
+    setIsPause(false);
+    setUtterance(newUtterance);
+  };
+
+  const updateSpeechRate = () => {
+    const speeds = [1, 1.5, 2, 2.5];
+    const currentIndex = speeds.indexOf(voice);
+    let newIndex = currentIndex + 1;
+
+    if (newIndex >= speeds.length) {
+      newIndex = 0;
+    }
+
+    const newVoice = speeds[newIndex];
+    setVoice(newVoice);
+
+    if (utterance) {
+      window.speechSynthesis.cancel();
+      const updatedUtterance = new SpeechSynthesisUtterance(data?.description);
+      updatedUtterance.rate = newVoice;
+      updatedUtterance.onend = () => {
+        setIsPlay(false);
+        setIsPause(false);
+      };
+      window.speechSynthesis.speak(updatedUtterance);
+      setIsPlay(true);
+      setIsPause(false);
+      setUtterance(updatedUtterance);
+    }
+  };
+
+  useEffect(() => {
+    if (utterance) {
+      setUtterance(utterance);
+      utterance.rate = voice;
+    }
+  }, [voice]);
+
+
+
+
+
+
+
 
   const handlePauses = () => {
     if (!isPause) {
@@ -385,66 +482,6 @@ export const ProductDetail = ({ eventKey, children }) => {
 
 
 
-
-  console.log("data?.chapters", data?.chapters)
-
-
-
-
-
-  // const [voice , setVoice] = useState(1.0)
-
-  // const utterance = new SpeechSynthesisUtterance(data?.description);
-  // let speechRate = voice; 
-
-  // const handleStarts = () => {
-  //   const newUtterance = new SpeechSynthesisUtterance(utterance?.text);
-
-
-  //   newUtterance.rate = speechRate;
-
-  //   newUtterance.onend = () => {
-  //     setIsPlay(false);
-  //     setIsPause(false);
-  //   };
-
-
-  //     newUtterance.rate = speechRate;
-
-  //   window.speechSynthesis.speak(newUtterance);
-  // };
-
-
-  // const updateSpeechRate = (newRate) => {
-  //   setVoice(speechRate * 1.0)
-  // };
-
-
-
-
-
-  const [voice, setVoice] = useState(1.0);
-
-
-  const utterance = new SpeechSynthesisUtterance(data?.description);
-  let speechRate = voice;
-
-  const handleStarts = () => {
-    const newUtterance = new SpeechSynthesisUtterance(utterance?.text);
-
-    newUtterance.rate = speechRate;
-
-    newUtterance.onend = () => {
-      setIsPlay(false);
-      setIsPause(false);
-    };
-
-    window.speechSynthesis.speak(newUtterance);
-  };
-
-  const updateSpeechRate = (newRate) => {
-    setVoice(newRate);
-  };
 
 
 
@@ -528,21 +565,15 @@ export const ProductDetail = ({ eventKey, children }) => {
                           <div className="actionBtn">
                             <button
                               className="play"
-                              onClick={() => updateSpeechRate(1.5)}
+                              onClick={updateSpeechRate}
                             >
-                              <i className="fa-solid fa-play"></i>
+
+                              {voice}X
                             </button>
                           </div>
 
 
-                          <div className="actionBtn">
-                            <button
-                              className="play"
-                              onClick={() => updateSpeechRate(0)}
-                            >
-                              <i className="fa-solid fa-play"></i>
-                            </button>
-                          </div>
+
                           <div className="actionBtn">
                             <button className="pause" onClick={handlePauses} disabled={!isPlay || isPause}>
                               <i className="fa-regular fa-circle-pause"></i>
@@ -615,6 +646,14 @@ export const ProductDetail = ({ eventKey, children }) => {
                                                     disabled={isPlaying && currentChapter !== item?.id}
                                                   >
                                                     <i className="fa-solid fa-play"></i>
+                                                  </button>
+                                                </div>
+                                                <div className="actionBtn">
+                                                  <button
+                                                    className="play"
+                                                    onClick={chapterupdateSpeechRate}
+                                                  >
+                                                    {chaptervoice}X
                                                   </button>
                                                 </div>
                                                 <div className="actionBtn">
