@@ -310,21 +310,21 @@ export const ProductDetail = ({ eventKey, children }) => {
   const [isPlay, setIsPlay] = useState(false);
   const [isPause, setIsPause] = useState(false);
 
-  const utterance = new SpeechSynthesisUtterance(data?.description);
+  // const utterance = new SpeechSynthesisUtterance(data?.description);
+  // let speechRate = 1.0; // Default speed
+  // const handleStarts = () => {
 
-  const handleStarts = () => {
+  //   const newUtterance = new SpeechSynthesisUtterance(utterance?.text);
+  //   newUtterance.rate = speechRate;
+  //   newUtterance.onend = () => {
+  //     setIsPlay(false);
+  //     setIsPause(false);
+  //   };
 
-    const newUtterance = new SpeechSynthesisUtterance(utterance?.text);
-
-    newUtterance.onend = () => {
-      setIsPlay(false);
-      setIsPause(false);
-    };
-
-    window.speechSynthesis.speak(newUtterance);
-    setIsPlay(true);
-    setIsPause(false);
-  };
+  //   window.speechSynthesis.speak(newUtterance);
+  //   setIsPlay(true);
+  //   setIsPause(false);
+  // };
 
   const handlePauses = () => {
     if (!isPause) {
@@ -386,7 +386,66 @@ export const ProductDetail = ({ eventKey, children }) => {
 
 
 
-console.log("data?.chapters" , data?.chapters)
+  console.log("data?.chapters", data?.chapters)
+
+
+
+
+
+  // const [voice , setVoice] = useState(1.0)
+
+  // const utterance = new SpeechSynthesisUtterance(data?.description);
+  // let speechRate = voice; 
+
+  // const handleStarts = () => {
+  //   const newUtterance = new SpeechSynthesisUtterance(utterance?.text);
+
+
+  //   newUtterance.rate = speechRate;
+
+  //   newUtterance.onend = () => {
+  //     setIsPlay(false);
+  //     setIsPause(false);
+  //   };
+
+
+  //     newUtterance.rate = speechRate;
+
+  //   window.speechSynthesis.speak(newUtterance);
+  // };
+
+
+  // const updateSpeechRate = (newRate) => {
+  //   setVoice(speechRate * 1.0)
+  // };
+
+
+
+
+
+  const [voice, setVoice] = useState(1.0);
+
+
+  const utterance = new SpeechSynthesisUtterance(data?.description);
+  let speechRate = voice;
+
+  const handleStarts = () => {
+    const newUtterance = new SpeechSynthesisUtterance(utterance?.text);
+
+    newUtterance.rate = speechRate;
+
+    newUtterance.onend = () => {
+      setIsPlay(false);
+      setIsPause(false);
+    };
+
+    window.speechSynthesis.speak(newUtterance);
+  };
+
+  const updateSpeechRate = (newRate) => {
+    setVoice(newRate);
+  };
+
 
 
   return (
@@ -467,6 +526,24 @@ console.log("data?.chapters" , data?.chapters)
                             </button>
                           </div>
                           <div className="actionBtn">
+                            <button
+                              className="play"
+                              onClick={() => updateSpeechRate(1.5)}
+                            >
+                              <i className="fa-solid fa-play"></i>
+                            </button>
+                          </div>
+
+
+                          <div className="actionBtn">
+                            <button
+                              className="play"
+                              onClick={() => updateSpeechRate(0)}
+                            >
+                              <i className="fa-solid fa-play"></i>
+                            </button>
+                          </div>
+                          <div className="actionBtn">
                             <button className="pause" onClick={handlePauses} disabled={!isPlay || isPause}>
                               <i className="fa-regular fa-circle-pause"></i>
                             </button>
@@ -529,47 +606,47 @@ console.log("data?.chapters" , data?.chapters)
                                           <div className="adiobtn d-flex">     <h3 className="text-capitalize">{item?.title}</h3>
 
 
-                                          {item.text_to_speech === true ? (
-                                            <div className="playbtns d-flex gap-12"  >
-                                              <div className="actionBtn">
-                                                <button
-                                                  className="play"
-                                                  onClick={() => handleStart(item?.id)}
-                                                  disabled={isPlaying && currentChapter !== item?.id}
-                                                >
-                                                  <i className="fa-solid fa-play"></i>
-                                                </button>
-                                              </div>
-                                              <div className="actionBtn">
+                                            {item.text_to_speech === true ? (
+                                              <div className="playbtns d-flex gap-12"  >
                                                 <div className="actionBtn">
-                                                  
+                                                  <button
+                                                    className="play"
+                                                    onClick={() => handleStart(item?.id)}
+                                                    disabled={isPlaying && currentChapter !== item?.id}
+                                                  >
+                                                    <i className="fa-solid fa-play"></i>
+                                                  </button>
+                                                </div>
+                                                <div className="actionBtn">
+                                                  <div className="actionBtn">
+
                                                     <button className="pause" onClick={handlePause} disabled={!isPlaying || isPaused}>
                                                       <i className="fa-regular fa-circle-pause"></i>
                                                     </button>
-                                                 
+
+                                                  </div>
+                                                </div>
+                                                <div className="actionBtn">
+                                                  <button className="resume" onClick={handleResume} disabled={!isPaused}>
+                                                    <i className="fa-solid fa-play"></i>
+                                                  </button>
+                                                </div>
+                                                <div className="actionBtn">
+                                                  <button className="stop" onClick={handleStop} disabled={!isPlaying && !isPaused}>
+                                                    <i className="fa-solid fa-stop"></i>
+                                                  </button>
                                                 </div>
                                               </div>
-                                              <div className="actionBtn">
-                                                <button className="resume" onClick={handleResume} disabled={!isPaused}>
-                                                  <i className="fa-solid fa-play"></i>
-                                                </button>
+                                            ) : (
+                                              <div className="actionBtn"> <button
+                                                className="play"
+                                                onClick={() => handleStart(item?.id)}
+                                                disabled
+                                              >
+                                                <i className="fa-solid fa-play"></i>
+                                              </button>
                                               </div>
-                                              <div className="actionBtn">
-                                                <button className="stop" onClick={handleStop} disabled={!isPlaying && !isPaused}>
-                                                  <i className="fa-solid fa-stop"></i>
-                                                </button>
-                                              </div>
-                                            </div>
-                                         ) : ( 
-                                          <div className="actionBtn"> <button
-                                          className="play"
-                                          onClick={() => handleStart(item?.id)}
-                                          disabled
-                                        >
-                                          <i className="fa-solid fa-play"></i>
-                                        </button>
-                                        </div>
-                                        )}
+                                            )}
                                           </div>
 
                                           <p> {item?.description}</p>
@@ -786,13 +863,13 @@ console.log("data?.chapters" , data?.chapters)
                 {/* {modalData?.text_to_speech === true ? "free" : <><input type="checkbox" /> 50</>} */}
                 {modalData?.text_to_speech === true ? "free" :
                   <div className="">
-                    <input type="checkbox" onChange={handleCheckboxChange}/>
+                    <input type="checkbox" onChange={handleCheckboxChange} />
                     <span className="prs">50</span>
-                    </div>
+                  </div>
                 }
 
 
- 
+
 
 
               </td>
