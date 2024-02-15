@@ -243,67 +243,67 @@ export const ProductDetail = ({ eventKey, children }) => {
   const [isPaused, setIsPaused] = useState(false);
   const [currentChapter, setCurrentChapter] = useState(null);
   const [isLooping, setIsLooping] = useState(false);
- 
 
 
 
 
-const handleStart = (chapterId) => {
-  if (!isPlaying) {
-    const chapter = data?.chapters.find(item => item.id === chapterId);
-    const utterance = new SpeechSynthesisUtterance();
-    utterance.text = chapter?.description;
-    utterance.rate = chaptervoice;  
-    utterance.onend = () => {
-      if (isLooping) {
-        handleStart(chapterId);
-      } else {
-        setIsPlaying(false);
-        setIsPaused(false);
-        setCurrentChapter(null);
-      }
-    };
 
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(utterance);
+  const handleStart = (chapterId) => {
+    if (!isPlaying) {
+      const chapter = data?.chapters.find(item => item.id === chapterId);
+      const utterance = new SpeechSynthesisUtterance();
+      utterance.text = chapter?.description;
+      utterance.rate = chaptervoice;
+      utterance.onend = () => {
+        if (isLooping) {
+          handleStart(chapterId);
+        } else {
+          setIsPlaying(false);
+          setIsPaused(false);
+          setCurrentChapter(null);
+        }
+      };
 
-    setIsPlaying(true);
-    setIsPaused(false);
-    setCurrentChapter(chapterId);
-    setChapterUtterance(utterance);  
-  }
-};
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(utterance);
 
-const chapterupdateSpeechRate = () => {
-  const speeds = [1, 1.5, 2, 2.5];
-  const currentIndex = speeds.indexOf(chaptervoice);
-  let newIndex = currentIndex + 1;
+      setIsPlaying(true);
+      setIsPaused(false);
+      setCurrentChapter(chapterId);
+      setChapterUtterance(utterance);
+    }
+  };
 
-  if (newIndex >= speeds.length) {
-    newIndex = 0;
-  }
+  const chapterupdateSpeechRate = () => {
+    const speeds = [1, 1.5, 2, 2.5];
+    const currentIndex = speeds.indexOf(chaptervoice);
+    let newIndex = currentIndex + 1;
 
-  const newVoice = speeds[newIndex];
-  setChapterVoice(newVoice);
+    if (newIndex >= speeds.length) {
+      newIndex = 0;
+    }
 
-  if (chapterutterance) {
-    window.speechSynthesis.cancel();
-    chapterutterance.rate = newVoice; 
-    window.speechSynthesis.speak(chapterutterance);
+    const newVoice = speeds[newIndex];
+    setChapterVoice(newVoice);
 
-    setIsPlaying(true);
-    setIsPaused(false);
-  }
-};
+    if (chapterutterance) {
+      window.speechSynthesis.cancel();
+      chapterutterance.rate = newVoice;
+      window.speechSynthesis.speak(chapterutterance);
 
-useEffect(() => {
-  if (chapterutterance) {
-    setChapterUtterance(chapterutterance);
-    chapterutterance.rate = chaptervoice;
-  }
-}, [chaptervoice]);
+      setIsPlaying(true);
+      setIsPaused(false);
+    }
+  };
 
- 
+  useEffect(() => {
+    if (chapterutterance) {
+      setChapterUtterance(chapterutterance);
+      chapterutterance.rate = chaptervoice;
+    }
+  }, [chaptervoice]);
+
+
 
 
 
@@ -346,7 +346,7 @@ useEffect(() => {
     setIsLooping(!isLooping);
   };
 
- 
+
 
 
 
@@ -359,10 +359,10 @@ useEffect(() => {
   const [utterance, setUtterance] = useState(null);
 
 
- 
 
 
- 
+
+
 
 
 
@@ -415,13 +415,6 @@ useEffect(() => {
       utterance.rate = voice;
     }
   }, [voice]);
-
-
-
-
-
-
-
 
   const handlePauses = () => {
     if (!isPause) {
@@ -501,9 +494,11 @@ useEffect(() => {
                     </div>
 
                     <div className="justify-content-center mb-4 m-auto text-center ">
-                      <span className="mb-2  d-flex  justify-content-center  m-auto text-center"><p className=" tabtags w-100 mx-auto p-2 text-center">  BookCategory : {data?.category?.name} </p></span>
+                      <span className="mb-2  d-flex  justify-content-center  m-auto text-center">
+                        <p className=" tabtags w-100 mx-auto p-2 text-center">  BookCategory : {data?.category?.name} </p></span>
                       <span className="d-flex mb-2 justify-content-center "><p className=" tabtags w-100 mx-auto p-2 text-center">  Type : {data?.types?.name} </p></span>
-                      <span className="d-flex   justify-content-center "><p className=" tabtags w-100 mx-auto p-2 text-center">  Genre  : {data?.genre?.name} </p></span>
+                      <span className="d-flex   justify-content-center ">
+                        <p className=" tabtags w-100 mx-auto p-2 text-center">  Genre  : {data?.genre?.name} </p></span>
                     </div>
 
 
@@ -538,13 +533,6 @@ useEffect(() => {
 
 
                   </div>
-
-
-
-
-
-
-
 
 
                   <div className="col-md-8 mb-4">
@@ -600,23 +588,6 @@ useEffect(() => {
                       <p className="mb-3"><span className="font-weight-bold">Category:</span> <span>{data?.category?.name}</span></p>
                       <p className="text-center"><span className="text-success">Recently 3 new chaper added.</span></p>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                     {CapterShow ? (
                       <div className="row">
