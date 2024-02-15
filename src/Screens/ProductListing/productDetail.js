@@ -449,7 +449,7 @@ useEffect(() => {
 
   const handleCheckboxClick = (id) => {
     const formData = new FormData();
-    formData.append("chapter_id", chapterID);
+    formData.append("chapter_id", id);
 
     fetch(`https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/book_purchase/${id}`, {
       method: 'POST',
@@ -551,7 +551,7 @@ useEffect(() => {
                     <div className="productInfo mb-4">
                       <div className="adiobtn d-flex">
                         <h3 className="text-capitalize">{data?.name}</h3>
-
+                        <h5 className="text-warning mb-0">Synopsis </h5>
 
                         <div className="playbtns d-flex gap-12"  >
                           <div className="actionBtn">
@@ -597,7 +597,8 @@ useEffect(() => {
                         <h4><span className="font-weight-bold">Price:</span>{` $ ${data?.price}`}</h4>
                       )}
                       <p>{data?.description}</p>
-                      <p><span className="font-weight-bold">Category:</span> <span>{data?.category?.name}</span></p>
+                      <p className="mb-3"><span className="font-weight-bold">Category:</span> <span>{data?.category?.name}</span></p>
+                      <p className="text-center"><span className="text-success">Recently 3 new chaper added.</span></p>
                     </div>
 
 
@@ -630,7 +631,7 @@ useEffect(() => {
                               <Accordion defaultActiveKey="0">
                                 {data?.chapters && data?.chapters.map((item, index) => (
                                   <Accordion.Item eventKey={index} key={index}>
-                                    <Accordion.Header className="  Button b" style={{ backgroundColor: '#f7944d', color: 'black' }}>{`Chapter ${index + 1}`}</Accordion.Header>
+                                    <Accordion.Header className="  Button b" style={{ backgroundColor: '#f7944d', color: 'black' }}>{`Chapter ${index + 1}`} {item?.latest && (<span className="newChapter">New</span>)}</Accordion.Header>
                                     <Accordion.Body>
                                       {item?.isPay ? (
                                         <>
@@ -729,7 +730,7 @@ useEffect(() => {
                                             molestiae numquam quas, voluptates omnis nulla ea odio quia similique
                                             corrupti magnam.
                                           </p>
-                                          <ul class="list-unstyled d-flex    ">
+                                          <ul class="list-unstyled d-flex">
                                             <li>
                                               <i class="fas fa-star fa-sm text-info"></i>
                                             </li>

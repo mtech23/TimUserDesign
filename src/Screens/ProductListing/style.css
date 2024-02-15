@@ -14,6 +14,17 @@
     height: 530px;
 }
 
+.newChapter {
+    background-color: orange;
+    color: #fff;
+    padding: 1px 6px;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 10px;
+    position: relative;
+    left: 7px;
+}
+
 .font-weight-bold {
     font-weight: bold;
 }
