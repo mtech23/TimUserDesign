@@ -19,6 +19,7 @@ import AccordionContext from 'react-bootstrap/AccordionContext';
 import { BookListingCover } from "../../Assets/images";
 import { useContext } from 'react';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
+import ReactStars from "react-rating-stars-component";
 
 export const ProductDetail = ({ eventKey, children }) => {
   const { activeEventKey } = useContext(AccordionContext);
@@ -29,20 +30,37 @@ export const ProductDetail = ({ eventKey, children }) => {
 
   const [data, setData] = useState({});
 
+  const [reviewData, setReviewData] = useState({
+    book_id: id
+  });
+
   const [chaptervoice, setChapterVoice] = useState(1);
-
   const [chapterutterance, setChapterUtterance] = useState(null);
-
-
   const [showModal, setShowModal] = useState(false);
   const [showModal1, setShowModal1] = useState(false);
   const [formData, setFormData] = useState({});
   const [modalData, setModalData] = useState({});
   const [CapterShow, setChapterShow] = useState(false);
+  const [reviewModal, setReviewModal] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const [currentChapter, setCurrentChapter] = useState(null);
+  const [isLooping, setIsLooping] = useState(false);
+  const [isPlay, setIsPlay] = useState(false);
+  const [isPause, setIsPause] = useState(false);
+  const [voice, setVoice] = useState(1);
+  const [utterance, setUtterance] = useState(null);
 
   const LoginToken = localStorage.getItem('loginUser');
 
 
+
+  const ratingChanged = (newRating) => {
+    console.log(newRating);
+    setReviewData({
+      ...reviewData, rating: newRating
+    })
+  };
 
 
   const chapterData = (paramId) => {
@@ -77,6 +95,7 @@ export const ProductDetail = ({ eventKey, children }) => {
 
 
 
+
   const chapterDataLogin = (LoginparamId) => {
     document.title = 'Tim User | Book Detail';
     document.querySelector('.loaderBox').classList.remove("d-none");
@@ -107,40 +126,44 @@ export const ProductDetail = ({ eventKey, children }) => {
   }
   const [textToSpeech, setTextToSpeech] = useState(false);
 
-  // const BuyChapter = (chapterID) => {
-  //   document.querySelector('.loaderBox').classList.remove("d-none");
+  const reviewSubmit = () => {
+    document.querySelector('.loaderBox').classList.remove("d-none");
 
-  //   const formData = new FormData();
-  //   formData.append("chapter_id", chapterID);
+    const formDataMethod = new FormData();
 
-  //   fetch(`https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/book_purchase/${id}`, {
-  //     method: 'POST',
-  //     headers: {
-  //       'Authorization': `Bearer ${LoginToken}`
-  //     },
-  //     body: formData
-  //   })
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw new Error(`HTTP error! Status: ${response.status}`);
-  //       }
-  //       return response.json();
-  //     })
-  //     .then((data) => {
-  //       document.querySelector('.loaderBox').classList.add("d-none");
-  //       console.log(data);
-  //       setShowModal(false);
-  //       setShowModal1(true);
-  //       setTimeout(() => {
-  //         setShowModal1(false);
-  //       }, 1000);
-  //       chapterDataLogin(id)
-  //     })
-  //     .catch((error) => {
-  //       document.querySelector('.loaderBox').classList.add("d-none");
-  //       console.error('Error during fetch:', error);
-  //     });
-  // };
+    for (const key in reviewData) {
+      formDataMethod.append(key, reviewData[key]);
+    }
+
+    fetch(`https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/review_add_update`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${LoginToken}`
+      },
+      body: formDataMethod
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        document.querySelector('.loaderBox').classList.add("d-none");
+        console.log(data);
+        setShowModal(false);
+        setReviewModal(true);
+        setTimeout(() => {
+          setReviewModal(false);
+        }, 1000);
+
+        chapterDataLogin(id)
+      })
+      .catch((error) => {
+        document.querySelector('.loaderBox').classList.add("d-none");
+        console.error('Error during fetch:', error);
+      });
+  };
 
 
 
@@ -233,16 +256,14 @@ export const ProductDetail = ({ eventKey, children }) => {
 
     GetOrderHistory()
   }, []);
+
   const tags = [
     ['Tag ', 'Tag ', 'Tag '],
     ['Tag ', 'Tag ', 'Tag '],
     ['Tag ', 'Tag ', 'Tag '],
   ];
 
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
-  const [currentChapter, setCurrentChapter] = useState(null);
-  const [isLooping, setIsLooping] = useState(false);
+
 
 
 
@@ -351,12 +372,7 @@ export const ProductDetail = ({ eventKey, children }) => {
 
 
 
-  const [isPlay, setIsPlay] = useState(false);
-  const [isPause, setIsPause] = useState(false);
 
-  const [voice, setVoice] = useState(1);
-
-  const [utterance, setUtterance] = useState(null);
 
 
 
@@ -586,7 +602,10 @@ export const ProductDetail = ({ eventKey, children }) => {
                       )}
                       <p>{data?.description}</p>
                       <p className="mb-3"><span className="font-weight-bold">Category:</span> <span>{data?.category?.name}</span></p>
-                      <p className="text-center"><span className="text-success">Recently 3 new chaper added.</span></p>
+                      {data?.chapters?.length > 2 ? (
+                        <p className="text-center"><span className="text-success">Recently {data?.latest_chap.length} new chaper added.</span></p>
+                      ) : ''}
+
                     </div>
 
                     {CapterShow ? (
@@ -688,39 +707,35 @@ export const ProductDetail = ({ eventKey, children }) => {
                               <div class="row d-flex justify-content-center">
                                 <div class="col-md-12">
                                   <div class="card">
-                                    <div class="card-body ">
-                                      <div class="row">
-                                        <div class="col-lg-2 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
-                                          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.webp"
-                                            class="rounded-circle img-fluid shadow-1" alt="woman avatar" width="200" height="200" />
+
+                                    {
+                                      data?.reviews && data?.reviews.map((item, index) => (
+                                        <div class="card-body ">
+                                          <div class="row">
+                                            <div class="col-lg-2 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                                              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.webp"
+                                                class="rounded-circle img-fluid shadow-1" alt="woman avatar" width="200" height="200" />
+                                            </div>
+                                            <div class="col-lg-8">
+                                              <p class="fw-bold lead mb-1 text-capitalize"><strong>{item?.user?.name}</strong></p>
+                                              <p class="text-muted  mb-2">
+                                                {item?.review}
+                                              </p>
+                                              <ReactStars
+                                                // count={5}
+                                                // filledIcon={3}
+                                                value={item?.rating}
+                                                edit={false}
+                                                size={18}
+                                                activeColor="#ffd700"
+                                              />
+
+                                            </div>
+                                          </div>
                                         </div>
-                                        <div class="col-lg-8">
-                                          <p class="fw-bold lead mb-1"><strong>Anna Smith</strong></p>
-                                          <p class="text-muted  mb-2">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
-                                            molestiae numquam quas, voluptates omnis nulla ea odio quia similique
-                                            corrupti magnam.
-                                          </p>
-                                          <ul class="list-unstyled d-flex">
-                                            <li>
-                                              <i class="fas fa-star fa-sm text-info"></i>
-                                            </li>
-                                            <li>
-                                              <i class="fas fa-star fa-sm text-info"></i>
-                                            </li>
-                                            <li>
-                                              <i class="fas fa-star fa-sm text-info"></i>
-                                            </li>
-                                            <li>
-                                              <i class="fas fa-star fa-sm text-info"></i>
-                                            </li>
-                                            <li>
-                                              <i class="fas fa-star-half-alt fa-sm text-info"></i>
-                                            </li>
-                                          </ul>
-                                        </div>
-                                      </div>
-                                    </div>
+                                      ))
+                                    }
+
                                   </div>
                                 </div>
                               </div>
@@ -732,49 +747,8 @@ export const ProductDetail = ({ eventKey, children }) => {
                                 <div class="col-md-12">
                                   <div class="card">
                                     <div class="card-body ">
-                                      <div class="row d-flex  ">
-                                        <div class="col-md-10 col-lg-8 col- xl-6">
-                                          <div class=" ">
-                                            <div class="card-body p-4">
-                                              <div class="d-flex flex-start w-100">
-                                                <img class="rounded-circle shadow-1-strong me-3"
-                                                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp" alt="avatar" width="65"
-                                                  height="65" />
-                                                <div class="w-100">
-                                                  <p class="fw-bold lead mb-1"><strong>John Smith</strong></p>
-                                                  <ul class="list-unstyled d-flex    ">
-                                                    <li>
-                                                      <i class="fas fa-star fa-sm text-info"></i>
-                                                    </li>
-                                                    <li>
-                                                      <i class="fas fa-star fa-sm text-info"></i>
-                                                    </li>
-                                                    <li>
-                                                      <i class="fas fa-star fa-sm text-info"></i>
-                                                    </li>
-                                                    <li>
-                                                      <i class="fas fa-star fa-sm text-info"></i>
-                                                    </li>
-                                                    <li>
-                                                      <i class="fas fa-star-half-alt fa-sm text-info"></i>
-                                                    </li>
-                                                  </ul>
-                                                  <div class="form-outline">
-                                                    <p class="text-muted  mb-2">
-                                                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
-                                                      molestiae numquam quas, voluptates omnis nulla ea odio quia similique
-                                                      corrupti magnam.
-                                                    </p>
-                                                  </div>
-
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="row d-flex  ">
-                                        <div class="col-md-10 col-lg-8 col- xl-6">
+                                      <div class="row">
+                                        <div class="col-md-12">
                                           <div class=" ">
                                             <div class="card-body p-4">
                                               <div class="d-flex flex-start w-100">
@@ -783,29 +757,25 @@ export const ProductDetail = ({ eventKey, children }) => {
                                                   height="65" />
                                                 <div class="w-100">
                                                   <h5>Add a comment</h5>
-                                                  <ul class="rating mb-3 list-unstyled d-flex " data-mdb-toggle="rating">
-                                                    <li>
-                                                      <i class="far fa-star fa-sm text-info" title="Bad"></i>
-                                                    </li>
-                                                    <li>
-                                                      <i class="far fa-star fa-sm text-info" title="Poor"></i>
-                                                    </li>
-                                                    <li>
-                                                      <i class="far fa-star fa-sm text-info"></i>
-                                                    </li>
-                                                    <li>
-                                                      <i class="far fa-star fa-sm text-info" title="Good"></i>
-                                                    </li>
-                                                    <li>
-                                                      <i class="far fa-star fa-sm text-info" title="Excellent"></i>
-                                                    </li>
-                                                  </ul>
+
+                                                  <ReactStars
+                                                    count={5}
+                                                    onChange={ratingChanged}
+                                                    size={24}
+                                                    activeColor="#ffd700"
+                                                  />
+
                                                   <div class="form-outline">
-                                                    <textarea class="form-control" id="textAreaExample" rows="7"></textarea>
+                                                    <textarea class="form-control" id="textAreaExample" rows="7" onChange={(e) => {
+                                                      setReviewData({
+                                                        ...reviewData, review: e.target.value
+                                                      })
+                                                      console.log(reviewData)
+                                                    }}></textarea>
                                                     <label class="form-label" for="textAreaExample">What is your view?</label>
                                                   </div>
                                                   <div class="d-flex justify-content-between mt-3">
-                                                    <button type="button" class="btn btn-danger">
+                                                    <button type="button" class="btn btn-danger" onClick={reviewSubmit}>
                                                       Send <i class="fas fa-long-arrow-alt-right ms-1"></i>
                                                     </button>
                                                   </div>
@@ -895,6 +865,7 @@ export const ProductDetail = ({ eventKey, children }) => {
         </CustomModal>
 
         <CustomModal show={showModal1} close={() => { setShowModal1(false) }} success heading="You Chapter Payment has been Done." />
+        <CustomModal show={reviewModal} close={() => { reviewModal(false) }} success heading="Review has been Posted." />
       </UserLayout>
     </>
   );

@@ -164,7 +164,7 @@ export const Home = () => {
                                 <div className='row'>
                                     <div className='col-md-6'>
                                         <div className="img_div">
-                                            <img src={base_url + selectedGenre.image} alt={selectedGenre.title} />
+                                            <img src={base_url + selectedGenre.image} alt={selectedGenre.title} className='mw-100' />
                                         </div>
                                     </div>
                                     <div className='col-md-6'>

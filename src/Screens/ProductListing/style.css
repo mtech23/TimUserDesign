@@ -14,6 +14,11 @@
     height: 530px;
 }
 
+.card-body ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
 .newChapter {
     background-color: orange;
     color: #fff;
@@ -79,6 +84,19 @@
     text-decoration: none;
     transition: .3s linear;
     width: 100%;
+}
+
+.listingBooks div#accordion .card, .card-header {
+    border: none !important;
+}
+
+.listingBooks .card-body li a {
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.listingBooks div#accordion > div {
+    margin-bottom: 15px;
 }
 
 .cardHeader {

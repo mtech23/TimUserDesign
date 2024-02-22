@@ -1,17 +1,20 @@
 import { React, useState, useEffect } from 'react'
 import { UserLayout } from '../../Components/Layout/UserLayout'
 import { BookListingCover } from '../../Assets/images'
-import { Dropdown } from 'react-bootstrap';
+import { Accordion, Dropdown } from 'react-bootstrap';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+import CustomInput from '../../Components/CustomInput'
 import { Link } from 'react-router-dom';
+import ReactStars from "react-rating-stars-component";
 export const ProductListing = () => {
     const [books, setBooks] = useState([]);
     const [bookFilter, setBookFilter] = useState()
     const [activeItem, setActiveItem] = useState(null);
     const [categories, setCategores] = useState();
+    const [genre, setGenre] = useState();
     const base_url = 'https://custom.mystagingserver.site/Tim-WDLLC/public/'
     const LoginToken = localStorage.getItem('loginUser');
 
@@ -73,8 +76,34 @@ export const ProductListing = () => {
 
 
 
- 
-    const categoriesListing = () => {
+
+    const genreListing = () => {
+        document.querySelector('.loaderBox').classList.remove("d-none");
+        fetch('https://custom.mystagingserver.site/Tim-WDLLC/public/api/genre_listing',
+            {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+            }
+        )
+
+            .then(response =>
+                response.json()
+            )
+            .then((data) => {
+                document.querySelector('.loaderBox').classList.add("d-none");
+                console.log(data.data)
+                setGenre(data.data);
+            })
+            .catch((error) => {
+                document.querySelector('.loaderBox').classList.add("d-none");
+                console.log(error)
+            })
+    }
+
+    const categoryListing = () => {
         document.querySelector('.loaderBox').classList.remove("d-none");
         fetch('https://custom.mystagingserver.site/Tim-WDLLC/public/api/category_listing',
             {
@@ -106,31 +135,48 @@ export const ProductListing = () => {
         } else {
             BookListing()
         }
-        categoriesListing()
+        genreListing()
+        categoryListing()
     }, [])
+
+    
     const toggleAccordion = (item) => {
         setActiveItem(activeItem === item ? null : item);
     };
 
-    const filterCategory = (event) => {
+    const filterGenre = (event) => {
         const filterCategory = event.target.value;
-        const filteredBooks = bookFilter?.filter(book => book.category_id == filterCategory);
+        const filteredBooks = bookFilter?.filter(book => book?.genre_id == filterCategory);
         setBooks(filteredBooks)
     }
+
+    const categoryFilter = (catID) => {
+        const filteredBooks = bookFilter?.filter(book => book?.category_id == catID);
+        setBooks(filteredBooks)
+    }
+
+    const priceFilter = (e) => {
+        const priceText = e.target.value;
+        if (priceText > 0) {
+            const filteredBooks = bookFilter?.filter(book => book?.price == priceText);
+            setBooks(filteredBooks)
+        } else {
+            BookListing()
+        }
+    }
+
+    const ratingFilter = (rating) => {
+        const filteredBooks = bookFilter?.filter(book => book?.rating == rating);
+        setBooks(filteredBooks)
+    }
+
+    console.log('dad', categories)
 
 
     const accordionData = [
         {
             title: 'categories',
-            items: ['One', 'Two', 'Three'],
-        },
-        {
-            title: 'Author',
-            items: ['One', 'Two', 'Three'],
-        },
-        {
-            title: 'Format',
-            items: ['One', 'Two', 'Three'],
+            items: categories,
         },
         {
             title: 'Filter By Price',
@@ -148,7 +194,7 @@ export const ProductListing = () => {
 
     return (
         <UserLayout subHeader={BookListingCover}>
-            <section className="book_listing_main_wrap">
+            <section className="book_listing_main_wrap listingBooks">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-3">
@@ -159,35 +205,65 @@ export const ProductListing = () => {
                                             <h4>Filter:</h4>
                                         </div>
                                     </div>
-                                    {accordionData.map((item, index) => (
-                                        <div className="card" key={index}>
-                                            <div className="card-header" id={`heading${index}`}>
-                                                <h5 className="mb-0">
-                                                    <button
-                                                        className={`btn btn-link ${activeItem === `collapse${index}` ? '' : 'collapsed'}`}
-                                                        onClick={() => toggleAccordion(`collapse${index}`)}
-                                                        data-toggle="collapse"
-                                                        data-target={`#collapse${index}`}
-                                                        aria-expanded={activeItem === `collapse${index}`}
-                                                        aria-controls={`collapse${index}`}
-                                                    >
-                                                        {item.title} <i className="fa-solid fa-caret-down"></i>
-                                                    </button>
-                                                </h5>
-                                            </div>
-                                            <div id={`collapse${index}`} className={`collapse ${activeItem === `collapse${index}` ? 'show' : ''}`}>
+                                    <Accordion defaultActiveKey="0">
+                                        <Accordion.Item eventKey="0">
+                                            <Accordion.Header>Filter By Categories</Accordion.Header>
+                                            <Accordion.Body>
                                                 <div className="card-body">
                                                     <ul>
-                                                        {item.items.map((subItem, subIndex) => (
+                                                        {categories?.map((subItem, subIndex) => (
                                                             <li key={subIndex}>
-                                                                <a href="javascript:;">{subItem}</a>
+                                                                <a href="javascript:;" value={subItem?.id} onClick={(() => { categoryFilter(subItem?.id) })}>{subItem?.name}</a>
                                                             </li>
                                                         ))}
                                                     </ul>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    ))}
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    </Accordion>
+
+                                    <Accordion defaultActiveKey="0">
+                                        <Accordion.Item eventKey="0">
+                                            <Accordion.Header>Filter By Price</Accordion.Header>
+                                            <Accordion.Body>
+                                                <div className="card-body">
+                                                    <ul>
+                                                        <li>
+                                                            <CustomInput
+                                                                label="Enter Price"
+                                                                type="number"
+                                                                placeholder="Enter Price"
+                                                                name="name"
+                                                                labelClass='mainLabel'
+                                                                inputClass='mainInput'
+                                                                onChange={priceFilter}
+                                                            />
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    </Accordion>
+                                    <Accordion defaultActiveKey="0">
+                                        <Accordion.Item eventKey="0">
+                                            <Accordion.Header>Filter By Rating</Accordion.Header>
+                                            <Accordion.Body>
+                                                <div className="card-body">
+                                                    <ul>
+                                                        <li>
+                                                            <ReactStars
+                                                                count={5}
+                                                                onChange={ratingFilter}
+                                                                size={24}
+                                                                activeColor="#ffd700"
+                                                            />
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    </Accordion>
+
                                 </div>
                             </div>
 
@@ -237,9 +313,9 @@ export const ProductListing = () => {
                                     <div className="col-md-8">
                                         <ul className="nav nav-pills mb-3 justify-content-end" id="pills-tab" role="tablist">
                                             {
-                                                categories && categories.map((item, index) => (
+                                                genre && genre.map((item, index) => (
                                                     <li className="nav-item" key={index}>
-                                                        <button className="nav-link text-black p-2" value={item?.id} onClick={filterCategory}>{item?.name}</button>
+                                                        <button className="nav-link text-black p-2" value={item?.id} onClick={filterGenre}>{item?.name}</button>
                                                     </li>
                                                 ))
                                             }

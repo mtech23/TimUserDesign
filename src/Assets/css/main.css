@@ -528,9 +528,10 @@ a:focus {
 
 .popular_tabing .tab_card .book_logo img {
   width: 135px;
-  height: 250px;
-  max-width: 300px;
+  height: 210px;
+  max-width: 100%;
   object-fit: cover;
+  border: 1px solid #9b9b9b38;
 }
 
 .popular_tabing .tabing_top {
