@@ -13,24 +13,36 @@ import { Novel } from "../Screens/Novel";
 import { ProductDetail } from "../Screens/ProductListing/productDetail";
 import { MyAccount } from "../Screens/MyAccount";
 import { ProtectedRoutes } from "./ProtectedRoutes";
- 
+import { Beta } from "../Screens/Home/Beta";
+import { AuthorModule } from "../Screens/AuthorModule";
+import { BookListing } from "../Screens/BookListing";
+
 export default function UserRouter() {
   return (
     <BrowserRouter basename="/TimUser">
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        
+        <Route path="/beta" element={<Beta />}></Route>
+        <Route path="/author-listing" element={<AuthorModule />}></Route>
+        <Route path="/book-listing" element={<BookListing />}></Route>
+
         <Route path="/forget-password" element={<ForgetPassword />} />
         <Route path="/forget-password2" element={<ForgetPassword2 />} />
         <Route path="/forget-password3" element={<ForgetPassword3 />} />
 
         <Route path="/book-listing" element={<ProductListing />}></Route>
         <Route path="/novel-listing" element={<Novel />}></Route>
-        <Route path="/book-listing/product-detail/:id" element={<ProductDetail />}></Route>
+        <Route
+          path="/book-listing/product-detail/:id"
+          element={<ProductDetail />}
+        ></Route>
         <Route path="*" element={<Error />} />
         <Route path="/login" element={<AdminLogin />}></Route>
         <Route path="/sign_up" element={<AdminSignup />}></Route>
-        <Route path="/account" element={<ProtectedRoutes Components={MyAccount} />}></Route>
+        <Route
+          path="/account"
+          element={<ProtectedRoutes Components={MyAccount} />}
+        ></Route>
       </Routes>
     </BrowserRouter>
   );
