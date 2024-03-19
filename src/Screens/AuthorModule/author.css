@@ -19,6 +19,12 @@
   padding: 60px 0;
   text-align: center;
 }
+
+.relativePart {
+  position: relative;
+  z-index: 999;
+}
+
 .authors__carousel {
   padding: 60px 0;
   text-align: center;

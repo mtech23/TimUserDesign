@@ -443,7 +443,7 @@ export const AuthorModule = () => {
           <div className="author__list-bgCartoon">
             <img src={AuthorListBgAnime} />
           </div>
-          <div className="container">
+          <div className="container relativePart">
             <div className="row aligns-items-center author__list-row">
               <div className="col-lg-3">
                 <div className="author__img">
