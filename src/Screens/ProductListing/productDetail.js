@@ -475,13 +475,13 @@ export const ProductDetail = ({ eventKey, children }) => {
         </section>
         <section className="cover">
           <div className="container">
-            <div className="dashCard my-4">
+            <div className="dashCard">
               <div className="row mb-3">
                 <div className="col-12">
                   <div className="row">
                     <div className="col-md-3 mb-4">
                       <div className="productImage mb-4">
-                        <img src={base_url + data?.image} />
+                        <img src={base_url + data?.image} className="img-fluid"/>
                       </div>
 
                       <div className="justify-content-center mb-4 m-auto text-center ">
@@ -683,9 +683,9 @@ export const ProductDetail = ({ eventKey, children }) => {
                                         key={index}
                                       >
                                         <Accordion.Header
-                                          className="   acpara accordation" 
+                                          className="acpara accordation" 
                                           style={{
-                                            backgroundColor: "#f7944d",
+                                            // backgroundColor: "#f7944d",
                                             color: "black",
                                           }}
                                         >

@@ -3,16 +3,29 @@
     border-right: 2px solid #fff0;
 }
 
+.dashCard{
+    padding: 30px 10px !important;
+
+}
+
 .avatarIcon {
     width: 60px;
     height: 60px;
 }
 
-.productImage img {
+.accordion .accordion-item{
+    background-color: transparent !important;
+    border: none !important;
+}
+
+
+
+
+/* .productImage img {
     width: 100%;
     object-fit: cover;
     height: 530px;
-}
+} */
 
 .card-body ul {
     list-style: none;
@@ -485,8 +498,10 @@ font-weight: 400;
 line-height: 24.7px;
 text-align: left;
 color:#fff;
-padding: 12px;
+/* padding: 12px; */
+background-color: transparent;
 }
+
 .accord{
     background: transparent;
     border: none;
