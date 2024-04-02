@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import "./booklisting.css";
+import "./style.css";
 // import {
 //   AdertiseImage,
 //   BookImage,
@@ -7,6 +7,15 @@ import "./booklisting.css";
 //   MainNoval,
 //   NovalImage,
 // } from "../../Assets/images";
+import { UserLayout } from "../../Components/Layout/UserLayout";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+
+import Col from "react-bootstrap/Col";
+
+import cartoon from "../../Assets/images/portrait-man-cartoon-style .png";
+import RangeSlider from "react-bootstrap-range-slider";
 
 import {
   AuthorList1,
@@ -38,7 +47,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-export const BookListing = () => {
+export const SearchFilter = () => {
   const [ads, setAds] = useState([]);
   const [books, setBooks] = useState([]);
   const [genres, setGenres] = useState([]);
@@ -88,7 +97,7 @@ export const BookListing = () => {
       centerMode: centerMode,
     };
   };
-
+  const [value, setValue] = useState(25);
   const settingsForFourItems = reusableSetting(4, false);
   const settingsForOneItem = reusableSettingForOne(1, false);
   //   const adsListing = () => {
@@ -175,20 +184,20 @@ export const BookListing = () => {
   return (
     <>
       {/* Header */}
-  
 
       {/* Hero Section */}
-      <sectionc class="inner__hero-sec jost-font">
-        <div className="container">
-          <div className="row">
-            <div className="herro__title">
-              <h1 className="typewriter">Book Listing</h1>
+      <UserLayout>
+        <sectionc class="inner__hero-sec jost-font">
+          <div className="container">
+            <div className="row">
+              <div className="herro__title">
+                <h1 className="typewriter">Book Listing</h1>
+              </div>
             </div>
           </div>
-        </div>
-      </sectionc>
+        </sectionc>
 
-      <section className="bestselling_books">
+        {/* <section className="bestselling_books">
         <section className="bestSell__book-sec jost-font">
           <div className="bestSell__book-cartoon1">
             <img src={SmallAnime1} />
@@ -547,141 +556,495 @@ export const BookListing = () => {
             </div>
           </div>
         </section>
-      </section>
+      </section> */}
 
-      {/* Footer */}
-      <section className="footer-sec jost-font">
-        <div className="container">
-          <div className="row footer__first">
-            <div className="col-lg-4">
-              <div className="footer__about">
-                <div className="footer__logo">
-                  <Link to="!#">
-                    <img src={Logo} />
-                  </Link>
-                </div>
-                <div className="footer__about-body">
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry Lorem Ipsum has been the industry's
-                    standard dummy text ever since the
-                  </p>
-                </div>
-                <div className="follow__social-icons">
-                  <a href="javascript:;" className="follow__social-icon">
-                    <i class="fa-brands fa-facebook-f"></i>
-                  </a>
-                  <a href="javascript:;" className="follow__social-icon">
-                    <i class="fa-brands fa-twitter"></i>
-                  </a>
-                  <a href="javascript:;" className="follow__social-icon">
-                    <i class="fa-brands fa-instagram"></i>
-                  </a>
-                  <a href="javascript:;" className="follow__social-icon">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                  </a>
+        <section className="search-filter">
+          <div className="container">
+            <div className=" row mt-5 ">
+              <div className="col-md-12 mb-5 ">
+                <p className="search-title">Type</p>
+                <div className=" d-flex  gap-5 mt-3  ">
+                  <span className="filter_radio  gap-2  d-flex ">
+                    {" "}
+                    <input type="radio" />
+                    <p className="   ">Web Novel</p>
+                  </span>
+
+                  <span className="filter_radio  gap-2  d-flex ">
+                    {" "}
+                    <input type="radio" />
+                    <p className="   ">Light Novel</p>
+                  </span>
+                  <span className="filter_radio  gap-2  d-flex ">
+                    {" "}
+                    <input type="radio" />
+                    <p className="   ">Menga</p>
+                  </span>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-2">
-              <div className="footer__quick-links">
-                <h3 className="foooter__subhead">Quick Links</h3>
-                <ul className="footer__links">
-                  <li className="footer__link">
-                    <Link to="javascript:;">About</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Newsroom</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Brand Guidline</Link>
-                  </li>
-                </ul>
+
+              <div className="col-md-12 mb-5 ">
+                <p className="search-title"> Original Language</p>
+                <div className=" d-flex  gap-5 mt-3  ">
+                  <span className="filter_radio  gap-2  d-flex ">
+                    {" "}
+                    <input type="radio" />
+                    <p className="   ">English]</p>
+                  </span>
+
+                  <span className="filter_radio  gap-2  d-flex ">
+                    {" "}
+                    <input type="radio" />
+                    <p className="   ">Japanese </p>
+                  </span>
+                  <span className="filter_radio  gap-2  d-flex ">
+                    {" "}
+                    <input type="radio" />
+                    <p className="   ">Malaysian</p>
+                  </span>
+
+                  <span className="filter_radio  gap-2  d-flex ">
+                    {" "}
+                    <input type="radio" />
+                    <p className="   ">Thai</p>
+                  </span>
+                  <span className="filter_radio  gap-2  d-flex ">
+                    {" "}
+                    <input type="radio" />
+                    <p className="   ">Khmer</p>
+                  </span>
+                  <span className="filter_radio  gap-2  d-flex ">
+                    {" "}
+                    <input type="radio" />
+                    <p className="   ">Filipino</p>
+                  </span>
+                  <span className="filter_radio  gap-2  d-flex ">
+                    {" "}
+                    <input type="radio" />
+                    <p className="   ">Indonesian</p>
+                  </span>
+                  <span className="filter_radio  gap-2  d-flex ">
+                    {" "}
+                    <input type="radio" />
+                    <p className="   ">Korean</p>
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-2">
-              <div className="footer__contact-links">
-                <h3 className="foooter__subhead">Contacts</h3>
-                <ul className="footer__links">
-                  <li className="footer__link">
-                    <Link to="javascript:;">Translators & Editors</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Commercial</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Audio business</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Help & Service</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">DMCA Notification</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Webnovel Forum</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Online service</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Vulnerability Report</Link>
-                  </li>
-                </ul>
+
+              <div className="col-md-12 mb-5 ">
+                <p className="search-title">Category</p>
+                <div className=" d-flex  gap-5 mt-3  ">
+                  <span className="filter_radio  gap-2  d-flex ">
+                    {" "}
+                    <input type="radio" />
+                    <p className="   ">Translated </p>
+                  </span>
+
+                  <span className="filter_radio  gap-2  d-flex ">
+                    {" "}
+                    <input type="radio" />
+                    <p className="   "> MTL</p>
+                  </span>
+                  <span className="filter_radio  gap-2  d-flex ">
+                    {" "}
+                    <input type="radio" />
+                    <p className="   ">Original Work</p>
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-2">
-              <div className="footer__resouses-links">
-                <h3 className="foooter__subhead">Contacts</h3>
-                <ul className="footer__links">
-                  <li className="footer__link">
-                    <Link to="javascript:;">Tags</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Download Apps</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Be an Author</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Help Center</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Privacy Policy</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Terms of Service</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Keywords</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Affiliate</Link>
-                  </li>
-                </ul>
+
+              <div className="row mb-5">
+                {/* <p>Select Chapter Range</p> */}
+                <Form>
+                  <Form.Group as={Row}>
+                    <Col xs="3">
+                      <p className="rangepara">Select Chapter Range</p>
+                    </Col>
+                    <Col xs="6">
+                      <RangeSlider
+                        value={value}
+                        onChange={(e) => setValue(e.target.value)}
+                      />
+                    </Col>
+                    <Col xs="3">
+                      <p className="chapterrange">Chapters</p>
+                    </Col>
+                  </Form.Group>
+                </Form>
               </div>
-            </div>
-            <div className="col-lg-2">
-              <div className="footer__referrals-links">
-                <h3 className="foooter__subhead">Referrals</h3>
-                <ul className="footer__links">
-                  <li className="footer__link">
-                    <Link to="javascript:;">QiDian</Link>
-                  </li>
-                  <li className="footer__link">
-                    <Link to="javascript:;">Yuewen</Link>
-                  </li>
-                </ul>
+
+              <div className="row mb-5">
+                {/* <p>Select Chapter Range</p> */}
+                <Form>
+                  <Form.Group as={Row}>
+                    <Col xs="3">
+                      <p className="rangepara"> Release Frequency </p>
+                    </Col>
+                    <Col xs="6">
+                      <RangeSlider
+                        value={value}
+                        onChange={(e) => setValue(e.target.value)}
+                      />
+                    </Col>
+                    <Col xs="3">
+                      <p className="chapterrange">Frequency</p>
+                    </Col>
+                  </Form.Group>
+                </Form>
+              </div>
+
+              <div className="row mb-5">
+                {/* <p>Select Chapter Range</p> */}
+                <Form>
+                  <Form.Group as={Row}>
+                    <Col xs="3">
+                      <p className="rangepara"> Select Reviews Range </p>
+                    </Col>
+                    <Col xs="6">
+                      <RangeSlider
+                        value={value}
+                        onChange={(e) => setValue(e.target.value)}
+                      />
+                    </Col>
+                    <Col xs="3">
+                      <p className="chapterrange">Reviews</p>
+                    </Col>
+                  </Form.Group>
+                </Form>
+              </div>
+
+              <div className="row mb-5">
+                {/* <p>Select Chapter Range</p> */}
+                <Form>
+                  <Form.Group as={Row}>
+                    <Col xs="3">
+                      <p className="rangepara"> Select Book Rating </p>
+                    </Col>
+                    <Col xs="6">
+                      <RangeSlider
+                        value={value}
+                        onChange={(e) => setValue(e.target.value)}
+                      />
+                    </Col>
+                    <Col xs="3">
+                      <p className="chapterrange">Rating</p>
+                    </Col>
+                  </Form.Group>
+                </Form>
+              </div>
+
+              <div className="row mb-5">
+                {/* <p>Select Chapter Range</p> */}
+                <Form>
+                  <Form.Group as={Row}>
+                    <Col xs="3">
+                      <p className="rangepara"> Number of Rating </p>
+                    </Col>
+                    <Col xs="6">
+                      <RangeSlider
+                        value={value}
+                        onChange={(e) => setValue(e.target.value)}
+                      />
+                    </Col>
+                    <Col xs="3">
+                      <p className="chapterrange">Rating</p>
+                    </Col>
+                  </Form.Group>
+                </Form>
+              </div>
+
+              <div className="row mb-5">
+                {/* <p>Select Chapter Range</p> */}
+                <Form>
+                  <Form.Group as={Row}>
+                    <Col xs="3">
+                      <p className="rangepara"> Number of Readers </p>
+                    </Col>
+                    <Col xs="6">
+                      <RangeSlider
+                        value={value}
+                        onChange={(e) => setValue(e.target.value)}
+                      />
+                    </Col>
+                    <Col xs="3">
+                      <p className="chapterrange">Readers</p>
+                    </Col>
+                  </Form.Group>
+                </Form>
+              </div>
+              <div className="col-md-4">
+                <p className="book-release-title mb-2 ">
+                  Select Book Release Date
+                </p>
+                <div className=" d-flex mb-5  gap-2  ">
+                  <span className="book-release-date">8/56/2012</span>
+                  <span className="book-release-date">8/56/2012</span>
+                </div>
+              </div>
+
+              <div className="col-md-8">
+                <p className="book-release-title mb-2 ">Select Book Genre</p>
+                <div className="book-release-genre-dropdown d-flex mb-5  gap-4  ">
+                  <span className="book-release-genre">Lorem Ipsume</span>
+
+                  <span className="book-release-genre">Lorem Ipsume</span>
+
+                  <span className="book-release-genre">Lorem Ipsume</span>
+
+                  <span className="book-release-genre">Lorem Ipsume</span>
+                </div>
+              </div>
+
+              <div className="col-md-8">
+                <div className="main_cartoon_image">
+                  <img src={cartoon} />
+                </div>
+                <div className="  row">
+                  <div className="    mb-2 gap-5  col-md-5 ">
+                    <p className="book-release-title mb-4 ">
+                      Tags [ <span className="book-release-date">OR</span> ]
+                    </p>
+                    <input
+                      type="text"
+                      placeholder="Include"
+                      className="book-release-input "
+                    />
+                  </div>
+                  <div className="    mb-2   gap-4 col-md-5  ">
+                    <p className="story">Story Status </p>
+
+                    <Form.Select
+                      aria-label="Default select example"
+                      className="book-release-input"
+                    >
+                      <option>Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </Form.Select>
+                  </div>
+                  <div className="  d-flex mb-5  gap-4 col-md-5  ">
+                    <Form.Select
+                      aria-label="Default select example"
+                      className="book-release-input"
+                    >
+                      <option>Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </Form.Select>
+                  </div>
+                </div>
+
+                <div className=" mb-4  row">
+                  <div className="    mb-2 gap-5  col-md-5 ">
+                    <p className="book-release-title mb-2 ">Group</p>
+
+                    <Form.Select
+                      aria-label="Default select example"
+                      className="book-release-input"
+                    >
+                      <option>Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </Form.Select>
+                  </div>
+                  <div className="    mb-2   gap-4 col-md-5  ">
+                    <p className="book-release-title  mb-2">
+                      {" "}
+                      Original Publisher{" "}
+                    </p>
+                    <input
+                      type="text"
+                      placeholder="Include"
+                      className="book-release-input"
+                    />
+                  </div>
+                </div>
+                <div className="  mb-4 row">
+                  <div className="    mb-2 gap-5  col-md-5 ">
+                    <p className="book-release-title mb-2 ">Translator</p>
+                    <input
+                      type="text"
+                      placeholder="Include"
+                      className="book-release-input "
+                    />
+                  </div>
+                  <div className="    mb-2   gap-4 col-md-5  ">
+                    <p className="book-release-title  mb-2"> Series </p>
+                    <input
+                      type="text"
+                      placeholder="Include"
+                      className="book-release-input"
+                    />
+                  </div>
+                </div>
+
+                <div className="  mb-4 row">
+                  <div className="    mb-2 gap-5  col-md-5 ">
+                    <p className="book-release-title mb-2 ">
+                      Search Results By..
+                    </p>
+
+                    <Form.Select
+                      aria-label="Default select example"
+                      className="book-release-input"
+                    >
+                      <option>Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </Form.Select>
+                  </div>
+                  <div className="    mb-2   gap-4 col-md-5  ">
+                    <p className="book-release-title  mb-2"> Author </p>
+                    <input
+                      type="text"
+                      placeholder="Include"
+                      className="book-release-input"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="footer__copyright">
-              <p>Copyright 2024 All right reserved. Little literature club</p>
+        </section>
+
+        {/* Footer */}
+        <section className="footer-sec jost-font">
+          <div className="container">
+            <div className="row footer__first">
+              <div className="col-lg-4">
+                <div className="footer__about">
+                  <div className="footer__logo">
+                    <Link to="!#">
+                      <img src={Logo} />
+                    </Link>
+                  </div>
+                  <div className="footer__about-body">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry Lorem Ipsum has been the industry's
+                      standard dummy text ever since the
+                    </p>
+                  </div>
+                  <div className="follow__social-icons">
+                    <a href="javascript:;" className="follow__social-icon">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="javascript:;" className="follow__social-icon">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="javascript:;" className="follow__social-icon">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="javascript:;" className="follow__social-icon">
+                      <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-2">
+                <div className="footer__quick-links">
+                  <h3 className="foooter__subhead">Quick Links</h3>
+                  <ul className="footer__links">
+                    <li className="footer__link">
+                      <Link to="javascript:;">About</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Newsroom</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Brand Guidline</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-lg-2">
+                <div className="footer__contact-links">
+                  <h3 className="foooter__subhead">Contacts</h3>
+                  <ul className="footer__links">
+                    <li className="footer__link">
+                      <Link to="javascript:;">Translators & Editors</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Commercial</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Audio business</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Help & Service</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">DMCA Notification</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Webnovel Forum</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Online service</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Vulnerability Report</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-lg-2">
+                <div className="footer__resouses-links">
+                  <h3 className="foooter__subhead">Contacts</h3>
+                  <ul className="footer__links">
+                    <li className="footer__link">
+                      <Link to="javascript:;">Tags</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Download Apps</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Be an Author</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Help Center</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Privacy Policy</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Terms of Service</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Keywords</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Affiliate</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-lg-2">
+                <div className="footer__referrals-links">
+                  <h3 className="foooter__subhead">Referrals</h3>
+                  <ul className="footer__links">
+                    <li className="footer__link">
+                      <Link to="javascript:;">QiDian</Link>
+                    </li>
+                    <li className="footer__link">
+                      <Link to="javascript:;">Yuewen</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="footer__copyright">
+                <p>Copyright 2024 All right reserved. Little literature club</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </UserLayout>
     </>
   );
 };

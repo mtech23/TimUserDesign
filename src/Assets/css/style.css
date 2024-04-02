@@ -99,7 +99,7 @@ body {
 /*----- Modal Css End -----*/
 
 .dashCard {
-  background: #fff;
+  /* background: #fff; */
   border-radius: 0.5rem;
   padding: 1rem 2rem;
 }

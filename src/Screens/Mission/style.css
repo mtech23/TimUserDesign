@@ -1,0 +1,410 @@
+.bestselling_books {
+  /* background-image: url(../../Assets/images/book-listing-bg.jpg); */
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.bestSell__mission-sec {
+  background-image: url(../../Assets/images/missionbg.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 100px 0 0;
+  position: relative;
+  height: 353px;
+}
+.bestSell__book-cartoon1 img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 170px;
+}
+.bestSell__book-title {
+  margin-bottom: 30px;
+}
+.bestSell__book-title h2 {
+  font-size: 55px;
+  font-weight: 900;
+  -webkit-text-stroke: 2px #6100a8;
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+}
+.bestSelling__books {
+  position: relative;
+}
+.bestSelling__books img {
+  width: 100%;
+}
+.bestSell__book-cartoon2 img {
+  position: absolute;
+  right: 50px;
+  width: auto;
+  bottom: -30px;
+}
+
+.bestSell__bookListing-sec {
+  padding: 60px 0;
+}
+
+.filters__tabs {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #360c55;
+  padding: 3px;
+  border-radius: 25px;
+  background: #fff;
+}
+.filters__tabs .filters__tab {
+  border: none;
+  background: #fff;
+  padding: 7px 30px;
+  border-radius: 25px;
+}
+.filters__tabs .filters__tab.filters__tab-active {
+  background: #360c55;
+  color: #fff;
+}
+.filters__category select,
+.filters__pricing select {
+  border: 2px solid #360c55;
+  padding: 5px 20px;
+  border-radius: 25px;
+}
+.filters__category select:focus,
+.filters__pricing select:focus {
+  box-shadow: unset;
+  border: 2px solid #360c55;
+}
+.filters__search {
+  border: 2px solid #360c55;
+  padding: 3px;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #fff;
+}
+.filters__search .filters__search-btn {
+  border: none;
+  background: #360c55;
+  color: #fff;
+  padding: 7px 30px;
+  border-radius: 25px !important;
+}
+.filters__search .filters__search-input {
+  border: none;
+  font-size: 14px;
+  padding: 3px 5px;
+}
+.filters__search .filters__search-input:focus {
+  box-shadow: unset;
+}
+.filters__search .filters__search-icon {
+  border: unset;
+  padding: 3px 10px;
+}
+.filters__search .filters__search-icon:hover {
+  background: transparent;
+  color: #000;
+}
+
+/* Best Books Listing Start Here */
+.bestBooks__listing {
+  margin-top: 60px;
+}
+.bestBooks__list {
+  width: 90%;
+  margin: 0 auto 50px;
+  position: relative;
+}
+.bestBooks__list img {
+  width: 100%;
+}
+.bestBooks__list-overlay .bestBooks__purchase-btn {
+  border: none;
+  background: #fff;
+  padding: 8px 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #360c55;
+}
+.bestBooks__list-body {
+  margin: 20px 0;
+  text-align: center;
+}
+.bestBooks__list-body .bestBooks__list-title {
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  line-height: 1.5;
+}
+.bestBooks__list-body .bestBooks__list-text {
+  font-size: 15px;
+  color: #000;
+  opacity: 1;
+  line-height: 1.5;
+}
+.bestBooks__list-overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bestBooks__list:hover .bestBooks__list-overlay {
+  bottom: 0;
+  height: 100%;
+}
+.bestBooks__list-img {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.book__listing-pagination {
+  margin-top: 20px;
+}
+.book__listing-pagination .pagination {
+  justify-content: center;
+}
+.book__listing-pagination .pagination .page-link {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  background: #6565658a;
+  color: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.book__listing-pagination .pagination .page-link.page_link-active {
+  background: #360c55;
+}
+.book__listing-pagination .pagination .page-link:focus {
+  box-shadow: none;
+}
+/* Best Books Listing Ends Here */
+
+@media (max-width: 1024px) {
+  .filters__tabs .filters__tab {
+    padding: 7px 20px;
+  }
+  .bestSell__book-title h2 {
+    font-size: 40px;
+  }
+  .bestSell__book-cartoon2 img {
+    right: 50px;
+    width: 25%;
+  }
+  .bestSell__book-sec {
+    padding: 50px 0 0;
+  }
+  .bestSell__book-cartoon1 img {
+    width: 110px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters__search {
+    margin-top: 20px;
+  }
+  .bestSell__book-title h2 {
+    font-size: 33px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filters__category,
+  .filters__pricing {
+    margin-top: 20px;
+  }
+  .bestSell__book-cartoon1 img {
+    width: 70px;
+  }
+  .bestSell__book-cartoon2 img {
+    right: 20px;
+    width: 23%;
+    bottom: -10px;
+  }
+}
+
+.bg-spiner {
+  position: relative;
+
+  text-align: center;
+  margin-top: -204px;
+}
+img.spiner-img {
+  height: 472px;
+}
+
+.missionimg1 {
+  background-image: url(../../Assets//images/missionbg1.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 100px 0 0;
+  position: relative;
+  height: 585px;
+}
+.missionimg2 {
+  background-image: url(../../Assets/images//missionbg2.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 100px 0 0;
+  position: relative;
+  height: 585px;
+}
+.missionimg3 {
+  background-image: url(../../Assets//images/missionbg3.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 100px 0 0;
+  position: relative;
+  height: 585px;
+}
+
+.spiner-ione-time {
+  text-align: center;
+  padding: 10px 0px;
+  background-color: #8030cc !important;
+  color: white;
+}
+
+.connect {
+  color: white;
+  /* gap: 35px; */
+  /* padding: 0px 46px; */
+  align-items: center;
+  /* justify-content: center; */
+  margin-left: 9px;
+}
+.percentage {
+  align-items: center !important;
+  justify-content: center !important;
+  height: 86px;
+}
+
+img.radioimg {
+  width: 24px;
+  height: 24px;
+}
+
+.spinerpercentage {
+  align-items: center !important;
+  justify-content: center !important;
+  height: 86px;
+}
+/* 
+.percentage{
+  display: block;
+  text-align: center;
+} */
+.spinerpercentage {
+  display: block;
+  text-align: center;
+}
+
+.mana {
+  color: #e6d0ff;
+}
+
+.reading {
+  font-size: unset;
+  font-weight: 900;
+  font-size: x-large;
+  margin-bottom: 0px;
+}
+.missionpara {
+  font-size: smaller;
+  margin-top: -6px;
+}
+
+.completespercent {
+  background-color: #360c55;
+  color: white;
+  width: 229px;
+  align-items: center;
+  display: block;
+  justify-content: center;
+  border-radius: 17px;
+  padding: 4px 38px;
+  text-align: center;
+}
+
+.complete-all {
+  color: #6100a8;
+  background-color: #d9c5c5;
+  padding: 4px;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-weight: 900;
+  /* backdrop-filter: opacity(0.6); */
+  filter: opacity(0.7);
+}
+
+.manacoin1 {
+  background-image: url(../../Assets//images/mana-coin.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 100px 0 0;
+  position: relative;
+  width: 109px;
+  align-items: center;
+  display: block;
+  justify-content: center;
+  margin-top: -25px;
+  height: 184px;
+}
+
+
+.manacoin2 {
+  background-image: url(../../Assets//images/mana-coin.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 100px 0 0;
+  position: relative;
+  width: 103px;
+  align-items: center;
+  display: block;
+  justify-content: center;
+  margin-top: -25px;
+  height: 141px;
+
+}
+.manaco{
+  color: #E6D0FF;
+  margin-left: 10px;
+}
+.manaco1 {
+  color: #E6D0FF;
+  margin-left: 22px;
+  margin-top: 41px;
+}
+
+.manaco2 {
+  color: #E6D0FF;
+  margin-left: 32px;
+  /* display: contents; */
+  margin-top: 10px;
+
+}
