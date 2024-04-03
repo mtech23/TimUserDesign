@@ -571,6 +571,7 @@ border: none;
     box-shadow: 4px 6px #41464b17;
     display: flex;
     gap:10px;
+    width: 1158px;
    
 }
 .rate h2{
@@ -809,10 +810,15 @@ color: #5C5C5C;
 .rate p.review{
     line-height: 19.95px;
     text-align: center;
-}
+}}
+@media only screen and (max-width: 768px) {
 
 
-}
+.ratebg{
+   
+    width: fit-content;
+   
+}}
 
 
 /*     margin-top: 10px; */

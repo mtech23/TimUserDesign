@@ -587,7 +587,7 @@ export const ProductDetail = ({ eventKey, children }) => {
                         </span> 
                     </div>
 
-                    <div className="col-md-8 mb-4">
+                    <div className="col-md-9 mb-4">
                       <div className="productInfo mb-4">
                         <div className="adiobtn d-flex">
                           <h3 className="text-capitalize">{data?.name}</h3>
@@ -1034,7 +1034,7 @@ export const ProductDetail = ({ eventKey, children }) => {
                                 <div class="line4"></div>
                               </div>
                             </div>
-                            <div class="col-12 col-sm-12 col-lg-7 ">
+                            <div class="col-12 col-sm-12 col-lg-7">
                               <div class="strong">
                                 <div class="num mb-2 ">
                                   <div>
