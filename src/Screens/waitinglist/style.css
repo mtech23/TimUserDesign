@@ -1,28 +1,31 @@
-.cover{
-  background-image: url(../../Assets//images/banner.png);
+.coverr{
+  background-image: url(../../Assets//images/newbanner.png);
   background-position: center;
   background-size:  cover;
   background-repeat: no-repeat;
   padding: 60px 0px;
 }
-.cover button{
-  background: #360C55;
-  color: #fff;
-  font-family: 'Poppins';
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 27px;
-  text-align: left;
-  border-radius: 59px;
-  padding: 10px 66px;
-  border: #360C55;
-  position: relative;}
+.coverr button.lib{
+  font-family: 'Jost';
+  font-size: 18.45px;
+  font-weight: 400;
+  line-height: 26.66px;
+  text-align: center;
+  background: #360c55;
+  color: #FFFFFF;
+  border-radius: 38px;
+  border: 1px solid #360c55;
+  padding-right: 0px;
+  text-align: center;
+  padding: 7px 52px;
+  position: relative;
+}
 
   .mid {
       padding: 0px 24px;
   }
 
-.btnrw{
+.btnrrw{
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -37,12 +40,14 @@
   position: relative;
   text-align: center;
 }
-.polygon{
+.polygoon{
   position: absolute;
-  top: 55px;
-  left: 798px;
+    top: 497px;
+    left: 813px;
+    width: 41px;
+
 }
-.cover button.history{
+.coverr button.history{
   background: #D2D2D2;
   color: #282828;
   font-family: 'Poppins';
@@ -51,11 +56,11 @@
   line-height: 27px;
   text-align: left;
   border-radius: 59px;
-  padding: 10px 66px;
+  padding: 7px 52px;
   border: #D2D2D2;
-
 }
-.cover button.hist{
+
+.coverr button.hist{
   background: #D2D2D2;
   color: #282828;
   font-family: 'Poppins';
@@ -64,27 +69,27 @@
   line-height: 27px;
   text-align: left;
   border-radius: 59px;
-  padding: 10px 66px;
+  padding: 10px 50px;
   border: #D2D2D2;
 
 }
-.book{
+.bookk{
   background-color: #fff;
   margin-top: 50px;
   margin-bottom: 85px;
 }
-.book img.bookcover{
+.bookk img.bookcover{
   margin-top: -20px;
   padding-bottom: 28px;
 }
-.book img.clock{
+.bookk img.clock{
   position: absolute;
   left: -11px;
   top: -43px;
  
 
 }
-.book h3.name{
+.bookk h3.name{
   font-family: 'Jost';
 font-size: 28.28px;
 font-weight: 600;
@@ -98,24 +103,26 @@ padding: 14px;
 display: flex;
 justify-content: space-between;
 }
-.book button.category{
+.bookk button.category{
   font-family: 'Jost';
-font-size: 14.45px;
-font-weight: 600;
-line-height: 25.69px;
-color: #360C55;
-background: #D9D9D9;
-border: #d9d9d9;
-padding: 6px 48px;
-margin-left: 16px;
-}
-.rate{
+  font-size: 14.45px;
+  font-weight: 600;
+  line-height: 25.69px;
   color: #360C55;
-  display: flex; 
-  padding: 20px;
+  background: #D9D9D9;
+  border: #d9d9d9;
+  padding: 6px 48px;
+  margin-left: 16px;
+  border-radius: 23px;
+}
+.raate{
+  color: #360C55;
+    display: flex;
+    padding: 20px;
+
 
 }
-.book p.rating{
+.bookk p.rating{
   font-family: 'Jost';
 font-size: 14.45px;
 font-weight: 600;
@@ -124,7 +131,7 @@ color: #360C55;
 line-height: 17.69px;
 margin-bottom: 0px;
 }
-.book p.detail{
+.bookk p.detail{
   font-family:' Jost';
 font-size: 18.85px;
 font-weight: 400;
@@ -148,11 +155,11 @@ span.view{
   text-decoration: underline;
   cursor: pointer;
 }
-.line{
+.linee{
   border: 1px solid #360C55;
 
 }
-.book p.num{
+.bookk p.numm{
   font-family: 'Poppins';
   font-size: 18px;
   font-weight: 600;
@@ -162,7 +169,7 @@ span.view{
   color: #282828;
 
 }
-span.number{
+span.numb{
   font-family: 'Poppins';
 font-size: 18px;
 font-weight: 700;
@@ -192,9 +199,9 @@ color: #169B00;
 
 }
 
-.book button.read{
+.bookk button.read{
   font-family: 'Jost';
-  font-size: 17.45px;
+  font-size: 15.45px;
   font-weight: 400;
   line-height: 26.66px;
   text-align: center;
@@ -219,7 +226,7 @@ color: #169B00;
   border-radius: 1px 18px 17px 0px;
   padding: 10px 15px 10px 11px;
 }
-.cover button.reading{
+.coverr button.reading{
   font-family:  'Jost';
   font-size: 18.45px;
   font-weight: 400;
@@ -245,7 +252,7 @@ color: #169B00;
   padding: 11px 18px 12px 11px;
 }
 @media only screen and (max-width: 1024px){
-  .btnrw{
+  .btnrrw{
      
   } 
   .icon {
@@ -253,14 +260,14 @@ color: #169B00;
       padding: 10px 11px 10px 11px;
   }
 
-  .polygon{
+  .polygoon{
       display: none;
   }
   .btnrow {
       justify-content: left;
 
   }
-  .book button.read {
+  .bookk button.read {
       font-size: 10px;
       gap: 12px;
   
@@ -268,47 +275,50 @@ color: #169B00;
   /* .res{
       display: none;
   } */
-  .book button.category {
+  .bookk button.category {
   margin-top: 6px;
   }
-  .book {
+  .bookk {
     
       padding-bottom: 20px;
   }
   /* .icons{
       padding: 7px 5px 3px 5px;
   } */
-  .cover button.reading {
+  .coverr button.reading {
       font-size: 10.45px;
       padding-left: 15px;
   
   }
-  .book {
+  .bookk {
     
       margin-bottom: 60px;
   }
-  .cover button {
+  .coverr button {
       font-size: 12px;
       padding: 2px 14px;
  
   }
-  .cover button.hist {
+  .coverr button.hist {
  
       font-size: 12px;
       
       padding: 2px 14px;
      
   }
-  .cover button.history {
-      font-size: 12px;
-      
-      padding: 2px 14px;
+  .coverr button.history {
+    font-size: 12px;
+    padding: 2px 26px;
   }
-  .book img.bookcover {
+  .coverr button.lib{
+    font-size: 12px;
+    padding: 2px 26px;
+  }
+  .bookk img.bookcover {
 
       padding-bottom: 0px;
   }
-  .book h3.name {
+  .bookk h3.name {
 
       font-size: 19.28px;
 }
@@ -318,13 +328,13 @@ color: #169B00;
   left: 40px;
 
 } */
-.btnrw {
+.btnrrw {
   justify-content: left;
   padding: 0px 14px;
   flex-wrap: wrap;
   display: flex;
 }
-.book button.read {
+.bookk button.read {
   font-size: 13px;
  
 }
@@ -339,7 +349,7 @@ color: #169B00;
 
 
 @media only screen and (max-width: 768px){
- .book img.vote{
+ .bookk img.vote{
   width: 26px;
   height: 32px;
 }
@@ -355,27 +365,31 @@ color: #169B00;
       gap: 12px;
   
   } */
-  .polygon {
+  .polygoon {
     
-      left: 565px;
+    left: 582px;
   }
 }
 @media only screen and (min-width: 2560px){
-  .polygon {
-      left: 820px;
+  .polygoon {
+    left: 1149px;
+
   }
-  .book img.clock {
+  .bookk img.clock {
       left: 35px;
   }
 }
 
 @media only screen and (max-width: 375px){
-  .book img.clock {
+  .bookk img.clock {
       left: 50px;
   }
 }
 @media only screen and (max-width: 768px){
-  .book img.clock {
+  .bookk img.clock {
       left: 79px;
   }
 }
+
+
+

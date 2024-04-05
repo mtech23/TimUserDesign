@@ -1,28 +1,33 @@
-.cover{
-  background-image: url(../../Assets//images/banner.png);
+.cov{
+  background-image: url(../../Assets//images/newbanner.png);
+  
+
   background-position: center;
   background-size:  cover;
   background-repeat: no-repeat;
   padding: 60px 0px;
 }
-.cover button{
-  background: #360C55;
-  color: #fff;
-  font-family: 'Poppins';
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 27px;
-  text-align: left;
-  border-radius: 59px;
-  padding: 10px 66px;
-  border: #360C55;
+.cov button.libs{
+
+  font-family:  'Jost';
+  font-size: 18.45px;
+  font-weight: 400;
+  line-height: 26.66px;
+  text-align: center;
+  background:#360c55;
+  color: #FFFFFF;
+  border-radius: 38px;
+  border: 1px solid #360c55;
+  padding-right: 0px;
+  text-align:center;
+  padding: 7px 52px;
   position: relative;}
 
   .mid {
       padding: 0px 24px;
   }
 
-.btnrw{
+.btnrww{
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -37,12 +42,13 @@
   position: relative;
   text-align: center;
 }
-.polygon{
+.polygons{
   position: absolute;
-  top: 55px;
-  left: 798px;
+  top: 497px;
+    left: 619px;
+    width: 41px;
 }
-.cover button.history{
+.cov button.history{
   background: #D2D2D2;
   color: #282828;
   font-family: 'Poppins';
@@ -51,11 +57,11 @@
   line-height: 27px;
   text-align: left;
   border-radius: 59px;
-  padding: 10px 66px;
+  padding: 7px 52px;
   border: #D2D2D2;
 
 }
-.cover button.hist{
+.cov button.hist{
   background: #D2D2D2;
   color: #282828;
   font-family: 'Poppins';
@@ -64,27 +70,28 @@
   line-height: 27px;
   text-align: left;
   border-radius: 59px;
-  padding: 10px 66px;
+  padding: 7px 52px;
   border: #D2D2D2;
 
 }
-.book{
+.books{
   background-color: #fff;
   margin-top: 50px;
   margin-bottom: 85px;
+  padding-bottom: 24px
 }
-.book img.bookcover{
+.books img.bookcover{
   margin-top: -20px;
   padding-bottom: 28px;
 }
-.book img.clock{
+.books img.clock{
   position: absolute;
   left: -11px;
   top: -43px;
  
 
 }
-.book h3.name{
+.books h3.name{
   font-family: 'Jost';
 font-size: 28.28px;
 font-weight: 600;
@@ -98,7 +105,7 @@ padding: 14px;
 display: flex;
 justify-content: space-between;
 }
-.book button.category{
+.books button.category{
   font-family: 'Jost';
 font-size: 14.45px;
 font-weight: 600;
@@ -108,14 +115,15 @@ background: #D9D9D9;
 border: #d9d9d9;
 padding: 6px 48px;
 margin-left: 16px;
+border-radius: 23px
 }
-.rate{
+.rates{
   color: #360C55;
   display: flex; 
   padding: 20px;
 
 }
-.book p.rating{
+.books p.rating{
   font-family: 'Jost';
 font-size: 14.45px;
 font-weight: 600;
@@ -124,7 +132,7 @@ color: #360C55;
 line-height: 17.69px;
 margin-bottom: 0px;
 }
-.book p.detail{
+.books p.detail{
   font-family:' Jost';
 font-size: 18.85px;
 font-weight: 400;
@@ -148,27 +156,27 @@ span.view{
   text-decoration: underline;
   cursor: pointer;
 }
-.line{
+.lines{
   border: 1px solid #360C55;
 
 }
-.book p.num{
-  font-family: 'Poppins';
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 27px;
-  text-align: left;
-  padding: 0px 15px;
-  color: #282828;
+.books p.nums{
+  font-family: 'Jost';
+    font-size: 24.22px;
+    font-weight: 600;
+    line-height: 25.69px;
+    padding: 0px 15px;
+    color: #360C55;
 
 }
-span.number{
-  font-family: 'Poppins';
-font-size: 18px;
-font-weight: 700;
-line-height: 27px;
-text-align: left;
-color: #AD0000;}
+span.numberr{
+  
+    font-family: 'Jost';
+    font-size: 14.74px;
+    font-weight: 600;
+    line-height: 25.69px;
+    color: #696969;
+}
 
 span.drop{
   font-family: 'Poppins';
@@ -192,9 +200,9 @@ color: #169B00;
 
 }
 
-.book button.read{
+.books button.reads{
   font-family: 'Jost';
-  font-size: 17.45px;
+  font-size: 12.45px;
   font-weight: 400;
   line-height: 26.66px;
   text-align: center;
@@ -206,20 +214,19 @@ color: #169B00;
   text-align: center;
   padding-top: 0px;
   padding-bottom: 0px;
-  padding-left: 6px;
-
+  padding-left: 7px;
   padding-right: 0px;
 
 }
 
-.icon{
+.iconn{
 
   /* padding: 4px; */
   background: #360C55;
   border-radius: 1px 18px 17px 0px;
   padding: 10px 15px 10px 11px;
 }
-.cover button.reading{
+.cov button.reading{
   font-family:  'Jost';
   font-size: 18.45px;
   font-weight: 400;
@@ -245,22 +252,22 @@ color: #169B00;
   padding: 11px 18px 12px 11px;
 }
 @media only screen and (max-width: 1024px){
-  .btnrw{
+  .btnrww{
      
   } 
-  .icon {
+  .iconn {
      
       padding: 10px 11px 10px 11px;
   }
 
-  .polygon{
+  .polygons{
       display: none;
   }
   .btnrow {
       justify-content: left;
 
   }
-  .book button.read {
+  .books button.reads {
       font-size: 10px;
       gap: 12px;
   
@@ -268,43 +275,48 @@ color: #169B00;
   /* .res{
       display: none;
   } */
-  .book button.category {
+  .books button.category {
   margin-top: 6px;
   }
-  .book {
+  .books {
     
       padding-bottom: 20px;
   }
   /* .icons{
       padding: 7px 5px 3px 5px;
   } */
-  .cover button.reading {
+  .cov button.reading {
       font-size: 10.45px;
       padding-left: 15px;
   
   }
-  .book {
+  .books {
     
       margin-bottom: 60px;
   }
-  .cover button {
+  .cov button {
       font-size: 12px;
       padding: 2px 14px;
  
   }
-  .cover button.hist {
+  .cov button.libs{
+    font-size: 12px;
+      
+    padding: 2px 14px;
+  }
+  .cov button.hist {
  
       font-size: 12px;
       
       padding: 2px 14px;
      
   }
-  .cover button.history {
+  .cov button.history {
       font-size: 12px;
       
       padding: 2px 14px;
   }
-  .book img.bookcover {
+  .books img.bookcover {
 
       padding-bottom: 0px;
   }
@@ -318,13 +330,13 @@ color: #169B00;
   left: 40px;
 
 } */
-.btnrw {
+.btnrww {
   justify-content: left;
   padding: 0px 14px;
   flex-wrap: wrap;
   display: flex;
 }
-.book button.read {
+.books button.reads {
   font-size: 13px;
  
 }
@@ -339,7 +351,7 @@ color: #169B00;
 
 
 @media only screen and (max-width: 768px){
- .book img.vote{
+ .books img.vote{
   width: 26px;
   height: 32px;
 }
@@ -355,27 +367,27 @@ color: #169B00;
       gap: 12px;
   
   } */
-  .polygon {
+  .polygons {
     
-      left: 565px;
+      left: 382px;
   }
 }
 @media only screen and (min-width: 2560px){
-  .polygon {
-      left: 820px;
+  .polygons {
+      left: 945px;
   }
-  .book img.clock {
+  .books img.clock {
       left: 35px;
   }
 }
 
 @media only screen and (max-width: 375px){
-  .book img.clock {
+  .books img.clock {
       left: 50px;
   }
 }
 @media only screen and (max-width: 768px){
-  .book img.clock {
+  .books img.clock {
       left: 79px;
   }
 }

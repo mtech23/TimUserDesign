@@ -43,6 +43,7 @@ import {
   BestSellingBook12,
 } from "../../Assets/images";
 import book1 from "../../Assets/images/book1.png";
+import Clock from "../../Assets/images//Clock.png";
 import book2 from "../../Assets/images/book2.png";
 import book3 from "../../Assets/images/book3.png";
 import { Link } from "react-router-dom";
@@ -230,286 +231,284 @@ export const Waitinglist = () => {
 
 
 
-
-
-
-        <section class="cover">
-            
+        <section class="coverr">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="btnrw">
-                            <button class="lib" >WAITING LIST </button>
-                            <img class="img-fluid polygon" src={Polygon6}/>
+                    <div class="col-md-6 ">
+                        <div class="btnrrw">
+                            <button class="history">Library </button>
                             <button class="hist" >History </button>
-                            <button class="history" >  WAITING LIST </button>
+                            <button class="lib" >Waiting List </button>
+                            <img class="img-fluid polygoon" src={Polygon6}/>
+                        </div>
+                      
+                        <div class="bookk">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="watch">
+                                        <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                       </div>
+                                    
+                                </div>
+                                <div class="col-lg-9 col-sm-12">
+                                   <div class="description">
+                                    <h3 class="name">Book Name Here</h3>
+                                    <div class="p-3 res">
+                                        <img class="img-fluid vote" src={Vote}/>
+                                        <img class="img-fluid vote" src={Notification}/>
+                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    </div>
+                                   </div>
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   <div class="raate">
+                                    <span class="fa fa-star checked star" ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star "></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <p class="rating">(4.82)</p>
+                                  </div>
+                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="view" > View More </span></p>
+                                        
+                                </div>
+                            </div>
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col-md-6">
+                                    <p class="numm">Status: <span class="numb"> Requested</span></p>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="btnrow">
+                                        
+                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                         <div class="bookk">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="watch">
+                                    <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                       </div>
+                                    
+                                </div>
+                                <div class="col-lg-9 col-sm-12">
+                                   <div class="description">
+                                    <h3 class="name">Book Name Here</h3>
+                                    <div class="p-3 res">
+                                    <img class="img-fluid vote" src={Vote}/>
+                                        <img class="img-fluid vote" src={Notification}/>
+                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    </div>
+                                   </div>
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   <div class="raate">
+                                    <span class="fa fa-star checked star" ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star "></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <p class="rating">(4.82)</p>
+                                  </div>
+                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="view" > View More </span></p>
+                                        
+                                </div>
+                            </div>
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col-md-6">
+                                    <p class="numm">Status: <span class="drop"> Dropped</span></p>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="btnrow">
+                                        
+                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                         <div class="bookk">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="watch">
+                                    <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                       </div>
+                                    
+                                </div>
+                                <div class="col-lg-9 col-sm-12">
+                                   <div class="description">
+                                    <h3 class="name">Book Name Here</h3>
+                                    <div class="p-3 res">
+                                    <img class="img-fluid vote" src={Vote}/>
+                                        <img class="img-fluid vote" src={Notification}/>
+                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    </div>
+                                   </div>
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   <div class="raate">
+                                    <span class="fa fa-star checked star" ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star "></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <p class="rating">(4.82)</p>
+                                  </div>
+                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="view" > View More </span></p>
+                                        
+                                </div>
+                            </div>
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col-md-6">
+                                    <p class="numm">Status: <span class="numb"> Requested</span></p>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="btnrow">
+                                        
+                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                          <div class="bookk">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="watch">
+                                    <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                       </div>
+                                    
+                                </div>
+                                <div class="col-lg-9 col-sm-12">
+                                   <div class="description">
+                                    <h3 class="name">Book Name Here</h3>
+                                    <div class="p-3 res">
+                                    <img class="img-fluid vote" src={Vote}/>
+                                        <img class="img-fluid vote" src={Notification}/>
+                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    </div>
+                                   </div>
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   <div class="raate">
+                                    <span class="fa fa-star checked star" ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star "></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <p class="rating">(4.82)</p>
+                                  </div>
+                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="view" > View More </span></p>
+                                        
+                                </div>
+                            </div>
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col-md-5">
+                                    <p class="numm">Status: <span class="pick"> Picked Up</span></p>
+                                </div>
+                                <div class="col-md-7 ">
+                                    <div class="btnrrw">
+                                        <button class="read" ><span>Add To Library  &nbsp;&nbsp;</span> <i class="fa-solid fa-book-open icon"></i></button>
+                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                           <div class="bookk">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="watch">
+                                    <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                       </div>
+                                    
+                                </div>
+                                <div class="col-lg-9 col-sm-12">
+                                   <div class="description">
+                                    <h3 class="name">Book Name Here</h3>
+                                    <div class="p-3 res">
+                                    <img class="img-fluid vote" src={Vote}/>
+                                        <img class="img-fluid vote" src={Notification}/>
+                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    </div>
+                                   </div>
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   <div class="raate">
+                                    <span class="fa fa-star checked star" ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star "></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <p class="rating">(4.82)</p>
+                                  </div>
+                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="view" > View More </span></p>
+                                        
+                                </div>
+                            </div>
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col-md-6">
+                                    <p class="numm">Status: <span class="numb"> Requested</span></p>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="btnrow">
+                                        
+                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         
-                        <div class="book">
-                            <div class="row">
-                                <div class="col-lg-3 col-sm-12">
-                                    <div class="main">
-                                        <img class="img-fluid bookcover" src={Group1000002083}/>
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-lg-9 col-sm-12">
-                                   <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
-                                    <div class="p-3 res">
-                                        <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote" src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
-                                    </div>
-                                   </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
-                                   <div class="rate">
-                                    <span class="fa fa-star checked star" ></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <span class="fa fa-star checked star "></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <p class="rating">(4.82)</p>
-                                  </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
-                                        
-                                </div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
-                                </div>
-                                <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span><i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                         
-                         
-                         <div class="book">
-                            <div class="row">
-                                <div class="col-lg-3 col-sm-12">
-                                   <div class="main">
-                                    <img class="img-fluid bookcover" src={Group1000002083}/>
-                                   </div>
-                                    
-                                </div>
-                                <div class="col-lg-9 col-sm-12">
-                                   <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
-                                    <div class=" res p-3 res">
-                                        <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote" src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
-                                    </div>
-                                   </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
-                                   <div class="rate">
-                                    <span class="fa fa-star checked star" ></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <span class="fa fa-star checked star "></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <p class="rating">(4.82)</p>
-                                  </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
-                                        
-                                </div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
-                                </div>
-                                <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                         
-                         
-                         <div class="book">
-                            <div class="row">
-                                <div class="col-lg-3 col-sm-12">
-                                    <div class="main">
-                                        <img class="img-fluid bookcover" src={lcimg}/>
-                                    
-                                    </div>
-                                </div>
-                                <div class="col-lg-9 col-sm-12">
-                                   <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
-                                    <div class="p-3 res">
-                                        <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote" src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
-                                    </div>
-                                   </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
-                                   <div class="rate">
-                                    <span class="fa fa-star checked star" ></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <span class="fa fa-star checked star "></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <p class="rating">(4.82)</p>
-                                  </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
-                                        
-                                </div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
-                                </div>
-                                <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span><i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                         
-                          
-                          <div class="book">
-                            <div class="row">
-                                <div class="col-lg-3 col-sm-12">
-                                    <div class="main">
-                                        <img class="img-fluid bookcover" src={Group1000002083}/>
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-lg-9 col-sm-12">
-                                   <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
-                                    <div class="p-3 res">
-                                        <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote" src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
-                                    </div>
-                                   </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
-                                   <div class="rate">
-                                    <span class="fa fa-star checked star" ></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <span class="fa fa-star checked star "></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <p class="rating">(4.82)</p>
-                                  </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
-                                        
-                                </div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
-                                </div>
-                                <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                         
-                           
-                           <div class="book">
-                            <div class="row">
-                                <div class="col-lg-3 col-sm-12">
-                                    <div class="main">
-                                        <img class="img-fluid bookcover" src={lcimg}/>
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-lg-9 col-sm-12">
-                                   <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
-                                    <div class="p-3 res">
-                                        <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote"  src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
-                                    </div>
-                                   </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
-                                   <div class="rate">
-                                    <span class="fa fa-star checked star" ></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <span class="fa fa-star checked star "></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <p class="rating">(4.82)</p>
-                                  </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
-                                        
-                                </div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
-                                </div>
-                                <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read m-auto " ><span>Continue Reading</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                         
                        
                     </div>
 
 
-                    <div class="col-md-6">
-                       <div class="btnrow">
-                        <button class="reading" >Sort Books <i class="fa-solid fa-arrow-down-wide-short icons"></i></button>
-                        <button class="reading" >Recommendations <i class="fa-solid fa-book-open icons"></i></button>
+                    <div class="col-md-6 ">
+                       <div class="btnrrw">
+                        <button class="reading" >Sort Books &nbsp;&nbsp;<i class="fa-solid fa-arrow-down-wide-short icons"></i></button>
+                        <button class="reading" >Clear Waiting List &nbsp;&nbsp;<i class="fa-solid fa-trash icons"></i></button>
                        </div>
 
-                         
-                         <div class="book">
+                      
+                         <div class="bookk">
                             <div class="row">
                                 <div class="col-lg-3 col-sm-12">
-                                    <div class="main">
-                                        <img class="img-fluid bookcover" src={Group1000002083}/>
-                                    </div>
+                                    <div class="watch">
+                                    <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                       </div>
                                     
                                 </div>
                                 <div class="col-lg-9 col-sm-12">
                                    <div class="description">
                                     <h3 class="name">Book Name Here</h3>
                                     <div class="p-3 res">
-                                        <img class="img-fluid vote" src={Vote}/>
+                                    <img class="img-fluid vote" src={Vote}/>
                                         <img class="img-fluid vote" src={Notification}/>
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
-                                   <div class="rate">
+                                   <div class="raate">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -522,87 +521,88 @@ export const Waitinglist = () => {
                                         
                                 </div>
                             </div>
-                            <div class="line"></div>
-                            <div class="row mt-3">
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
                                 <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
-                                </div>
-                                <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                         
-                        
-                        <div class="book">
-                            <div class="row">
-                                <div class="col-lg-3 col-sm-12">
-                                    <div class="main">
-                                        <img class="img-fluid bookcover" src={Group1000002083}/>
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-lg-9 col-sm-12">
-                                   <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
-                                    <div class="p-3 res">
-                                        <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote" src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
-                                    </div>
-                                   </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
-                                   <div class="rate">
-                                    <span class="fa fa-star checked star" ></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <span class="fa fa-star checked star "></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <p class="rating">(4.82)</p>
-                                  </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
-                                        
-                                </div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
+                                    <p class="numm">Status: <span class="pick"> Picked Up</span></p>
                                 </div>
                                 <div class="col-md-7">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
+                                    <div class="btnrrw">
+                                        <button class="read" ><span>Add To Library  &nbsp;&nbsp;</span> <i class="fa-solid fa-book-open icon"></i></button>
+                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                          
-                            <div class="book">
+                       
+                        <div class="bookk">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="watch">
+                                    <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                       </div>
+                                    
+                                </div>
+                                <div class="col-lg-9 col-sm-12">
+                                   <div class="description">
+                                    <h3 class="name">Book Name Here</h3>
+                                    <div class="p-3 res">
+                                    <img class="img-fluid vote" src={Vote}/>
+                                        <img class="img-fluid vote" src={Notification}/>
+                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    </div>
+                                   </div>
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   <div class="raate">
+                                    <span class="fa fa-star checked star" ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star "></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <p class="rating">(4.82)</p>
+                                  </div>
+                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="view" > View More </span></p>
+                                        
+                                </div>
+                            </div>
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col-md-5">
+                                    <p class="numm">Status: <span class="pick"> Picked Up</span></p>
+                                </div>
+                                <div class="col-md-7 ">
+                                    <div class="btnrrw">
+                                        <button class="read" ><span>Add To Library  &nbsp;&nbsp;</span> <i class="fa-solid fa-book-open icon"></i></button>
+                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                            <div class="bookk">
                                 <div class="row">
                                     <div class="col-lg-3 col-sm-12">
-                                        <div class="main">
-                                            <img class="img-fluid bookcover" src={Group1000002083}/>
-                                        </div>
+                                        <div class="watch">
+                                        <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                           </div>
                                         
                                     </div>
                                     <div class="col-lg-9 col-sm-12">
                                        <div class="description">
                                         <h3 class="name">Book Name Here</h3>
                                         <div class="p-3 res">
-                                            <img class="img-fluid vote" src={Vote}/>
-                                            <img class="img-fluid vote" src={Notification}/>
-                                            <img class="img-fluid vote" src={Trashcan}/>
+                                        <img class="img-fluid vote" src={Vote}/>
+                                        <img class="img-fluid vote" src={Notification}/>
+                                        <img class="img-fluid vote" src={Trashcan}/>
                                         </div>
                                        </div>
                                        <button class="category" >Category </button>
                                        <button class="category" >Category </button>
-                                       <div class="rate">
+                                       <div class="raate">
                                         <span class="fa fa-star checked star" ></span>
                                         <span class="fa fa-star checked star " ></span>
                                         <span class="fa fa-star checked star " ></span>
@@ -615,88 +615,88 @@ export const Waitinglist = () => {
                                             
                                     </div>
                                 </div>
-                                <div class="line"></div>
-                                <div class="row mt-3">
+                                <div class="linee"></div>
+                                <div class="row mt-3 pb-3">
                                     <div class="col-md-5">
-                                        <p class="num">10/ <span class="number">1032</span></p>
+                                        <p class="numm">Status: <span class="drop"> Dropped</span></p>
                                     </div>
                                     <div class="col-md-7 ">
-                                        <div class="btnrw">
-                                            <button class="read" ><span>Continue Reading</span><i class="fa-solid fa-book-open icon"></i></button>
-                                        <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
+                                        <div class="btnrow">
+                                            
+                                        <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                             
                           
-                         <div class="book">
-                            <div class="row">
-                                <div class="col-lg-3 col-sm-12">
-                                    <div class="main">
+                             <div class="bookk">
+                                <div class="row">
+                                    <div class="col-lg-3 col-sm-12">
+                                        <div class="watch">
+                                        <img class="img-fluid clock" src={Clock}/>
                                         <img class="img-fluid bookcover" src={lcimg}/>
+                                           </div>
+                                        
                                     </div>
-                                    
-                                </div>
-                                <div class="col-lg-9 col-sm-12">
-                                   <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
-                                    <div class="p-3 res">
+                                    <div class="col-lg-9 col-sm-12">
+                                       <div class="description">
+                                        <h3 class="name">Book Name Here</h3>
+                                        <div class="p-3 res">
                                         <img class="img-fluid vote" src={Vote}/>
                                         <img class="img-fluid vote" src={Notification}/>
                                         <img class="img-fluid vote" src={Trashcan}/>
-                                    </div>
-                                   </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
-                                   <div class="rate">
-                                    <span class="fa fa-star checked star" ></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <span class="fa fa-star checked star "></span>
-                                    <span class="fa fa-star checked star " ></span>
-                                    <p class="rating">(4.82)</p>
-                                  </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
-                                        
-                                </div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
-                                </div>
-                                <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
+                                        </div>
+                                       </div>
+                                       <button class="category" >Category </button>
+                                       <button class="category" >Category </button>
+                                       <div class="raate">
+                                        <span class="fa fa-star checked star" ></span>
+                                        <span class="fa fa-star checked star " ></span>
+                                        <span class="fa fa-star checked star " ></span>
+                                        <span class="fa fa-star checked star "></span>
+                                        <span class="fa fa-star checked star " ></span>
+                                        <p class="rating">(4.82)</p>
+                                      </div>
+                                        <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                            <span class="view" > View More </span></p>
+                                            
                                     </div>
                                 </div>
+                                <div class="linee"></div>
+                                <div class="row mt-3 pb-3">
+                                    <div class="col-md-5">
+                                        <p class="numm">Status: <span class="drop"> Dropped</span></p>
+                                    </div>
+                                    <div class="col-md-7 ">
+                                        <div class="btnrow">
+                                            
+                                        <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                   
-                           
-                           <div class="book">
+                    
+                           <div class="bookk">
                             <div class="row">
                                 <div class="col-lg-3 col-sm-12">
-                                    <div class="main">
-                                        <img class="img-fluid bookcover" src={Group1000002083}/>
-                                    </div>
+                                    <div class="watch">
+                                    <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                       </div>
                                     
                                 </div>
                                 <div class="col-lg-9 col-sm-12">
                                    <div class="description">
                                     <h3 class="name">Book Name Here</h3>
                                     <div class="p-3 res">
-                                        <img class="img-fluid vote" src={Vote}/>
+                                    <img class="img-fluid vote" src={Vote}/>
                                         <img class="img-fluid vote" src={Notification}/>
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
-                                   <div class="rate">
+                                   <div class="raate">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -709,30 +709,25 @@ export const Waitinglist = () => {
                                         
                                 </div>
                             </div>
-                            <div class="line"></div>
-                            <div class="row mt-3">
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
                                 <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
+                                    <p class="numm">Status: <span class="drop"> Dropped</span></p>
                                 </div>
                                 <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
+                                    <div class="btnrow">
+                                        
+                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                         
+                      
                     </div>
                     
                 </div>
             </div>
-       
-    </section>
- 
-
-
-
+        </section>
 
 
 
