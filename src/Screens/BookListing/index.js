@@ -7,8 +7,8 @@ import "./booklisting.css";
 //   MainNoval,
 //   NovalImage,
 // } from "../../Assets/images";
-
-import CustomInput from '../../Components/CustomInput'
+import { UserLayout } from "../../Components/Layout/UserLayout";
+import CustomInput from "../../Components/CustomInput";
 import {
   AuthorList1,
   Logo,
@@ -40,9 +40,9 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 export const BookListing = () => {
-  const [currentPage, setCurrentPage] = useState(1);  
+  const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(8);
-  const [formData, setFormData] = useState({})
+  const [formData, setFormData] = useState({});
   const [books, setBooks] = useState([]);
   const [bookFilter, setBookFilter] = useState();
   const [activeItem, setActiveItem] = useState(null);
@@ -220,14 +220,9 @@ export const BookListing = () => {
     },
   ];
 
+  const [inputValue, setInputValue] = useState("");
 
-
-  const [inputValue, setInputValue] = useState('');
-
-
-
-
-  const filterData = books?.filter(item =>
+  const filterData = books?.filter((item) =>
     item?.name.toLowerCase().includes(inputValue.toLowerCase())
   );
 
@@ -235,26 +230,23 @@ export const BookListing = () => {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const bookitems = filterData?.slice(indexOfFirstItem, indexOfLastItem);
 
-  console.log("bookitemItems"  ,bookitems)
+  console.log("bookitemItems", bookitems);
   const handleChange = (event) => {
     const { name, value } = event.target;
 
     if (name === "search_book") {
-      setInputValue(value)
+      setInputValue(value);
     }
 
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
-
   };
 
   return (
-    <>
-      {/* Header */}
-
-      {/* Hero Section */}
+    
+  <UserLayout> 
       <sectionc class="inner__hero-sec jost-font">
         <div className="container">
           <div className="row">
@@ -292,16 +284,37 @@ export const BookListing = () => {
           <div className="bestSell__filters">
             <div className="container">
               <div className="row align-items-center">
-                <div className="col-lg-4 col-md-6">
+                <div className="col-lg-6 col-md-6">
                   <div className="filters__tabs">
-                    <button className="filters__tab filters__tab-active">
+                    {/* <button className="filters__tab filters__tab-active">
                       Novels
                     </button>
                     <button className="filters__tab">Commics</button>
-                    <button className="filters__tab">Fan-fic</button>
+                    <button className="filters__tab">Fan-fic</button> */}
+
+                    <div className="col-md-12">
+                      <ul
+                        className="nav nav-pills justify-content-center  d-flex  gap-2 "
+                        id="pills-tab"
+                        role="tablist"
+                      >
+                        {genre &&
+                          genre.map((item, index) => (
+                            <li className="nav-item" key={index}>
+                              <button
+                                className="filters__tab filters__tab-active"
+                                value={item?.id}
+                                onClick={filterGenre}
+                              >
+                                {item?.name}
+                              </button>
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
-                <div className="col-lg-2 col-md-3">
+                {/* <div className="col-lg-2 col-md-3">
                   <div className="filters__category">
                     <select
                       class="form-select"
@@ -321,36 +334,34 @@ export const BookListing = () => {
                           </option>
                         </li>
                       ))}
+
+                    </select>
+
+                  </div>
+                </div> */}
+
                       {/* <option value="1">Categories 1</option>
                       <option value="2">Categories 2</option>
                       <option value="3">Categories 3</option> */}
-                    </select>
-                  </div>
-                </div>
                 <div className="col-lg-2 col-md-3">
                   <div className="filters__pricing">
-                 
                     {/* <select
                       class="form-select"
                       aria-label="Default select example"
                     > */}
-                      {/* <option selected>Pricing</option> */}
-                      {/* <option value="1">Pricing 1</option>
-                      <option value="2">Pricing 2</option> */}
-                 
-                        {" "}
-                         
-                   
+                    {/* <option selected>Pricing</option> */}
+                    {/* <option value="1">Pricing 1</option>
+                      <option value="2">Pricing 2</option> */}{" "}
                     {/* </select> */}
                     <CustomInput
-                            // label="Enter Price"
-                            type="number"
-                            placeholder="Enter Price"
-                            name="name"
-                            labelClass="mainLabel"
-                            inputClass="filters__category_price  "
-                            onChange={priceFilter}
-                          />
+                      // label="Enter Price"
+                      type="number"
+                      placeholder="Enter Price"
+                      name="name"
+                      labelClass="mainLabel"
+                      inputClass="filters__category_price  "
+                      onChange={priceFilter}
+                    />
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-12">
@@ -364,10 +375,10 @@ export const BookListing = () => {
                         <FontAwesomeIcon icon={faSearch} />
                       </button>
                       <input
-                      value={inputValue}
-                      name="search_book"
-                      onChange={handleChange}
-                      type="text"
+                        value={inputValue}
+                        name="search_book"
+                        onChange={handleChange}
+                        type="text"
                         className="form-control filters__search-input"
                         placeholder="Search book By Name, Author Name"
                         aria-describedby="button-addon1"
@@ -580,6 +591,6 @@ export const BookListing = () => {
           </div>
         </div>
       </section>
-    </>
+      </UserLayout>
   );
 };

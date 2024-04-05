@@ -59,7 +59,7 @@
 .filters__tabs .filters__tab {
   border: none;
   background: #fff;
-  padding: 7px 30px;
+  padding: 7px 20px;
   border-radius: 25px;
 }
 .filters__category_price{
@@ -78,6 +78,7 @@
 .filters__tabs .filters__tab.filters__tab-active {
   background: #360c55;
   color: #fff;
+  font-size: 12px;
 }
 .filters__category select,
 .filters__pricing select {
