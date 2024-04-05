@@ -233,19 +233,21 @@ export const History = () => {
 
 
 
-        <section class="cover">
+        <section class="cov">
             
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="btnrw">
-                            <button class="lib" >WAITING LIST </button>
-                            <img class="img-fluid polygon" src={Polygon6}/>
-                            <button class="hist" >History </button>
-                            <button class="history" >  WAITING LIST </button>
+                        <div class="btnrww">
+                            <button class="history" >Library </button>
+                            
+                            <button class="libs"  >History </button>
+                            <img class="img-fluid polygons" src={Polygon6}/>
+                            <button class="hist" >  Waiting List </button>
+                           
                         </div>
                         
-                        <div class="book">
+                        <div class="books">
                             <div class="row">
                                 <div class="col-lg-3 col-sm-12">
                                     <div class="main">
@@ -264,7 +266,7 @@ export const History = () => {
                                    </div>
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
-                                   <div class="rate">
+                                   <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -277,22 +279,23 @@ export const History = () => {
                                         
                                 </div>
                             </div>
-                            <div class="line"></div>
+                            <div class="lines"></div>
                             <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
+                                <div class="col-md-3">
+                                    <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span><i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
-                                    </div>
+                                <div class="col-md-9 ">
+                                    <div class="btnrww">
+                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                          
                          
-                         <div class="book">
+                         <div class="books">
                             <div class="row">
                                 <div class="col-lg-3 col-sm-12">
                                    <div class="main">
@@ -311,7 +314,7 @@ export const History = () => {
                                    </div>
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
-                                   <div class="rate">
+                                   <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -324,22 +327,23 @@ export const History = () => {
                                         
                                 </div>
                             </div>
-                            <div class="line"></div>
+                            <div class="lines"></div>
                             <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
+                            <div class="col-md-3">
+                                    <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
-                                    </div>
+                                <div class="col-md-9 ">
+                                    <div class="btnrww">
+                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                          
                          
-                         <div class="book">
+                         <div class="books">
                             <div class="row">
                                 <div class="col-lg-3 col-sm-12">
                                     <div class="main">
@@ -358,7 +362,7 @@ export const History = () => {
                                    </div>
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
-                                   <div class="rate">
+                                   <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -371,22 +375,23 @@ export const History = () => {
                                         
                                 </div>
                             </div>
-                            <div class="line"></div>
+                            <div class="lines"></div>
                             <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
+                            <div class="col-md-3">
+                                    <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span><i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
-                                    </div>
+                                <div class="col-md-9 ">
+                                    <div class="btnrww">
+                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                          
                           
-                          <div class="book">
+                          <div class="books">
                             <div class="row">
                                 <div class="col-lg-3 col-sm-12">
                                     <div class="main">
@@ -405,7 +410,7 @@ export const History = () => {
                                    </div>
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
-                                   <div class="rate">
+                                   <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -418,22 +423,23 @@ export const History = () => {
                                         
                                 </div>
                             </div>
-                            <div class="line"></div>
+                            <div class="lines"></div>
                             <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
+                            <div class="col-md-3">
+                                    <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
-                                    </div>
+                                <div class="col-md-9 ">
+                                    <div class="btnrww">
+                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                          
                            
-                           <div class="book">
+                           <div class="books">
                             <div class="row">
                                 <div class="col-lg-3 col-sm-12">
                                     <div class="main">
@@ -452,7 +458,7 @@ export const History = () => {
                                    </div>
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
-                                   <div class="rate">
+                                   <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -465,16 +471,17 @@ export const History = () => {
                                         
                                 </div>
                             </div>
-                            <div class="line"></div>
+                            <div class="lines"></div>
                             <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
+                            <div class="col-md-3">
+                                    <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read m-auto " ><span>Continue Reading</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
-                                    </div>
+                                <div class="col-md-9 ">
+                                    <div class="btnrww">
+                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -486,11 +493,11 @@ export const History = () => {
                     <div class="col-md-6">
                        <div class="btnrow">
                         <button class="reading" >Sort Books <i class="fa-solid fa-arrow-down-wide-short icons"></i></button>
-                        <button class="reading" >Recommendations <i class="fa-solid fa-book-open icons"></i></button>
+                        <button class="reading" >Clear All History<i class="fa-solid fa-book-open icons"></i></button>
                        </div>
 
                          
-                         <div class="book">
+                         <div class="books">
                             <div class="row">
                                 <div class="col-lg-3 col-sm-12">
                                     <div class="main">
@@ -509,7 +516,7 @@ export const History = () => {
                                    </div>
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
-                                   <div class="rate">
+                                   <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -522,22 +529,23 @@ export const History = () => {
                                         
                                 </div>
                             </div>
-                            <div class="line"></div>
+                            <div class="lines"></div>
                             <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
+                            <div class="col-md-3">
+                                    <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
-                                    </div>
+                                <div class="col-md-9 ">
+                                    <div class="btnrww">
+                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                          
                         
-                        <div class="book">
+                        <div class="books">
                             <div class="row">
                                 <div class="col-lg-3 col-sm-12">
                                     <div class="main">
@@ -556,7 +564,7 @@ export const History = () => {
                                    </div>
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
-                                   <div class="rate">
+                                   <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -569,21 +577,22 @@ export const History = () => {
                                         
                                 </div>
                             </div>
-                            <div class="line"></div>
+                            <div class="lines"></div>
                             <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
+                            <div class="col-md-3">
+                                    <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-7">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
-                                    </div>
+                                <div class="col-md-9 ">
+                                    <div class="btnrww">
+                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                           
-                            <div class="book">
+                            <div class="books">
                                 <div class="row">
                                     <div class="col-lg-3 col-sm-12">
                                         <div class="main">
@@ -602,7 +611,7 @@ export const History = () => {
                                        </div>
                                        <button class="category" >Category </button>
                                        <button class="category" >Category </button>
-                                       <div class="rate">
+                                       <div class="rates">
                                         <span class="fa fa-star checked star" ></span>
                                         <span class="fa fa-star checked star " ></span>
                                         <span class="fa fa-star checked star " ></span>
@@ -615,22 +624,23 @@ export const History = () => {
                                             
                                     </div>
                                 </div>
-                                <div class="line"></div>
+                                <div class="lines"></div>
                                 <div class="row mt-3">
-                                    <div class="col-md-5">
-                                        <p class="num">10/ <span class="number">1032</span></p>
-                                    </div>
-                                    <div class="col-md-7 ">
-                                        <div class="btnrw">
-                                            <button class="read" ><span>Continue Reading</span><i class="fa-solid fa-book-open icon"></i></button>
-                                        <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
+                                <div class="col-md-3">
+                                    <p class="nums">10/ <span class="numberr">1032</span></p>
+                                </div>
+                                <div class="col-md-9 ">
+                                    <div class="btnrww">
+                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
-                                    </div>
+                                </div>
                                 </div>
                             </div>
                              
                           
-                         <div class="book">
+                         <div class="books">
                             <div class="row">
                                 <div class="col-lg-3 col-sm-12">
                                     <div class="main">
@@ -649,7 +659,7 @@ export const History = () => {
                                    </div>
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
-                                   <div class="rate">
+                                   <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -662,22 +672,23 @@ export const History = () => {
                                         
                                 </div>
                             </div>
-                            <div class="line"></div>
+                            <div class="lines"></div>
                             <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
+                            <div class="col-md-3">
+                                    <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
-                                    </div>
+                                <div class="col-md-9 ">
+                                    <div class="btnrww">
+                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                    
                            
-                           <div class="book">
+                           <div class="books">
                             <div class="row">
                                 <div class="col-lg-3 col-sm-12">
                                     <div class="main">
@@ -696,7 +707,7 @@ export const History = () => {
                                    </div>
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
-                                   <div class="rate">
+                                   <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -709,16 +720,17 @@ export const History = () => {
                                         
                                 </div>
                             </div>
-                            <div class="line"></div>
+                            <div class="lines"></div>
                             <div class="row mt-3">
-                                <div class="col-md-5">
-                                    <p class="num">10/ <span class="number">1032</span></p>
+                            <div class="col-md-3">
+                                    <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-7 ">
-                                    <div class="btnrw">
-                                        <button class="read" ><span>Continue Reading</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils <i class="fa-solid fa-calendar-week icon"></i></button>
-                                    </div>
+                                <div class="col-md-9 ">
+                                    <div class="btnrww">
+                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
