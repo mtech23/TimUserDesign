@@ -298,6 +298,7 @@ const [bookFilter, setBookFilter] = useState()
         {/* Top Author Section */}
         <section className="top-authors">
           <div className="top__author-cartoon">
+            {/* <Link to={`/book-listing/product-detail/${item?.id}`}></Link> */}
             <img src={TopAuthorCartoon} />
           </div>
           <div className="top__author-before">
@@ -343,57 +344,17 @@ const [bookFilter, setBookFilter] = useState()
                   </a>
                 </div>
               </div>
+
               <div className="author__products">
                 <div className="row">
                   <Slider {...settingsForFourItems}>
-                    {/* <div className="author__poduct">
-                      <div className="add_to_card"></div>
-                      <div className="position-relative">
-                        <img src={TopAuthorBook1} />
-                        <div className="cart_overlay">
-                          <div className="cart__box">
-                            <div className="cart__icons">
-                              <a href="javascript:;" className="cart__icon">
-                                <FontAwesomeIcon
-                                  icon={faArrowRight}
-                                  className="cart__icon-arrow"
-                                />
-                              </a>
-                              <a href="javascript:;" className="cart__icon">
-                                <FontAwesomeIcon icon={faEye} />
-                              </a>
-                              <a href="javascript:;" className="cart__icon">
-                                <FontAwesomeIcon icon={faHeart} />
-                              </a>
-                            </div>
-                            <button className="addToCart__btn jost-font">
-                              Add To Cart
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="product__titled-div">
-                        <h3 className="author__poduct_title jost-font">
-                          Lorem Ipsume Doller
-                        </h3>
-                        <div class="product__icon">
-                        
-                          <img src={Cart_icon_pink} />
-                        </div>
-                      </div>
-                      <div className="product__price ">
-                        <span className="discount__price jost-font">
-                          $18.99
-                        </span>
-                        <span className="actual__price jost-font">$20.99</span>
-                      </div>
-                    </div>   */}
-                    {/*                     
-                     <CustomButton props={"Add To Cart"}/> */}
+                 
 
                     {books &&
                       books.map((item, index) => (
+                        <Link to={`/book-listing/product-detail/${item?.id}`} className="author__products_link">
                         <CustomCard
+                        className="author__products_img"
                           image={base_url + item?.image}
                           icon1={faArrowRight}
                           icon2={faEye}
@@ -402,10 +363,12 @@ const [bookFilter, setBookFilter] = useState()
                           price={item?.price || 0}
                           title={item?.name}
                         />
+                        </Link>
                       ))}
                   </Slider>
                 </div>
               </div>
+ 
             </div>
           </div>
         </section>
@@ -522,15 +485,16 @@ const [bookFilter, setBookFilter] = useState()
                 </div>
                 <div className="featured__books">
                   <div className="row popular_tabing">
+                  <Slider {...settingsForFourItems}>
                     {books &&
                       books.map((item, index) => (
                         
                         <div className="col-md-4">
                           <div className="card product_hover-effect">
-                            <img src={base_url +  item?.image} className="card-img-top" />
+                            <img src={base_url +  item?.image} className="card-img-top" id="featured__books_img" />
                             <div className="card-body featured_books-body">
                               <h3 className="card-title jost-font">
-                               {item?.name}
+                               {item?.name.slice(0 ,15)}
                               </h3>
                               <p className="author__name jost-font">
                                 Author Name
@@ -574,6 +538,8 @@ const [bookFilter, setBookFilter] = useState()
                           </div>
                         </div>
                       ))}
+
+</Slider>
                   </div>
                 </div>
               </div>
@@ -867,7 +833,7 @@ const [bookFilter, setBookFilter] = useState()
             </div>
           </section>
         </section>
-        {/* Completed Novel Section */}
+ 
         <section className="completed-novel">
           <div
             className="container-fluid

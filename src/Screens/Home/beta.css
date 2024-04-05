@@ -1556,9 +1556,21 @@
     font-size: 65px;
   }
 }
+
+
+
+#featured__books_img{
+  height: 400px;
+}
 @media (max-width: 414px) {
   .banner-sec .join__us-btns,
   .mana-coin .join__us-btns {
     gap: 15px;
   }
+}
+
+
+
+.author__products_link{
+color: black;
 }

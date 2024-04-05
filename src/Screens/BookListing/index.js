@@ -8,6 +8,7 @@ import "./booklisting.css";
 //   NovalImage,
 // } from "../../Assets/images";
 
+import CustomInput from '../../Components/CustomInput'
 import {
   AuthorList1,
   Logo,
@@ -39,143 +40,219 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 export const BookListing = () => {
-  const [ads, setAds] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);  
+  const [itemsPerPage, setItemsPerPage] = useState(8);
+  const [formData, setFormData] = useState({})
   const [books, setBooks] = useState([]);
-  const [genres, setGenres] = useState([]);
-  const [selectedGenre, setSelectedGenre] = useState(null);
+  const [bookFilter, setBookFilter] = useState();
+  const [activeItem, setActiveItem] = useState(null);
+  const [categories, setCategores] = useState();
+  const [genre, setGenre] = useState();
   const base_url = "https://custom.mystagingserver.site/Tim-WDLLC/public/";
+  const LoginToken = localStorage.getItem("loginUser");
 
-  const reusableSetting = (item, centerMode) => {
-    return {
-      dots: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: item,
-      slidesToScroll: 1,
-      centerMode: centerMode,
-      responsive: [
-        {
-          breakpoint: 1025,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 5,
-          },
+  console.log("categories img", categories);
+
+  const BookListing = () => {
+    document.querySelector(".loaderBox").classList.remove("d-none");
+    fetch(
+      "https://custom.mystagingserver.site/Tim-WDLLC/public/api/book_listing",
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
         },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 3,
-          },
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 2,
-          },
-        },
-      ],
-    };
-  };
-  const reusableSettingForOne = (item, centerMode) => {
-    return {
-      dots: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: item,
-      slidesToScroll: 1,
-      centerMode: centerMode,
-    };
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(data.data);
+        setBooks(data.data);
+        setBookFilter(data.data);
+      })
+      .catch((error) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(error);
+      });
   };
 
-  const settingsForFourItems = reusableSetting(4, false);
-  const settingsForOneItem = reusableSettingForOne(1, false);
-  //   const adsListing = () => {
-  //     document.querySelector(".loaderBox").classList.remove("d-none");
-  //     fetch(
-  //       "https://custom.mystagingserver.site/Tim-WDLLC/public/api/ads_listing",
-  //       {
-  //         method: "GET",
-  //         headers: {
-  //           Accept: "application/json",
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     )
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         document.querySelector(".loaderBox").classList.add("d-none");
-  //         setAds(data.data);
-  //       })
-  //       .catch((error) => {
-  //         document.querySelector(".loaderBox").classList.add("d-none");
-  //         console.log(error);
-  //       });
-  //   };
+  const BookListingUser = () => {
+    document.querySelector(".loaderBox").classList.remove("d-none");
+    fetch(
+      "https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/book_listing",
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${LoginToken}`,
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(data.data);
+        setBooks(data.data);
+        setBookFilter(data.data);
+      })
+      .catch((error) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(error);
+      });
+  };
 
-  //   const BookListing = () => {
-  //     document.querySelector(".loaderBox").classList.remove("d-none");
-  //     fetch(
-  //       "https://custom.mystagingserver.site/Tim-WDLLC/public/api/book_listing",
-  //       {
-  //         method: "GET",
-  //         headers: {
-  //           Accept: "application/json",
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     )
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         document.querySelector(".loaderBox").classList.add("d-none");
-  //         console.log(data.data);
-  //         setBooks(data.data);
-  //       })
-  //       .catch((error) => {
-  //         document.querySelector(".loaderBox").classList.add("d-none");
-  //         console.log(error);
-  //       });
-  //   };
+  console.log("categories", categories);
+  const genreListing = () => {
+    document.querySelector(".loaderBox").classList.remove("d-none");
+    fetch(
+      "https://custom.mystagingserver.site/Tim-WDLLC/public/api/genre_listing",
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(data.data);
+        setGenre(data.data);
+      })
+      .catch((error) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(error);
+      });
+  };
 
-  //   const GenreData = () => {
-  //     document.querySelector(".loaderBox").classList.remove("d-none");
-  //     fetch(
-  //       "https://custom.mystagingserver.site/Tim-WDLLC/public/api/genre_listing"
-  //     )
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         document.querySelector(".loaderBox").classList.add("d-none");
-  //         console.log(data);
-  //         setGenres(data.data);
-  //         if (data.data.length > 0) {
-  //           setSelectedGenre(data.data[0]); // Select the first genre by default
-  //         }
-  //       })
-  //       .catch((error) => {
-  //         document.querySelector(".loaderBox").classList.add("d-none");
-  //         console.error("Error fetching data: ", error);
-  //       });
-  //   };
+  const categoryListing = () => {
+    document.querySelector(".loaderBox").classList.remove("d-none");
+    fetch(
+      "https://custom.mystagingserver.site/Tim-WDLLC/public/api/category_listing",
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(data.data);
+        setCategores(data.data);
+      })
+      .catch((error) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(error);
+      });
+  };
 
-  //   useEffect(() => {
-  //     adsListing();
-  //     BookListing();
-  //     GenreData();
-  //   }, []);
-
-  //   const handleTabClick = (genre) => {
-  //     setSelectedGenre(genre);
-  //   };
-
-  //   <FontAwesomeIcon icon={faHeart}></FontAwesomeIcon>
   useEffect(() => {
-    Aos.init();
+    if (LoginToken) {
+      BookListingUser();
+    } else {
+      BookListing();
+    }
+    genreListing();
+    categoryListing();
   }, []);
+
+  const toggleAccordion = (item) => {
+    setActiveItem(activeItem === item ? null : item);
+  };
+
+  const filterGenre = (event) => {
+    const filterCategory = event.target.value;
+    const filteredBooks = bookFilter?.filter(
+      (book) => book?.genre_id == filterCategory
+    );
+    setBooks(filteredBooks);
+  };
+
+  const categoryFilter = (catID) => {
+    const filteredBooks = bookFilter?.filter(
+      (book) => book?.category_id == catID
+    );
+    setBooks(filteredBooks);
+  };
+
+  const priceFilter = (e) => {
+    const priceText = e.target.value;
+    if (priceText > 0) {
+      const filteredBooks = bookFilter?.filter(
+        (book) => book?.price == priceText
+      );
+      setBooks(filteredBooks);
+    } else {
+      BookListing();
+    }
+  };
+
+  const ratingFilter = (rating) => {
+    const filteredBooks = bookFilter?.filter((book) => book?.rating == rating);
+    setBooks(filteredBooks);
+  };
+
+  console.log("dad", categories);
+
+  const accordionData = [
+    {
+      title: "categories",
+      items: categories,
+    },
+    {
+      title: "Filter By Price",
+      items: ["One", "Two", "Three"],
+    },
+    {
+      title: "By Review",
+      items: ["One", "Two", "Three"],
+    },
+    {
+      title: "Featured Books",
+      items: ["One", "Two", "Three"],
+    },
+  ];
+
+
+
+  const [inputValue, setInputValue] = useState('');
+
+
+
+
+  const filterData = books?.filter(item =>
+    item?.name.toLowerCase().includes(inputValue.toLowerCase())
+  );
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const bookitems = filterData?.slice(indexOfFirstItem, indexOfLastItem);
+
+  console.log("bookitemItems"  ,bookitems)
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    if (name === "search_book") {
+      setInputValue(value)
+    }
+
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+
+  };
+
   return (
     <>
       {/* Header */}
-  
 
       {/* Hero Section */}
       <sectionc class="inner__hero-sec jost-font">
@@ -231,23 +308,49 @@ export const BookListing = () => {
                       aria-label="Default select example"
                     >
                       <option selected>Categories</option>
-                      <option value="1">Categories 1</option>
+                      {categories?.map((subItem, subIndex) => (
+                        <li key={subIndex}>
+                          <option
+                            href="javascript:;"
+                            value={subItem?.id}
+                            onClick={() => {
+                              categoryFilter(subItem?.id);
+                            }}
+                          >
+                            {subItem?.name}
+                          </option>
+                        </li>
+                      ))}
+                      {/* <option value="1">Categories 1</option>
                       <option value="2">Categories 2</option>
-                      <option value="3">Categories 3</option>
+                      <option value="3">Categories 3</option> */}
                     </select>
                   </div>
                 </div>
                 <div className="col-lg-2 col-md-3">
                   <div className="filters__pricing">
-                    <select
+                 
+                    {/* <select
                       class="form-select"
                       aria-label="Default select example"
-                    >
-                      <option selected>Pricing</option>
-                      <option value="1">Pricing 1</option>
-                      <option value="2">Pricing 2</option>
-                      <option value="3">Pricing 3</option>
-                    </select>
+                    > */}
+                      {/* <option selected>Pricing</option> */}
+                      {/* <option value="1">Pricing 1</option>
+                      <option value="2">Pricing 2</option> */}
+                 
+                        {" "}
+                         
+                   
+                    {/* </select> */}
+                    <CustomInput
+                            // label="Enter Price"
+                            type="number"
+                            placeholder="Enter Price"
+                            name="name"
+                            labelClass="mainLabel"
+                            inputClass="filters__category_price  "
+                            onChange={priceFilter}
+                          />
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-12">
@@ -261,7 +364,10 @@ export const BookListing = () => {
                         <FontAwesomeIcon icon={faSearch} />
                       </button>
                       <input
-                        type="text"
+                      value={inputValue}
+                      name="search_book"
+                      onChange={handleChange}
+                      type="text"
                         className="form-control filters__search-input"
                         placeholder="Search book By Name, Author Name"
                         aria-describedby="button-addon1"
@@ -279,246 +385,38 @@ export const BookListing = () => {
               </div>
               <div className="bestBooks__listing">
                 <div className="row">
-                  <div className="col-lg-3 col-md-4">
-                    <div className="bestBooks__list">
-                      <div className="bestBooks__list-img">
-                        <img src={BestSellingBook1} />
-                        <div className="bestBooks__list-overlay">
-                          <button className="bestBooks__purchase-btn">
-                            Purchases
-                          </button>
+                  {bookitems &&
+                    bookitems?.map((item, index) => (
+                      <div className="col-lg-3 col-md-4">
+                        <div className="bestBooks__list">
+                          <div className="bestBooks__list-img">
+                            <img
+                              src={base_url + item?.image}
+                              id="bestsellingimg"
+                            />
+                            <div className="bestBooks__list-overlay">
+                              {/* <button className="bestBooks__purchase-btn">
+                            detail
+                          </button> */}
+                              <Link
+                                to={`/book-listing/product-detail/${item?.id}`}
+                                className="bestBooks__purchase-btn"
+                              >
+                                View
+                              </Link>
+                            </div>
+                          </div>
+                          <div className="bestBooks__list-body">
+                            <h3 className="bestBooks__list-title">
+                              {item?.name}
+                            </h3>
+                            <p className="bestBooks__list-text">
+                              Lorem Ipsum is simply dummy text{" "}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                      <div className="bestBooks__list-body">
-                        <h3 className="bestBooks__list-title">
-                          Book Name Here
-                        </h3>
-                        <p className="bestBooks__list-text">
-                          Lorem Ipsum is simply dummy text{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-4">
-                    <div className="bestBooks__list">
-                      <div className="bestBooks__list-img">
-                        <img src={BestSellingBook2} />
-                        <div className="bestBooks__list-overlay">
-                          <button className="bestBooks__purchase-btn">
-                            Purchases
-                          </button>
-                        </div>
-                      </div>
-                      <div className="bestBooks__list-body">
-                        <h3 className="bestBooks__list-title">
-                          Book Name Here
-                        </h3>
-                        <p className="bestBooks__list-text">
-                          Lorem Ipsum is simply dummy text{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-4">
-                    <div className="bestBooks__list">
-                      <div className="bestBooks__list-img">
-                        <img src={BestSellingBook3} />
-                        <div className="bestBooks__list-overlay">
-                          <button className="bestBooks__purchase-btn">
-                            Purchases
-                          </button>
-                        </div>
-                      </div>
-                      <div className="bestBooks__list-body">
-                        <h3 className="bestBooks__list-title">
-                          Book Name Here
-                        </h3>
-                        <p className="bestBooks__list-text">
-                          Lorem Ipsum is simply dummy text{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-4">
-                    <div className="bestBooks__list">
-                      <div className="bestBooks__list-img">
-                        <img src={BestSellingBook4} />
-                        <div className="bestBooks__list-overlay">
-                          <button className="bestBooks__purchase-btn">
-                            Purchases
-                          </button>
-                        </div>
-                      </div>
-                      <div className="bestBooks__list-body">
-                        <h3 className="bestBooks__list-title">
-                          Book Name Here
-                        </h3>
-                        <p className="bestBooks__list-text">
-                          Lorem Ipsum is simply dummy text{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-4">
-                    <div className="bestBooks__list">
-                      <div className="bestBooks__list-img">
-                        <img src={BestSellingBook5} />
-                        <div className="bestBooks__list-overlay">
-                          <button className="bestBooks__purchase-btn">
-                            Purchases
-                          </button>
-                        </div>
-                      </div>
-                      <div className="bestBooks__list-body">
-                        <h3 className="bestBooks__list-title">
-                          Book Name Here
-                        </h3>
-                        <p className="bestBooks__list-text">
-                          Lorem Ipsum is simply dummy text{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-4">
-                    <div className="bestBooks__list">
-                      <div className="bestBooks__list-img">
-                        <img src={BestSellingBook6} />
-                        <div className="bestBooks__list-overlay">
-                          <button className="bestBooks__purchase-btn">
-                            Purchases
-                          </button>
-                        </div>
-                      </div>
-                      <div className="bestBooks__list-body">
-                        <h3 className="bestBooks__list-title">
-                          Book Name Here
-                        </h3>
-                        <p className="bestBooks__list-text">
-                          Lorem Ipsum is simply dummy text{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-4">
-                    <div className="bestBooks__list">
-                      <div className="bestBooks__list-img">
-                        <img src={BestSellingBook7} />
-                        <div className="bestBooks__list-overlay">
-                          <button className="bestBooks__purchase-btn">
-                            Purchases
-                          </button>
-                        </div>
-                      </div>
-                      <div className="bestBooks__list-body">
-                        <h3 className="bestBooks__list-title">
-                          Book Name Here
-                        </h3>
-                        <p className="bestBooks__list-text">
-                          Lorem Ipsum is simply dummy text{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-4">
-                    <div className="bestBooks__list">
-                      <div className="bestBooks__list-img">
-                        <img src={BestSellingBook8} />
-                        <div className="bestBooks__list-overlay">
-                          <button className="bestBooks__purchase-btn">
-                            Purchases
-                          </button>
-                        </div>
-                      </div>
-                      <div className="bestBooks__list-body">
-                        <h3 className="bestBooks__list-title">
-                          Book Name Here
-                        </h3>
-                        <p className="bestBooks__list-text">
-                          Lorem Ipsum is simply dummy text{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-4">
-                    <div className="bestBooks__list">
-                      <div className="bestBooks__list-img">
-                        <img src={BestSellingBook9} />
-                        <div className="bestBooks__list-overlay">
-                          <button className="bestBooks__purchase-btn">
-                            Purchases
-                          </button>
-                        </div>
-                      </div>
-                      <div className="bestBooks__list-body">
-                        <h3 className="bestBooks__list-title">
-                          Book Name Here
-                        </h3>
-                        <p className="bestBooks__list-text">
-                          Lorem Ipsum is simply dummy text{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-4">
-                    <div className="bestBooks__list">
-                      <div className="bestBooks__list-img">
-                        <img src={BestSellingBook10} />
-                        <div className="bestBooks__list-overlay">
-                          <button className="bestBooks__purchase-btn">
-                            Purchases
-                          </button>
-                        </div>
-                      </div>
-                      <div className="bestBooks__list-body">
-                        <h3 className="bestBooks__list-title">
-                          Book Name Here
-                        </h3>
-                        <p className="bestBooks__list-text">
-                          Lorem Ipsum is simply dummy text{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-4">
-                    <div className="bestBooks__list">
-                      <div className="bestBooks__list-img">
-                        <img src={BestSellingBook11} />
-                        <div className="bestBooks__list-overlay">
-                          <button className="bestBooks__purchase-btn">
-                            Purchases
-                          </button>
-                        </div>
-                      </div>
-                      <div className="bestBooks__list-body">
-                        <h3 className="bestBooks__list-title">
-                          Book Name Here
-                        </h3>
-                        <p className="bestBooks__list-text">
-                          Lorem Ipsum is simply dummy text{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-4">
-                    <div className="bestBooks__list">
-                      <div className="bestBooks__list-img">
-                        <img src={BestSellingBook12} />
-                        <div className="bestBooks__list-overlay">
-                          <button className="bestBooks__purchase-btn">
-                            Purchases
-                          </button>
-                        </div>
-                      </div>
-                      <div className="bestBooks__list-body">
-                        <h3 className="bestBooks__list-title">
-                          Book Name Here
-                        </h3>
-                        <p className="bestBooks__list-text">
-                          Lorem Ipsum is simply dummy text{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                    ))}
                 </div>
               </div>
               <div className="row">

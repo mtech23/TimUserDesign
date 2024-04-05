@@ -9,7 +9,7 @@ const CustomCard = (props) => {
       <div className="author__poduct">
         <div className="add_to_card"></div>
         <div className="position-relative">
-          <img src={props?.image} />
+          <img src={props?.image} className={props?.className}/>
           <div className="cart_overlay">
             <div className="cart__box">
               <div className="cart__icons">

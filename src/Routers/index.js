@@ -6,6 +6,10 @@ import ForgetPassword3 from "../Screens/Auth/ForgetPassword3";
 import AdminLogin from "../Screens/Auth/Login";
 import AdminSignup from "../Screens/Auth/signup";
 import { Completion } from "../Screens/Completion/index";
+import { Library } from "../Screens/library/index";
+import { Waitinglist } from "../Screens/waitinglist";
+import { History } from "../Screens/history";
+ 
 import Error from "../Screens/Error";
 import { Mission } from "../Screens/Mission";
 import { Home } from "../Screens/Home";
@@ -18,6 +22,7 @@ import { MyAccount } from "../Screens/MyAccount";
 
 import { ProtectedRoutes } from "./ProtectedRoutes";
 import { Beta } from "../Screens/Home/Beta";
+
 import { AuthorModule } from "../Screens/AuthorModule";
 import { BookListing } from "../Screens/BookListing";
 
@@ -30,6 +35,15 @@ export default function UserRouter() {
         <Route path="/beta" element={<Beta />}></Route>
         <Route path="/author-listing" element={<AuthorModule />}></Route>
         <Route path="/book-listings" element={<BookListing />}></Route>
+
+
+        <Route path="/library" element={<Library />}></Route>
+        <Route path="/Waitinglist" element={<Waitinglist />}></Route>
+        <Route path="/History" element={<History />}></Route>
+         
+         
+
+
 
         <Route path="/forget-password" element={<ForgetPassword />} />
         <Route path="/forget-password2" element={<ForgetPassword2 />} />

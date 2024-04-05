@@ -1,0 +1,305 @@
+.cover{
+  background-image: url(../../Assets//images/banner.png);
+  background-position: center;
+  background-size:  cover;
+  background-repeat: no-repeat;
+  padding: 60px 0px;
+}
+.cover button.lib{
+  background: #360C55;
+  color: #fff;
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: left;
+  border-radius: 59px;
+  padding: 10px 66px;
+  border: #360C55;
+  position: relative;
+
+}
+.btnrw{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.btnrow{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.polygon{
+  position: absolute;
+  top: 55px;
+  left: 374px;
+}
+.cover button.history{
+  background: #D2D2D2;
+  color: #282828;
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: left;
+  border-radius: 59px;
+  padding: 10px 66px;
+  border: #D2D2D2;
+
+}
+.cover button.hist{
+  background: #D2D2D2;
+  color: #282828;
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: left;
+  border-radius: 59px;
+  padding: 10px 66px;
+  border: #D2D2D2;
+
+}
+.book{
+  background-color: #fff;
+  margin-top: 50px;
+  margin-bottom: 85px;
+}
+.book img.bookcover{
+  margin-top: -37px;
+  padding-bottom: 28px;
+}
+.book h3.name{
+  font-family: 'Jost';
+font-size: 28.28px;
+font-weight: 600;
+line-height: 30.17px;
+text-align: left;
+color: #2E2E2E;
+padding: 14px;
+
+}
+.main{
+  text-align: center;
+}
+.description{
+display: flex;
+justify-content: space-between;
+}
+.book button.category{
+  font-family: 'Jost';
+font-size: 14.45px;
+font-weight: 600;
+line-height: 25.69px;
+color: #360C55;
+background: #D9D9D9;
+border: #d9d9d9;
+padding: 6px 48px;
+margin-left: 16px;
+border-radius: 59px;
+}
+.rate{
+  color: #360C55;
+  display: flex; 
+  padding: 20px;
+
+}
+.book p.rating{
+  font-family: 'Jost';
+font-size: 14.45px;
+font-weight: 600;
+line-height: 25.69px;
+color: #360C55;
+line-height: 17.69px;
+margin-bottom: 0px;
+}
+.book p.detail{
+  font-family:' Jost';
+font-size: 18.85px;
+font-weight: 400;
+line-height: 28.85px;
+color: #2C2C2C;
+padding-left: 14px;
+
+}
+/* .res{
+  display:flex
+} */
+span.view{
+  font-family: Jost;
+  font-size: 14.45px;
+  font-weight: 700;
+  line-height: 25.69px;
+  color: #360C55;
+  background: transparent;
+  border: transparent;
+  padding: 0px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.line{
+  border: 1px solid #360C55;
+
+}
+.book p.num{
+  font-family: 'Jost';
+font-size: 29.22px;
+font-weight: 600;
+line-height: 25.69px;
+padding: 0px 15px;
+
+color: #360C55;
+}
+span.number{
+  font-family: 'Jost';
+font-size: 20.74px;
+font-weight: 600;
+line-height: 25.69px;
+color:#696969;
+
+}
+.book button.read{
+  font-family: Jost;
+  font-size: 18.45px;
+  font-weight: 400;
+  line-height: 26.66px;
+  text-align: center;
+  background: #000;
+  color: #FFFFFF;
+  border-radius: 38px;
+  border: 1px solid #000;
+  padding-right: 0px;
+  text-align:center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 9px;
+  padding-right: 0px;
+}
+
+.icon{
+
+  /* padding: 4px; */
+  background: #360C55;
+  border-radius: 1px 18px 17px 0px;
+  padding: 6px 15px 7px 11px;
+ 
+
+}
+.cover button.reading{
+  font-family: Jost;
+  font-size: 18.45px;
+  font-weight: 400;
+  line-height: 26.66px;
+  text-align: center;
+  background: #000;
+  color: #FFFFFF;
+  border-radius: 38px;
+  border: 1px solid #000;
+  padding-right: 0px;
+  text-align:center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 36px;
+  padding-right: 2px;
+
+}
+.icons{
+
+  /* padding: 4px; */
+  background: #360C55;
+  border-radius: 1px 18px 17px 0px;
+  padding: 15px 16px 15px 21px;
+ 
+
+}
+@media only screen and (max-width: 1024px){
+  .btnrw {
+      flex-wrap: wrap;
+      justify-content: left;
+      padding-left: 15px;
+  }
+
+  .polygon{
+      display: none;
+  }
+
+  
+  /* .res{
+      display: none;
+  } */
+  .book button.category {
+  margin-top: 6px;
+  }
+  .book {
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+  }
+  .icons{
+      padding: 12px 5px 12px 5px;
+  }
+  .cover button.reading {
+      
+      font-size: 12.45px;
+      padding-left: 24px;
+  }
+  .cover button.lib {
+      font-size: 12px;
+      padding: 2px 14px;
+ 
+  }
+  .cover button.hist {
+ 
+      font-size: 12px;
+      
+      padding: 2px 14px;
+     
+  }
+  .cover button.history {
+      font-size: 12px;
+      
+      padding: 2px 14px;
+  }
+  .book img.bookcover {
+
+      padding-bottom: 0px;
+  }
+  .book h3.name {
+
+      font-size: 19.28px;
+}
+
+}
+@media only screen and (max-width: 768px){
+ .book img.vote{
+  width: 26px;
+  height: 32px;
+}
+ .res{
+  display: flex;
+ }
+ .book button.read {
+
+  font-size: 13.45px;
+
+ }
+
+}
+@media only screen and (max-width: 1440px){
+  .book button.read {
+      font-size: 14.45px;
+      display: flex;
+      gap: 12px;
+  
+  }
+  .polygon {
+    
+      left: 144px;
+  }
+}
+@media only screen and (min-width: 2560px){
+  .polygon {
+    
+      left: 704px;
+  
+  }
+}

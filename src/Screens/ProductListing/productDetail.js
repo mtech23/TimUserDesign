@@ -5,8 +5,60 @@ import CustomModal from "../../Components/CustomModal";
 import CustomButton from "../../Components/CustomButton";
 import Accordion from "react-bootstrap/Accordion";
 import CustomInput from "../../Components/CustomInput";
+import preview from "../../Assets/images/image_74-removebg-preview.png";
+import CustomCard from "../../Components/CustomCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+ 
+import {
+  BannerBooks,
+  Cart_icon_pink,
+  CompletedNovelB1,
+  CompletedNovelB2,
+  CompletedNovelB3,
+  CompletedNovelB4,
+  FeaturedB1,
+  FeaturedB2,
+  FeaturedB3,
+  HarryPotterBook,
+  Logo,
+  ManaAnime,
+  ManaDisplayImg,
+  MyRebbetsBook,
+  PopularAnime,
+  PopularTagAfter,
+  PopularTagBefore,
+  Product_Icon,
+  TopAuthorAfter,
+  TopAuthorBefore,
+  TopAuthorBook1,
+  TopAuthorBook2,
+  TopAuthorBook3,
+  TopAuthorCartoon,
+  User_Icon,
+  User_icon_pink,
+  User_icon_plus,
+  User_icon_white,
+} from "../../Assets/images";
+import Ellipse4 from "../../Assets/images/Ellipse 44.png";
 import { UserLayout } from "../../Components/Layout/UserLayout";
 import "./style.css";
+import {
+  faArrowRight,
+  faCartShopping,
+  faEnvelope,
+  faEye,
+  faHeart,
+  faList,
+  faSearch,
+  faStar,
+  faUser,
+  faUserPlus,
+} from "@fortawesome/free-solid-svg-icons";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css"; // Make sure to import Bootstrap CSS
 import Ellipse from "../../Assets/images/Ellipse 1.png";
 import Form from "react-bootstrap/Form";
@@ -24,8 +76,48 @@ import ReactStars from "react-rating-stars-component";
 
 export const ProductDetail = ({ eventKey, children }) => {
   const { activeEventKey } = useContext(AccordionContext);
+  
+const [books, setBooks] = useState([]);
+  const reusableSetting = (item, centerMode) => {
+
+
+    return {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: item,
+      slidesToScroll: 1,
+      centerMode: centerMode,
+      responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 5,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 3,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 2,
+          },
+        },
+      ],
+    };
+  };
+
+console.log("books" , books)
 
   const { id } = useParams();
+  const settingsForFourItems = reusableSetting(4, false);
 
   const base_url = "https://custom.mystagingserver.site/Tim-WDLLC/public/";
 
@@ -285,7 +377,7 @@ export const ProductDetail = ({ eventKey, children }) => {
       setChapterUtterance(utterance);
     }
   };
-
+  const [ads, setAds] = useState([]);
   const chapterupdateSpeechRate = () => {
     const speeds = [1, 1.5, 2, 2.5];
     const currentIndex = speeds.indexOf(chaptervoice);
@@ -306,6 +398,31 @@ export const ProductDetail = ({ eventKey, children }) => {
       setIsPlaying(true);
       setIsPaused(false);
     }
+  };
+
+
+
+    const adsListing = () => {
+    document.querySelector(".loaderBox").classList.remove("d-none");
+    fetch(
+      "https://custom.mystagingserver.site/Tim-WDLLC/public/api/ads_listing",
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        setAds(data.data);
+      })
+      .catch((error) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(error);
+      });
   };
 
   useEffect(() => {
@@ -460,7 +577,35 @@ export const ProductDetail = ({ eventKey, children }) => {
         console.error("Error during fetch:", error);
       });
   };
-
+  const BookListing = () => {
+    document.querySelector(".loaderBox").classList.remove("d-none");
+    fetch(
+      "https://custom.mystagingserver.site/Tim-WDLLC/public/api/book_listing",
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(data.data);
+        setBooks(data.data);
+      })
+      .catch((error) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(error);
+      });
+  };
+  
+  
+  useEffect(() =>{
+    adsListing()
+    BookListing()
+  },[])
   return (
     <>
       <UserLayout>
@@ -481,7 +626,10 @@ export const ProductDetail = ({ eventKey, children }) => {
                   <div className="row">
                     <div className="col-md-3 mb-4">
                       <div className="productImage mb-4">
-                        <img src={base_url + data?.image} className="img-fluid"/>
+                        <img
+                          src={base_url + data?.image}
+                          className="img-fluid"
+                        />
                       </div>
 
                       <div className="justify-content-center mb-4 m-auto text-center ">
@@ -546,110 +694,156 @@ export const ProductDetail = ({ eventKey, children }) => {
                         <div className=" d-flex gap-4 mb-2  justify-content-center mb-4 m-auto text-center "></div>
                       </div>
 
-
+                      <span className="mb-2    justify-content-center  m-auto text-center">
+                        <p className="mb-2 ">Affiliated Group</p>
+                        <p className=" tabtags w-100 mx-auto p-2 text-center">
+                          {" "}
+                          Lorem Ispurm
+                        </p>
+                      </span>
+                      <span className="mb-2    justify-content-center  m-auto text-center">
+                        <p className="mb-2 "> Original Publisher </p>
+                        <p className=" tabtags mb-2 w-100 mx-auto p-2 text-center">
+                          {" "}
+                          Lorem Ispurm
+                        </p>
+                      </span>
+                      <span className="mb-2    justify-content-center  m-auto text-center">
+                        <p className="mb-2 ">Trenslater</p>
+                        <p className=" tabtags mb-2 w-100 mx-auto p-2 text-center">
+                          {" "}
+                          Lorem Ispurm
+                        </p>
+                      </span>
 
                       <span className="mb-2    justify-content-center  m-auto text-center">
-                         <p className="mb-2 ">Affiliated Group</p>
-                          <p className=" tabtags w-100 mx-auto p-2 text-center">
-                            {" "}
-                            Lorem Ispurm
-                          </p>
-                        </span>
-                        <span className="mb-2    justify-content-center  m-auto text-center">
-                                         <p className="mb-2 "> Original Publisher  </p>
-                          <p className=" tabtags mb-2 w-100 mx-auto p-2 text-center">
-                            {" "}
-                            Lorem Ispurm
-                          </p>
-                        </span>
-                        <span className="mb-2    justify-content-center  m-auto text-center">
-                        <p className="mb-2 ">Trenslater</p>       
-                          <p className=" tabtags mb-2 w-100 mx-auto p-2 text-center">
-                            {" "}
-                            Lorem Ispurm
-                          </p>
-                        </span>
-
-
-                        <span className="mb-2    justify-content-center  m-auto text-center">
-                        <p className="mb-2 ">Affiliated Series</p>       
-                          <p className=" tabtags mb-2 w-100 mx-auto p-2 text-center">
-                            {" "}
-                            Lorem Ispurm
-                          </p>
-                        </span>
-                        <span className="mb-2    justify-content-center  m-auto text-center">
-                        <p className="mb-2 ">  Status</p>       
-                          <p className=" tabtags mb-2 w-100 mx-auto p-2 text-center">
-                            {" "}
-                            Lorem Ispurm
-                          </p>
-                        </span> 
+                        <p className="mb-2 ">Affiliated Series</p>
+                        <p className=" tabtags mb-2 w-100 mx-auto p-2 text-center">
+                          {" "}
+                          Lorem Ispurm
+                        </p>
+                      </span>
+                      <span className="mb-2    justify-content-center  m-auto text-center">
+                        <p className="mb-2 "> Status</p>
+                        <p className=" tabtags mb-2 w-100 mx-auto p-2 text-center">
+                          {" "}
+                          Lorem Ispurm
+                        </p>
+                      </span>
                     </div>
 
                     <div className="col-md-9 mb-4">
                       <div className="productInfo mb-4">
-                        <div className="adiobtn d-flex">
-                          <h3 className="text-capitalize">{data?.name}</h3>
-                          <h5 className="text-warning mb-0">Synopsis </h5>
-{/* 
-                          <div className="playbtns d-flex gap-12">
-                            <div className="actionBtn">
-                              <button
-                                className="play"
-                                onClick={handleStarts}
-                                disabled={isPlay}
-                              >
-                                <i className="fa-solid fa-play"></i>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <h3>{data?.name}</h3>
+                            <div className="     ">
+                              <button className="nottext">
+                                Vote Now <i class="fas fa-vote-yea icon"></i>
+                              </button>
+                              <button className="nottext  ml ">
+                                Notifications{" "}
+                                <i class="fa-solid fa-bell icon"></i>
                               </button>
                             </div>
-                            <div className="actionBtn">
-                              <button
-                                className="play"
-                                onClick={updateSpeechRate}
-                              >
-                                {voice}X
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="profile ">
+                              <div>
+                                <img class="img-fluid" src={Ellipse4} />
+                              </div>
+                              <div>
+                                <p class="prof">Author Name </p>
+                                <p class="top">Top Fans 11,442</p>
+                                <p class="more"> More By This Author</p>
+                              </div>
+                            </div>
+                            <div className="last_update mb-4">
+                              {" "}
+                              <button className="nottext">
+                                Last Update 3 days ago
                               </button>
                             </div>
 
-                            <div className="actionBtn">
-                              <button
-                                className="pause"
-                                onClick={handlePauses}
-                                disabled={!isPlay || isPause}
-                              >
-                                <i className="fa-regular fa-circle-pause"></i>
-                              </button>
+                            <div class="profile mb-2">
+                              {/* <img class="img-fluid imgicon " src={preview} /> */}
+
+                              <div className="playbtns d-flex gap-12">
+                                <div className="actionBtn">
+                                  <button
+                                    className="play"
+                                    onClick={handleStarts}
+                                    disabled={isPlay}
+                                  >
+                                    <i className="fa-solid fa-play"></i>
+                                  </button>
+                                </div>
+                                <div className="actionBtn">
+                                  <button
+                                    className="play"
+                                    onClick={updateSpeechRate}
+                                  >
+                                    {voice}X
+                                  </button>
+                                </div>
+
+                                <div className="actionBtn">
+                                  <button
+                                    className="pause"
+                                    onClick={handlePauses}
+                                    disabled={!isPlay || isPause}
+                                  >
+                                    <i className="fa-regular fa-circle-pause"></i>
+                                  </button>
+                                </div>
+                                <div className="actionBtn">
+                                  <button
+                                    className="resume"
+                                    onClick={handleResumes}
+                                    disabled={!isPause}
+                                  >
+                                    <i className="fa-solid fa-play"></i>
+                                  </button>
+                                </div>
+                                <div className="actionBtn">
+                                  <button
+                                    className="stop"
+                                    onClick={handleStops}
+                                    disabled={!isPlay && !isPause}
+                                  >
+                                    <i className="fa-solid fa-stop"></i>
+                                  </button>
+                                </div>
+                              </div>
                             </div>
-                            <div className="actionBtn">
-                              <button
-                                className="resume"
-                                onClick={handleResumes}
-                                disabled={!isPause}
-                              >
-                                <i className="fa-solid fa-play"></i>
-                              </button>
-                            </div>
-                            <div className="actionBtn">
-                              <button
-                                className="stop"
-                                onClick={handleStops}
-                                disabled={!isPlay && !isPause}
-                              >
-                                <i className="fa-solid fa-stop"></i>
-                              </button>
-                            </div>
-                          </div> */}
+                          </div>
                         </div>
-                        {data?.price && (
+
+                        {/* <div className="adiobtn d-flex">
+                        </div> */}
+                        {/* <h3 className="text-capitalize" id="title">{data?.name}</h3> */}
+                        {/* <h5 className="text-warning mb-0">Synopsis </h5> */}
+
+                        {/* {data?.price && (
                           <h4>
                             <span className="font-weight-bold">Price:</span>
                             {` $ ${data?.price}`}
                           </h4>
-                        )}
+                        )} */}
 
-                        <p>{data?.description?.slice(0, 300)}</p>
- 
+                        {/* <p>{data?.description?.slice(0, 300)}</p> */}
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="syn">
+                              <h4>Synopsis</h4>
+                              <p class="txt">
+                                {data?.description?.slice(0, 300)}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                         <p className="mb-3">
                           <span className="font-weight-bold">Category:</span>{" "}
                           <span>{data?.category?.name}</span>
@@ -668,149 +862,151 @@ export const ProductDetail = ({ eventKey, children }) => {
 
                       {CapterShow ? (
                         <div className="row select">
+                          <div className="col-md-12">
+                            <Accordion defaultActiveKey="0">
+                              {data?.chapters &&
+                                data?.chapters.map((item, index) => (
+                                  <Accordion.Item eventKey={index} key={index}>
+                                    <Accordion.Header
+                                      className="acpara accordation"
+                                      style={{
+                                        // backgroundColor: "#f7944d",
+                                        color: "black",
+                                      }}
+                                    >
+                                      {`Chapter ${index + 1}`}{" "}
+                                      {item?.latest && (
+                                        // <span className="newChapter">
+                                        //   New
+                                        // </span>
+
+                                        <div class="new">
+                                          <button class="chapbtn">
+                                            {" "}
+                                            NEW!{" "}
+                                          </button>
+                                        </div>
+                                      )}
+                                    </Accordion.Header>
+                                    <Accordion.Body>
+                                      {item?.isPay ? (
+                                        <>
+                                          <div className="adiobtn d-flex">
+                                            {" "}
+                                            <h3 className="text-capitalize">
+                                              {item?.title}
+                                            </h3>
+                                            {item.text_to_speech === true ? (
+                                              <div className="playbtns d-flex gap-12">
+                                                <div className="actionBtn">
+                                                  <button
+                                                    className="play"
+                                                    onClick={() =>
+                                                      handleStart(item?.id)
+                                                    }
+                                                    disabled={
+                                                      isPlaying &&
+                                                      currentChapter !==
+                                                        item?.id
+                                                    }
+                                                  >
+                                                    <i className="fa-solid fa-play"></i>
+                                                  </button>
+                                                </div>
+                                                <div className="actionBtn">
+                                                  <button
+                                                    className="play"
+                                                    onClick={
+                                                      chapterupdateSpeechRate
+                                                    }
+                                                  >
+                                                    {chaptervoice}X
+                                                  </button>
+                                                </div>
+                                                <div className="actionBtn">
+                                                  <div className="actionBtn">
+                                                    <button
+                                                      className="pause"
+                                                      onClick={handlePause}
+                                                      disabled={
+                                                        !isPlaying || isPaused
+                                                      }
+                                                    >
+                                                      <i className="fa-regular fa-circle-pause"></i>
+                                                    </button>
+                                                  </div>
+                                                </div>
+                                                <div className="actionBtn">
+                                                  <button
+                                                    className="resume"
+                                                    onClick={handleResume}
+                                                    disabled={!isPaused}
+                                                  >
+                                                    <i className="fa-solid fa-play"></i>
+                                                  </button>
+                                                </div>
+                                                <div className="actionBtn">
+                                                  <button
+                                                    className="stop"
+                                                    onClick={handleStop}
+                                                    disabled={
+                                                      !isPlaying && !isPaused
+                                                    }
+                                                  >
+                                                    <i className="fa-solid fa-stop"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                            ) : (
+                                              <div className="actionBtn">
+                                                {" "}
+                                                <button
+                                                  className="play"
+                                                  onClick={() =>
+                                                    handleStart(item?.id)
+                                                  }
+                                                  disabled
+                                                >
+                                                  <i className="fa-solid fa-play"></i>
+                                                </button>
+                                              </div>
+                                            )}
+                                          </div>
+
+                                          <p> {item?.description}</p>
+                                        </>
+                                      ) : (
+                                        <div className="text-center">
+                                          <button
+                                            type="button"
+                                            onClick={() => {
+                                              PaymentModal(item);
+                                            }}
+                                            className="primaryButton btn text- white"
+                                            style={{
+                                              backgroundColor: "#f7944d",
+                                              color: "black",
+                                            }}
+                                          >
+                                            Pay {item?.price} Mana For this
+                                            Chapter
+                                          </button>
+                                        </div>
+                                      )}
+                                    </Accordion.Body>
+                                  </Accordion.Item>
+                                ))}
+                            </Accordion>
+                          </div>
                           <Tabs
                             defaultActiveKey="home"
                             id="uncontrolled-tab-example"
                             className="mb-3"
                           >
-                            <Tab eventKey="home" title=" Book Chapters">
-                              <div className="col-md-12">
-                                <Accordion defaultActiveKey="0"  >
-                                  {data?.chapters &&
-                                    data?.chapters.map((item, index) => (
-                                      <Accordion.Item 
-                                        eventKey={index}
-                                        key={index}
-                                      >
-                                        <Accordion.Header
-                                          className="acpara accordation" 
-                                          style={{
-                                            // backgroundColor: "#f7944d",
-                                            color: "black",
-                                          }}
-                                        >
-                                          {`Chapter ${index + 1}`}{" "}
-                                          {item?.latest && (
-                                            <span className="newChapter">
-                                              New
-                                            </span>
-                                          )}
-                                        </Accordion.Header>
-                                        <Accordion.Body>
-                                          {item?.isPay ? (
-                                            <>
-                                              <div className="adiobtn d-flex">
-                                                {" "}
-                                                <h3 className="text-capitalize">
-                                                  {item?.title}
-                                                </h3>
-                                                {item.text_to_speech ===
-                                                true ? (
-                                                  <div className="playbtns d-flex gap-12">
-                                                    <div className="actionBtn">
-                                                      <button
-                                                        className="play"
-                                                        onClick={() =>
-                                                          handleStart(item?.id)
-                                                        }
-                                                        disabled={
-                                                          isPlaying &&
-                                                          currentChapter !==
-                                                            item?.id
-                                                        }
-                                                      >
-                                                        <i className="fa-solid fa-play"></i>
-                                                      </button>
-                                                    </div>
-                                                    <div className="actionBtn">
-                                                      <button
-                                                        className="play"
-                                                        onClick={
-                                                          chapterupdateSpeechRate
-                                                        }
-                                                      >
-                                                        {chaptervoice}X
-                                                      </button>
-                                                    </div>
-                                                    <div className="actionBtn">
-                                                      <div className="actionBtn">
-                                                        <button
-                                                          className="pause"
-                                                          onClick={handlePause}
-                                                          disabled={
-                                                            !isPlaying ||
-                                                            isPaused
-                                                          }
-                                                        >
-                                                          <i className="fa-regular fa-circle-pause"></i>
-                                                        </button>
-                                                      </div>
-                                                    </div>
-                                                    <div className="actionBtn">
-                                                      <button
-                                                        className="resume"
-                                                        onClick={handleResume}
-                                                        disabled={!isPaused}
-                                                      >
-                                                        <i className="fa-solid fa-play"></i>
-                                                      </button>
-                                                    </div>
-                                                    <div className="actionBtn">
-                                                      <button
-                                                        className="stop"
-                                                        onClick={handleStop}
-                                                        disabled={
-                                                          !isPlaying &&
-                                                          !isPaused
-                                                        }
-                                                      >
-                                                        <i className="fa-solid fa-stop"></i>
-                                                      </button>
-                                                    </div>
-                                                  </div>
-                                                ) : (
-                                                  <div className="actionBtn">
-                                                    {" "}
-                                                    <button
-                                                      className="play"
-                                                      onClick={() =>
-                                                        handleStart(item?.id)
-                                                      }
-                                                      disabled
-                                                    >
-                                                      <i className="fa-solid fa-play"></i>
-                                                    </button>
-                                                  </div>
-                                                )}
-                                              </div>
-
-                                              <p> {item?.description}</p>
-                                            </>
-                                          ) : (
-                                            <div className="text-center">
-                                              <button
-                                                type="button"
-                                                onClick={() => {
-                                                  PaymentModal(item);
-                                                }}
-                                                className="primaryButton btn text- white"
-                                                style={{
-                                                  backgroundColor: "#f7944d",
-                                                  color: "black",
-                                                }}
-                                              >
-                                                Pay {item?.price} Mana For this
-                                                Chapter
-                                              </button>
-                                            </div>
-                                          )}
-                                        </Accordion.Body>
-                                      </Accordion.Item>
-                                    ))}
-                                </Accordion>
-                              </div>
-                            </Tab>
-                            <Tab eventKey="profile" title="Book Reviews">
+                            {/* <Tab eventKey="home" title=" Book Chapters">
+                            
+                            </Tab> */}
+                            {/* <Tab eventKey="profile" title="Book Reviews">
                               <section class="   text-center text-lg-start shadow-1-strong rounded">
                                 <div class="row d-flex justify-content-center">
                                   <div class="col-md-12">
@@ -853,8 +1049,8 @@ export const ProductDetail = ({ eventKey, children }) => {
                                   </div>
                                 </div>
                               </section>
-                            </Tab>
-                            <Tab eventKey="Poster" title="Poster Reviews">
+                            </Tab> */}
+                            {/* <Tab eventKey="Poster" title="Poster Reviews">
                               <section class="   text-center text-lg-start shadow-1-strong rounded">
                                 <div class="row d-flex justify-content-center">
                                   <div class="col-md-12">
@@ -930,7 +1126,7 @@ export const ProductDetail = ({ eventKey, children }) => {
                               <section>
                                 <div class="container my-5 py-5 text-dark"></div>
                               </section>
-                            </Tab>
+                            </Tab> */}
                           </Tabs>
                         </div>
                       ) : (
@@ -940,173 +1136,175 @@ export const ProductDetail = ({ eventKey, children }) => {
                         </p>
                       )}
 
+                      <div className="row">
+                        <div className="book__listing-pagination">
+                          <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                              <li class="page-item">
+                                <a class="page-link page_link-active" href="#">
+                                  1
+                                </a>
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link" href="#">
+                                  2
+                                </a>
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link" href="#">
+                                  3
+                                </a>
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link" href="#">
+                                  4
+                                </a>
+                              </li>
+                              ...
+                              <li class="page-item">
+                                <a class="page-link" href="#">
+                                  61
+                                </a>
+                              </li>
+                              <li>
+                                {" "}
+                                <div className="select-chapter   mb-2   gap-4   ">
+                                  {/* <p className="story">Story Status </p> */}
 
-
-
-<div className="row">
-                    <div className="book__listing-pagination">
-                      <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                          <li class="page-item">
-                            <a class="page-link page_link-active" href="#">
-                              1
-                            </a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">
-                              2
-                            </a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">
-                              3
-                            </a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">
-                              4
-                            </a>
-                          </li>
-                          ...
-                          <li class="page-item">
-                            <a class="page-link" href="#">
-                              61
-                            </a>
-                          </li>
-                          <li>
-                            {" "}
-                            <div className="select-chapter   mb-2   gap-4   ">
-                              {/* <p className="story">Story Status </p> */}
-
-                              <Form.Select
-                                aria-label="Default select example"
-                                className="book-release-input" id="select-chapter"
-                              >
-                                <option>Select  Chapter</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </Form.Select>
-                            </div>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                  <div class="rate">
-                    <div class="container-fluid">
-                      <div class="conatiner">
-                        <div class="ratebg">
-                          <div class="row justify-content-center">
-                            <div class="col-sm-12 col-lg-3 my-auto ">
-                              <div class="star">
-                                <h2>4.5</h2>
-                                <img class="img-fluid" src={Star} />
-                              </div>
-                              <button>653 reviews</button> <br />
-                              <button class="rev">Add Review</button>
-                            </div>
-
-                            <div class="col-12 col-sm-12 col-lg-2 my-auto ">
-                              <div class="num">
-                                <p>5 </p>
-                                <i class="fa-solid fa-star numstar"></i>
-                                <div class="line"></div>
-                              </div>
-                              <div class="num">
-                                <p>4 </p>
-                                <i class="fa-solid fa-star numstar"></i>
-                                <div class="line1"></div>
-                              </div>
-                              <div class="num">
-                                <p>3 </p>
-                                <i class="fa-solid fa-star numstar"></i>
-                                <div class="line2"></div>
-                              </div>
-                              <div class="num">
-                                <p>2 </p>
-                                <i class="fa-solid fa-star numstar"></i>
-                                <div class="line3"></div>
-                              </div>
-                              <div class="num">
-                                <p>1 </p>
-                                <i class="fa-solid fa-star numstar"></i>
-                                <div class="line4"></div>
-                              </div>
-                            </div>
-                            <div class="col-12 col-sm-12 col-lg-7">
-                              <div class="strong">
-                                <div class="num mb-2 ">
-                                  <div>
-                                    <img
-                                      class="img-fluid starimg"
-                                      src={Ellipse}
-                                    />
+                                  <Form.Select
+                                    aria-label="Default select example"
+                                    className="book-release-input"
+                                    id="select-chapter"
+                                  >
+                                    <option>Select Chapter</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </Form.Select>
+                                </div>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
+                      </div>
+                      <div class="rate">
+                        <div class="container-fluid">
+                          <div class="conatiner">
+                            <div class="ratebg">
+                              <div class="row justify-content-center">
+                                <div class="col-sm-12 col-lg-3 my-auto ">
+                                  <div class="star">
+                                    <h2>4.5</h2>
+                                    <img class="img-fluid" src={Star} />
                                   </div>
-                                  <div>
-                                    <p class="review">
-                                      Lorem ipsum dolor sit amet
-                                    </p>
-                                    <div className="bookdetail-date d-flex">
-                                      <span class="rev">13-Feb-2024</span>
-                                      <span class="rev">
-                                        Michael Anderson
-                                      </span>{" "}
+                                  <button>653 reviews</button> <br />
+                                  <button class="rev">Add Review</button>
+                                </div>
+
+                                <div class="col-12 col-sm-12 col-lg-2 my-auto ">
+                                  <div class="num">
+                                    <p>5 </p>
+                                    <i class="fa-solid fa-star numstar"></i>
+                                    <div class="line"></div>
+                                  </div>
+                                  <div class="num">
+                                    <p>4 </p>
+                                    <i class="fa-solid fa-star numstar"></i>
+                                    <div class="line1"></div>
+                                  </div>
+                                  <div class="num">
+                                    <p>3 </p>
+                                    <i class="fa-solid fa-star numstar"></i>
+                                    <div class="line2"></div>
+                                  </div>
+                                  <div class="num">
+                                    <p>2 </p>
+                                    <i class="fa-solid fa-star numstar"></i>
+                                    <div class="line3"></div>
+                                  </div>
+                                  <div class="num">
+                                    <p>1 </p>
+                                    <i class="fa-solid fa-star numstar"></i>
+                                    <div class="line4"></div>
+                                  </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-lg-7">
+                                  <div class="strong">
+                                    <div class="num mb-2 ">
+                                      <div>
+                                        <img
+                                          class="img-fluid starimg"
+                                          src={Ellipse}
+                                        />
+                                      </div>
+                                      <div>
+                                        <p class="review">
+                                          Lorem ipsum dolor sit amet
+                                        </p>
+                                        <div className="bookdetail-date d-flex">
+                                          <span class="rev">13-Feb-2024</span>
+                                          <span class="rev">
+                                            Michael Anderson
+                                          </span>{" "}
+                                        </div>
+                                      </div>
+                                      <div className="stars">
+                                        <i class="fa-solid fa-star numstar"></i>
+                                        <i class="fa-solid fa-star numstar"></i>
+                                        <i class="fa-solid fa-star numstar"></i>
+                                        <i class="fa-solid fa-star numstar"></i>
+                                        <i class="fa-solid fa-star numstar"></i>
+                                        <i class="fa-solid fa-star numstar"></i>
+                                      </div>
                                     </div>
-                                  </div>
-                                  <div className="stars">
-                                    <i class="fa-solid fa-star numstar"></i>
-                                    <i class="fa-solid fa-star numstar"></i>
-                                    <i class="fa-solid fa-star numstar"></i>
-                                    <i class="fa-solid fa-star numstar"></i>
-                                    <i class="fa-solid fa-star numstar"></i>
-                                    <i class="fa-solid fa-star numstar"></i>
-                                  </div>
-                                </div>
-                                <div>
-                                  <p class="revpara mb-3">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, <br />
-                                    sed do eiusmod tempor incididunt ut labore{" "}
-                                  </p>
-                                </div>
-
-                                <div class="num">
-                                  <div>
-                                    <img
-                                      class="img-fluid starimg"
-                                      src={Ellipse}
-                                    />
-                                  </div>
-                                  <div>
-                                    <p class="review">
-                                      Lorem ipsum dolor sit amet
-                                    </p>
-                                    <div className="bookdetail-date d-flex">
-                                      <span class="rev">13-Feb-2024</span>
-                                      <span class="rev">
-                                        Michael Anderson
-                                      </span>{" "}
+                                    <div>
+                                      <p class="revpara mb-3">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit, <br />
+                                        sed do eiusmod tempor incididunt ut
+                                        labore{" "}
+                                      </p>
                                     </div>
-                                  </div>
-                                  <div className="stars">
-                                    <i class="fa-solid fa-star numstar"></i>
-                                    <i class="fa-solid fa-star numstar"></i>
-                                    <i class="fa-solid fa-star numstar"></i>
-                                    <i class="fa-solid fa-star numstar"></i>
-                                    <i class="fa-solid fa-star numstar"></i>
-                                    <i class="fa-solid fa-star numstar"></i>
-                                  </div>
-                                </div>
-                                <div className=" mb-2 ">
-                                  <p class="revpara">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, <br />
-                                    sed do eiusmod tempor incididunt ut labore{" "}
-                                  </p>
-                                </div>
 
-                                {/* <button class="rev">Show More</button> */}
+                                    <div class="num">
+                                      <div>
+                                        <img
+                                          class="img-fluid starimg"
+                                          src={Ellipse}
+                                        />
+                                      </div>
+                                      <div>
+                                        <p class="review">
+                                          Lorem ipsum dolor sit amet
+                                        </p>
+                                        <div className="bookdetail-date d-flex">
+                                          <span class="rev">13-Feb-2024</span>
+                                          <span class="rev">
+                                            Michael Anderson
+                                          </span>{" "}
+                                        </div>
+                                      </div>
+                                      <div className="stars">
+                                        <i class="fa-solid fa-star numstar"></i>
+                                        <i class="fa-solid fa-star numstar"></i>
+                                        <i class="fa-solid fa-star numstar"></i>
+                                        <i class="fa-solid fa-star numstar"></i>
+                                        <i class="fa-solid fa-star numstar"></i>
+                                        <i class="fa-solid fa-star numstar"></i>
+                                      </div>
+                                    </div>
+                                    <div className=" mb-2 ">
+                                      <p class="revpara">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit, <br />
+                                        sed do eiusmod tempor incididunt ut
+                                        labore{" "}
+                                      </p>
+                                    </div>
+
+                                    {/* <button class="rev">Show More</button> */}
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1114,15 +1312,159 @@ export const ProductDetail = ({ eventKey, children }) => {
                       </div>
                     </div>
                   </div>
-                    </div>
-
-
-                
-                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+
+
+
+
+
+
+
+
+
+          <section className="feature-books">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-12 section__heading">
+                  <div class="special_heading">
+                    <h1
+ 
+                    >
+                      Books
+                    </h1>
+                    <h2
+                   
+                    >
+                      Related Books
+                    </h2>
+                  </div>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry Lorem Ipsum has been the industrys
+                    standard dummy text ever since the when an unknown printer
+                    took a galley of type and scrambled.
+                  </p>
+                  {/* <div
+                    className="tags jost-font nav nav-pills mb-3 "
+                    id="pills-tab"
+                    role="tablist"
+                  >
+                    <button href="javascript:;" className="nav-link tag " value={item?.id} onClick={filterGenre}>
+                      Books{" "}
+                    </button>
+                    <button href="javascript:;" className="tag nav-link" value={item?.id} onClick={filterGenre}>
+                      novels
+                    </button>
+                    <button href="javascript:;" className="tag nav-link" value={item?.id} onClick={filterGenre}>
+                      Genre
+                    </button>
+                    <button href="javascript:;" className="tag nav-link"value={item?.id} onClick={filterGenre}>
+                      comics
+                    </button>
+                  </div> */}
+                </div>
+                {/* <div className="featured__books">
+                  <div className="row popular_tabing">
+                  <Slider {...settingsForFourItems}>
+                    {books &&
+                      books.map((item, index) => (
+                        
+                        <div className="col-md-4">
+                          <div className="card product_hover-effect">
+                            <img src={base_url +  item?.image} className="card-img-top" />
+                            <div className="card-body featured_books-body">
+                              <h3 className="card-title jost-font">
+                               {item?.name}
+                              </h3>
+                              <p className="author__name jost-font">
+                                Author Name
+                              </p>
+                              <p className="card-text featured__book-desc jost-font">
+                             {item?.description}
+                              </p>
+                              <div className="product__price-div">
+                                <h3 className="author__poduct_title jost-font">
+                                  <div className="product__price">
+                                    <span className="discount__price">
+                                      ${item?.price}
+                                    </span>
+                                    <span className="actual__price">
+                                      ${item?.price}
+                                    </span>
+                                  </div>
+                                </h3>
+                                <div class="product__icon">
+                                  <img src={Cart_icon_pink} />
+                                </div>
+                              </div>
+                              <div className="rating__div">
+                                <FontAwesomeIcon
+                                  icon={faStar}
+                                ></FontAwesomeIcon>
+                                <FontAwesomeIcon
+                                  icon={faStar}
+                                ></FontAwesomeIcon>
+                                <FontAwesomeIcon
+                                  icon={faStar}
+                                ></FontAwesomeIcon>
+                                <FontAwesomeIcon
+                                  icon={faStar}
+                                ></FontAwesomeIcon>
+                                <FontAwesomeIcon
+                                  icon={faStar}
+                                ></FontAwesomeIcon>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                           </Slider>
+                  </div>
+                </div> */}
+
+
+
+<div className="author__products">
+                <div className="row mb-5 ">
+                  <Slider {...settingsForFourItems}>
+                 
+
+                    {books &&
+                      books.map((item, index) => (
+                        <CustomCard
+                        className="author__products_img"
+                          image={base_url + item?.image}
+                          icon1={faArrowRight}
+                          icon2={faEye}
+                          imageicon={Cart_icon_pink}
+                          text={"Add To Cart"}
+                          price={item?.price || 0}
+                          title={item?.name}
+                        />
+                      ))}
+                  </Slider>
+                </div>
+              </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           <CustomModal
             show={showModal}
@@ -1183,7 +1525,17 @@ export const ProductDetail = ({ eventKey, children }) => {
             success
             heading="Review has been Posted."
           />
+
+
+
+
+          
         </section>
+
+
+
+
+ 
       </UserLayout>
     </>
   );

@@ -673,7 +673,7 @@ export const ProductDetails = ({ eventKey, children }) => {
                       </div>
                       <div class="col-md-6">
                         <div class="new">
-                          <button class="chapbtn"> NEW! </button>
+                          <button class="chapbtn"  > NEW! </button>
                         </div>
                       </div>
                     </div>
@@ -764,9 +764,9 @@ export const ProductDetails = ({ eventKey, children }) => {
 
 
                   <div className="row">
-                    <div className="book__listing-pagination">
+                    <div className="book__listing-pagination"  >
                       <nav aria-label="Page navigation example">
-                        <ul class="pagination">
+                        <ul class="pagination"  >
                           <li class="page-item">
                             <a class="page-link page_link-active" href="#">
                               1

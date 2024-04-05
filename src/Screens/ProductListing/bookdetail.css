@@ -1625,11 +1625,7 @@
     height: 60px;
 }
 
-.productImage img {
-    width: 100%;
-    object-fit: cover;
-    height: 530px;
-}
+
 
 .card-body ul {
     list-style: none;
@@ -1906,6 +1902,7 @@ color: #B7B7B7;
     padding-left: 11px;
 
 }
+ 
 .pos{
     position: absolute;
     left: 433px;
@@ -2033,7 +2030,7 @@ margin: 0px
   
 
 }
-.syn{
+/* .syn{
     background-image: linear-gradient(0deg, #1b0c55, #360c550d), url(../../Assets//images/p_4.png);
     background-position: center;
     background-size:  cover;
@@ -2041,6 +2038,14 @@ margin: 0px
     padding: 35px;
     margin: 48px 0px;
 }
+.cover p.txt{
+  font-family: Century Gothic;
+font-size: 17px;
+font-weight: 400;
+line-height: 35.36px;
+text-align:left;
+color:#fff;
+} */
 /* .cover h4{
     font-family: Century Gothic;
 font-size: 40px;
@@ -2050,14 +2055,7 @@ text-align:center;
 color: #FFFFFF;
 
 } */
-.cover p.txt{
-    font-family: Century Gothic;
-font-size: 17px;
-font-weight: 400;
-line-height: 35.36px;
-text-align:left;
-color:#fff;
-}
+
 .select{
     background-image: url(../../Assets//images/faq.png);
     /* background-position: center;
@@ -2082,7 +2080,7 @@ text-align: left;
 color:#000;
 
 }
-.cover button.chapbtn{
+/* .cover button.chapbtn{
     font-family: Century Gothic;
 font-size: 12.09px;
 font-weight: 700;
@@ -2093,7 +2091,7 @@ background: #360C55;
 border-radius: 30px;
 padding: 8px 25px;
 
-}
+} */
 .new{
     display: flex;
     justify-content: end;}
@@ -2101,10 +2099,7 @@ padding: 8px 25px;
 .nw{
         display: flex;
 }
-   
-.accordation{
-    background: #360C55;
-}
+    
 .acpara{
 font-family: Century Gothic;
 font-size: 20.15px;
@@ -2239,14 +2234,14 @@ text-align: left;
 color: #6A6A6A;
 
 }
-.rate img.starimg{
+/* .rate img.starimg{
     width:50px;
     height: 50px;
    
-}
-.num{
+} */
+/* .num{
     display: flex;
-}
+} */
 .numstar{
     color: #6100A8;
     padding-left: 6px;
@@ -2298,14 +2293,14 @@ color: #6A6A6A;
     border-left: 1px solid #c0c0c0;
     padding: 20px;
 }
-.rate img.starimg{
+/* .rate img.starimg{
     width: 52px;
     height: 51px;
     padding: 0px;
-}
+} */
 .rate p.review{
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 14.95px;
     letter-spacing: 0.02em;
@@ -2325,26 +2320,18 @@ text-align: left;
 color: #5C5C5C;
 
 }
-.rev{
+/* .rev{
     font-family: Poppins;
-    font-size: 14.75px;
+    font-size: 12.75px!important;
     font-weight: 500;
     line-height: 11.63px;
     letter-spacing: 0.02em;
     text-align: left;
     color: #5C5C5C;
     padding-left: 11px;
-}
-.rate p.revpara{
-    font-family: Poppins;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.08em;
-    text-align: left;
-    color: #505050;
-    margin-top: 20px;
-}
+} */
+
+
 
 @media only screen and (max-width: 425px) {
     
