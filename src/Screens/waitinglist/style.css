@@ -182,7 +182,7 @@ line-height: 27px;
 text-align: left;
 color: #AD0000;}
 
-span.drop{
+span.dropp{
   font-family: 'Poppins';
 font-size: 13px;
 font-weight: 700;
@@ -192,7 +192,7 @@ color: #360C55;
 
 
 }
-span.pick{
+span.pickk{
   font-family: 'Poppins';
 font-size: 13px;
 font-weight: 700;
@@ -222,7 +222,7 @@ color: #169B00;
 
 }
 
-.icon{
+.iicon{
 
   /* padding: 4px; */
   background: #360C55;
@@ -258,7 +258,7 @@ color: #169B00;
   .btnrrw{
      
   } 
-  .icon {
+  .iicon {
      
       padding: 10px 11px 10px 11px;
   }

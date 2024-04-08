@@ -285,7 +285,7 @@ export const Waitinglist = () => {
                                 <div class="col-md-6 ">
                                     <div class="btnrow">
                                         
-                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -329,12 +329,12 @@ export const Waitinglist = () => {
                             <div class="linee"></div>
                             <div class="row mt-3 pb-3">
                                 <div class="col-md-6">
-                                    <p class="numm">Status: <span class="drop"> Dropped</span></p>
+                                    <p class="numm">Status: <span class="dropp"> Dropped</span></p>
                                 </div>
                                 <div class="col-md-6 ">
                                     <div class="btnrow">
                                         
-                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -383,7 +383,7 @@ export const Waitinglist = () => {
                                 <div class="col-md-6 ">
                                     <div class="btnrow">
                                         
-                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -427,12 +427,12 @@ export const Waitinglist = () => {
                             <div class="linee"></div>
                             <div class="row mt-3 pb-3">
                                 <div class="col-md-5">
-                                    <p class="numm">Status: <span class="pick"> Picked Up</span></p>
+                                    <p class="numm">Status: <span class="pickk"> Picked Up</span></p>
                                 </div>
                                 <div class="col-md-7 ">
                                     <div class="btnrrw">
-                                        <button class="read" ><span>Add To Library  &nbsp;&nbsp;</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                        <button class="read" ><span>Add To Library  &nbsp;&nbsp;</span> <i class="fa-solid fa-book-open iicon"></i></button>
+                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -481,7 +481,7 @@ export const Waitinglist = () => {
                                 <div class="col-md-6 ">
                                     <div class="btnrow">
                                         
-                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -536,12 +536,12 @@ export const Waitinglist = () => {
                             <div class="linee"></div>
                             <div class="row mt-3 pb-3">
                                 <div class="col-md-5">
-                                    <p class="numm">Status: <span class="pick"> Picked Up</span></p>
+                                    <p class="numm">Status: <span class="pickk"> Picked Up</span></p>
                                 </div>
                                 <div class="col-md-7">
                                     <div class="btnrrw">
-                                        <button class="read" ><span>Add To Library  &nbsp;&nbsp;</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                        <button class="read" ><span>Add To Library  &nbsp;&nbsp;</span> <i class="fa-solid fa-book-open iicon"></i></button>
+                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -585,12 +585,12 @@ export const Waitinglist = () => {
                             <div class="linee"></div>
                             <div class="row mt-3 pb-3">
                                 <div class="col-md-5">
-                                    <p class="numm">Status: <span class="pick"> Picked Up</span></p>
+                                    <p class="numm">Status: <span class="pickk"> Picked Up</span></p>
                                 </div>
                                 <div class="col-md-7 ">
                                     <div class="btnrrw">
-                                        <button class="read" ><span>Add To Library  &nbsp;&nbsp;</span> <i class="fa-solid fa-book-open icon"></i></button>
-                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                        <button class="read" ><span>Add To Library  &nbsp;&nbsp;</span> <i class="fa-solid fa-book-open iicon"></i></button>
+                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -634,12 +634,12 @@ export const Waitinglist = () => {
                                 <div class="linee"></div>
                                 <div class="row mt-3 pb-3">
                                     <div class="col-md-5">
-                                        <p class="numm">Status: <span class="drop"> Dropped</span></p>
+                                        <p class="numm">Status: <span class="dropp"> Dropped</span></p>
                                     </div>
                                     <div class="col-md-7 ">
                                         <div class="btnrow">
                                             
-                                        <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                        <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -683,12 +683,12 @@ export const Waitinglist = () => {
                                 <div class="linee"></div>
                                 <div class="row mt-3 pb-3">
                                     <div class="col-md-5">
-                                        <p class="numm">Status: <span class="drop"> Dropped</span></p>
+                                        <p class="numm">Status: <span class="dropp"> Dropped</span></p>
                                     </div>
                                     <div class="col-md-7 ">
                                         <div class="btnrow">
                                             
-                                        <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                        <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -732,12 +732,12 @@ export const Waitinglist = () => {
                             <div class="linee"></div>
                             <div class="row mt-3 pb-3">
                                 <div class="col-md-5">
-                                    <p class="numm">Status: <span class="drop"> Dropped</span></p>
+                                    <p class="numm">Status: <span class="dropp"> Dropped</span></p>
                                 </div>
                                 <div class="col-md-7 ">
                                     <div class="btnrow">
                                         
-                                    <button class="read" >Book Deatils &nbsp;&nbsp; <i class="fa-solid fa-calendar-week icon"></i></button>
+                                    <button class="read" >Book Deatils &nbsp;&nbsp; <i class="fa-solid fa-calendar-week iicon"></i></button>
                                     </div>
                                 </div>
                             </div>
