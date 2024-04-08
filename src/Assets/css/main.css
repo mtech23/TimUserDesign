@@ -2932,10 +2932,10 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 /* footer css*/
-footer {
+/* footer {
   padding: 100px 0 13px;
   background: #000;
-}
+} */
 
 footer .logo_img {
   text-align: center;

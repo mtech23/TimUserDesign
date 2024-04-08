@@ -9,7 +9,8 @@ import { Completion } from "../Screens/Completion/index";
 import { Library } from "../Screens/library/index";
 import { Waitinglist } from "../Screens/waitinglist";
 import { History } from "../Screens/history";
- 
+import { Shop } from "../Screens/shop";
+//  Shop
 import Error from "../Screens/Error";
 import { Mission } from "../Screens/Mission";
 import { Home } from "../Screens/Home";
@@ -40,6 +41,8 @@ export default function UserRouter() {
         <Route path="/library" element={<Library />}></Route>
         <Route path="/Waitinglist" element={<Waitinglist />}></Route>
         <Route path="/History" element={<History />}></Route>
+
+       <Route path="/shop" element={<Shop />}></Route>
          
          
 
