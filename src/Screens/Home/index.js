@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react'
 import { UserLayout } from '../../Components/Layout/UserLayout'
 import { AdertiseImage, BookImage, Fancy, MainNoval, NovalImage } from '../../Assets/images'
 import { Link } from 'react-router-dom';
-
+import { BookListingCover } from '../../Assets/images'
 export const Home = () => {
     const [ads, setAds] = useState([]);
     const [books, setBooks] = useState([]);
@@ -91,7 +91,7 @@ export const Home = () => {
 
 
     return (
-        <UserLayout>
+        <UserLayout subHeader={BookListingCover}>
             <section className="first-wrap">
                 <div className="container-fluid">
                     <div className="row mb-4">
