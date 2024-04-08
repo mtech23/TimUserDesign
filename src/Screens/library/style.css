@@ -9,19 +9,20 @@
 }
 .coverss button.libs{
 
-  font-family:  'Jost';
-  font-size: 18.45px;
+  font-family: 'Poppins';
+  font-size: 17px;
   font-weight: 400;
-  line-height: 26.66px;
+ 
   text-align: center;
-  background:#360c55;
+  background: #360c55;
   color: #FFFFFF;
   border-radius: 38px;
   border: 1px solid #360c55;
   padding-right: 0px;
-  text-align:center;
-  padding: 7px 52px;
-  position: relative;}
+  text-align: center;
+  padding: 4px 52px;
+  position: relative;  
+}
 
   .mid {
       padding: 0px 24px;
@@ -45,35 +46,37 @@
 }
 .poly{
   position: absolute;
-  top: 497px;
-  left: 434px;
-    width: 41px;
+    top: 498px;
+    left: 458px;
+    width: 35px;
 }
 .coverss button.history{
-  background: #D2D2D2;
+  background: #fff;
   color: #282828;
   font-family: 'Poppins';
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 400;
   line-height: 27px;
   text-align: left;
   border-radius: 59px;
-  padding: 7px 52px;
-  border: #D2D2D2;
+  padding: 4px 52px;
+  border: #fff;
 
 }
-.coverss button.hist{
-  background: #D2D2D2;
+
+
+.coverss button.hist
+{
+  background: #fff;
   color: #282828;
   font-family: 'Poppins';
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 400;
   line-height: 27px;
   text-align: left;
   border-radius: 59px;
-  padding: 7px 52px;
-  border: #D2D2D2;
-
+  padding: 4px 40px;
+  border: #fff;
 }
 .books{
   background-color: #fff;
@@ -92,31 +95,29 @@
  
 
 }
-.books h3.name{
-  font-family: 'Jost';
-font-size: 28.28px;
-font-weight: 600;
-line-height: 30.17px;
-text-align: left;
-color: #2E2E2E;
-padding: 14px;
+.books h3.namee{
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30.17px;
+  text-align: left;
+  color: #2E2E2E;
+  padding: 14px;
 
 }
 .description{
 display: flex;
 justify-content: space-between;
 }
-.books button.category{
-  font-family: 'Jost';
-font-size: 14.45px;
-font-weight: 600;
-line-height: 25.69px;
-color: #360C55;
-background: #D9D9D9;
-border: #d9d9d9;
-padding: 6px 48px;
-margin-left: 16px;
-border-radius: 23px
+.books button.cate{
+  font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 500;
+    color: #360C55;
+    background: #D9D9D9;
+    border: #d9d9d9;
+    padding: 5px 33px;
+    border-radius: 23px;
 }
 .rates{
   color: #360C55;
@@ -125,7 +126,7 @@ border-radius: 23px
 
 }
 .books p.rating{
-  font-family: 'Jost';
+  font-family: 'Poppins';
 font-size: 14.45px;
 font-weight: 600;
 line-height: 25.69px;
@@ -133,22 +134,25 @@ color: #360C55;
 line-height: 17.69px;
 margin-bottom: 0px;
 }
-.books p.detail{
-  font-family:' Jost';
-font-size: 18.85px;
-font-weight: 400;
-line-height: 28.85px;
-color: #2C2C2C;
-padding-left: 14px;
+.books p.detaill{
+  font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 28.85px;
+    color: #2C2C2C;
+    padding: 0px 25px 15px 25px;
 
 }
-/* .res{
-  display:flex
-} */
-span.view{
-  font-family: 'Jost';
-  font-size: 14.45px;
-  font-weight: 700;
+
+
+.res{
+  display: flex;
+  gap: 10px;
+}
+span.views{
+  font-family: 'Poppins';
+  font-size: 15px;
+    font-weight: 500;
   line-height: 25.69px;
   color: #360C55;
   background: transparent;
@@ -162,8 +166,8 @@ span.view{
 
 }
 .books p.nums{
-  font-family: 'Jost';
-    font-size: 24.22px;
+  font-family: 'Poppins';
+    font-size: 16px;
     font-weight: 600;
     line-height: 25.69px;
     padding: 0px 15px;
@@ -172,8 +176,8 @@ span.view{
 }
 span.numberr{
   
-    font-family: 'Jost';
-    font-size: 14.74px;
+    font-family: 'Poppins';
+    font-size: 14px;
     font-weight: 600;
     line-height: 25.69px;
     color: #696969;
@@ -202,21 +206,21 @@ color: #169B00;
 }
 
 .books button.reads{
-  font-family: 'Jost';
-  font-size: 12.45px;
-  font-weight: 400;
-  line-height: 26.66px;
-  text-align: center;
-  background: #000;
-  color: #FFFFFF;
-  border-radius: 38px;
-  border: 1px solid #000;
-  padding-right: 0px;
-  text-align: center;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 7px;
-  padding-right: 0px;
+  font-family: 'Poppins';
+    font-size: 11px;
+    font-weight: 400;
+    border: #000;
+    text-align: center;
+    background: #000;
+    color: #FFFFFF;
+    border-radius: 38px;
+    
+    padding-right: 0px;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 0px;
 
 }
 
@@ -228,29 +232,36 @@ color: #169B00;
   padding: 10px 15px 10px 11px;
 }
 .coverss button.reading{
-  font-family:  'Jost';
-  font-size: 18.45px;
-  font-weight: 400;
-  line-height: 26.66px;
-  text-align: center;
-  background: #000;
-  color: #FFFFFF;
-  border-radius: 38px;
-  border: 1px solid #000;
-  padding-right: 0px;
-  text-align:center;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 36px;
-  padding-right: 2px;
+  font-family: 'Poppins';
+    font-size: 17px ;
+    font-weight: 400;
+    text-align: center;
+    background: #fff;
+    color: #360c55;
+    border-radius: 38px;
+    border: 0px solid #fff;
+    padding-right: 0px;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 40px;
+    padding-right: 0px;
 
+}
+.maincate{
+  display: flex;
+  gap: 10px;
 }
 .icons{
 
-  /* padding: 4px; */
-  background: #360C55;
-  border-radius: 1px 18px 17px 0px;
-  padding: 11px 18px 12px 11px;
+      background: #360C55;
+      border-radius: 1px 18px 17px 0px;
+      padding: 9px 18px 9px 11px;
+      color: #fff;
+}
+.books img.votee{
+  width: 20px;
+  height: 20px;
 }
 @media only screen and (max-width: 1024px){
   .btnrww{
@@ -276,7 +287,7 @@ color: #169B00;
   /* .res{
       display: none;
   } */
-  .books button.category {
+  .books button.cate {
   margin-top: 6px;
   }
   .books {
@@ -313,7 +324,7 @@ color: #169B00;
 
       padding-bottom: 0px;
   }
-  .book h3.name {
+  .books h3.namee {
 
       font-size: 19.28px;
 }
@@ -345,10 +356,10 @@ color: #169B00;
 
 
 @media only screen and (max-width: 768px){
- .books img.vote{
+ /* .books img.votee{
   width: 26px;
   height: 32px;
-}
+} */
  .res{
   display: flex;
  }
@@ -363,12 +374,12 @@ color: #169B00;
   } */
   .poly {
     
-    left: 204px;
+    left: 143px;
   }
 }
 @media only screen and (min-width: 2560px){
   .poly {
-    left: 768px;
+    left: 785px;
   }
   .books img.clock {
       left: 35px;

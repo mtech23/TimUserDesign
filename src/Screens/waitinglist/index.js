@@ -260,8 +260,10 @@ export const Waitinglist = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="mainly">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="raate">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -307,8 +309,10 @@ export const Waitinglist = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="mainly">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="raate">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -354,8 +358,10 @@ export const Waitinglist = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="mainly">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="raate">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -401,8 +407,10 @@ export const Waitinglist = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="mainly">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="raate">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -448,8 +456,10 @@ export const Waitinglist = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="mainly">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="raate">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -506,8 +516,10 @@ export const Waitinglist = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="mainly">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="raate">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -553,8 +565,10 @@ export const Waitinglist = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="mainly">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="raate">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -600,8 +614,10 @@ export const Waitinglist = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                         </div>
                                        </div>
-                                       <button class="category" >Category </button>
-                                       <button class="category" >Category </button>
+                                       <div class="mainly">
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   </div>
                                        <div class="raate">
                                         <span class="fa fa-star checked star" ></span>
                                         <span class="fa fa-star checked star " ></span>
@@ -647,8 +663,10 @@ export const Waitinglist = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                         </div>
                                        </div>
-                                       <button class="category" >Category </button>
-                                       <button class="category" >Category </button>
+                                       <div class="mainly">
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   </div>
                                        <div class="raate">
                                         <span class="fa fa-star checked star" ></span>
                                         <span class="fa fa-star checked star " ></span>
@@ -694,8 +712,10 @@ export const Waitinglist = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="mainly">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="raate">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -717,7 +737,7 @@ export const Waitinglist = () => {
                                 <div class="col-md-7 ">
                                     <div class="btnrow">
                                         
-                                    <button class="read" >Book Deatils &nbsp;&nbsp;<i class="fa-solid fa-calendar-week icon"></i></button>
+                                    <button class="read" >Book Deatils &nbsp;&nbsp; <i class="fa-solid fa-calendar-week icon"></i></button>
                                     </div>
                                 </div>
                             </div>

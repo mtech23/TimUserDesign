@@ -239,9 +239,9 @@ export const History = () => {
                 <div class="row">
                     <div class="col-md-6">
                         <div class="btnrww">
-                            <button class="history" >Library </button>
+                            <button class="history" > Library </button>
                             
-                            <button class="libs"  >History </button>
+                            <button class="libs"  > History </button>
                             <img class="img-fluid polygons" src={Polygon6}/>
                             <button class="hist" >  Waiting List </button>
                            
@@ -264,8 +264,10 @@ export const History = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="main">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -286,9 +288,9 @@ export const History = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                            <button class="reads" ><span> Add To Library </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -305,15 +307,17 @@ export const History = () => {
                                 </div>
                                 <div class="col-lg-9 col-sm-12">
                                    <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
+                                    <h3 class="name"> Book Name Here </h3>
                                     <div class=" res p-3 res">
                                          
                                          
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="main">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -334,9 +338,9 @@ export const History = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                            <button class="reads" ><span> Add To Library </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -360,8 +364,10 @@ export const History = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="main">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -382,9 +388,9 @@ export const History = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                            <button class="reads" ><span> Add To Library </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -408,8 +414,10 @@ export const History = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="main">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -430,9 +438,9 @@ export const History = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                            <button class="reads" ><span> Add To Library </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -456,8 +464,10 @@ export const History = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="main">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -478,9 +488,9 @@ export const History = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                            <button class="reads" ><span> Add To Library </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -492,8 +502,8 @@ export const History = () => {
 
                     <div class="col-md-6">
                        <div class="btnrow">
-                        <button class="reading" >Sort Books <i class="fa-solid fa-arrow-down-wide-short icons"></i></button>
-                        <button class="reading" >Clear All History<i class="fa-solid fa-book-open icons"></i></button>
+                        <button class="reading" > Sort Books <i class="fa-solid fa-arrow-down-wide-short icons"></i></button>
+                        <button class="reading" > Clear All History <i class="fa-solid fa-trash icons"></i></button>
                        </div>
 
                          
@@ -514,8 +524,10 @@ export const History = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="main">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -536,9 +548,9 @@ export const History = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                            <button class="reads" ><span> Add To Library </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -562,8 +574,10 @@ export const History = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="main">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -584,9 +598,9 @@ export const History = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                            <button class="reads" ><span> Add To Library </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -602,15 +616,17 @@ export const History = () => {
                                     </div>
                                     <div class="col-lg-9 col-sm-12">
                                        <div class="description">
-                                        <h3 class="name">Book Name Here</h3>
+                                        <h3 class="name"> Book Name Here </h3>
                                         <div class="p-3 res">
                                              
                                              
                                             <img class="img-fluid vote" src={Trashcan}/>
                                         </div>
                                        </div>
-                                       <button class="category" >Category </button>
-                                       <button class="category" >Category </button>
+                                       <div class="main">
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   </div>
                                        <div class="rates">
                                         <span class="fa fa-star checked star" ></span>
                                         <span class="fa fa-star checked star " ></span>
@@ -631,9 +647,9 @@ export const History = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                            <button class="reads" ><span> Add To Library </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                                 </div>
@@ -657,8 +673,10 @@ export const History = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="main">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -679,9 +697,9 @@ export const History = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                            <button class="reads" ><span> Add To Library </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -705,8 +723,10 @@ export const History = () => {
                                         <img class="img-fluid vote" src={Trashcan}/>
                                     </div>
                                    </div>
+                                   <div class="main">
                                    <button class="category" >Category </button>
                                    <button class="category" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -727,9 +747,9 @@ export const History = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                            <button class="reads" ><span> Add To Library </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
