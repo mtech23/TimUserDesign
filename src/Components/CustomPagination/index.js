@@ -9,9 +9,9 @@ const CustomPagination = ({ itemsPerPage, totalItems, currentPage, onPageChange 
     }
   
     return (
-      <div className="paginationBar align-items-center">
-        <p>Showing {itemsPerPage} out of {totalItems} Entries</p>
-        <ul>
+      <div className="  align-items-center">
+        {/* <p>Showing {itemsPerPage} out of {totalItems} Entries</p> */}
+        {/* <ul>
           <li><button>Prev</button></li>
           {pageNumbers.map((pageNumber) => (
             <li key={pageNumber}>
@@ -19,10 +19,23 @@ const CustomPagination = ({ itemsPerPage, totalItems, currentPage, onPageChange 
             </li>
           ))}
           <li><button>Next</button></li>
-        </ul>
+        </ul> */}
+
+
+
+
+        <ul class="pagination">
+        {pageNumbers.map((pageNumber) => (  
+                        <li class="page-item">
+                          <button class="page-link page_link-active"  onClick={() => onPageChange(pageNumber)}>
+                          {pageNumber}
+                          </button>
+                        </li>
+                          ))}
+                      </ul>
       </div>
     );
   };
-  
+  // page_link-active
   export default CustomPagination;
 

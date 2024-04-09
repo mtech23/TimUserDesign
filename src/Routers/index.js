@@ -59,11 +59,11 @@ export default function UserRouter() {
         <Route path="/completeion" element={<Completion />}></Route>
         <Route path="/mission" element={<Mission />}></Route>
         <Route
-          path="/book-listing/product-detail/:id"
+          path="/book-detail/:id"
           element={<ProductDetail />}
         ></Route>
         <Route
-          path="/book-listing/product-details/:id"
+          path="/book-details/:id"
           element={<ProductDetails />}
         ></Route>
 

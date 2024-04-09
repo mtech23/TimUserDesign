@@ -1,5 +1,6 @@
 import { React, useState, useEffect } from "react";
 import "./style.css";
+import CustomPagination from "../../Components/CustomPagination"
 // import {
 //   AdertiseImage,
 //   BookImage,
@@ -49,10 +50,14 @@ import "aos/dist/aos.css";
 
 export const Completion = () => {
   const [ads, setAds] = useState([]);
+  const [userdata, setUserdata] = useState([]);
   const [books, setBooks] = useState([]);
+  const [inputValue, setInputValue] = useState('');
   const [genres, setGenres] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState(null);
   const base_url = "https://custom.mystagingserver.site/Tim-WDLLC/public/";
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(8)
 
   const reusableSetting = (item, centerMode) => {
     return {
@@ -98,6 +103,23 @@ export const Completion = () => {
     };
   };
 
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+
+
+
+  const filterData = books?.filter(item =>
+    item?.category?.name.toLowerCase().includes(inputValue.toLowerCase())
+  );
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filterData.slice(indexOfFirstItem, indexOfLastItem);
+
+console.log("currentItems" , currentItems)
   const settingsForFourItems = reusableSetting(4, false);
   const settingsForOneItem = reusableSettingForOne(1, false);
   //   const adsListing = () => {
@@ -123,29 +145,34 @@ export const Completion = () => {
   //       });
   //   };
 
-  //   const BookListing = () => {
-  //     document.querySelector(".loaderBox").classList.remove("d-none");
-  //     fetch(
-  //       "https://custom.mystagingserver.site/Tim-WDLLC/public/api/book_listing",
-  //       {
-  //         method: "GET",
-  //         headers: {
-  //           Accept: "application/json",
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     )
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         document.querySelector(".loaderBox").classList.add("d-none");
-  //         console.log(data.data);
-  //         setBooks(data.data);
-  //       })
-  //       .catch((error) => {
-  //         document.querySelector(".loaderBox").classList.add("d-none");
-  //         console.log(error);
-  //       });
-  //   };
+    const BookListing = () => {
+      document.querySelector(".loaderBox").classList.remove("d-none");
+      fetch(
+        "https://custom.mystagingserver.site/Tim-WDLLC/public/api/book_listing",
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        }
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          document.querySelector(".loaderBox").classList.add("d-none");
+          console.log(data.data);
+
+
+          setBooks(data?.data);
+
+
+          setUserdata(data?.data);
+        })
+        .catch((error) => {
+          document.querySelector(".loaderBox").classList.add("d-none");
+          console.log(error);
+        });
+    };
 
   //   const GenreData = () => {
   //     document.querySelector(".loaderBox").classList.remove("d-none");
@@ -179,8 +206,10 @@ export const Completion = () => {
 
   //   <FontAwesomeIcon icon={faHeart}></FontAwesomeIcon>
   useEffect(() => {
+    BookListing()
     Aos.init();
   }, []);
+  console.log("books" , books)
   return (
     <UserLayout>
       <>
@@ -389,10 +418,11 @@ export const Completion = () => {
                 </div>
                 <div className="bestBooks__listing">
                   <div className="row">
-                    <div className="col-lg-3 col-md-4">
+                   {currentItems?.map((item , index) =>(
+ <div className="col-lg-3 col-md-4">
                       <div className="bestBooks__list">
                         <div className="bestBooks__list-img">
-                          <img src={BestSellingBook1} />
+                          <img src={base_url + item?.image} />
                           <div className="bestBooks__list-overlay">
                             <button className="bestBooks__purchase-btn">
                               Purchases
@@ -401,7 +431,7 @@ export const Completion = () => {
                         </div>
                         <div className="bestBooks__list-body">
                           <h3 className="bestBooks__list-title">
-                            Book Name Here
+                       {item?.category?.name}
                           </h3>
                           <p className="bestBooks__list-text">
                             Lorem Ipsum is simply dummy text{" "}
@@ -409,250 +439,43 @@ export const Completion = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-lg-3 col-md-4">
-                      <div className="bestBooks__list">
-                        <div className="bestBooks__list-img">
-                          <img src={BestSellingBook2} />
-                          <div className="bestBooks__list-overlay">
-                            <button className="bestBooks__purchase-btn">
-                              Purchases
-                            </button>
-                          </div>
-                        </div>
-                        <div className="bestBooks__list-body">
-                          <h3 className="bestBooks__list-title">
-                            Book Name Here
-                          </h3>
-                          <p className="bestBooks__list-text">
-                            Lorem Ipsum is simply dummy text{" "}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-4">
-                      <div className="bestBooks__list">
-                        <div className="bestBooks__list-img">
-                          <img src={BestSellingBook3} />
-                          <div className="bestBooks__list-overlay">
-                            <button className="bestBooks__purchase-btn">
-                              Purchases
-                            </button>
-                          </div>
-                        </div>
-                        <div className="bestBooks__list-body">
-                          <h3 className="bestBooks__list-title">
-                            Book Name Here
-                          </h3>
-                          <p className="bestBooks__list-text">
-                            Lorem Ipsum is simply dummy text{" "}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-4">
-                      <div className="bestBooks__list">
-                        <div className="bestBooks__list-img">
-                          <img src={BestSellingBook4} />
-                          <div className="bestBooks__list-overlay">
-                            <button className="bestBooks__purchase-btn">
-                              Purchases
-                            </button>
-                          </div>
-                        </div>
-                        <div className="bestBooks__list-body">
-                          <h3 className="bestBooks__list-title">
-                            Book Name Here
-                          </h3>
-                          <p className="bestBooks__list-text">
-                            Lorem Ipsum is simply dummy text{" "}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-4">
-                      <div className="bestBooks__list">
-                        <div className="bestBooks__list-img">
-                          <img src={BestSellingBook5} />
-                          <div className="bestBooks__list-overlay">
-                            <button className="bestBooks__purchase-btn">
-                              Purchases
-                            </button>
-                          </div>
-                        </div>
-                        <div className="bestBooks__list-body">
-                          <h3 className="bestBooks__list-title">
-                            Book Name Here
-                          </h3>
-                          <p className="bestBooks__list-text">
-                            Lorem Ipsum is simply dummy text{" "}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-4">
-                      <div className="bestBooks__list">
-                        <div className="bestBooks__list-img">
-                          <img src={BestSellingBook6} />
-                          <div className="bestBooks__list-overlay">
-                            <button className="bestBooks__purchase-btn">
-                              Purchases
-                            </button>
-                          </div>
-                        </div>
-                        <div className="bestBooks__list-body">
-                          <h3 className="bestBooks__list-title">
-                            Book Name Here
-                          </h3>
-                          <p className="bestBooks__list-text">
-                            Lorem Ipsum is simply dummy text{" "}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-4">
-                      <div className="bestBooks__list">
-                        <div className="bestBooks__list-img">
-                          <img src={BestSellingBook7} />
-                          <div className="bestBooks__list-overlay">
-                            <button className="bestBooks__purchase-btn">
-                              Purchases
-                            </button>
-                          </div>
-                        </div>
-                        <div className="bestBooks__list-body">
-                          <h3 className="bestBooks__list-title">
-                            Book Name Here
-                          </h3>
-                          <p className="bestBooks__list-text">
-                            Lorem Ipsum is simply dummy text{" "}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-4">
-                      <div className="bestBooks__list">
-                        <div className="bestBooks__list-img">
-                          <img src={BestSellingBook8} />
-                          <div className="bestBooks__list-overlay">
-                            <button className="bestBooks__purchase-btn">
-                              Purchases
-                            </button>
-                          </div>
-                        </div>
-                        <div className="bestBooks__list-body">
-                          <h3 className="bestBooks__list-title">
-                            Book Name Here
-                          </h3>
-                          <p className="bestBooks__list-text">
-                            Lorem Ipsum is simply dummy text{" "}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-4">
-                      <div className="bestBooks__list">
-                        <div className="bestBooks__list-img">
-                          <img src={BestSellingBook9} />
-                          <div className="bestBooks__list-overlay">
-                            <button className="bestBooks__purchase-btn">
-                              Purchases
-                            </button>
-                          </div>
-                        </div>
-                        <div className="bestBooks__list-body">
-                          <h3 className="bestBooks__list-title">
-                            Book Name Here
-                          </h3>
-                          <p className="bestBooks__list-text">
-                            Lorem Ipsum is simply dummy text{" "}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-4">
-                      <div className="bestBooks__list">
-                        <div className="bestBooks__list-img">
-                          <img src={BestSellingBook10} />
-                          <div className="bestBooks__list-overlay">
-                            <button className="bestBooks__purchase-btn">
-                              Purchases
-                            </button>
-                          </div>
-                        </div>
-                        <div className="bestBooks__list-body">
-                          <h3 className="bestBooks__list-title">
-                            Book Name Here
-                          </h3>
-                          <p className="bestBooks__list-text">
-                            Lorem Ipsum is simply dummy text{" "}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-4">
-                      <div className="bestBooks__list">
-                        <div className="bestBooks__list-img">
-                          <img src={BestSellingBook11} />
-                          <div className="bestBooks__list-overlay">
-                            <button className="bestBooks__purchase-btn">
-                              Purchases
-                            </button>
-                          </div>
-                        </div>
-                        <div className="bestBooks__list-body">
-                          <h3 className="bestBooks__list-title">
-                            Book Name Here
-                          </h3>
-                          <p className="bestBooks__list-text">
-                            Lorem Ipsum is simply dummy text{" "}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-4">
-                      <div className="bestBooks__list">
-                        <div className="bestBooks__list-img">
-                          <img src={BestSellingBook12} />
-                          <div className="bestBooks__list-overlay">
-                            <button className="bestBooks__purchase-btn">
-                              Purchases
-                            </button>
-                          </div>
-                        </div>
-                        <div className="bestBooks__list-body">
-                          <h3 className="bestBooks__list-title">
-                            Book Name Here
-                          </h3>
-                          <p className="bestBooks__list-text">
-                            Lorem Ipsum is simply dummy text{" "}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                   ))}
+                 
                   </div>
                 </div>
                 <div className="row">
                   <div className="book__listing-pagination">
                     <nav aria-label="Page navigation example">
-                      <ul class="pagination">
+                      {/* <ul class="pagination">
                         <li class="page-item">
                           <a class="page-link page_link-active" href="#">
-                            1
+                          {currentPage}
                           </a>
                         </li>
                         <li class="page-item">
                           <a class="page-link" href="#">
-                            2
+                          {userdata.length}
                           </a>
                         </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">
-                            3
-                          </a>
-                        </li>
-                      </ul>
+                       
+                      </ul> */}
+                      <CustomPagination
+                          itemsPerPage={itemsPerPage}
+                          totalItems={userdata.length}
+                          currentPage={currentPage}
+                          onPageChange={handlePageChange}
+                        />
                     </nav>
                   </div>
+
+{/* 
+<CustomPagination
+                          itemsPerPage={itemsPerPage}
+                          totalItems={userdata.length}
+                          currentPage={currentPage}
+                          onPageChange={handlePageChange}
+                        /> */}
+
                 </div>
               </div>
             </div>
@@ -660,138 +483,7 @@ export const Completion = () => {
         </section>
 
         {/* Footer */}
-        <section className="footer-sec jost-font">
-          <div className="container">
-            <div className="row footer__first">
-              <div className="col-lg-4">
-                <div className="footer__about">
-                  <div className="footer__logo">
-                    <Link to="!#">
-                      <img src={Logo} />
-                    </Link>
-                  </div>
-                  <div className="footer__about-body">
-                    <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry Lorem Ipsum has been the industry's
-                      standard dummy text ever since the
-                    </p>
-                  </div>
-                  <div className="follow__social-icons">
-                    <a href="javascript:;" className="follow__social-icon">
-                      <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="javascript:;" className="follow__social-icon">
-                      <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="javascript:;" className="follow__social-icon">
-                      <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="javascript:;" className="follow__social-icon">
-                      <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="footer__quick-links">
-                  <h3 className="foooter__subhead">Quick Links</h3>
-                  <ul className="footer__links">
-                    <li className="footer__link">
-                      <Link to="javascript:;">About</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Newsroom</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Brand Guidline</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="footer__contact-links">
-                  <h3 className="foooter__subhead">Contacts</h3>
-                  <ul className="footer__links">
-                    <li className="footer__link">
-                      <Link to="javascript:;">Translators & Editors</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Commercial</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Audio business</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Help & Service</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">DMCA Notification</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Webnovel Forum</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Online service</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Vulnerability Report</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="footer__resouses-links">
-                  <h3 className="foooter__subhead">Contacts</h3>
-                  <ul className="footer__links">
-                    <li className="footer__link">
-                      <Link to="javascript:;">Tags</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Download Apps</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Be an Author</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Help Center</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Privacy Policy</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Terms of Service</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Keywords</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Affiliate</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="footer__referrals-links">
-                  <h3 className="foooter__subhead">Referrals</h3>
-                  <ul className="footer__links">
-                    <li className="footer__link">
-                      <Link to="javascript:;">QiDian</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Yuewen</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="footer__copyright">
-                <p>Copyright 2024 All right reserved. Little literature club</p>
-              </div>
-            </div>
-          </div>
-        </section>
+       
       </>
     </UserLayout>
   );
