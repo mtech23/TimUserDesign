@@ -42,7 +42,7 @@
   position: absolute;
   top: 497px;
   left: 813px;
-  width: 41px;
+  width: 35px;
 
 }
 .coverr button.history{
@@ -370,7 +370,8 @@ color: #169B00;
   } */
   .polygoon {
     
-    left: 582px;
+    left: 494px;
+
   }
 }
 @media only screen and (min-width: 2560px){

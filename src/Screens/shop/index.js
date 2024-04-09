@@ -8,6 +8,12 @@ import "./style.css";
 //   NovalImage,
 // } from "../../Assets/images";
 import Group1000002083 from '../../Assets/images/Group1000002083.png'
+import {
+ 
+  Product_Icon,
+  HarryPotterBook,
+   
+} from "../../Assets/images";
 import Polygon6 from '../../Assets/images/Polygon6.png'
 import Form from "react-bootstrap/Form";
 import medal from "../../Assets/images/Medal.png";
@@ -43,6 +49,11 @@ import {
   BestSellingBook12,
 } from "../../Assets/images";
 import book1 from "../../Assets/images/book1.png";
+import dragon from "../../Assets/images/dragon.png";
+import mana from "../../Assets/images/mana.png";
+import chechmark from "../../Assets/images/checkmark.png";
+import timebg from "../../Assets/images/timebg.png";
+import ihk from "../../Assets/images/ihk.png";
 import book2 from "../../Assets/images/book2.png";
 import book3 from "../../Assets/images/book3.png";
 import { Link } from "react-router-dom";
@@ -107,29 +118,31 @@ export const Shop = () => {
 
   const settingsForFourItems = reusableSetting(4, false);
   const settingsForOneItem = reusableSettingForOne(1, false);
-  //   const adsListing = () => {
-  //     document.querySelector(".loaderBox").classList.remove("d-none");
-  //     fetch(
-  //       "https://custom.mystagingserver.site/Tim-WDLLC/public/api/ads_listing",
-  //       {
-  //         method: "GET",
-  //         headers: {
-  //           Accept: "application/json",
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     )
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         document.querySelector(".loaderBox").classList.add("d-none");
-  //         setAds(data.data);
-  //       })
-  //       .catch((error) => {
-  //         document.querySelector(".loaderBox").classList.add("d-none");
-  //         console.log(error);
-  //       });
-  //   };
-
+    const adsListing = () => {
+      document.querySelector(".loaderBox").classList.remove("d-none");
+      fetch(
+        "https://custom.mystagingserver.site/Tim-WDLLC/public/api/ads_listing",
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        }
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          document.querySelector(".loaderBox").classList.add("d-none");
+          setAds(data.data);
+        })
+        .catch((error) => {
+          document.querySelector(".loaderBox").classList.add("d-none");
+          console.log(error);
+        });
+    };
+useEffect(() =>{
+  adsListing()
+} , [])
   //   const BookListing = () => {
   //     document.querySelector(".loaderBox").classList.remove("d-none");
   //     fetch(
@@ -207,7 +220,283 @@ export const Shop = () => {
             </div>
           </div>
         </section>
+
+        <section class="shop">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="head">MANA PACKS</h1>
+                <img class="img-fluid dra" src={dragon}/>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="second">
+          <div class="container">
+            <div class="cardrow">
+            <div class="row">
+              
+            <div class="col-md-3">
+              <div class="box">
+                <img class="img-fluid mana" src={mana}/>
+               </div>
+               <div class="rect">
+                <h3 class="recthe">250 MANA PACK</h3>
+                <p class="para"> $19.99 <span class="price"> $19.99 </span></p>
+                <div class="cartbtn">
+                <button class="cart"> Add to cart <i class="fa-solid fa-cart-shopping carticon"></i></button>
+                </div>
+               </div>
+              </div>
+
+              <div class="col-md-3">
+              <div class="box">
+                <img class="img-fluid mana" src={mana}/>
+               </div>
+               <div class="rect">
+                <h3 class="recthe">250 MANA PACK</h3>
+                <p class="para"> $19.99 <span class="price"> $19.99 </span></p>
+                <div class="cartbtn">
+                <button class="cart"> Add to cart <i class="fa-solid fa-cart-shopping carticon"></i></button>
+                </div>
+               </div>
+              </div>
+
+              <div class="col-md-3">
+              <div class="box">
+                <img class="img-fluid mana" src={mana}/>
+               </div>
+               <div class="rect">
+                <h3 class="recthe">250 MANA PACK</h3>
+                <p class="para"> $19.99 <span class="price"> $19.99 </span></p>
+                <div class="cartbtn">
+                <button class="cart"> Add to cart <i class="fa-solid fa-cart-shopping carticon"></i></button>
+                </div>
+               </div>
+              </div>
+
+              <div class="col-md-3">
+              <div class="box">
+                <img class="img-fluid mana" src={mana}/>
+               </div>
+               <div class="rect">
+                <h3 class="recthe">250 MANA PACK</h3>
+                <p class="para"> $19.99 <span class="price"> $19.99 </span></p>
+                <div class="cartbtn">
+                <button class="cart"> Add to cart <i class="fa-solid fa-cart-shopping carticon"></i></button>
+                </div>
+               </div>
+              </div>
+
+
+
+
+            </div>
+            </div>
+
+          
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+        <section className="harry-potter">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-9 harry-potter-bg">
+                  <div className="harry__potter-section">
+                    <div className="row align-items-center">
+                      <div className="col-md-4">
+                        <div class="harry__potter-img">
+                          <img
+                            src={HarryPotterBook}
+                            data-aos="fade-right"
+                            data-aos-duration="3000"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-8">
+                        <div class="harry__potter-content">
+                          <h1
+                            className="jost-font"
+                            data-aos="fade-left"
+                            data-aos-duration="3000"
+                          >
+                            Harry Potter
+                          </h1>
+                          <p className="poppins-font py-3">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry Lorem Ipsum has been the
+                            industry's standard dummy text ever since the when
+                            an unknown
+                          </p>
+                          <div className="offer-end">
+                            <div className="offer-remain-time poppins-font">
+                              2:59:59
+                            </div>
+                            <div className="offer-lable jost-font">
+                              Offer Ends In
+                            </div>
+                          </div>
+                          <div className="offer-btn-group">
+                            <button className="jost">
+                              Buy Now{" "}
+                              <div className="offer__icon">
+                                {/* <FontAwesomeIcon icon={faCartShopping} /> */}
+                                <img src={Product_Icon} />
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-3 harrypotter_books-col">
+                  <div className="harrypotter_book">
+                    {/* <div class="row  harrypotter_book active">
+                      <div className="col-4">
+                        <img src={MyRebbetsBook} alt="..." />
+                      </div>
+                      <div className="col-8">
+                        <h3 className="harrypotter_books-title jost-font">
+                          Lorem Ipsume Doller
+                        </h3>
+                        <p className="harrypotter_books-body">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry Lorem Ipsum has been the
+                          industry's standard
+                        </p>
+                        <h3 class="author__poduct_title harrypotter_books-price jost-font">
+                          <div class="product__price">
+                            <span class="discount__price">$18.99</span>
+                            <span class="actual__price">$18.99</span>
+                          </div>
+                        </h3>
+                      </div>
+                    </div> */}
+                  
+                  {  ads && ads.map((item, index) => (  
+                  <div class="row  harrypotter_book mb-4 ">
+                      <div className="col-4">
+                        <img src={base_url +  item?.ad_image} alt="..." />
+                      </div>
+                      <div className="col-8">
+                        <h3 className="harrypotter_books-title jost-font">
+                        {  item?.ad_title}
+                        </h3>
+                        {/* <p className="harrypotter_books-body">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry Lorem Ipsum has been the
+                          industry's standard
+                        </p> */}
+                        {/* <h3 class="author__poduct_title harrypotter_books-price jost-font">
+                          <div class="product__price">
+                            <span class="discount__price">$18.99</span>
+                            <span class="actual__price">$18.99</span>
+                          </div>
+                        </h3> */}
+                      </div>
+                    </div>))}
+                   
+                    
+                 
+                  
+                   
+                  
+                  
+                
+               
+               
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
        
+       
+        <section class="subscription">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="subs">SUBSCRIPTIONS</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+       
+       <section class="price">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="eco">
+                <p class="ecohead">Economic</p>
+                <p class="ecohead1">$15/Month</p>
+                <button class="cart"> Subscribe <i class="fa-solid fa-cart-shopping carticon"></i></button>
+                <hr class="hori"></hr>
+                <p class="plan">Economic plan for all users.</p>
+                <div class="check">
+                <img class="img-fluid chk" src={chechmark}/>
+                <p class="point">Lorem Ipsum is simply dummy text</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+
+
+       
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
       </>
     </UserLayout>

@@ -46,7 +46,7 @@
   position: absolute;
     top: 497px;
     left: 632px;
-    width: 37px;
+    width: 32px;
 }
 .cov button.history{
   background: #D2D2D2;
@@ -376,7 +376,7 @@ color: #169B00;
   } */
   .polygons {
     
-      left: 382px;
+    left: 319px;
   }
 }
 @media only screen and (min-width: 2560px){
