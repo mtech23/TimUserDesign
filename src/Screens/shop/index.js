@@ -467,6 +467,81 @@ useEffect(() =>{
                 <img class="img-fluid chk" src={chechmark}/>
                 <p class="point">Lorem Ipsum is simply dummy text</p>
                 </div>
+                <div class="check">
+                <img class="img-fluid chk" src={chechmark}/>
+                <p class="point">Lorem Ipsum is simply dummy text</p>
+                </div>
+                <div class="check">
+                <img class="img-fluid chk" src={chechmark}/>
+                <p class="point">Lorem Ipsum is simply dummy text</p>
+                </div>
+                <div class="check">
+                <img class="img-fluid chk" src={chechmark}/>
+                <p class="point">Lorem Ipsum is simply dummy text</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="basic
+              ">
+                <p class="ecohead">Basic</p>
+                <p class="ecohead1">$35/Month</p>
+                <button class="cart"> Subscribe <i class="fa-solid fa-cart-shopping carticon"></i></button>
+                <hr class="hori"></hr>
+                <p class="plan">Economic plan for all users.</p>
+                <div class="check">
+                <img class="img-fluid chk" src={chechmark}/>
+                <p class="point">Lorem Ipsum is simply dummy text</p>
+                </div>
+                <div class="check">
+                <img class="img-fluid chk" src={chechmark}/>
+                <p class="point">Lorem Ipsum is simply dummy text</p>
+                </div>
+                <div class="check">
+                <img class="img-fluid chk" src={chechmark}/>
+                <p class="point">Lorem Ipsum is simply dummy text</p>
+                </div>
+                <div class="check">
+                <img class="img-fluid chk" src={chechmark}/>
+                <p class="point">Lorem Ipsum is simply dummy text</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="pre">
+                <p class="ecohead">Premium</p>
+                <p class="ecohead1">$55/Month</p>
+                <button class="cart"> Subscribe <i class="fa-solid fa-cart-shopping carticon"></i></button>
+                <hr class="hori"></hr>
+                <p class="plan">Economic plan for all users.</p>
+                <div class="check">
+                <img class="img-fluid chk" src={chechmark}/>
+                <p class="point">Lorem Ipsum is simply dummy text</p>
+                </div>
+                <div class="check">
+                <img class="img-fluid chk" src={chechmark}/>
+                <p class="point">Lorem Ipsum is simply dummy text</p>
+                </div>
+                <div class="check">
+                <img class="img-fluid chk" src={chechmark}/>
+                <p class="point">Lorem Ipsum is simply dummy text</p>
+                </div>
+                <div class="check">
+                <img class="img-fluid chk" src={chechmark}/>
+                <p class="point">Lorem Ipsum is simply dummy text</p>
+                </div>
+                <div class="check">
+                <img class="img-fluid chk" src={chechmark}/>
+                <p class="point">Lorem Ipsum is simply dummy text</p>
+                </div>
+                <div class="check">
+                <img class="img-fluid chk" src={chechmark}/>
+                <p class="point">Lorem Ipsum is simply dummy text</p>
+                </div>
+                <div class="check">
+                <img class="img-fluid chk" src={chechmark}/>
+                <p class="point">Lorem Ipsum is simply dummy text</p>
+                </div>
               </div>
             </div>
           </div>
