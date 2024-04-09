@@ -275,17 +275,19 @@ export const Library = () => {
                                 </div>
                                 <div class="col-lg-9 col-sm-12">
                                    <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
-                                    <div class="p-3 res">
+                                    <h3 class="namee">Book Name Here</h3>
+                                    <div class="p-3 res ">
                                          
-                                    <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote" src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    <img class="img-fluid votee" src={Vote}/>
+                                        <img class="img-fluid votee" src={Notification}/>
+                                        <img class="img-fluid votee" src={Trashcan}/>
                                        
                                     </div>
                                    </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
+                                   <div class="maincate">
+                                   <button class="cate" >Category </button>
+                                   <button class="cate" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -294,8 +296,8 @@ export const Library = () => {
                                     <span class="fa fa-star checked star " ></span>
                                     <p class="rating">(4.82)</p>
                                   </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
+                                    <p class="detaill">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="views" > View More </span></p>
                                         
                                 </div>
                             </div>
@@ -306,9 +308,9 @@ export const Library = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                            <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -325,15 +327,17 @@ export const Library = () => {
                                 </div>
                                 <div class="col-lg-9 col-sm-12">
                                    <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
-                                    <div class=" res p-3 res">
-                                    <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote" src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    <h3 class="namee">Book Name Here</h3>
+                                    <div class=" res p-3 res ">
+                                    <img class="img-fluid votee" src={Vote}/>
+                                        <img class="img-fluid votee" src={Notification}/>
+                                        <img class="img-fluid votee" src={Trashcan}/>
                                     </div>
                                    </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
+                                   <div class="maincate">
+                                   <button class="cate" >Category </button>
+                                   <button class="cate" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -342,8 +346,8 @@ export const Library = () => {
                                     <span class="fa fa-star checked star " ></span>
                                     <p class="rating">(4.82)</p>
                                   </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
+                                    <p class="detaill">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="views" > View More </span></p>
                                         
                                 </div>
                             </div>
@@ -354,9 +358,9 @@ export const Library = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                    <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" >  Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -373,15 +377,17 @@ export const Library = () => {
                                 </div>
                                 <div class="col-lg-9 col-sm-12">
                                    <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
+                                    <h3 class="namee">Book Name Here</h3>
                                     <div class="p-3 res">
-                                    <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote" src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    <img class="img-fluid votee" src={Vote}/>
+                                        <img class="img-fluid votee" src={Notification}/>
+                                        <img class="img-fluid votee" src={Trashcan}/>
                                     </div>
                                    </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
+                                   <div class="maincate">
+                                   <button class="cate" >Category </button>
+                                   <button class="cate" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -390,8 +396,8 @@ export const Library = () => {
                                     <span class="fa fa-star checked star " ></span>
                                     <p class="rating">(4.82)</p>
                                   </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
+                                    <p class="detaill">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="views" > View More </span></p>
                                         
                                 </div>
                             </div>
@@ -402,9 +408,9 @@ export const Library = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                    <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -421,15 +427,17 @@ export const Library = () => {
                                 </div>
                                 <div class="col-lg-9 col-sm-12">
                                    <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
+                                    <h3 class="namee">Book Name Here</h3>
                                     <div class="p-3 res">
-                                    <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote" src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    <img class="img-fluid votee" src={Vote}/>
+                                        <img class="img-fluid votee" src={Notification}/>
+                                        <img class="img-fluid votee" src={Trashcan}/>
                                     </div>
                                    </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
+                                   <div class="maincate">
+                                   <button class="cate" >Category </button>
+                                   <button class="cate" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -438,8 +446,8 @@ export const Library = () => {
                                     <span class="fa fa-star checked star " ></span>
                                     <p class="rating">(4.82)</p>
                                   </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
+                                    <p class="detaill">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="views" > View More </span></p>
                                         
                                 </div>
                             </div>
@@ -450,9 +458,9 @@ export const Library = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                    <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -469,15 +477,17 @@ export const Library = () => {
                                 </div>
                                 <div class="col-lg-9 col-sm-12">
                                    <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
+                                    <h3 class="namee">Book Name Here</h3>
                                     <div class="p-3 res">
-                                    <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote" src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    <img class="img-fluid votee" src={Vote}/>
+                                        <img class="img-fluid votee" src={Notification}/>
+                                        <img class="img-fluid votee" src={Trashcan}/>
                                     </div>
                                    </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
+                                   <div class="maincate">
+                                   <button class="cate" >Category </button>
+                                   <button class="cate" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -486,8 +496,8 @@ export const Library = () => {
                                     <span class="fa fa-star checked star " ></span>
                                     <p class="rating">(4.82)</p>
                                   </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
+                                    <p class="detaill">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="views" > View More </span></p>
                                         
                                 </div>
                             </div>
@@ -498,9 +508,9 @@ export const Library = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                    <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils  <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -527,15 +537,17 @@ export const Library = () => {
                                 </div>
                                 <div class="col-lg-9 col-sm-12">
                                    <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
+                                    <h3 class="namee">Book Name Here</h3>
                                     <div class="p-3 res">
-                                    <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote" src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    <img class="img-fluid votee" src={Vote}/>
+                                        <img class="img-fluid votee" src={Notification}/>
+                                        <img class="img-fluid votee" src={Trashcan}/>
                                     </div>
                                    </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
+                                   <div class="maincate">
+                                   <button class="cate" >Category </button>
+                                   <button class="cate" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -544,8 +556,8 @@ export const Library = () => {
                                     <span class="fa fa-star checked star " ></span>
                                     <p class="rating">(4.82)</p>
                                   </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
+                                    <p class="detaill">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="views" > View More </span></p>
                                         
                                 </div>
                             </div>
@@ -556,9 +568,9 @@ export const Library = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                    <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -575,15 +587,17 @@ export const Library = () => {
                                 </div>
                                 <div class="col-lg-9 col-sm-12">
                                    <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
+                                    <h3 class="namee">Book Name Here</h3>
                                     <div class="p-3 res">
-                                    <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote" src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    <img class="img-fluid votee" src={Vote}/>
+                                        <img class="img-fluid votee" src={Notification}/>
+                                        <img class="img-fluid votee" src={Trashcan}/>
                                     </div>
                                    </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
+                                   <div class="maincate">
+                                   <button class="cate" >Category </button>
+                                   <button class="cate" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -592,8 +606,8 @@ export const Library = () => {
                                     <span class="fa fa-star checked star " ></span>
                                     <p class="rating">(4.82)</p>
                                   </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
+                                    <p class="detaill">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="views" > View More </span></p>
                                         
                                 </div>
                             </div>
@@ -604,9 +618,9 @@ export const Library = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                    <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -622,15 +636,17 @@ export const Library = () => {
                                     </div>
                                     <div class="col-lg-9 col-sm-12">
                                        <div class="description">
-                                        <h3 class="name">Book Name Here</h3>
+                                        <h3 class="namee">Book Name Here</h3>
                                         <div class="p-3 res">
-                                        <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote" src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
+                                        <img class="img-fluid votee" src={Vote}/>
+                                        <img class="img-fluid votee" src={Notification}/>
+                                        <img class="img-fluid votee" src={Trashcan}/>
                                         </div>
                                        </div>
-                                       <button class="category" >Category </button>
-                                       <button class="category" >Category </button>
+                                       <div class="maincate">
+                                   <button class="cate" >Category </button>
+                                   <button class="cate" >Category </button>
+                                   </div>
                                        <div class="rates">
                                         <span class="fa fa-star checked star" ></span>
                                         <span class="fa fa-star checked star " ></span>
@@ -639,8 +655,8 @@ export const Library = () => {
                                         <span class="fa fa-star checked star " ></span>
                                         <p class="rating">(4.82)</p>
                                       </div>
-                                        <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                            <span class="view" > View More </span></p>
+                                        <p class="detaill">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                            <span class="views" > View More </span></p>
                                             
                                     </div>
                                 </div>
@@ -651,9 +667,9 @@ export const Library = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                    <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" >  Book Deatils  <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                                 </div>
@@ -670,15 +686,17 @@ export const Library = () => {
                                 </div>
                                 <div class="col-lg-9 col-sm-12">
                                    <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
+                                    <h3 class="namee">Book Name Here</h3>
                                     <div class="p-3 res">
-                                    <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote" src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    <img class="img-fluid votee" src={Vote}/>
+                                        <img class="img-fluid votee" src={Notification}/>
+                                        <img class="img-fluid votee" src={Trashcan}/>
                                     </div>
                                    </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
+                                   <div class="maincate">
+                                   <button class="cate" >Category </button>
+                                   <button class="cate" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -687,8 +705,8 @@ export const Library = () => {
                                     <span class="fa fa-star checked star " ></span>
                                     <p class="rating">(4.82)</p>
                                   </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
+                                    <p class="detaill">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="views" > View More </span></p>
                                         
                                 </div>
                             </div>
@@ -699,9 +717,9 @@ export const Library = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                    <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" >  Book Deatils  <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
@@ -718,15 +736,17 @@ export const Library = () => {
                                 </div>
                                 <div class="col-lg-9 col-sm-12">
                                    <div class="description">
-                                    <h3 class="name">Book Name Here</h3>
+                                    <h3 class="namee">Book Name Here</h3>
                                     <div class="p-3 res">
-                                    <img class="img-fluid vote" src={Vote}/>
-                                        <img class="img-fluid vote" src={Notification}/>
-                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    <img class="img-fluid votee" src={Vote}/>
+                                        <img class="img-fluid votee" src={Notification}/>
+                                        <img class="img-fluid votee" src={Trashcan}/>
                                     </div>
                                    </div>
-                                   <button class="category" >Category </button>
-                                   <button class="category" >Category </button>
+                                   <div class="maincate">
+                                   <button class="cate" >Category </button>
+                                   <button class="cate" >Category </button>
+                                   </div>
                                    <div class="rates">
                                     <span class="fa fa-star checked star" ></span>
                                     <span class="fa fa-star checked star " ></span>
@@ -735,8 +755,8 @@ export const Library = () => {
                                     <span class="fa fa-star checked star " ></span>
                                     <p class="rating">(4.82)</p>
                                   </div>
-                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                        <span class="view" > View More </span></p>
+                                    <p class="detaill">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="views" > View More </span></p>
                                         
                                 </div>
                             </div>
@@ -747,9 +767,9 @@ export const Library = () => {
                                 </div>
                                 <div class="col-md-9 ">
                                     <div class="btnrww">
-                                            <button class="reads" ><span>Add To Library</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                            <button class="reads" ><span>Continue Reading</span><i class="fa-solid fa-book-open iconn"></i></button>
-                                        <button class="reads" >Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
+                                    <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
+                                            <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
+                                        <button class="reads" > Book Deatils <i class="fa-solid fa-calendar-week iconn"></i></button>
                                         </div>
                                 </div>
                             </div>
