@@ -663,28 +663,7 @@ export const Beta = () => {
 
           {/* Joins us and popular combine section */}
 
-          <section className="newlySell__book-sec mb-5  jost-font">
-            <div className="bestSell__book-cartoon1">
-              {/* <img src={SmallAnime1} /> */}
-            </div>
-            <div className="container">
-              <div className="row">
-                <div className="col-12">
-                  <div className="bestSell__book-title">
-                    <h2>Newly Released Books</h2>
-                  </div>
-                </div>
-                <div className="col-12">
-                  <div className="bestSelling__books">
-                    <img src={newlybook} />
-                    {/* <div className="bestSell__book-cartoon2">
-                      <img src={SmallAnime2} />
-                    </div> */}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+        
           <section className="join-us mt-5 ">
             <div className="container">
               <div className="row">
