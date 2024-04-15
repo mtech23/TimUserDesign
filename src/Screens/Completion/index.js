@@ -107,10 +107,6 @@ export const Completion = () => {
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
-
-
-
-
   const filterData = books?.filter(item =>
     item?.category?.name.toLowerCase().includes(inputValue.toLowerCase())
   );
