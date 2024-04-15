@@ -388,7 +388,7 @@ color: #169B00;
   }
 }
 
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 375px ) {
   .books img.clock {
       left: 50px;
   }

@@ -17,10 +17,10 @@ color: #360C55;
 }
 .shop img.dra{
     position: absolute;
-    left: 746px;
-    top: -248px;
-    width: 1157px;
-    height: 783px;
+    left: 988px;
+    top: -273px;
+    /* width: 1157px;
+    height: 783px; */
 }
 
 .second{
@@ -100,7 +100,7 @@ text-decoration:  line-through;
 .cardrow{
     margin-top: -105px;
     position: relative;
-    padding-bottom: 70px;
+    padding-bottom: 10px;
 }
 .second h2.limit{
     font-family: 'Jost';
@@ -256,3 +256,52 @@ height: 20px;
     margin-top: -51px;
     border-radius: 20px;
 }
+
+@media (max-width: 1024px) {
+
+    .shop img.dra {
+        display: none;
+    }
+    .subscription h1.subs {
+
+        font-size: 31.93px;
+}
+.shop h1.head {
+   
+    font-size: 31.93px;
+}
+.rect {
+   
+    margin-bottom: 30px;
+}
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .pre{
+        padding: 35px 20px 0px 20px;
+    }
+}
+@media (max-width: 425px) {
+    .basic {
+        margin-top: 20px;
+    }
+    .pre{
+        margin-top: 20px; 
+    }
+}
+@media only screen and (min-width: 2560px){
+    .shop img.dra {
+       
+        left: 1646px;
+    }
+       
+    }
+    @media only screen and (max-width: 1440px){
+        .shop img.dra {
+           
+            left: 526px;
+           
+        }
+        }
