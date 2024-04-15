@@ -631,27 +631,25 @@ export const Beta = () => {
                       </div>
                     </div> */}
 
-                    {ads &&
-                      ads.map((item, index) => (
+                    {books &&
+                      books?.map((item, index) => (
                         <div class="row  harrypotter_book mb-4 ">
                           <div className="col-4">
-                            <img src={base_url + item?.ad_image} alt="..." />
+                            <img src={base_url + item?.image} alt="..." />
                           </div>
                           <div className="col-8">
                             <h3 className="harrypotter_books-title jost-font">
-                              {item?.ad_title}
+                            {item?.name.slice(0, 15)}
                             </h3>
-                            {/* <p className="harrypotter_books-body">
-                          Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry Lorem Ipsum has been the
-                          industry's standard
-                        </p> */}
-                            {/* <h3 class="author__poduct_title harrypotter_books-price jost-font">
+                            <p className="harrypotter_books-body">
+                            {item?.description}
+                        </p>
+                            <h3 class="author__poduct_title harrypotter_books-price jost-font">
                           <div class="product__price">
-                            <span class="discount__price">$18.99</span>
-                            <span class="actual__price">$18.99</span>
+                            <span class="discount__price">${item?.price}</span>
+                            <span class="actual__price">${item?.price}</span>
                           </div>
-                        </h3> */}
+                        </h3>
                           </div>
                         </div>
                       ))}
