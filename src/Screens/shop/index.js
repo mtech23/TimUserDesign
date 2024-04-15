@@ -237,7 +237,7 @@ useEffect(() =>{
             <div class="cardrow">
             <div class="row">
               
-            <div class="col-md-3">
+            <div class="col-lg-3 col-sm-6 ">
               <div class="box">
                 <img class="img-fluid mana" src={mana}/>
                </div>
@@ -250,7 +250,7 @@ useEffect(() =>{
                </div>
               </div>
 
-              <div class="col-md-3">
+              <div class="col-lg-3 col-sm-6 ">
               <div class="box">
                 <img class="img-fluid mana" src={mana}/>
                </div>
@@ -263,7 +263,7 @@ useEffect(() =>{
                </div>
               </div>
 
-              <div class="col-md-3">
+              <div class="col-lg-3 col-sm-6 ">
               <div class="box">
                 <img class="img-fluid mana" src={mana}/>
                </div>
@@ -276,7 +276,7 @@ useEffect(() =>{
                </div>
               </div>
 
-              <div class="col-md-3">
+              <div class="col-lg-3 col-sm-6 ">
               <div class="box">
                 <img class="img-fluid mana" src={mana}/>
                </div>
