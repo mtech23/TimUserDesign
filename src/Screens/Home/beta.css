@@ -1574,3 +1574,13 @@
 .author__products_link{
 color: black;
 }
+
+
+.newlySell__book-sec {
+  background-image: url(../../Assets/images/bgnewlybooks.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 100px 0 0;
+  position: relative;
+}

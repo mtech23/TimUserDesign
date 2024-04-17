@@ -6,9 +6,10 @@ import CustomButton from "../../Components/CustomButton";
 import Accordion from "react-bootstrap/Accordion";
 import CustomInput from "../../Components/CustomInput";
 import preview from "../../Assets/images/image_74-removebg-preview.png";
+import CustomPagination from '../../Components/CustomPagination'
 import CustomCard from "../../Components/CustomCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
- 
+
 import {
   BannerBooks,
   Cart_icon_pink,
@@ -76,8 +77,17 @@ import ReactStars from "react-rating-stars-component";
 
 export const ProductDetail = ({ eventKey, children }) => {
   const { activeEventKey } = useContext(AccordionContext);
-  
-const [books, setBooks] = useState([]);
+
+  const [data, setData] = useState({});
+  const [inputValue, setInputValue] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(4)
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+
+  const [books, setBooks] = useState([]);
+
   const reusableSetting = (item, centerMode) => {
 
 
@@ -114,14 +124,21 @@ const [books, setBooks] = useState([]);
     };
   };
 
-console.log("books" , books)
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const filterData = data?.chapters?.filter(item =>
+    item?.title.toLowerCase().includes(inputValue.toLowerCase())
+  );
+  const currentItems = filterData?.slice(indexOfFirstItem, indexOfLastItem);
+  console.log("currentItems", currentItems)
 
   const { id } = useParams();
   const settingsForFourItems = reusableSetting(4, false);
 
   const base_url = "https://custom.mystagingserver.site/Tim-WDLLC/public/";
 
-  const [data, setData] = useState({});
 
   const [reviewData, setReviewData] = useState({
     book_id: id,
@@ -256,7 +273,7 @@ console.log("books" , books)
   };
 
   const handleCheckboxChange = () => {
-    // Toggle the state of textToSpeech when the checkbox is clicked
+
     setTextToSpeech(!textToSpeech);
   };
 
@@ -383,7 +400,7 @@ console.log("books" , books)
     const currentIndex = speeds.indexOf(chaptervoice);
     let newIndex = currentIndex + 1;
 
-    if (newIndex >= speeds.length) {
+    if (newIndex >= speeds?.length) {
       newIndex = 0;
     }
 
@@ -402,7 +419,7 @@ console.log("books" , books)
 
 
 
-    const adsListing = () => {
+  const adsListing = () => {
     document.querySelector(".loaderBox").classList.remove("d-none");
     fetch(
       "https://custom.mystagingserver.site/Tim-WDLLC/public/api/ads_listing",
@@ -491,7 +508,7 @@ console.log("books" , books)
     const currentIndex = speeds.indexOf(voice);
     let newIndex = currentIndex + 1;
 
-    if (newIndex >= speeds.length) {
+    if (newIndex >= speeds?.length) {
       newIndex = 0;
     }
 
@@ -600,12 +617,12 @@ console.log("books" , books)
         console.log(error);
       });
   };
-  
-  
-  useEffect(() =>{
+
+
+  useEffect(() => {
     adsListing()
     BookListing()
-  },[])
+  }, [])
   return (
     <>
       <UserLayout>
@@ -848,10 +865,10 @@ console.log("books" , books)
                           <span className="font-weight-bold">Category:</span>{" "}
                           <span>{data?.category?.name}</span>
                         </p>
-                        {data?.chapters?.length > 2 ? (
+                        {currentItems?.length > 2 ? (
                           <p className="text-center">
                             <span className="text-success">
-                              Recently {data?.latest_chap.length} new chaper
+                              Recently {data?.latest_chap?.length} new chaper
                               added.
                             </span>
                           </p>
@@ -864,8 +881,8 @@ console.log("books" , books)
                         <div className="row select">
                           <div className="col-md-12">
                             <Accordion defaultActiveKey="0">
-                              {data?.chapters &&
-                                data?.chapters.map((item, index) => (
+                              {currentItems &&
+                                currentItems?.map((item, index) => (
                                   <Accordion.Item eventKey={index} key={index}>
                                     <Accordion.Header
                                       className="acpara accordation"
@@ -907,7 +924,7 @@ console.log("books" , books)
                                                     disabled={
                                                       isPlaying &&
                                                       currentChapter !==
-                                                        item?.id
+                                                      item?.id
                                                     }
                                                   >
                                                     <i className="fa-solid fa-play"></i>
@@ -1136,10 +1153,10 @@ console.log("books" , books)
                         </p>
                       )}
 
-                      <div className="row">
-                        <div className="book__listing-pagination">
-                          <nav aria-label="Page navigation example">
-                            <ul class="pagination">
+                      <div className="row ">
+                        <div className="book__listing-pagination  mb-4">
+                          <nav aria-label="Page navigation example  mb-4">
+                            {/* <ul class="pagination">
                               <li class="page-item">
                                 <a class="page-link page_link-active" href="#">
                                   1
@@ -1169,7 +1186,7 @@ console.log("books" , books)
                               <li>
                                 {" "}
                                 <div className="select-chapter   mb-2   gap-4   ">
-                                  {/* <p className="story">Story Status </p> */}
+                                  <p className="story">Story Status </p>
 
                                   <Form.Select
                                     aria-label="Default select example"
@@ -1183,8 +1200,17 @@ console.log("books" , books)
                                   </Form.Select>
                                 </div>
                               </li>
-                            </ul>
+                            </ul> */}
+
+
+                            <CustomPagination
+                              itemsPerPage={itemsPerPage}
+                              totalItems={data?.chapters?.length}
+                              currentPage={currentPage}
+                              onPageChange={handlePageChange}
+                            />
                           </nav>
+
                         </div>
                       </div>
                       <div class="rate">
@@ -1332,12 +1358,12 @@ console.log("books" , books)
                 <div className="col-md-12 section__heading">
                   <div class="special_heading">
                     <h1
- 
+
                     >
                       Books
                     </h1>
                     <h2
-                   
+
                     >
                       Related Books
                     </h2>
@@ -1428,27 +1454,27 @@ console.log("books" , books)
 
 
 
-<div className="author__products">
-                <div className="row mb-5 ">
-                  <Slider {...settingsForFourItems}>
-                 
+                <div className="author__products">
+                  <div className="row mb-5 ">
+                    <Slider {...settingsForFourItems}>
 
-                    {books &&
-                      books.map((item, index) => (
-                        <CustomCard
-                        className="author__products_img"
-                          image={base_url + item?.image}
-                          icon1={faArrowRight}
-                          icon2={faEye}
-                          imageicon={Cart_icon_pink}
-                          text={"Add To Cart"}
-                          price={item?.price || 0}
-                          title={item?.name}
-                        />
-                      ))}
-                  </Slider>
+
+                      {books &&
+                        books.map((item, index) => (
+                          <CustomCard
+                            className="author__products_img"
+                            image={base_url + item?.image}
+                            icon1={faArrowRight}
+                            icon2={faEye}
+                            imageicon={Cart_icon_pink}
+                            text={"Add To Cart"}
+                            price={item?.price || 0}
+                            title={item?.name}
+                          />
+                        ))}
+                    </Slider>
+                  </div>
                 </div>
-              </div>
               </div>
             </div>
           </section>
@@ -1529,13 +1555,13 @@ console.log("books" , books)
 
 
 
-          
+
         </section>
 
 
 
 
- 
+
       </UserLayout>
     </>
   );

@@ -122,7 +122,7 @@ export const Home = () => {
                                                         <h5>    {`$ ${item?.price || 0}`}</h5>
                                                     </div>
                                                     <div className="arrow-icon">
-                                                        <Link to={`/book-listing/product-detail/${item?.id}`}><i className="fa-solid fa-arrow-right"></i></Link>
+                                                        <Link to={`/book-detail/${item?.id}`}><i className="fa-solid fa-arrow-right"></i></Link>
                                                     </div>
                                                 </div>
                                             </div>

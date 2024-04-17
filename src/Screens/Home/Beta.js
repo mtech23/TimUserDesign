@@ -10,6 +10,8 @@ import CustomCard from "../../Components/CustomCard";
 //   NovalImage,
 // } from "../../Assets/images";
 import CustomButton from "../../Components/BackButton";
+import bgnewlybook from '../../Assets/images/bgnewlybooks.png'
+import newlybook from '../../Assets/images/newlybook.png'
 import {
   BannerBooks,
   Cart_icon_pink,
@@ -33,12 +35,18 @@ import {
   TopAuthorBefore,
   TopAuthorBook1,
   TopAuthorBook2,
+
+  SmallAnime1,
+  SmallAnime2,
+  User_icon_plus,
+  User_icon_white,
+  BestSellingBooks,
   TopAuthorBook3,
   TopAuthorCartoon,
   User_Icon,
   User_icon_pink,
-  User_icon_plus,
-  User_icon_white,
+   
+ 
 } from "../../Assets/images";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -64,8 +72,7 @@ export const Beta = () => {
   const [ads, setAds] = useState([]);
   const [books, setBooks] = useState([]);
   const [genres, setGenres] = useState([]);
-  
- 
+
   const [selectedGenre, setSelectedGenre] = useState(null);
   const base_url = "https://custom.mystagingserver.site/Tim-WDLLC/public/";
 
@@ -197,18 +204,14 @@ export const Beta = () => {
     setSelectedGenre(genre);
   };
 
-
-
-  
-const [bookFilter, setBookFilter] = useState()
+  const [bookFilter, setBookFilter] = useState();
   const filterGenre = (event) => {
     const filterCategory = event.target.value;
-    const filteredBooks = bookFilter?.filter(book => book?.genre_id == filterCategory);
-    setBooks(filteredBooks)
-}
-
-
-
+    const filteredBooks = bookFilter?.filter(
+      (book) => book?.genre_id == filterCategory
+    );
+    setBooks(filteredBooks);
+  };
 
   console.log("book", books);
   return (
@@ -348,27 +351,27 @@ const [bookFilter, setBookFilter] = useState()
               <div className="author__products">
                 <div className="row">
                   <Slider {...settingsForFourItems}>
-                 
-
                     {books &&
                       books.map((item, index) => (
-                        <Link to={`/book-listing/product-detail/${item?.id}`} className="author__products_link">
-                        <CustomCard
-                        className="author__products_img"
-                          image={base_url + item?.image}
-                          icon1={faArrowRight}
-                          icon2={faEye}
-                          imageicon={Cart_icon_pink}
-                          text={"Add To Cart"}
-                          price={item?.price || 0}
-                          title={item?.name}
-                        />
+                        <Link
+                          to={`/book-detail/${item?.id}`}
+                          className="author__products_link"
+                        >
+                          <CustomCard
+                            className="author__products_img"
+                            image={base_url + item?.image}
+                            icon1={faArrowRight}
+                            icon2={faEye}
+                            imageicon={Cart_icon_pink}
+                            text={"Add To Cart"}
+                            price={item?.price || 0}
+                            title={item?.name}
+                          />
                         </Link>
                       ))}
                   </Slider>
                 </div>
               </div>
- 
             </div>
           </div>
         </section>
@@ -485,61 +488,66 @@ const [bookFilter, setBookFilter] = useState()
                 </div>
                 <div className="featured__books">
                   <div className="row popular_tabing">
-                  <Slider {...settingsForFourItems}>
-                    {books &&
-                      books.map((item, index) => (
-                        
-                        <div className="col-md-4">
-                          <div className="card product_hover-effect">
-                            <img src={base_url +  item?.image} className="card-img-top" id="featured__books_img" />
-                            <div className="card-body featured_books-body">
-                              <h3 className="card-title jost-font">
-                               {item?.name.slice(0 ,15)}
-                              </h3>
-                              <p className="author__name jost-font">
-                                Author Name
-                              </p>
-                              <p className="card-text featured__book-desc jost-font">
-                             {item?.description}
-                              </p>
-                              <div className="product__price-div">
-                                <h3 className="author__poduct_title jost-font">
-                                  <div className="product__price">
-                                    <span className="discount__price">
-                                      ${item?.price}
-                                    </span>
-                                    <span className="actual__price">
-                                      ${item?.price}
-                                    </span>
-                                  </div>
+                    <Slider {...settingsForFourItems}>
+                      {books &&
+                        books.map((item, index) => (
+                          <Link
+                            className="col-md-4"
+                            to={`/book-detail/${item?.id}`}
+                          >
+                            <div className="card product_hover-effect">
+                              <img
+                                src={base_url + item?.image}
+                                className="card-img-top"
+                                id="featured__books_img"
+                              />
+                              <div className="card-body featured_books-body">
+                                <h3 className="card-title jost-font">
+                                  {item?.name.slice(0, 15)}
                                 </h3>
-                                <div class="product__icon">
-                                  <img src={Cart_icon_pink} />
+                                <p className="author__name jost-font">
+                                  Author Name
+                                </p>
+                                <p className="card-text featured__book-desc jost-font">
+                                  {item?.description}
+                                </p>
+                                <div className="product__price-div">
+                                  <h3 className="author__poduct_title jost-font">
+                                    <div className="product__price">
+                                      <span className="discount__price">
+                                        ${item?.price}
+                                      </span>
+                                      <span className="actual__price">
+                                        ${item?.price}
+                                      </span>
+                                    </div>
+                                  </h3>
+                                  <div class="product__icon">
+                                    <img src={Cart_icon_pink} />
+                                  </div>
+                                </div>
+                                <div className="rating__div">
+                                  <FontAwesomeIcon
+                                    icon={faStar}
+                                  ></FontAwesomeIcon>
+                                  <FontAwesomeIcon
+                                    icon={faStar}
+                                  ></FontAwesomeIcon>
+                                  <FontAwesomeIcon
+                                    icon={faStar}
+                                  ></FontAwesomeIcon>
+                                  <FontAwesomeIcon
+                                    icon={faStar}
+                                  ></FontAwesomeIcon>
+                                  <FontAwesomeIcon
+                                    icon={faStar}
+                                  ></FontAwesomeIcon>
                                 </div>
                               </div>
-                              <div className="rating__div">
-                                <FontAwesomeIcon
-                                  icon={faStar}
-                                ></FontAwesomeIcon>
-                                <FontAwesomeIcon
-                                  icon={faStar}
-                                ></FontAwesomeIcon>
-                                <FontAwesomeIcon
-                                  icon={faStar}
-                                ></FontAwesomeIcon>
-                                <FontAwesomeIcon
-                                  icon={faStar}
-                                ></FontAwesomeIcon>
-                                <FontAwesomeIcon
-                                  icon={faStar}
-                                ></FontAwesomeIcon>
-                              </div>
                             </div>
-                          </div>
-                        </div>
-                      ))}
-
-</Slider>
+                          </Link>
+                        ))}
+                    </Slider>
                   </div>
                 </div>
               </div>
@@ -622,40 +630,29 @@ const [bookFilter, setBookFilter] = useState()
                         </h3>
                       </div>
                     </div> */}
-                  
-                  {  ads && ads.map((item, index) => (  
-                  <div class="row  harrypotter_book mb-4 ">
-                      <div className="col-4">
-                        <img src={base_url +  item?.ad_image} alt="..." />
-                      </div>
-                      <div className="col-8">
-                        <h3 className="harrypotter_books-title jost-font">
-                        {  item?.ad_title}
-                        </h3>
-                        {/* <p className="harrypotter_books-body">
-                          Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry Lorem Ipsum has been the
-                          industry's standard
-                        </p> */}
-                        {/* <h3 class="author__poduct_title harrypotter_books-price jost-font">
-                          <div class="product__price">
-                            <span class="discount__price">$18.99</span>
-                            <span class="actual__price">$18.99</span>
+
+                    {books &&
+                      books?.map((item, index) => (
+                        <div class="row  harrypotter_book mb-4 ">
+                          <div className="col-4">
+                            <img src={base_url + item?.image} alt="..." />
                           </div>
-                        </h3> */}
-                      </div>
-                    </div>))}
-                   
-                    
-                 
-                  
-                   
-                  
-                  
-                
-               
-               
-                  
+                          <div className="col-8">
+                            <h3 className="harrypotter_books-title jost-font">
+                            {item?.name.slice(0, 15)}
+                            </h3>
+                            <p className="harrypotter_books-body">
+                            {item?.description}
+                        </p>
+                            <h3 class="author__poduct_title harrypotter_books-price jost-font">
+                          <div class="product__price">
+                            <span class="discount__price">${item?.price}</span>
+                            <span class="actual__price">${item?.price}</span>
+                          </div>
+                        </h3>
+                          </div>
+                        </div>
+                      ))}
                   </div>
                 </div>
               </div>
@@ -664,8 +661,8 @@ const [bookFilter, setBookFilter] = useState()
 
           {/* Joins us and popular combine section */}
 
-          {/* Join us Section */}
-          <section className="join-us">
+        
+          <section className="join-us mt-5 ">
             <div className="container">
               <div className="row">
                 <div className="col-md-12 section__heading">
@@ -833,7 +830,7 @@ const [bookFilter, setBookFilter] = useState()
             </div>
           </section>
         </section>
- 
+
         <section className="completed-novel">
           <div
             className="container-fluid
@@ -1037,138 +1034,6 @@ const [bookFilter, setBookFilter] = useState()
           </div>
         </section>
         {/* Footer */}
-        <section className="footer-sec jost-font">
-          <div className="container">
-            <div className="row footer__first">
-              <div className="col-lg-4">
-                <div className="footer__about">
-                  <div className="footer__logo">
-                    <Link to="!#">
-                      <img src={Logo} />
-                    </Link>
-                  </div>
-                  <div className="footer__about-body">
-                    <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry Lorem Ipsum has been the industry's
-                      standard dummy text ever since the
-                    </p>
-                  </div>
-                  <div className="follow__social-icons">
-                    <a href="javascript:;" className="follow__social-icon">
-                      <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="javascript:;" className="follow__social-icon">
-                      <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="javascript:;" className="follow__social-icon">
-                      <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="javascript:;" className="follow__social-icon">
-                      <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="footer__quick-links">
-                  <h3 className="foooter__subhead">Quick Links</h3>
-                  <ul className="footer__links">
-                    <li className="footer__link">
-                      <Link to="javascript:;">About</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Newsroom</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Brand Guidline</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="footer__contact-links">
-                  <h3 className="foooter__subhead">Contacts</h3>
-                  <ul className="footer__links">
-                    <li className="footer__link">
-                      <Link to="javascript:;">Translators & Editors</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Commercial</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Audio business</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Help & Service</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">DMCA Notification</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Webnovel Forum</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Online service</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Vulnerability Report</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="footer__resouses-links">
-                  <h3 className="foooter__subhead">Contacts</h3>
-                  <ul className="footer__links">
-                    <li className="footer__link">
-                      <Link to="javascript:;">Tags</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Download Apps</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Be an Author</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Help Center</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Privacy Policy</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Terms of Service</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Keywords</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Affiliate</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="footer__referrals-links">
-                  <h3 className="foooter__subhead">Referrals</h3>
-                  <ul className="footer__links">
-                    <li className="footer__link">
-                      <Link to="javascript:;">QiDian</Link>
-                    </li>
-                    <li className="footer__link">
-                      <Link to="javascript:;">Yuewen</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="footer__copyright">
-                <p>Copyright 2024 All right reserved. Little literature club</p>
-              </div>
-            </div>
-          </div>
-        </section>
       </UserLayout>
     </>
   );
