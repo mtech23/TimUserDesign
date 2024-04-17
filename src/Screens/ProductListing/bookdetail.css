@@ -2227,7 +2227,7 @@ border-radius: 52.5px;
 }
 .rate p{
     font-family: Manrope;
-font-size: 24px;
+font-size: 15px!important;
 font-weight: 500;
 line-height: 18px;
 text-align: left;

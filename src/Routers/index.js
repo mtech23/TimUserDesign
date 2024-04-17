@@ -34,8 +34,8 @@ export default function UserRouter() {
       <Routes>
         <Route path="/beta" element={<Home />}></Route>
         <Route path="/" element={<Beta />}></Route>
-        <Route path="/author-listing" element={<AuthorModule />}></Route>
-        <Route path="/book-listings" element={<BookListing />}></Route>
+        <Route path="/author-listings" element={<AuthorModule />}></Route>
+        <Route path="/book-listing" element={<BookListing />}></Route>
 
 
         <Route path="/library" element={<Library />}></Route>
