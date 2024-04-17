@@ -451,7 +451,7 @@ export const MyAccount = () => {
                                                         </div>
                                                         <div className='col-md-4 text-md-right'>
                                                             <div className='totalCredeit'>
-                                                                <p className='font-weight-bold'>Available Mana: <span className='text-success'>{Logintoken}</span></p>
+                                                                <p className='font-weight-bold'>Available Mana: <span className='text-success'>{currency}</span></p>
                                                             </div>
                                                         </div>
                                                     </div>

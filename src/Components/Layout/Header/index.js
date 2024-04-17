@@ -122,7 +122,7 @@ export const Header = (props) => {
 
 
 
-
+console.log("manabal" , mana)
 
 
 
@@ -213,7 +213,7 @@ export const Header = (props) => {
 
               <li className="main-navbar-list ">
                 <Link to="/beta/" className="main-navbar-link ">
-                  <span className=" d-flex ">Mane : {Logintoken}</span>
+                  <span className=" d-flex ">Mane : {mana} </span>
 
                 </Link>
               </li>
