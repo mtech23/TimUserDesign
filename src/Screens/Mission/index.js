@@ -224,40 +224,40 @@ export const Mission = () => {
               </div>
 
               <div className="row">
-                <div className="spiner-time col-md-4  ">
+                <div className="col-md-4  spiner-time">
                   <div className="spiner-ione-time">
                     <p className="spiner-ione-time">ONE TIME</p>
                   </div>
 
                   <div className="missionimg1">
-                    <div className=" connect row    mb-2 color-white">
-                      <div className="col-md-5 ms-2 ">
-                        <p>Connect Social: </p>
+                    <div className=" connect row ms-2 mb-2 color-white">
+                      <div className="col-md-5">
+                        <p className="cnt">Connect Social: </p>
                       </div>
-                      <div className="col-md-6    d-flex  gap-4 ">
-                        <img className="" src={coin} />
+                      <div className="col-md-6    d-flex  gap-3 align-items-center">
+                        <img className="coinimg" src={coin} />
                         <p className="mana">5 MANA</p>
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
 
-                    <div className=" connect row    mb-2 color-white">
-                      <div className="col-md-6 ms-2 ">
-                        <p>Purchase Mana Pack: </p>
+                    <div className=" connect row  ms-2  mb-2 color-white">
+                      <div className="col-md-5">
+                        <p className="cnt">Purchase Mana Pack: </p>
                       </div>
-                      <div className="col-md-5    d-flex  gap-2 ">
-                        <img className="" src={coin} />
+                      <div className="col-md-6   d-flex  gap-3 ">
+                        <img className="coinimg" src={coin} />
                         <p className="mana">5 MANA</p>
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
 
-                    <div className=" connect row    mb-2 color-white">
-                      <div className="col-md-6 ms-2 ">
-                        <p>Purchase Subscription:</p>
+                    <div className=" connect row  ms-2  mb-2 color-white">
+                      <div className="col-md-5">
+                        <p className="cnt">Purchase Subscription:</p>
                       </div>
-                      <div className="col-md-5    d-flex  gap-2 ">
-                        <img className="" src={coin} />
+                      <div className="col-md-6   d-flex  gap-3 ">
+                        <img className="coinimg" src={coin} />
                         <p className="mana">5 MANA</p>
                         <img src={redio} className="radioimg" />
                       </div>
@@ -271,7 +271,7 @@ export const Mission = () => {
                     </span>
                   </div>
                 </div>
-                <div className="spiner-time col-md-4  ">
+                <div className="col-md-4 spiner-time">
                   <div className="spiner-ione-time">
                     <p className="reading">DAILY</p>
                     <p className="missionpara"> Mission resets In 12hr</p>
@@ -284,7 +284,7 @@ export const Mission = () => {
                   
                     <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
                       <div className="col-md-8  ">
-                        <p>Login </p>
+                        <p className="cnt">Login </p>
                       </div>
                       <div className="col-md-4    d-flex  gap-2 ">
                         <img src={redio} className="radioimg" />
@@ -295,7 +295,7 @@ export const Mission = () => {
 
                     <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
                       <div className="col-md-8  ">
-                        <p>Vote for a book you like </p>
+                        <p className="cnt">Vote for a book you like </p>
                       </div>
                       <div className="col-md-2    d-flex  gap-2 ">
                         <img src={redio} className="radioimg" />
@@ -303,7 +303,7 @@ export const Mission = () => {
                     </div>
                     <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
                       <div className="col-md-8  ">
-                        <p>Post One Comment </p>
+                        <p className="cnt" >Post One Comment </p>
                       </div>
                       <div className="col-md-4    d-flex  gap-2 ">
                         <img src={redio} className="radioimg" />
@@ -312,7 +312,7 @@ export const Mission = () => {
 
                     <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
                       <div className="col-md-8  ">
-                        <p>Spend 5 or more coins </p>
+                        <p className="cnt" >Spend 5 or more coins </p>
                       </div>
                       <div className="col-md-4    d-flex  gap-2 ">
                         <img src={redio} className="radioimg" />
@@ -321,17 +321,15 @@ export const Mission = () => {
 
                     <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
                       <div className="col-md-8  ">
-                        <p>Like A review</p>
+                        <p className="cnt">Like A review</p>
                       </div>
                       <div className="col-md-4    d-flex  gap-2 ">
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
                     <div
-                      className="completespercent  mb-4  mx-auto
-"
-                    >
-                      <p>4/5 Completed</p>
+                      className="completespercent  mb-4  mx-auto">
+                      <p className="cnt">4/5 Completed</p>
                     </div>
                     <div className="complete-all   ">
                       <p>COMPLETE ALL DAILY MISSION TO GET</p>
@@ -341,7 +339,7 @@ export const Mission = () => {
                     </div>
                   </div>
                 </div>
-                <div className="spiner-time col-md-4  ">
+                <div className="col-md-4 spiner-time">
                   <div className="spiner-ione-time">
                     <p className="reading">READING/WEEKLY</p>
 
@@ -351,7 +349,7 @@ export const Mission = () => {
                   <div className="missionimg3">
                     <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
                       <div className="col-md-10  ">
-                        <p>Read for 60 more mins this week: </p>
+                        <p className="cnt" >Read for 60 more mins this week: </p>
                       </div>
                       <div className="col-md-2    d-flex   ">
                         <img src={redio} className="radioimg" />
@@ -359,7 +357,7 @@ export const Mission = () => {
                     </div>
                     <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
                       <div className="col-md-10  ">
-                        <p>Read for 60 more mins this week: </p>
+                        <p className="cnt">Read for 60 more mins this week: </p>
                       </div>
                       <div className="col-md-2    d-flex   ">
                         <img src={redio} className="radioimg" />
@@ -367,7 +365,7 @@ export const Mission = () => {
                     </div>
                     <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
                       <div className="col-md-10  ">
-                        <p>Read for 60 more mins this week: </p>
+                        <p className="cnt">Read for 60 more mins this week: </p>
                       </div>
                       <div className="col-md-2    d-flex   ">
                         <img src={redio} className="radioimg" />
@@ -375,7 +373,7 @@ export const Mission = () => {
                     </div>
                     <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
                       <div className="col-md-10  ">
-                        <p>Read for 60 more mins this week: </p>
+                        <p className="cnt">Read for 60 more mins this week: </p>
                       </div>
                       <div className="col-md-2    d-flex   ">
                         <img src={redio} className="radioimg" />
@@ -384,19 +382,7 @@ export const Mission = () => {
 
                     <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
                       <div className="col-md-10  ">
-                        <p>Read for 60 more mins this week: </p>
-                      </div>
-                      <div className="col-md-2    d-flex   ">
-                        <img src={redio} className="radioimg" />
-                      </div>
-                    </div>
-
-
-
-
-                    <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
-                      <div className="col-md-10  ">
-                        <p>Read for 60 more mins this week: </p>
+                        <p className="cnt">Read for 60 more mins this week: </p>
                       </div>
                       <div className="col-md-2    d-flex   ">
                         <img src={redio} className="radioimg" />
@@ -405,9 +391,21 @@ export const Mission = () => {
 
 
 
+
                     <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
                       <div className="col-md-10  ">
-                        <p>Read for 60 more mins this week: </p>
+                        <p className="cnt">Read for 60 more mins this week: </p>
+                      </div>
+                      <div className="col-md-2    d-flex   ">
+                        <img src={redio} className="radioimg" />
+                      </div>
+                    </div>
+
+
+
+                    <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
+                      <div className="col-md-10  ">
+                        <p className="cnt">Read for 60 more mins this week: </p>
                       </div>
                       <div className="col-md-2    d-flex   ">
                         <img src={redio} className="radioimg" />

@@ -46,7 +46,7 @@
 }
 
 .bestSell__bookListing-sec {
-  padding: 60px 0;
+  padding: 130px 0 !important; 
 }
 
 .filters__tabs {
@@ -199,48 +199,9 @@
 }
 /* Best Books Listing Ends Here */
 
-@media (max-width: 1024px) {
-  .filters__tabs .filters__tab {
-    padding: 7px 20px;
-  }
-  .bestSell__book-title h2 {
-    font-size: 40px;
-  }
-  .bestSell__book-cartoon2 img {
-    right: 50px;
-    width: 25%;
-  }
-  .bestSell__book-sec {
-    padding: 50px 0 0;
-  }
-  .bestSell__book-cartoon1 img {
-    width: 110px;
-  }
-}
 
-@media (max-width: 768px) {
-  .filters__search {
-    margin-top: 20px;
-  }
-  .bestSell__book-title h2 {
-    font-size: 33px;
-  }
-}
 
-@media (max-width: 480px) {
-  .filters__category,
-  .filters__pricing {
-    margin-top: 20px;
-  }
-  .bestSell__book-cartoon1 img {
-    width: 70px;
-  }
-  .bestSell__book-cartoon2 img {
-    right: 20px;
-    width: 23%;
-    bottom: -10px;
-  }
-}
+
 
 .bg-spiner {
   position: relative;
@@ -259,7 +220,7 @@ img.spiner-img {
   background-repeat: no-repeat;
   padding: 100px 0 0;
   position: relative;
-  height: 585px;
+  height:100%;
 }
 .missionimg2 {
   background-image: url(../../Assets/images//missionbg2.png);
@@ -268,7 +229,7 @@ img.spiner-img {
   background-repeat: no-repeat;
   padding: 100px 0 0;
   position: relative;
-  height: 585px;
+  height:100%;
 }
 .missionimg3 {
   background-image: url(../../Assets//images/missionbg3.png);
@@ -277,7 +238,7 @@ img.spiner-img {
   background-repeat: no-repeat;
   padding: 100px 0 0;
   position: relative;
-  height: 585px;
+  height:100%;
 }
 
 .spiner-ione-time {
@@ -302,8 +263,8 @@ img.spiner-img {
 }
 
 img.radioimg {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
 }
 
 .spinerpercentage {
@@ -323,6 +284,7 @@ img.radioimg {
 
 .mana {
   color: #e6d0ff;
+  font-size: 12px;
 }
 
 .reading {
@@ -408,3 +370,67 @@ img.radioimg {
   margin-top: 10px;
 
 }
+.cnt{
+  font-size: 12px;
+}
+.coinimg {
+  height: 30px;
+  width: 30px;
+}
+@media (max-width: 1024px) {
+  .filters__tabs .filters__tab {
+    padding: 7px 20px;
+  }
+  .bestSell__book-title h2 {
+    font-size: 40px;
+  }
+  .bestSell__book-cartoon2 img {
+    right: 50px;
+    width: 25%;
+  }
+  .bestSell__book-sec {
+    padding: 50px 0 0;
+  }
+  .bestSell__book-cartoon1 img {
+    width: 110px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters__search {
+    margin-top: 20px;
+  }
+  .bestSell__book-title h2 {
+    font-size: 33px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .filters__category,
+  .filters__pricing {
+    margin-top: 20px;
+  }
+  .bestSell__book-cartoon1 img {
+    width: 70px;
+  }
+  .bestSell__book-cartoon2 img {
+    right: 20px;
+    width: 23%;
+    bottom: -10px;
+  }
+}
+@media (max-width: 425px){ 
+  img.spiner-img {
+    height: 317px;
+}
+.missionimg2{
+  margin-top: 20px;
+}
+.missionimg3{
+  margin-top: 40px;
+}
+}
+
+/* //////////////////// */
+
