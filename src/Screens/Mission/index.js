@@ -389,9 +389,7 @@ export const Mission = () => {
                       </div>
                     </div>
 
-
-
-
+                    
                     <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
                       <div className="col-md-10  ">
                         <p className="cnt">Read for 60 more mins this week: </p>
@@ -400,9 +398,7 @@ export const Mission = () => {
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
-
-
-
+                    
                     <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
                       <div className="col-md-10  ">
                         <p className="cnt">Read for 60 more mins this week: </p>
@@ -411,9 +407,6 @@ export const Mission = () => {
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
-
-
-                
 
                     <div className="complete-all   ">
                       <p>COMPLETE ALL DAILY MISSION TO GET</p>
@@ -430,7 +423,7 @@ export const Mission = () => {
       </section>
 
       {/* Footer */}
-      <section className="footer-sec jost-font">
+      {/* <section className="footer-sec jost-font">
         <div className="container">
           <div className="row footer__first">
             <div className="col-lg-4">
@@ -561,7 +554,7 @@ export const Mission = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       </UserLayout>
     </>
   );

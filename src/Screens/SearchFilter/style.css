@@ -21,8 +21,9 @@
 }
 .book-release-genre-dropdown{
     border: 1px solid;
-    border-radius: 57px;
-    padding: 19px}
+    border-radius: 37px;
+    padding: 19px 8px;
+  }
 
 
 
@@ -31,10 +32,13 @@
         color: white;
         border-radius: 21px;
         font-size: larger;
-        padding: 7px 18px;
+        padding: 7px 12px;
     }
 
-
+    .radbtns{
+      display: flex;
+      flex-wrap: wrap;
+    }
     input.filter-input {
         border: 33px black;
         background-color: #d6faee;
@@ -240,6 +244,11 @@ background-repeat: no-repeat;
     font-weight: 600;
     margin-top: -11px;
 }
+    .bookGenre{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
   .chapterrange{
     font-size: larger;
     color: #360C55;
@@ -296,7 +305,30 @@ input[type=range] {
 
 .main_cartoon_image img{
   position: absolute;
-  bottom: 0;
+  bottom: -64px;
   height: 700px;
   right: -450px;
+}
+
+@media (max-width: 768px) {
+  .rangepara {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    padding: 0;
+    font-size: 18px;
+}
+.book-release-title {
+  font-size: 20px;
+}
+.story{
+  padding-top: 29px;
+}
+}
+@media (max-width: 425px) {
+  
+  .main_cartoon_image img {
+    display: none;
+}
 }
