@@ -1,4 +1,541 @@
-    <UserLayout subHeader={BookListingCover}>
+import { useState, useEffect } from "react";
+import { Link, json, useParams } from "react-router-dom";
+import BackButton from "../../Components/BackButton";
+import CustomModal from "../../Components/CustomModal";
+import CustomButton from "../../Components/CustomButton";
+import Accordion from "react-bootstrap/Accordion";
+import CustomInput from "../../Components/CustomInput";
+import { UserLayout } from "../../Components/Layout/UserLayout";
+import "./bookdetail.css";
+import "bootstrap/dist/css/bootstrap.min.css"; // Make sure to import Bootstrap CSS
+import Ellipse from "../../Assets/images/Ellipse 1.png";
+import preview from "../../Assets/images/image_74-removebg-preview.png";
+import Group from "../../Assets/images/Group 1000001829.png";
+import Ellipse4 from "../../Assets/images/Ellipse 44.png";
+import Star from "../../Assets/images/Star 1.png";
+import { Container, Row, Col } from "react-bootstrap";
+
+import Form from "react-bootstrap/Form";
+// import {
+//   AuthorList1,
+//   Logo,
+//   SmallAnime1,
+//   SmallAnime2,
+//   User_icon_plus,
+//   User_icon_white,
+//   BestSellingBooks,
+//   BestSellingBook1,
+//   BestSellingBook2,
+//   BestSellingBook3,
+//   BestSellingBook4,
+//   BestSellingBook5,
+//   BestSellingBook6,
+//   BestSellingBook7,
+//   BestSellingBook8,
+//   BestSellingBook9,
+//   BestSellingBook10,
+//   BestSellingBook11,
+//   BestSellingBook12,
+// } from "../../Assets/images";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faArrowRight,
+  faCartShopping,
+  faEnvelope,
+  faEye,
+  faHeart,
+  faList,
+  faSearch,
+  faStar,
+  faUser,
+  faUserPlus,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  BannerBooks,
+  Cart_icon_pink,
+  CompletedNovelB1,
+  CompletedNovelB2,
+  CompletedNovelB3,
+  CompletedNovelB4,
+  FeaturedB1,
+  FeaturedB2,
+  FeaturedB3,
+  HarryPotterBook,
+  Logo,
+  ManaAnime,
+  ManaDisplayImg,
+  MyRebbetsBook,
+  PopularAnime,
+  PopularTagAfter,
+  PopularTagBefore,
+  Product_Icon,
+  TopAuthorAfter,
+  TopAuthorBefore,
+  TopAuthorBook1,
+  TopAuthorBook2,
+  TopAuthorBook3,
+  TopAuthorCartoon,
+  User_Icon,
+  User_icon_pink,
+  User_icon_plus,
+  User_icon_white,
+} from "../../Assets/images";
+import bookimg from "../../Assets/images/ORJ9ZD1 2.png";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
+import AccordionContext from "react-bootstrap/AccordionContext";
+
+import { BookListingCover } from "../../Assets/images";
+import { useContext } from "react";
+import { useAccordionButton } from "react-bootstrap/AccordionButton";
+import ReactStars from "react-rating-stars-component";
+
+export const ProductDetails = ({ eventKey, children }) => {
+  const { activeEventKey } = useContext(AccordionContext);
+
+  const [ads, setAds] = useState([]);
+  const { id } = useParams();
+
+  const base_url = "https://custom.mystagingserver.site/Tim-WDLLC/public/";
+
+  const [data, setData] = useState({});
+
+  const [books, setBooks] = useState([]);
+  const [reviewData, setReviewData] = useState({
+    book_id: id,
+  });
+
+  const [chaptervoice, setChapterVoice] = useState(1);
+  const [chapterutterance, setChapterUtterance] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [showModal1, setShowModal1] = useState(false);
+  const [formData, setFormData] = useState({});
+  const [modalData, setModalData] = useState({});
+  const [CapterShow, setChapterShow] = useState(false);
+  const [reviewModal, setReviewModal] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const [currentChapter, setCurrentChapter] = useState(null);
+  const [isLooping, setIsLooping] = useState(false);
+  const [isPlay, setIsPlay] = useState(false);
+  const [isPause, setIsPause] = useState(false);
+  const [voice, setVoice] = useState(1);
+  const [utterance, setUtterance] = useState(null);
+
+  const LoginToken = localStorage.getItem("loginUser");
+
+  const ratingChanged = (newRating) => {
+    console.log(newRating);
+    setReviewData({
+      ...reviewData,
+      rating: newRating,
+    });
+  };
+
+  const chapterData = (paramId) => {
+    document.title = "Tim User | Book Detail";
+    document.querySelector(".loaderBox").classList.remove("d-none");
+    fetch(
+      `https://custom.mystagingserver.site/Tim-WDLLC/public/api/book_view/${paramId}`,
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          // 'Authorization': `Bearer ${LogoutData}`
+        },
+      }
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(data);
+
+        setData(data.data);
+      })
+      .catch((error) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(error);
+      });
+  };
+
+  const chapterDataLogin = (LoginparamId) => {
+    document.title = "Tim User | Book Detail";
+    document.querySelector(".loaderBox").classList.remove("d-none");
+    fetch(
+      `https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/book_view/${LoginparamId}`,
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${LoginToken}`,
+        },
+      }
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(data);
+
+        setData(data.data);
+      })
+      .catch((error) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(error);
+      });
+  };
+  const [textToSpeech, setTextToSpeech] = useState(false);
+
+  const reviewSubmit = () => {
+    document.querySelector(".loaderBox").classList.remove("d-none");
+
+    const formDataMethod = new FormData();
+
+    for (const key in reviewData) {
+      formDataMethod.append(key, reviewData[key]);
+    }
+
+    fetch(
+      `https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/review_add_update`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${LoginToken}`,
+        },
+        body: formDataMethod,
+      }
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(data);
+        setShowModal(false);
+        setReviewModal(true);
+        setTimeout(() => {
+          setReviewModal(false);
+        }, 1000);
+
+        chapterDataLogin(id);
+      })
+      .catch((error) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.error("Error during fetch:", error);
+      });
+  };
+
+  const handleCheckboxChange = () => {
+    // Toggle the state of textToSpeech when the checkbox is clicked
+    setTextToSpeech(!textToSpeech);
+  };
+
+  const BuyChapter = (chapterID) => {
+    document.querySelector(".loaderBox").classList.remove("d-none");
+
+    const formData = new FormData();
+    formData.append("chapter_id", chapterID);
+    formData.append("text_to_speech_fee", textToSpeech); // Include the text_to_speech value in the FormData
+
+    fetch(
+      `https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/book_purchase/${id}`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${LoginToken}`,
+        },
+        body: formData,
+      }
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(data);
+        setShowModal(false);
+        setShowModal1(true);
+        setTimeout(() => {
+          setShowModal1(false);
+        }, 1000);
+        chapterDataLogin(id);
+      })
+      .catch((error) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.error("Error during fetch:", error);
+      });
+  };
+
+  const GetOrderHistory = () => {
+    document.querySelector(".loaderBox").classList.remove("d-none");
+    fetch(
+      `https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/view-order-history`,
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${LoginToken}`,
+        },
+      }
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log("order", data);
+      })
+      .catch((error) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(error);
+      });
+  };
+
+  const PaymentModal = (amount) => {
+    setModalData(amount);
+    setShowModal(true);
+  };
+
+  useEffect(() => {
+    console.log(modalData);
+  }, [modalData]);
+
+  useEffect(() => {
+    if (!LoginToken) {
+      setChapterShow(false);
+      chapterData(id);
+    } else {
+      chapterDataLogin(id);
+      setChapterShow(true);
+    }
+
+    GetOrderHistory();
+  }, []);
+
+  const tags = [
+    ["Tag ", "Tag ", "Tag "],
+    ["Tag ", "Tag ", "Tag "],
+    ["Tag ", "Tag ", "Tag "],
+  ];
+
+  const handleStart = (chapterId) => {
+    if (!isPlaying) {
+      const chapter = data?.chapters.find((item) => item.id === chapterId);
+      const utterance = new SpeechSynthesisUtterance();
+      utterance.text = chapter?.description;
+      utterance.rate = chaptervoice;
+      utterance.onend = () => {
+        if (isLooping) {
+          handleStart(chapterId);
+        } else {
+          setIsPlaying(false);
+          setIsPaused(false);
+          setCurrentChapter(null);
+        }
+      };
+
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(utterance);
+
+      setIsPlaying(true);
+      setIsPaused(false);
+      setCurrentChapter(chapterId);
+      setChapterUtterance(utterance);
+    }
+  };
+
+  const chapterupdateSpeechRate = () => {
+    const speeds = [1, 1.5, 2, 2.5];
+    const currentIndex = speeds.indexOf(chaptervoice);
+    let newIndex = currentIndex + 1;
+
+    if (newIndex >= speeds.length) {
+      newIndex = 0;
+    }
+
+    const newVoice = speeds[newIndex];
+    setChapterVoice(newVoice);
+
+    if (chapterutterance) {
+      window.speechSynthesis.cancel();
+      chapterutterance.rate = newVoice;
+      window.speechSynthesis.speak(chapterutterance);
+
+      setIsPlaying(true);
+      setIsPaused(false);
+    }
+  };
+
+  useEffect(() => {
+    if (chapterutterance) {
+      setChapterUtterance(chapterutterance);
+      chapterutterance.rate = chaptervoice;
+    }
+  }, [chaptervoice]);
+
+  const handlePause = () => {
+    if (!isPaused) {
+      window.speechSynthesis.pause();
+      setIsPaused(true);
+      setIsPlaying(false);
+    }
+  };
+
+  const handleResume = () => {
+    if (isPaused && currentChapter !== null) {
+      const chapter = data?.chapters.find((item) => item.id === currentChapter);
+      const utterance = new SpeechSynthesisUtterance();
+      utterance.text = chapter?.description;
+      utterance.onend = () => {
+        if (isLooping) {
+          handleStart(currentChapter);
+        } else {
+          setIsPlaying(false);
+          setIsPaused(false);
+          setCurrentChapter(null);
+        }
+      };
+      window.speechSynthesis.resume();
+      setIsPlaying(true);
+      setIsPaused(false);
+    }
+  };
+
+  const handleStop = () => {
+    window.speechSynthesis.cancel();
+    setIsPlaying(false);
+    setIsPaused(false);
+    setCurrentChapter(null);
+  };
+
+  const handleLoopToggle = () => {
+    setIsLooping(!isLooping);
+  };
+
+  const handleStarts = () => {
+    const newUtterance = new SpeechSynthesisUtterance(data?.description);
+    newUtterance.rate = voice;
+    newUtterance.onend = () => {
+      setIsPlay(false);
+      setIsPause(false);
+    };
+
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(newUtterance);
+    setIsPlay(true);
+    setIsPause(false);
+    setUtterance(newUtterance);
+  };
+
+  const updateSpeechRate = () => {
+    const speeds = [1, 1.5, 2, 2.5];
+    const currentIndex = speeds.indexOf(voice);
+    let newIndex = currentIndex + 1;
+
+    if (newIndex >= speeds.length) {
+      newIndex = 0;
+    }
+
+    const newVoice = speeds[newIndex];
+    setVoice(newVoice);
+
+    if (utterance) {
+      window.speechSynthesis.cancel();
+      const updatedUtterance = new SpeechSynthesisUtterance(data?.description);
+      updatedUtterance.rate = newVoice;
+      updatedUtterance.onend = () => {
+        setIsPlay(false);
+        setIsPause(false);
+      };
+      window.speechSynthesis.speak(updatedUtterance);
+      setIsPlay(true);
+      setIsPause(false);
+      setUtterance(updatedUtterance);
+    }
+  };
+
+  useEffect(() => {
+    if (utterance) {
+      setUtterance(utterance);
+      utterance.rate = voice;
+    }
+  }, [voice]);
+
+  const handlePauses = () => {
+    if (!isPause) {
+      window.speechSynthesis.pause();
+      setIsPlay(false);
+      setIsPause(true);
+    }
+  };
+
+  const handleResumes = () => {
+    if (isPause) {
+      window.speechSynthesis.resume();
+      setIsPlay(true);
+      setIsPause(false);
+    }
+  };
+
+  const handleStops = () => {
+    window.speechSynthesis.cancel();
+    setIsPlay(false);
+    setIsPause(false);
+  };
+
+  const handleCheckboxClick = (id) => {
+    const formData = new FormData();
+    formData.append("chapter_id", id);
+
+    fetch(
+      `https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/book_purchase/${id}`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${LoginToken}`,
+        },
+        body: formData,
+      }
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(data);
+        setShowModal(false);
+        setShowModal1(true);
+        setTimeout(() => {
+          setShowModal1(false);
+        }, 1000);
+        chapterDataLogin(id);
+      })
+      .catch((error) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.error("Error during fetch:", error);
+      });
+  };
+
+  return (
+    <>
+      <UserLayout subHeader={BookListingCover}>
         <div className="container">
           <div className="dashCard my-4">
             <div className="row mb-3">
@@ -368,159 +905,6 @@
         <CustomModal show={showModal1} close={() => { setShowModal1(false) }} success heading="You Chapter Payment has been Done." />
         <CustomModal show={reviewModal} close={() => { reviewModal(false) }} success heading="Review has been Posted." />
       </UserLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class="rate">
-        <div class="container-fluid">
-          <div class="conatiner">
-            <div class="ratebg">
-              <div class="row justify-content-center">
-                <div class="col-sm-12 col-lg-3 my-auto ">
-                  <div class="star">
-                    <h2>4.5</h2>
-                    <img class="img-fluid" src={Star} />
-                  </div>
-                  <button>653 reviews</button> <br />
-                  <button class="rev">Add Review</button>
-                </div>
-
-                <div class="col-12 col-sm-12 col-lg-2 my-auto ">
-                  <div class="num">
-                    <p>5 </p>
-                    <i class="fa-solid fa-star numstar"></i>
-                    <div class="line"></div>
-                  </div>
-                  <div class="num">
-                    <p>4 </p>
-                    <i class="fa-solid fa-star numstar"></i>
-                    <div class="line1"></div>
-                  </div>
-                  <div class="num">
-                    <p>3 </p>
-                    <i class="fa-solid fa-star numstar"></i>
-                    <div class="line2"></div>
-                  </div>
-                  <div class="num">
-                    <p>2 </p>
-                    <i class="fa-solid fa-star numstar"></i>
-                    <div class="line3"></div>
-                  </div>
-                  <div class="num">
-                    <p>1 </p>
-                    <i class="fa-solid fa-star numstar"></i>
-                    <div class="line4"></div>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-12 col-lg-7">
-                  <div class="strong">
-                    <div class="num mb-2 ">
-                      <div>
-                        <img
-                          class="img-fluid starimg"
-                          src={Ellipse}
-                        />
-                      </div>
-                      <div>
-                        <p class="review">
-                          Lorem ipsum dolor sit amet
-                        </p>
-                        <div className="bookdetail-date d-flex">
-                          <span class="rev">13-Feb-2024</span>
-                          <span class="rev">
-                            Michael Anderson
-                          </span>{" "}
-                        </div>
-                      </div>
-                      <div className="stars">
-                        <i class="fa-solid fa-star numstar"></i>
-                        <i class="fa-solid fa-star numstar"></i>
-                        <i class="fa-solid fa-star numstar"></i>
-                        <i class="fa-solid fa-star numstar"></i>
-                        <i class="fa-solid fa-star numstar"></i>
-                        <i class="fa-solid fa-star numstar"></i>
-                      </div>
-                    </div>
-                    <div>
-                      <p class="revpara mb-3">
-                        Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, <br />
-                        sed do eiusmod tempor incididunt ut
-                        labore{" "}
-                      </p>
-                    </div>
-
-                    <div class="num">
-                      <div>
-                        <img
-                          class="img-fluid starimg"
-                          src={Ellipse}
-                        />
-                      </div>
-                      <div>
-                        <p class="review">
-                          Lorem ipsum dolor sit amet
-                        </p>
-                        <div className="bookdetail-date d-flex">
-                          <span class="rev">13-Feb-2024</span>
-                          <span class="rev">
-                            Michael Anderson
-                          </span>{" "}
-                        </div>
-                      </div>
-                      <div className="stars">
-                        <i class="fa-solid fa-star numstar"></i>
-                        <i class="fa-solid fa-star numstar"></i>
-                        <i class="fa-solid fa-star numstar"></i>
-                        <i class="fa-solid fa-star numstar"></i>
-                        <i class="fa-solid fa-star numstar"></i>
-                        <i class="fa-solid fa-star numstar"></i>
-                      </div>
-                    </div>
-                    <div className=" mb-2 ">
-                      <p class="revpara">
-                        Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, <br />
-                        sed do eiusmod tempor incididunt ut
-                        labore{" "}
-                      </p>
-                    </div>
-
-                    {/* <button class="rev">Show More</button> */}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    </>
+  );
+};

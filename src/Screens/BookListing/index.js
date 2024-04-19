@@ -410,7 +410,7 @@ export const BookListing = () => {
                             detail
                           </button> */}
                               <Link
-                                to={`/book-details/${item?.id}`}
+                                to={`/book-detail/${item?.id}`}
                                 className="bestBooks__purchase-btn"
                               >
                                 View

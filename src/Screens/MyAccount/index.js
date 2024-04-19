@@ -30,7 +30,8 @@ export const MyAccount = () => {
     const base_url = 'https://custom.mystagingserver.site/Tim-WDLLC/public/'
     const LoginToken = localStorage.getItem('loginUser');
     const [paymentInfo, setPaymentInfo] = useState();
-
+    const Logintoken = localStorage.getItem('loginUser');
+ 
 
 
     const ProfileData = () => {
@@ -188,6 +189,7 @@ export const MyAccount = () => {
             )
             .then((data) => {
                 console.log(data?.data)
+
                 setCurrency(data?.data)
             })
             .catch((error) => {
@@ -263,6 +265,7 @@ export const MyAccount = () => {
         GetLibrary()
     }, [])
 
+ 
 
 
 
@@ -273,7 +276,7 @@ export const MyAccount = () => {
                     <div className="row">
                         <div className='col-md-12 text-center'>
                             <div className='titleBox mb-4'>
-                                <h3>My Account</h3>
+                                {/* <h3>My Account</h3> */}
                             </div>
                         </div>
 
@@ -499,6 +502,7 @@ export const MyAccount = () => {
 
                                                         {/* <InjectedCheckoutForm /> */}
                                                         {/* </Elements> */}
+ 
                                                         <CustomButton text="Buy Now" variant='primaryButton' onClick={handleSubmit} />
                                                     </div>
                                                 </div>
