@@ -213,7 +213,7 @@ console.log("manabal" , mana)
 
               <li className="main-navbar-list ">
                 <Link to="/beta/" className="main-navbar-link ">
-                  <span className=" d-flex ">Mane : {mana} </span>
+                  <span className=" d-flex ">Mana : {mana} </span>
 
                 </Link>
               </li>

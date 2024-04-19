@@ -808,6 +808,10 @@ padding: 8px 25px;
 .strong {
     border-left: 1px solid #c0c0c0;
     padding: 20px;
+
+ 
+    height: 421px !important;
+    overflow-x: auto;
 }
 
 .rate img.starimg {
