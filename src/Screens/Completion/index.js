@@ -38,6 +38,7 @@ import {
 } from "../../Assets/images";
 import book1 from "../../Assets/images/book1.png";
 import book2 from "../../Assets/images/book2.png";
+import Untitledbook2 from "../../Assets/images/Untitledbook2.png";
 import book3 from "../../Assets/images/book3.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -221,7 +222,7 @@ console.log("currentItems" , currentItems)
             </div>
           </div>
         </sectionc>
-        <div className="sectioncompletion gap-5   py-3  px-5  row justify-content-center  mx-auto ">
+        <div className="sectioncompletion gap-3   py-3  px-5  row justify-content-center  mx-auto ">
           <div class=" col-md-4 input-completion completion__search">
             <button
               className="completion_btn btn btn-outline-secondary  "
@@ -244,7 +245,7 @@ console.log("currentItems" , currentItems)
               search
             </button>
           </div>
-          <div class=" col-md-2 input-completion completion__search">
+          <div class=" col-md-3 input-completion completion__search">
             <Form.Select
               className="completion-input-select"
               aria-label="Default select example"
@@ -255,7 +256,7 @@ console.log("currentItems" , currentItems)
               <option value="3">Three</option>
             </Form.Select>
           </div>
-          <div class=" col-md-2 input-completion completion__search">
+          <div class=" col-md-3 input-completion completion__search">
             <Form.Select
               className="completion-input-select"
               aria-label="Default select example"
@@ -302,10 +303,10 @@ console.log("currentItems" , currentItems)
                             Details
                           </span>
                         </div>
-                        <img src={book2} className="img-fluid" />
+                        <img src={Untitledbook2} className="img-fluid" />
                       </div>
                       <div className="col-md-4">
-                        <div className=" d-flex gap-2  justify-content-center ">
+                        <div className="completion-book d-flex gap-2  justify-content-center ">
                           <span className="bookvote bg-white color-black ">
                             Vote
                           </span>
@@ -320,13 +321,10 @@ console.log("currentItems" , currentItems)
 
                       <img src={board1} className="board-compition" />
 
-                      <div className="sectioncompletion row      py-3  px-5   justify-content-center  mx-auto ">
-                        <div class=" col-md-3 input-completion completion__search">
+                      <div className="row sectioncompletion py-3  px-5   justify-content-center  mx-auto ">
+                        <div class="col-md-3 input-completion completion__search">
                           <button
-                            className="completion_btn btn btn-outline-secondary  "
-                            type="button"
-                            id="button-addon1"
-                          ></button>
+                            className="completion_btn btn btn-outline-secondary" type="button" id="button-addon1"></button>
 
                           <p className="completion-input form-control ">
                             {" "}
@@ -334,13 +332,11 @@ console.log("currentItems" , currentItems)
                           </p>
                           <button
                             className="btn btn-outline-secondary  compition-category__icon"
-                            type="button"
-                            id="button-addon2"
-                          >
+                            type="button" id="button-addon2">
                             <img src={medal} className="   " id="icon-img" />
                           </button>
                         </div>
-                        <div class=" col-md-3 input-completion completion__search">
+                        <div class="col-md-3 input-completion completion__search">
                           <button
                             className="completion_btn btn btn-outline-secondary  "
                             type="button"
@@ -359,7 +355,7 @@ console.log("currentItems" , currentItems)
                             <img src={cup} className="   " id="icon-img" />
                           </button>
                         </div>
-                        <div class=" col-md-3 input-completion completion__search">
+                        <div class="col-md-3 input-completion completion__search">
                           <button
                             className="completion_btn btn btn-outline-secondary  "
                             type="button"
@@ -404,7 +400,7 @@ console.log("currentItems" , currentItems)
               </div>
             </div>
           </section>
-          <section className="bestSell__bookListing-sec">
+          <section className="bestSell__bookListing-sec1">
             <div className="bestSell__filters">
               <div className="container">
                 <div className="row align-items-center">
