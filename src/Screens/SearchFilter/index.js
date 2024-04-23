@@ -784,7 +784,7 @@ export const SearchFilter = () => {
 
               <div className="col-md-8">
                 <p className="book-release-title mb-2 ">Select Book Genre</p>
-                <div className="book-release-genre-dropdown  mb-5  gap-4 bookGenre ">
+                <div className="book-release-genre-dropdown  mb-5  gap-3 bookGenre ">
                   <span className="book-release-genre">Lorem Ipsume</span>
 
                   <span className="book-release-genre">Lorem Ipsume</span>

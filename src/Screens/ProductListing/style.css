@@ -157,6 +157,59 @@
     justify-content: space-between;
     align-items: start;
 }
+.top{
+    background-image: url(../../Assets//images/topbg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 50px 10px;
+    border-radius: 10px;
+    
+}
+.top h3.fans{
+    font-family: Jost;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 57.8px;
+    text-align: left;
+    color: #FFFFFF;
+  
+}
+sup{
+    font-family: 'Century Gothic';
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24.52px;
+    text-align: left;
+    color: #F8C100;
+    vertical-align: super;
+
+}
+.top button.all{
+    font-family: 'Jost';
+    font-size: 13.8px;
+    text-align: left;
+    background: #000;
+    color: #FFFFFF;
+    border-radius: 24px;
+    padding: 0px 0px 0px 36px;
+    border: #000;
+}
+.allicon{
+    background: #8030CC;
+    border-radius: 1px 18px 17px 0px;
+    padding: 10px 20px 10px 20px;
+    margin-left: 14px;
+}  
+.top img.cartoons{
+    height: 200px;
+    margin-top: -40px;
+}
+.parabtn{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
 
 @media screen and (max-width: 1200px) and (min-width: 768px) {
 
@@ -206,7 +259,24 @@ p {
     padding: 2px 10px;
 }
 
+@media (max-width:768px){
+    .top img.cartoons{
+      
+        margin-top: 0;
+    } 
+  
+}
+@media (max-width:1024px){
+    .allicon{
+        padding: 10px 15px 10px 15px;
+        margin-left: 10px;
+    }
+    .top button.all{
+        padding: 0px 0px 0px 25px;
 
+    }
+    
+}
 
 
 
@@ -287,6 +357,7 @@ p {
     /* line-height: 35.21px; */
     /* text-align: center; */
     color: #360C55;
+   
 }
 
 .rating {

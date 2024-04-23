@@ -305,7 +305,7 @@ input[type=range] {
 
 .main_cartoon_image img{
   position: absolute;
-  bottom: -64px;
+  bottom: -128px;
   height: 700px;
   right: -450px;
 }
@@ -317,13 +317,38 @@ input[type=range] {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     padding: 0;
-    font-size: 18px;
+    font-size: 13px;
 }
 .book-release-title {
-  font-size: 20px;
+  font-size: 14px;
 }
-.story{
+.book-release-date {
+  padding: 3px 13px;
+}
+.book-release-genre-dropdown {
+  padding: 4px 1px;
+}
+.search-title {
+  font-size: 15px;
+}
+.filter_radio {
+  font-size: 11px;
+}
+.story {
   padding-top: 29px;
+  font-size: 14px;
+}
+.book-release-genre {
+  padding: 7px 9px;
+}
+.chapterrange{
+  font-size: 13px;
+}
+input[type=range] {
+  height: 5px !important;
+}
+.book-release-genre {
+  font-size: 9px;
 }
 }
 @media (max-width: 425px) {

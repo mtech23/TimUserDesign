@@ -62,6 +62,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css"; // Make sure to import Bootstrap CSS
 import Ellipse from "../../Assets/images/Ellipse 1.png";
+import animated from "../../Assets/images/animated.png";
 import Form from "react-bootstrap/Form";
 
 import { Container, Row, Col } from "react-bootstrap";
@@ -1293,14 +1294,34 @@ export const ProductDetail = ({ eventKey, children }) => {
 
                         </div>
                       </div>
+                      <section className="top">
+                        <div className="container">
+                          <div className="row">
+                          
+                            <div className="col-lg-4 col-sm-12 p-4 parabtn">
+                        
+                              <h3 className="fans">TOP FANS <sup >8,346</sup> </h3>
+                           
+                            </div>
+                            <div className="col-lg-3 col-sm-12 p-4 parabtn">
+                             
+                             <button className="all" ><span> View All </span> <i class="fa-solid fa-play allicon"></i></button>
+                            
+                            </div>
+                            <div className="col-lg-5 col-sm-12">
+                            <img className="img-fluid cartoons" src={animated} />
+                            </div>
+                          </div>
+                        </div>
+                      </section>
 
 
 
 
 
                       <div class="rate">
-                        <div class="container-fluid">
-                          <div class="conatiner">
+                      
+                          <div class="container">
                             <div class="ratebg">
                               <div class="row justify-content-center">
                                 <div class="col-sm-12 col-lg-3 my-auto ">
@@ -1564,7 +1585,7 @@ export const ProductDetail = ({ eventKey, children }) => {
                       </div>
 
                     </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>
