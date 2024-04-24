@@ -1,6 +1,11 @@
-.filter_radio{
+.filter_radioo{
     color: #360C55;
-    font-size: large;
+    font-family: 'Jost';
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21.49px;
+    text-align: center;
+   
 }
 
 .search-title{
@@ -338,9 +343,7 @@ input[type=range] {
   padding-top: 29px;
   font-size: 14px;
 }
-.book-release-genre {
-  padding: 7px 9px;
-}
+
 .chapterrange{
   font-size: 13px;
 }
@@ -349,6 +352,7 @@ input[type=range] {
 }
 .book-release-genre {
   font-size: 9px;
+  padding: 7px 9px;
 }
 }
 @media (max-width: 425px) {

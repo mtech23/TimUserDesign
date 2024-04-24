@@ -18,9 +18,9 @@ import { ProductListing } from "../Screens/ProductListing";
 import { Novel } from "../Screens/Novel";
 import { ProductDetail } from "../Screens/ProductListing/productDetail";
 import { ProductDetails } from "../Screens/ProductListing/ProductDetails";
- 
+import { CreateRequest } from "../Screens/CreateRequest/index.js";
 import { MyAccount } from "../Screens/MyAccount";
-
+ 
 import { ProtectedRoutes } from "./ProtectedRoutes";
 import { Beta } from "../Screens/Home/Beta";
 
@@ -51,6 +51,8 @@ export default function UserRouter() {
         <Route path="/forget-password" element={<ForgetPassword />} />
         <Route path="/forget-password2" element={<ForgetPassword2 />} />
         <Route path="/forget-password3" element={<ForgetPassword3 />} />
+        <Route path="/create-request" element={<CreateRequest />}></Route>
+
 
         <Route path="/book-listing" element={<ProductListing />}></Route>
         <Route path="/novel-listing" element={<Novel />}></Route>
@@ -74,6 +76,7 @@ export default function UserRouter() {
           path="/account"
           element={<ProtectedRoutes Components={MyAccount} />}
         ></Route>
+        
       </Routes>
     </BrowserRouter>
   );

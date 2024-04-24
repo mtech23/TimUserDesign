@@ -810,7 +810,7 @@ export const SearchFilter = () => {
                       className="book-release-input "
                     />
                   </div>
-                  <div className="    mb-2   gap-4 col-md-5  ">
+                  <div className=" mb-2   gap-4 col-md-5  ">
                     <p className="story">Story Status </p>
 
                     <Form.Select
@@ -862,14 +862,13 @@ export const SearchFilter = () => {
                     />
                   </div>
                 </div>
-                <div className="  mb-4 row">
+                <div className="mb-4 row">
                   <div className="    mb-2 gap-5  col-md-5 ">
                     <p className="book-release-title mb-2 ">Translator</p>
                     <input
                       type="text"
                       placeholder="Include"
-                      className="book-release-input "
-                    />
+                      className="book-release-input"/>
                   </div>
                   <div className="    mb-2   gap-4 col-md-5  ">
                     <p className="book-release-title  mb-2"> Series </p>

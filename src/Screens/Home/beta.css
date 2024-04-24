@@ -1584,3 +1584,20 @@ color: black;
   padding: 100px 0 0;
   position: relative;
 }
+
+.harry__potter-section{
+  overflow-x: hidden;
+}
+
+
+.join-us .section__heading{
+  overflow-x: hidden;
+}
+
+
+.popular-tags{
+  overflow-x: hidden;
+}
+
+
+
