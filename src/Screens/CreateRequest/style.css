@@ -232,4 +232,12 @@ input[type="radio"]:focus {
     .space{
         padding-top: 30px;
     }
+    .novinfo img.nvlbk {
+        height: 145px;
+        width: 50%;
+       
+    }
+    .addsyn {
+        margin-top: 30px;
+    }
 }
