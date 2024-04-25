@@ -19,6 +19,7 @@ import { Novel } from "../Screens/Novel";
 import { ProductDetail } from "../Screens/ProductListing/productDetail";
 import { ProductDetails } from "../Screens/ProductListing/ProductDetails";
 import { CreateRequest } from "../Screens/CreateRequest/index.js";
+import { TranslationRequest } from "../Screens/TranslationRequest/index.js";
 import { MyAccount } from "../Screens/MyAccount";
  
 import { ProtectedRoutes } from "./ProtectedRoutes";
@@ -43,7 +44,7 @@ export default function UserRouter() {
         <Route path="/History" element={<History />}></Route>
 
        <Route path="/shop" element={<Shop />}></Route>
-         
+       <Route path="/translation-request" element={<TranslationRequest />}></Route>
          
 
 

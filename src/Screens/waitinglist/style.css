@@ -40,7 +40,7 @@
 }
 .polygoon{
   position: absolute;
-  top: 497px;
+  top: 489px;
   left: 813px;
   width: 35px;
 
@@ -209,10 +209,10 @@ color: #169B00;
   font-size: 11px;
   font-weight: 400;
   text-align: center;
-  background: #000;
+  background: #FFFFFF;
   color: #FFFFFF;
   border-radius: 38px;
-  border: #000;
+  border: #fff;
   padding-right: 0px;
   text-align: center;
   padding-top: 0px;

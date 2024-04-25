@@ -7,7 +7,7 @@
   display: block;
 }
 .herro__title h1 {
-  font-size: 94px;
+  font-size: 86px;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
@@ -225,5 +225,10 @@
   }
   .author__list-bgCartoon img {
     height: 40%;
+  }
+}
+@media (max-width:425px){
+  .herro__title h1 {
+    font-size: 28px;
   }
 }
