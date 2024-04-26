@@ -94,12 +94,7 @@
     border-radius: 1px 18px 17px 0px;
     padding: 5px 13px 6px 11px;
 }
-.point{
-    position: absolute;
-    top: 1188px;
-    left: 1226px;
-    width: 32px;
-}
+
 
 .dualbtn{
    
@@ -196,12 +191,7 @@
     padding: 100px 0 0;
     position: relative;
   }
-.points{
-    position: absolute;
-    top: 2623px;
-    left: 1364px;
-    width: 32px;
-}
+
 .readbtns{
     font-family: 'Poppins';
     font-size: 11px;
@@ -223,9 +213,7 @@
 
 @media (max-width: 768px){
   
-    .point{
-        display: none;
-    }
+    
     /* .bookboxes{
         flex-wrap: wrap;
     } */
