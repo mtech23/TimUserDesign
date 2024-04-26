@@ -17,10 +17,10 @@
     text-transform: uppercase;
 }
 .recent{
-    background-image: url(../../Assets/images/novinfo.png);
+    background-image: url(../../Assets/images/book-listing-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     padding: 80px 0px;
 }
 .picked{
@@ -30,21 +30,48 @@
     color: #6100A8;
     text-transform: uppercase;
 }
-.recentbtn{
+.nav-pills .nav-link.active.recentbtn {
     font-family: 'Poppins';
-    font-size: 13px;
+    font-size: 12px;
     text-align: center;
     background-color: #360C55;
     color: #fff;
     position: relative;
-    padding: 7px 51px;
+    padding: 7px 45px;
     border: none;
     border-radius: 34px;
     display: block;
+    
 }
-.votebtn{
-    font-family: 'Poppins';
+
+.nav-pills .nav-link.recomend {
+    font-family: "Poppins";
     font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    padding: 6px 25px;
+    color: #282828;
+}
+
+.nav-pills .nav-link.active.recentbtn:focus::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -3px;
+    background-image: url("../../Assets/images/Polygon6.png");
+    display: block;
+    z-index: 20;
+    height: 23px;
+    width: 31px;
+    background-size: 100% 100%;
+    transform: translateX(-50%);
+}
+
+
+
+.votebtn {
+    font-family: 'Poppins';
+    font-size: 11px;
     font-weight: 400;
     text-align: center;
     color: #360C55;
@@ -53,20 +80,20 @@
     border: #000;
     padding-top: 0px;
     padding-bottom: 0px;
-    padding-left: 30px;
-    padding-right: 0px; 
+    padding-left: 22px;
+    padding-right: 0px;
     display: block;
 }
 
 .votebtn:first-child{
-    margin-bottom: 10px;
-    padding-left: 37px;
+    margin-bottom: 7px;
+    padding-left: 28px;
 }
-.voteicon{
+.voteicon {
     background: #360C55;
     border-radius: 1px 18px 17px 0px;
-    padding: 7px 18px 7px 18px;
-  }
+    padding: 5px 13px 6px 11px;
+}
 .point{
     position: absolute;
     top: 1188px;
@@ -75,21 +102,14 @@
 }
 
 .dualbtn{
-    display: flex;
+   
     border: 2px solid #6100A8;
     border-radius: 23px;
     padding: 5px 10px;
-    flex-wrap: wrap;
+  
     width: fit-content;
 }
-.recomend{
-    font-family: "Poppins";
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-    padding: 6px 30px;
-    color: #282828;
-}
+
 .divider{
     background-color: #6100A8;
     height: 4px;
@@ -198,27 +218,89 @@
     padding-left: 6px;
     padding-right: 0px;
 }
+
+
+
 @media (max-width: 768px){
   
     .point{
         display: none;
     }
-    .bookboxes{
+    /* .bookboxes{
         flex-wrap: wrap;
-    }
+    } */
+    .nav-pills .nav-link.recomend{
+        font-size: 9px;
+        padding: 8px 10px;
+         
+        }
+    .nav-pills .nav-link.active.recentbtn {
+        font-size: 9px;
+        padding: 7px 38px;
+        }
+        .picked {
+            font-size: 30px;
+        }
+        .vote_actionBtn {
+            position: relative;
+        }
+        .bookboxes {
+            gap: 0px;
+            flex-wrap: wrap;
+        }
+        .rankbook2 {
+            margin-top: 41px;
+        }
+        .rankbook3 {
+            margin-top: 41px;
+        }
+        .recent {
+            padding: 40px 0px;
+        }
 
 }
-@media  (max-width: 1440px){
+@media  (max-width: 425px){
 
-    .point {
-      
-      
+  
+    .picked {
+        font-size: 17px;
+    }
+
+    .vote_actionBtn {
+        position: relative;
+    }
+    .rankbook1 {
+        margin-top: 41px;
+    }
+    .dualbtn {
+        margin-top: 9px;
     }
     
   }
-  @media only screen and (min-width: 2560px){
-    /* .point {
-      
-    } */
-   
+  @media only screen and (min-width: 1024px){
+    .vote_actionBtn {
+        right: -19px;
+    
   }
+  .profilename {
+
+    font-size: 9px;
+}
+.starRate {
+
+    font-size: 9px;
+}
+.mainrating {
+
+    gap: 3px;
+}
+.bookboxes {
+    gap: 0px;
+}
+}
+@media (min-width: 375px) and (max-width: 768px) {
+
+    .vote_actionBtn {
+        right: -86px;
+    }
+    }
