@@ -908,8 +908,7 @@ export const ProductDetail = ({ eventKey, children }) => {
                                   <button
                                     className="stop"
                                     onClick={handleStops}
-                                    disabled={!isPlay && !isPause}
-                                  >
+                                    disabled={!isPlay && !isPause}>
                                     <i className="fa-solid fa-stop"></i>
                                   </button>
                                 </div>

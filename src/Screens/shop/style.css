@@ -29,6 +29,7 @@ color: #360C55;
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
+padding-bottom: 80px;
 
 }
 .box{
@@ -257,7 +258,94 @@ height: 20px;
     margin-top: -51px;
     border-radius: 20px;
 }
-
+.discount_voucher{
+    background-image: url(../../Assets//images/voucherbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 0px;
+}
+.diccount_num{
+    background-image: url(../../Assets//images/offers.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 77px 40px 30px 40px;
+}
+.discount_voucher h2.twentyfive {
+    font-family: 'Bebas Neue';
+    font-size: 66px;
+    font-weight: 700;
+    line-height: 123.48px;
+    text-align: left;
+    color: #FFF;
+    background: #FF0000;
+    width: fit-content;
+    padding: 0px 7px;
+    border-radius: 30px;
+}
+.discount_voucher h4.vouchers{
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 48.78px;
+    text-align: left;
+    color:#FFFFFF;
+    
+}
+.discount_voucher p.monthly_discount{
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 10.23px;
+    text-align: left;
+    color:#FFFFFF;
+    
+}
+.shop_two{
+    background-image: url(../../Assets//images/GIFTCARDS.png);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+padding: 50px 0px 160px 0px;
+position: relative;
+/* overflow: hidden; */
+}
+.shop_two h1.gift{
+    font-family: 'Jost';
+    font-size: 76.93px;
+    font-weight: 900;
+    line-height: 66.16px;
+    text-align: center;
+    color: #360C55;
+}
+.gift_cards_bg{
+    background-image: url(../../Assets//images/dragongift.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 200px 0px 730px 0px;
+}
+.gift_coins {
+    margin-top: -341px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.gift_cards_bg img.promoCards{
+    height: 286px;
+    width:  234px;
+}
+.coinMain{
+    justify-content: center;
+}
+.gift_cards_bg h1.promos{
+    font-family: 'Jost';
+    font-size: 76.93px;
+    font-weight: 900;
+    line-height: 66.16px;
+    text-align: center;
+    color: #360C55;
+}
 @media (max-width: 1024px) {
 
     .shop img.dra {

@@ -56,6 +56,8 @@ import timebg from "../../Assets/images/timebg.png";
 import ihk from "../../Assets/images/ihk.png";
 import book2 from "../../Assets/images/book2.png";
 import book3 from "../../Assets/images/book3.png";
+import carddd1 from "../../Assets/images/carddd1.png";
+
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faList, faSearch, faStar } from "@fortawesome/free-solid-svg-icons";
@@ -547,6 +549,131 @@ useEffect(() =>{
           </div>
         </div>
        </section>
+
+
+       <section className="discount_voucher">
+
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-sm-12">
+              <div className="diccount_num">
+                <div className="dicount_bg">
+                <h2 className="twentyfive">25%</h2>
+                </div>
+                <h4 className="vouchers">DISCOUNT VOUCHER</h4>
+                <p className="monthly_discount">This voucher is valid for only one month</p>
+
+              </div>
+
+            </div> 
+            <div className="col-lg-6 col-sm-12">
+              <div className="diccount_num">
+                <div className="dicount_bg">
+                <h2 className="twentyfive">50%</h2>
+                </div>
+                <h4 className="vouchers">DISCOUNT VOUCHER</h4>
+                <p className="monthly_discount">This voucher is valid for only one month</p>
+
+              </div>
+
+            </div> 
+          </div>
+
+          <div className="row mt-5">
+            <div className="col-lg-6 col-sm-12">
+              <div className="diccount_num">
+                <div className="dicount_bg">
+                <h2 className="twentyfive">75%</h2>
+                </div>
+                <h4 className="vouchers">DISCOUNT VOUCHER</h4>
+                <p className="monthly_discount">This voucher is valid for only one month</p>
+
+              </div>
+
+            </div> 
+            <div className="col-lg-6 col-sm-12">
+              <div className="diccount_num">
+                <div className="dicount_bg">
+                <h2 className="twentyfive">100%</h2>
+                </div>
+                <h4 className="vouchers">DISCOUNT VOUCHER</h4>
+                <p className="monthly_discount">This voucher is valid for only one month</p>
+
+              </div>
+
+            </div> 
+          </div>
+        </div>
+        </section>
+        {/* <section>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+              <h3 class="recthe">GIFT CARDS</h3>
+              </div>
+            </div>
+          </div>
+
+        </section> */}
+        <section class="shop_two">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="gift">GIFT CARDS</h1>
+              
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="gift_cards_bg">
+          <div className="container">
+            <div className="row coinMain">
+              <div className="col-lg-2 col-sm-12">
+               <div className="gift_coins">
+                  <img className="img-fluid promoCards" src={carddd1}/>
+               </div>
+
+              </div>
+              <div className="col-lg-2 col-sm-12">
+               <div className="gift_coins">
+                  <img className="img-fluid promoCards" src={carddd1}/>
+               </div>
+
+              </div>
+              <div className="col-lg-2 col-sm-12">
+               <div className="gift_coins">
+                  <img className="img-fluid promoCards" src={carddd1}/>
+               </div>
+
+              </div>
+              <div className="col-lg-2 col-sm-12">
+               <div className="gift_coins">
+                  <img className="img-fluid promoCards" src={carddd1}/>
+               </div>
+
+              </div>
+              <div className="col-lg-2 col-sm-12">
+               <div className="gift_coins">
+                  <img className="img-fluid promoCards" src={carddd1}/>
+               </div>
+
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-12">
+              
+              <h1 class="promos">PROMO CODES</h1>
+              
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        
+        
+        
 
 
        
