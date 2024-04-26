@@ -13,6 +13,8 @@ import spiner from "../../Assets/images/spinerimg.png";
 import spinerpercentage from "../../Assets/images/spinerpercentage.png";
 import missionbg from "../../Assets/images/missionbg.png";
 import coin from "../../Assets/images/coin.png";
+
+import { Wheel } from 'react-custom-roulette'
 import {
   AuthorList1,
   Logo,
@@ -96,6 +98,49 @@ export const Mission = () => {
 
   const settingsForFourItems = reusableSetting(4, false);
   const settingsForOneItem = reusableSettingForOne(1, false);
+
+
+  
+const data = [
+  {
+      option: '50Mana',
+      style: {
+          background: 'linear-gradient(234.4deg, #6100A8 9.38%, #2069FF 92.48%, #915DC0 130.17%, #FF5183 167.86%)',
+          textColor: 'black'
+      }
+  },
+
+  // background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+
+  { option: '45Mana', outerBorderColor: 'yellow', outerBorderWidth : 5 ,  style: { backgroundColor: 'green', textColor: 'black' } },
+  { option: '5Mana', style: { backgroundColor: '#AA37FF', textColor: 'black' } },
+  { option: '15Mana', style: { backgroundImage: "linear-gradient(to bottom, #ff0000, #0000ff)", textColor: 'black' } },
+  { option: '30Mana', style: { backgroundColor: 'yellow', textColor: 'black' } },
+  { option: '40Mana', style: { backgroundColor: 'yellow', textColor: 'black' } },
+  { option: '50Mana', style: { backgroundColor: 'green', textColor: 'black' } },
+  { option: '1', style: { backgroundColor: 'white', textColor: 'black' } },
+  { option: '2', style: { textColor: 'black' } } // Assuming you want to specify textColor for this item as well
+];
+const backgroundColors = [ '#a8eb12)']    ;
+const outerBorderColor = ['#360C55'];
+const outerBorderWidth = 10;
+
+
+const innerBorderColor = '#AA37FF';
+const innerBorderWidth = 10;
+
+
+const innerRadius = 0;
+const radiusLineColor = '#eeeeee';
+const radiusLineWidth = 8;
+const fontFamily = 'Nunito';
+const fontWeight = 'bold';
+const fontSize = 20;
+const fontStyle = 'normal';
+const textDistance = 60;
+const spinDuration = 1.0;
+// background: linear-gradient(210.46deg, #360C55 40.03%, #8030CC 66.34%);
+
   //   const adsListing = () => {
   //     document.querySelector(".loaderBox").classList.remove("d-none");
   //     fetch(
@@ -177,6 +222,21 @@ export const Mission = () => {
   useEffect(() => {
     Aos.init();
   }, []);
+
+
+
+  
+  const [mustSpin, setMustSpin] = useState(false);
+  const [prizeNumber, setPrizeNumber] = useState(0);
+
+  const handleSpinClick = () => {
+      if (!mustSpin) {
+          const newPrizeNumber = Math.floor(Math.random() * data.length);
+          setPrizeNumber(newPrizeNumber);
+          setMustSpin(true);
+      }
+  }
+
   return (
     <>
      <UserLayout>
@@ -220,7 +280,37 @@ export const Mission = () => {
           <div className="bestSell__filters">
             <div className="container">
               <div className="bg-spiner  justify-content-center  mx-auto ">
-                <img src={spiner} className="spiner-img" />
+                {/* <img src={spiner} className="spiner-img" /> */}
+<div   className="spiner-img    ">
+                <Wheel
+                mustStartSpinning={mustSpin}
+                prizeNumber={prizeNumber}
+                fontSize={fontSize}
+                fontWeight={fontWeight}
+                fontStyle={fontStyle}
+                fontFamily={fontFamily}
+                innerBorderWidth={innerBorderWidth}
+                data={data}
+                innerBorderColor={innerBorderColor}
+                outerBorderWidth={outerBorderWidth}
+                outerBorderColor={outerBorderColor}
+                backgroundColors={backgroundColors}
+
+                 radiusLineColor={radiusLineColor}
+                radiusLineWidth={radiusLineWidth}
+                spinDuration={spinDuration}
+                onStopSpinning={() => {
+                    setMustSpin(false);
+                }}
+
+
+                startingOptionIndex={2}
+                // perpendicularText
+                textDistance={textDistance}
+                
+            />
+</div>
+<button onClick={handleSpinClick}  className="spincolor mb-4 " >SPIN</button>
               </div>
 
               <div className="row">

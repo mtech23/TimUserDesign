@@ -1,10 +1,10 @@
-
 .bestselling_books {
   /* background-image: url(../../Assets/images/book-listing-bg.jpg); */
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 }
+
 .bestSell__mission-sec {
   background-image: url(../../Assets/images/missionbg.png);
   background-size: cover;
@@ -14,15 +14,18 @@
   position: relative;
   height: 353px;
 }
+
 .bestSell__book-cartoon1 img {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 170px;
 }
+
 .bestSell__book-title {
   margin-bottom: 30px;
 }
+
 .bestSell__book-title h2 {
   font-size: 55px;
   font-weight: 900;
@@ -33,12 +36,15 @@
   line-height: 1;
   text-align: center;
 }
+
 .bestSelling__books {
   position: relative;
 }
+
 .bestSelling__books img {
   width: 100%;
 }
+
 .bestSell__book-cartoon2 img {
   position: absolute;
   right: 50px;
@@ -47,7 +53,24 @@
 }
 
 .bestSell__bookListing-sec {
-  padding: 130px 0 !important; 
+  padding: 130px 0 !important;
+}
+
+.sc-gsTCUz {
+  width: 100%;
+  /* text-align: right; */
+  margin: auto;
+
+}
+
+.spincolor {
+  padding: 4px 11px;
+  /* border: 2px solid red; */
+  border-radius: 5px;
+  /* padding: 5px; */
+  background-color: #8030cc;
+  text-align: white;
+  color: white;
 }
 
 .filters__tabs {
@@ -58,27 +81,32 @@
   border-radius: 25px;
   background: #fff;
 }
+
 .filters__tabs .filters__tab {
   border: none;
   background: #fff;
   padding: 7px 30px;
   border-radius: 25px;
 }
+
 .filters__tabs .filters__tab.filters__tab-active {
   background: #360c55;
   color: #fff;
 }
+
 .filters__category select,
 .filters__pricing select {
   border: 2px solid #360c55;
   padding: 5px 20px;
   border-radius: 25px;
 }
+
 .filters__category select:focus,
 .filters__pricing select:focus {
   box-shadow: unset;
   border: 2px solid #360c55;
 }
+
 .filters__search {
   border: 2px solid #360c55;
   padding: 3px;
@@ -86,6 +114,7 @@
   overflow: hidden;
   background: #fff;
 }
+
 .filters__search .filters__search-btn {
   border: none;
   background: #360c55;
@@ -93,18 +122,22 @@
   padding: 7px 30px;
   border-radius: 25px !important;
 }
+
 .filters__search .filters__search-input {
   border: none;
   font-size: 14px;
   padding: 3px 5px;
 }
+
 .filters__search .filters__search-input:focus {
   box-shadow: unset;
 }
+
 .filters__search .filters__search-icon {
   border: unset;
   padding: 3px 10px;
 }
+
 .filters__search .filters__search-icon:hover {
   background: transparent;
   color: #000;
@@ -114,14 +147,17 @@
 .bestBooks__listing {
   margin-top: 60px;
 }
+
 .bestBooks__list {
   width: 90%;
   margin: 0 auto 50px;
   position: relative;
 }
+
 .bestBooks__list img {
   width: 100%;
 }
+
 .bestBooks__list-overlay .bestBooks__purchase-btn {
   border: none;
   background: #fff;
@@ -131,10 +167,12 @@
   font-weight: 600;
   color: #360c55;
 }
+
 .bestBooks__list-body {
   margin: 20px 0;
   text-align: center;
 }
+
 .bestBooks__list-body .bestBooks__list-title {
   font-size: 22px;
   font-weight: 600;
@@ -142,12 +180,14 @@
 
   line-height: 1.5;
 }
+
 .bestBooks__list-body .bestBooks__list-text {
   font-size: 15px;
   color: #000;
   opacity: 1;
   line-height: 1.5;
 }
+
 .bestBooks__list-overlay {
   position: absolute;
   bottom: 100%;
@@ -161,10 +201,12 @@
   justify-content: center;
   align-items: center;
 }
+
 .bestBooks__list:hover .bestBooks__list-overlay {
   bottom: 0;
   height: 100%;
 }
+
 .bestBooks__list-img {
   position: relative;
   border-radius: 30px;
@@ -173,12 +215,15 @@
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
+
 .book__listing-pagination {
   margin-top: 20px;
 }
+
 .book__listing-pagination .pagination {
   justify-content: center;
 }
+
 .book__listing-pagination .pagination .page-link {
   padding: 0;
   width: 40px;
@@ -192,12 +237,15 @@
   border-radius: 50%;
   margin: 0 5px;
 }
+
 .book__listing-pagination .pagination .page-link.page_link-active {
   background: #360c55;
 }
+
 .book__listing-pagination .pagination .page-link:focus {
   box-shadow: none;
 }
+
 /* Best Books Listing Ends Here */
 
 
@@ -210,6 +258,7 @@
   text-align: center;
   margin-top: -204px;
 }
+
 img.spiner-img {
   height: 472px;
 }
@@ -221,8 +270,9 @@ img.spiner-img {
   background-repeat: no-repeat;
   padding: 100px 0 0;
   position: relative;
-  height:100%;
+  height: 100%;
 }
+
 .missionimg2 {
   background-image: url(../../Assets/images//missionbg2.png);
   background-size: cover;
@@ -230,8 +280,9 @@ img.spiner-img {
   background-repeat: no-repeat;
   padding: 100px 0 0;
   position: relative;
-  height:100%;
+  height: 100%;
 }
+
 .missionimg3 {
   background-image: url(../../Assets//images/missionbg3.png);
   background-size: cover;
@@ -239,7 +290,7 @@ img.spiner-img {
   background-repeat: no-repeat;
   padding: 100px 0 0;
   position: relative;
-  height:100%;
+  height: 100%;
 }
 
 .spiner-ione-time {
@@ -257,6 +308,7 @@ img.spiner-img {
   /* justify-content: center; */
   margin-left: 9px;
 }
+
 .percentage {
   align-items: center !important;
   justify-content: center !important;
@@ -273,6 +325,7 @@ img.radioimg {
   justify-content: center !important;
   height: 86px;
 }
+
 /* 
 .percentage{
   display: block;
@@ -294,6 +347,7 @@ img.radioimg {
   font-size: x-large;
   margin-bottom: 0px;
 }
+
 .missionpara {
   font-size: smaller;
   margin-top: -6px;
@@ -354,10 +408,12 @@ img.radioimg {
   height: 141px;
 
 }
-.manaco{
+
+.manaco {
   color: #E6D0FF;
   margin-left: 10px;
 }
+
 .manaco1 {
   color: #E6D0FF;
   margin-left: 22px;
@@ -371,27 +427,34 @@ img.radioimg {
   margin-top: 10px;
 
 }
-.cnt{
+
+.cnt {
   font-size: 12px;
 }
+
 .coinimg {
   height: 30px;
   width: 30px;
 }
+
 @media (max-width: 1024px) {
   .filters__tabs .filters__tab {
     padding: 7px 20px;
   }
+
   .bestSell__book-title h2 {
     font-size: 40px;
   }
+
   .bestSell__book-cartoon2 img {
     right: 50px;
     width: 25%;
   }
+
   .bestSell__book-sec {
     padding: 50px 0 0;
   }
+
   .bestSell__book-cartoon1 img {
     width: 110px;
   }
@@ -401,6 +464,7 @@ img.radioimg {
   .filters__search {
     margin-top: 20px;
   }
+
   .bestSell__book-title h2 {
     font-size: 33px;
   }
@@ -408,30 +472,35 @@ img.radioimg {
 
 
 @media (max-width: 480px) {
+
   .filters__category,
   .filters__pricing {
     margin-top: 20px;
   }
+
   .bestSell__book-cartoon1 img {
     width: 70px;
   }
+
   .bestSell__book-cartoon2 img {
     right: 20px;
     width: 23%;
     bottom: -10px;
   }
 }
-@media (max-width: 425px){ 
+
+@media (max-width: 425px) {
   img.spiner-img {
     height: 317px;
-}
-.missionimg2{
-  margin-top: 20px;
-}
-.missionimg3{
-  margin-top: 40px;
-}
+  }
+
+  .missionimg2 {
+    margin-top: 20px;
+  }
+
+  .missionimg3 {
+    margin-top: 40px;
+  }
 }
 
 /* //////////////////// */
-
