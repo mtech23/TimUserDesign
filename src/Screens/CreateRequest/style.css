@@ -198,7 +198,7 @@ input[type="radio"]:focus {
     border: 1px solid #9696ce;
     width: 100% ;
     font-size: 12px;
-    margin-top: 24px !important;
+    margin-top: 27px !important;
 
 }
 @media (max-width: 768px) {
@@ -240,4 +240,8 @@ input[type="radio"]:focus {
     .addsyn {
         margin-top: 30px;
     }
+    .novinfo h1.novel {
+        font-size: 27px;
+    }
+   
 }

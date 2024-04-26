@@ -280,9 +280,12 @@ height: 20px;
 
 
 @media only screen and (max-width: 768px) {
-    .pre{
-        padding: 35px 20px 0px 20px;
+    .price p.point {
+        font-size: 11px;  
     }
+    .price p.plan {       
+        font-size: 15px;
+}
 }
 @media (max-width: 425px) {
     .basic {

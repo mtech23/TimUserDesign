@@ -1,0 +1,306 @@
+.topfive{
+    font-family: 'Jost';
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 92.79px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+.novelVote {
+    font-family: 'Jost';
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 42.25px;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.recent{
+    background-image: url(../../Assets/images/book-listing-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 80px 0px;
+}
+.picked{
+    font-family: 'Jost';
+    font-size: 37px;
+    font-weight: 900;
+    color: #6100A8;
+    text-transform: uppercase;
+}
+.nav-pills .nav-link.active.recentbtn {
+    font-family: 'Poppins';
+    font-size: 12px;
+    text-align: center;
+    background-color: #360C55;
+    color: #fff;
+    position: relative;
+    padding: 7px 45px;
+    border: none;
+    border-radius: 34px;
+    display: block;
+    
+}
+
+.nav-pills .nav-link.recomend {
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    padding: 6px 25px;
+    color: #282828;
+}
+
+.nav-pills .nav-link.active.recentbtn:focus::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -3px;
+    background-image: url("../../Assets/images/Polygon6.png");
+    display: block;
+    z-index: 20;
+    height: 23px;
+    width: 31px;
+    background-size: 100% 100%;
+    transform: translateX(-50%);
+}
+
+
+
+.votebtn {
+    font-family: 'Poppins';
+    font-size: 11px;
+    font-weight: 400;
+    text-align: center;
+    color: #360C55;
+    background: #FFFFFF;
+    border-radius: 38px;
+    border: #000;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 22px;
+    padding-right: 0px;
+    display: block;
+}
+
+.votebtn:first-child{
+    margin-bottom: 7px;
+    padding-left: 28px;
+}
+.voteicon {
+    background: #360C55;
+    border-radius: 1px 18px 17px 0px;
+    padding: 5px 13px 6px 11px;
+}
+.point{
+    position: absolute;
+    top: 1188px;
+    left: 1226px;
+    width: 32px;
+}
+
+.dualbtn{
+   
+    border: 2px solid #6100A8;
+    border-radius: 23px;
+    padding: 5px 10px;
+  
+    width: fit-content;
+}
+
+.divider{
+    background-color: #6100A8;
+    height: 4px;
+    width: 100%;
+    margin-top: 35px;
+}
+.dividerr{
+    background-color: #6100A8;
+    height: 4px;
+    width: 100%;
+    margin-top: 10px;
+}
+.rankbook{
+    background-image: url(../../Assets/images/bk1.png);
+    background-repeat: no-repeat;
+    padding: 396px 0px 20px 8px;
+    border-radius: 21px;
+    background-size: 100% 100%;
+}
+.authorprof{
+    height: 40px;
+    width: 40px;
+}
+.authorprofile{
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 6px; */
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.bookboxes{
+   gap: 24px;
+   flex-wrap: nowrap;
+}
+.vote_actionBtn{
+    position: absolute;
+    top: -32px;
+    right: -45px;
+}
+
+.mainrating{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.profilename{
+    font-family: 'Poppins';
+    font-size: 14px;
+    text-align: left;
+    color: #fff;  
+}
+.starRate{
+    color: #F8C100;
+    font-size: 12px;
+}
+.rankbook1{
+    background-image: url(../../Assets/images/bk2.png);
+    background-repeat: no-repeat;
+    padding: 396px 0px 20px 8px;
+    border-radius: 21px;
+    background-size: 100% 100%;
+}
+.rankbook2{
+    background-image: url(../../Assets/images/bk3.png);
+    background-repeat: no-repeat;
+    padding: 396px 0px 20px 8px;
+    border-radius: 21px;
+    background-size: 100% 100%;
+}
+.rankbook3{
+    background-image: url(../../Assets/images/bk4.png);
+    background-repeat: no-repeat;
+    padding: 396px 0px 20px 8px;
+    border-radius: 21px;
+    background-size: 100% 100%;
+}
+.topfive__book-sec {
+    background-image: url(../../Assets/images/bookscovers.png);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 100px 0 0;
+    position: relative;
+  }
+.points{
+    position: absolute;
+    top: 2623px;
+    left: 1364px;
+    width: 32px;
+}
+.readbtns{
+    font-family: 'Poppins';
+    font-size: 11px;
+    font-weight: 400;
+    text-align: center;
+    background: #000;
+    color: #FFFFFF;
+    border-radius: 38px;
+    border: #000;
+    padding-right: 0px;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 6px;
+    padding-right: 0px;
+}
+
+
+
+@media (max-width: 768px){
+  
+    .point{
+        display: none;
+    }
+    /* .bookboxes{
+        flex-wrap: wrap;
+    } */
+    .nav-pills .nav-link.recomend{
+        font-size: 9px;
+        padding: 8px 10px;
+         
+        }
+    .nav-pills .nav-link.active.recentbtn {
+        font-size: 9px;
+        padding: 7px 38px;
+        }
+        .picked {
+            font-size: 30px;
+        }
+        .vote_actionBtn {
+            position: relative;
+        }
+        .bookboxes {
+            gap: 0px;
+            flex-wrap: wrap;
+        }
+        .rankbook2 {
+            margin-top: 41px;
+        }
+        .rankbook3 {
+            margin-top: 41px;
+        }
+        .recent {
+            padding: 40px 0px;
+        }
+
+}
+@media  (max-width: 425px){
+
+  
+    .picked {
+        font-size: 17px;
+    }
+
+    .vote_actionBtn {
+        position: relative;
+    }
+    .rankbook1 {
+        margin-top: 41px;
+    }
+    .dualbtn {
+        margin-top: 9px;
+    }
+    
+  }
+  @media only screen and (min-width: 1024px){
+    .vote_actionBtn {
+        right: -19px;
+    
+  }
+  .profilename {
+
+    font-size: 9px;
+}
+.starRate {
+
+    font-size: 9px;
+}
+.mainrating {
+
+    gap: 3px;
+}
+.bookboxes {
+    gap: 0px;
+}
+}
+@media (min-width: 375px) and (max-width: 768px) {
+
+    .vote_actionBtn {
+        right: -86px;
+    }
+    }
