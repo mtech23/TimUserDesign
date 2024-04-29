@@ -23,6 +23,7 @@
     "react-bootstrap": "^2.7.0",
     "react-bootstrap-range-slider": "^3.0.8",
     "react-chartjs-2": "^5.2.0",
+    "react-custom-roulette": "^1.4.1",
     "react-dom": "^18.2.0",
     "react-rating-stars-component": "^2.2.0",
     "react-redux": "^9.1.1",

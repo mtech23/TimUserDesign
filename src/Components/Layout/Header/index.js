@@ -166,26 +166,45 @@ console.log("manabal" , mana)
                   Home
                 </Link>
               </li>
-              <li className="main-navbar-list">
+              {/* <li className="main-navbar-list">
                 <Link to="/beta/" className="main-navbar-link">
                   Browse
                 </Link>
-              </li>
-              <li className="main-navbar-list">
+              </li> */}
+              {/* <li className="main-navbar-list">
                 <Link to="/beta/" className="main-navbar-link">
                   Rankings
                 </Link>
-              </li>
+              </li> */}
               <li className="main-navbar-list">
-                <Link to="/completeion/" className="main-navbar-link">
-                  Competion
+                <Link to="/translation-request/" className="main-navbar-link">
+                Translation
+                </Link>
+              </li>
+              
+               
+              <li className="main-navbar-list">
+                <Link to="/create-request/" className="main-navbar-link">
+                Creation
+
+                </Link>
+              </li>
+              {/* create-request */}
+              <li className="main-navbar-list">
+                <Link to="/competition/" className="main-navbar-link">
+                Competition
                 </Link>
               </li>
               <li className="main-navbar-list">
+                <Link to="/shop/" className="main-navbar-link">
+                Shop
+                </Link>
+              </li>
+              {/* <li className="main-navbar-list">
                 <Link to="/library/" className="main-navbar-link">
                   Library
                 </Link>
-              </li>
+              </li> */}
 
 
             </ul>

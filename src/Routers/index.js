@@ -33,7 +33,7 @@ export default function UserRouter() {
   return (
     <BrowserRouter basename="/TimUser">
       <Routes>
-        <Route path="/beta" element={<Home />}></Route>
+        <Route path="/" element={<Beta />}></Route>
         <Route path="/" element={<Beta />}></Route>
         <Route path="/author-listings" element={<AuthorModule />}></Route>
         <Route path="/book-listing" element={<BookListing />}></Route>
@@ -59,7 +59,7 @@ export default function UserRouter() {
         <Route path="/novel-listing" element={<Novel />}></Route>
 
         <Route path="/search-filter" element={<SearchFilter />}></Route>
-        <Route path="/completeion" element={<Completion />}></Route>
+        <Route path="/competition" element={<Completion />}></Route>
         <Route path="/mission" element={<Mission />}></Route>
         <Route
           path="/book-detail/:id"
