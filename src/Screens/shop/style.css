@@ -9,16 +9,16 @@ position: relative;
 }
 .shop h1.head{
     font-family: 'Jost';
-font-size: 76.93px;
+font-size: 69px;
 font-weight: 900;
 line-height: 66.16px;
 text-align: center;
 color: #360C55;
 
 }
-.shop img.dra{
+.shop img.dragon_image{
     position: absolute;
-    left: 988px;
+    left: 1465px;
     top: -273px;
     /* width: 1157px;
     height: 783px; */
@@ -159,11 +159,11 @@ background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
     padding: 100px 0px 200px 0px;
-    margin-top: -51px;
+
 }
 .subscription h1.subs{
     font-family: 'Jost';
-    font-size: 76.93px;
+    font-size: 69px;
     font-weight: 900;
     line-height: 66.16px;
     text-align: center;
@@ -272,6 +272,13 @@ height: 20px;
     background-position: center;
     padding: 77px 40px 30px 40px;
 }
+.diccount_nums{
+    background-image: url(../../Assets//images/offers.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 77px 40px 30px 40px;
+}
 .discount_voucher h2.twentyfive {
     font-family: 'Bebas Neue';
     font-size: 66px;
@@ -307,13 +314,13 @@ height: 20px;
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
-padding: 50px 0px 160px 0px;
+padding: 122px 0px 211px 0px;
 position: relative;
 /* overflow: hidden; */
 }
 .shop_two h1.gift{
     font-family: 'Jost';
-    font-size: 76.93px;
+    font-size: 69px;
     font-weight: 900;
     line-height: 66.16px;
     text-align: center;
@@ -325,7 +332,12 @@ position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 200px 0px 230px 0px;
+    padding: 200px 0px 50px 0px;
+}
+.gift_coins_one {
+    margin-top: -341px;
+    position: relative;
+    padding-bottom: 10px;
 }
 .gift_coins {
     margin-top: -341px;
@@ -334,32 +346,140 @@ position: relative;
 }
 .gift_cards_bg img.promoCards{
     height: 286px;
-    width:  234px;
+    /* width:  234px; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 .coinMain{
     justify-content: center;
 }
 .gift_cards_bg h1.promos{
     font-family: 'Jost';
-    font-size: 76.93px;
+    font-size: 69px;
     font-weight: 900;
     line-height: 66.16px;
     text-align: center;
     color: #360C55;
 }
+.promo_code {
+    padding: 0px 0px;
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 80px;
+    overflow: hidden;
+    margin: 20px 0px;
+}
+.promo_codes_fields{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.code_form {
+    border-radius: 25px 0px 0px 25px;
+    padding-left: 36px;
+    font-family: 'Jost';
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    color: #535353;
+    width: 80%;
+    margin: 0px;
+    border: none;
+}
+.code_form:focus{
+    box-shadow: none;
+    outline: 0;
+    border: none;
+}
+.sub_btn {
+    background: #360c55;
+    color: #fff;
+    padding: 13px 34px;
+    font-family: 'Jost';
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 21.5px;
+    text-align: center;
+    border: none;
+    margin-left: 4px;
+    position: relative;
+}
+.promo_image {
+    position: absolute;
+    top: -289px;
+    left: 0px;
+}
+.promo_pin{
+    background-image: url(../../Assets/images/promopin.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 21px;
+}
+.promo_card_box h3.promo_heading {
+    font-family: 'Jost';
+    font-size: 28.49px;
+    font-weight: 900;
+    line-height: 41.38px;
+    text-align: center;
+    color: #fff;
+}
+.promo_card_box p.promo_para {
+    font-family: 'Jost';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21.49px;
+    text-align: center;
+    color: #FFFFFF;
+}
+/* .promo_number{
+    font-family: 'Jost';
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    width: 100%;
+    border: 1px dashed #fff;
+    background: transparent;
+    color: #fff;
+    padding: 9px;
+} */
+input.promo_number[type='number']{
+    font-family: 'Jost';
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
+    width: 100%;
+    border: 1px dashed #fff;
+    background: transparent;
+    color: #E3E3E3;
+    padding: 9px;
+    margin-top: 19px;
+}
+
+input.promo_number[type='number']::placeholder{
+    color: #E3E3E3;
+}
+.promo_number:focus{
+    box-shadow: none;
+    outline: 0;
+    border: none;
+}
+.promo_cards_boxes {
+    margin-top: -78px;
+    position: relative;
+    padding-bottom: 100px;
+}
 @media (max-width: 1024px) {
 
-    .shop img.dra {
+    .shop img.dragon_image {
         display: none;
     }
-    .subscription h1.subs {
 
-        font-size: 31.93px;
-}
-.shop h1.head {
-   
-    font-size: 31.93px;
-}
+
 .rect {
    
     margin-bottom: 30px;
@@ -367,15 +487,88 @@ position: relative;
 }
 
 
+@media (max-width: 768px) {
 
-@media only screen and (max-width: 768px) {
+    .shop_two {
+        padding: 27px 0px 141px 0px;
+    }
+
     .price p.point {
         font-size: 11px;  
     }
     .price p.plan {       
         font-size: 15px;
+    }
+    .discount_voucher h2.twentyfive {
+        font-size: 31px;
+        line-height: 78.48px;
+    }
+    .discount_voucher p.monthly_discount {
+        font-size: 10px;
+        line-height: 15.23px;
+    
+    }
+    .discount_voucher h4.vouchers {
+        font-size: 13px;
+        line-height: 48.78px;
+    }
+    .promo_image {
+        top: -83px !important;
+        width: 112px !important;
+    }
+   
+    .gift_cards_bg h1.promos {
+
+        font-size: 26px !important;
+       
+    }
+   
+    .gift_cards_bg img.promoCards {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        height: 238px;
+    }
+   
+    
+    .subscription h1.subs {
+        font-size: 22.93px !important;
+    }
+    .subscription {
+        padding: 23px 0px 200px 0px;
+    }
+    .promo_cards_boxes {
+        margin-top: -124px;
+        padding-bottom: 50px;
+
+    }
+    .promo_pin {
+       
+        margin-top: 20px;
+    }
+    .promo_card_box p.promo_para {
+        font-size: 10px;
+    }
+    .promo_card_box h3.promo_heading {
+        font-size: 20px;
+    }
+    .cardrow {
+        margin-top: -181px;
+    }
+    .shop h1.head {
+            font-size: 22px;
+    }
+    .shop {
+        padding: 17px 0px 200px 0px;
+    
+    }
+    .shop_two h1.gift {
+        font-size: 30px;
+    }
+    
 }
-}
+
 @media (max-width: 425px) {
     .basic {
         margin-top: 20px;
@@ -383,18 +576,70 @@ position: relative;
     .pre{
         margin-top: 20px; 
     }
+    .gift_coins_one {
+        margin-top: -100px;
+    }
+
+    .gift_cards_bg {
+
+        padding: 0px 0px 50px 0px; 
+    }
+    .gift_coins {
+        margin-top: 0px;
+       
+    }
+    .shop_two {
+        padding: 55px 0px 97px 0px;
+    }
+    .shop_two h1.gift {
+        font-size: 22px !important;
+    }
+    .diccount_nums{
+        margin-top: 3rem;
+    }
+   
+
 }
 @media only screen and (min-width: 2560px){
-    .shop img.dra {
+    .shop img.dragon_image {
        
         left: 1646px;
     }
        
     }
     @media only screen and (max-width: 1440px){
-        .shop img.dra {
+        .shop img.dragon_image {
            
             left: 526px;
            
         }
         }
+ /* @media only screen and (min-width: 425px) and (max-width: 768px){
+    .shop_two {
+        padding: 27px 0px 141px 0px;
+    }
+ } */
+
+ @media (max-width: 1024px){
+    .promo_image {
+     
+        top: -144px;
+
+        width: 200px;
+    }
+    .gift_cards_bg h1.promos {
+        font-size: 42px;
+    }
+    .shop_two h1.gift {
+        font-size: 42px;
+    }
+    .shop h1.head {
+        font-size: 42px;
+    }
+    .subscription h1.subs {
+        font-size: 42px;
+    }
+    .promo_card_box h3.promo_heading {
+        font-size: 20.49px;
+    }
+ }

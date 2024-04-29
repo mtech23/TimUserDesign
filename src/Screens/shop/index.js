@@ -52,6 +52,7 @@ import book1 from "../../Assets/images/book1.png";
 import dragon from "../../Assets/images/dragon.png";
 import mana from "../../Assets/images/mana.png";
 import chechmark from "../../Assets/images/checkmark.png";
+import promoimg from "../../Assets/images/promoimg.png";
 import timebg from "../../Assets/images/timebg.png";
 import ihk from "../../Assets/images/ihk.png";
 import book2 from "../../Assets/images/book2.png";
@@ -228,7 +229,7 @@ useEffect(() =>{
             <div class="row">
               <div class="col-md-12">
                 <h1 class="head">MANA PACKS</h1>
-                <img class="img-fluid dra" src={dragon}/>
+                <img class="img-fluid dragon_image" src={dragon}/>
               </div>
             </div>
           </div>
@@ -555,7 +556,7 @@ useEffect(() =>{
 
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 col-sm-12">
+            <div className="col-md-6">
               <div className="diccount_num">
                 <div className="dicount_bg">
                 <h2 className="twentyfive">25%</h2>
@@ -566,8 +567,8 @@ useEffect(() =>{
               </div>
 
             </div> 
-            <div className="col-lg-6 col-sm-12">
-              <div className="diccount_num">
+            <div className="col-md-6">
+              <div className="diccount_nums">
                 <div className="dicount_bg">
                 <h2 className="twentyfive">50%</h2>
                 </div>
@@ -580,7 +581,7 @@ useEffect(() =>{
           </div>
 
           <div className="row mt-5">
-            <div className="col-lg-6 col-sm-12">
+            <div className="col-md-6">
               <div className="diccount_num">
                 <div className="dicount_bg">
                 <h2 className="twentyfive">75%</h2>
@@ -591,8 +592,8 @@ useEffect(() =>{
               </div>
 
             </div> 
-            <div className="col-lg-6 col-sm-12">
-              <div className="diccount_num">
+            <div className="col-md-6">
+              <div className="diccount_nums">
                 <div className="dicount_bg">
                 <h2 className="twentyfive">100%</h2>
                 </div>
@@ -629,31 +630,31 @@ useEffect(() =>{
         <section className="gift_cards_bg">
           <div className="container">
             <div className="row coinMain">
-              <div className="col-lg-2 col-sm-12">
+              <div className="col-lg-2 col-sm-12 col-md-4">
+               <div className="gift_coins_one">
+                  <img className="img-fluid promoCards" src={carddd1}/>
+               </div>
+
+              </div>
+              <div className="col-lg-2 col-sm-12 col-md-4">
                <div className="gift_coins">
                   <img className="img-fluid promoCards" src={carddd1}/>
                </div>
 
               </div>
-              <div className="col-lg-2 col-sm-12">
+              <div className="col-lg-2 col-sm-12 col-md-4">
                <div className="gift_coins">
                   <img className="img-fluid promoCards" src={carddd1}/>
                </div>
 
               </div>
-              <div className="col-lg-2 col-sm-12">
+              <div className="col-lg-2 col-sm-12 col-md-4">
                <div className="gift_coins">
                   <img className="img-fluid promoCards" src={carddd1}/>
                </div>
 
               </div>
-              <div className="col-lg-2 col-sm-12">
-               <div className="gift_coins">
-                  <img className="img-fluid promoCards" src={carddd1}/>
-               </div>
-
-              </div>
-              <div className="col-lg-2 col-sm-12">
+              <div className="col-lg-2 col-sm-12 col-md-4">
                <div className="gift_coins">
                   <img className="img-fluid promoCards" src={carddd1}/>
                </div>
@@ -664,13 +665,67 @@ useEffect(() =>{
               <div className="col-md-12">
               
               <h1 class="promos">PROMO CODES</h1>
-              <form className="login-forms ">
-                
-              </form>
+
+              <div className="row">
+                <div class="col-md-8 mx-auto">
+                  <div class="promo_code">
+                <form>
+                <div className="promo_codes_fields">
+                  <input class="code_form" type="text" placeholder="Enter Promo Code" name="Name"/>
+                  <button class="sub_btn"> Submit </button>
+                </div>
+                </form>
+                </div>
+              </div>
+              </div>
+              
+              </div>
+            </div>
+           
+          </div>
+        </section>
+        <section class="shop_two">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="gift">AVAILABLE PROMOTIONS</h1>
+                <img class="img-fluid promo_image" src={promoimg}/>
+              
               </div>
             </div>
           </div>
         </section>
+        <section className="promo_card_box">
+          <div className="container">
+          <div className="promo_cards_boxes">
+            <div className="row">
+             
+             <div className="col-md-4">
+                <div className="promo_pin">
+                  <h3 className="promo_heading">PROMO CODE</h3>
+                  <p className="promo_para">Get 50% oFF Voucher Using This Promo Code</p>
+                  <input className="promo_number" type="number" placeholder="EXAMPLEPROMOCODE123" />
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="promo_pin">
+                  <h3 className="promo_heading">PROMO CODE</h3>
+                  <p className="promo_para">Get 50% oFF Voucher Using This Promo Code</p>
+                  <input className="promo_number" type="number" placeholder="EXAMPLEPROMOCODE123" />
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="promo_pin">
+                  <h3 className="promo_heading">PROMO CODE</h3>
+                  <p className="promo_para">Get 50% oFF Voucher Using This Promo Code</p>
+                  <input className="promo_number" type="number" placeholder="EXAMPLEPROMOCODE123" />
+                </div>
+              </div>
+             </div>
+            </div>
+          </div>
+        </section>
+        
 
 
         
