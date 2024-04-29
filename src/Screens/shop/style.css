@@ -320,11 +320,12 @@ position: relative;
     color: #360C55;
 }
 .gift_cards_bg{
-    background-image: url(../../Assets//images/dragongift.jpg);
+    /* background-image: url(../../Assets//images/dragongift.jpg); */
+    background-color: #fff;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 200px 0px 730px 0px;
+    padding: 200px 0px 230px 0px;
 }
 .gift_coins {
     margin-top: -341px;

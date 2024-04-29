@@ -664,7 +664,9 @@ useEffect(() =>{
               <div className="col-md-12">
               
               <h1 class="promos">PROMO CODES</h1>
-              
+              <form className="login-forms ">
+                
+              </form>
               </div>
             </div>
           </div>
