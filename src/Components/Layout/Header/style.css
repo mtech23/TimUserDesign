@@ -18,6 +18,11 @@
 }
 
 
+
+.user__icon-container a {
+    padding: 6px 17px !important;
+    color: #fff !important;
+}
 .customCollapse .navbar-nav {
     align-items: center;
 }

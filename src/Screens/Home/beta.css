@@ -27,6 +27,27 @@
   }
 }
 
+.card-img, .card-img-top {
+  border-top-left-radius: var(--bs-card-inner-border-radius);
+  border-top-right-radius: var(--bs-card-inner-border-radius);
+  height: 356px;
+}
+.strong::-webkit-scrollbar {
+  width: 5px;
+}
+
+.strong::-webkit-scrollbar-track {
+  background: #e7e7e7; 
+     border-radius: 10px;
+}
+
+.strong::-webkit-scrollbar-thumb {
+  background: #210d46; 
+     border-radius: 10px;
+}
+
+
+
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from,

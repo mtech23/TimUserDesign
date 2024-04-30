@@ -1,2 +1,18 @@
 
 
+
+.strong::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .strong::-webkit-scrollbar-track {
+    background: #e7e7e7; 
+       border-radius: 10px;
+  }
+  
+  .strong::-webkit-scrollbar-thumb {
+    background: #210d46; 
+       border-radius: 10px;
+  }
+  
+  

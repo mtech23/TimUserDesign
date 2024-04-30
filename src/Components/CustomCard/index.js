@@ -22,12 +22,12 @@ const CustomCard = (props) => {
                 <a href="javascript:;" className="cart__icon">
                   <FontAwesomeIcon icon={props?.icon2} />
                 </a>
-                <a href="javascript:;" className="cart__icon">
+                {/* <a href="javascript:;" className="cart__icon">
                   <FontAwesomeIcon icon={props?.icon3} />
-                </a>
+                </a> */}
               </div>
               {/* <button className="addToCart__btn jost-font">{props?.text} </button> */}
-              <CustomButton props={props?.text} />
+              {/* <CustomButton props={props?.text} /> */}
             </div>
           </div>
         </div>

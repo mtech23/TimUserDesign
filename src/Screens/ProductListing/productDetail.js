@@ -1392,7 +1392,7 @@ export const ProductDetail = ({ eventKey, children }) => {
                                         </div>
 
 
-                                        <div className="reviewBoxRate shadow p-3 mt-4 mb-5 ">
+                                        <div className=" ">
                                           <div className="reviewStar">
                                             <label><p className="font-weight-bold">Writing Quality</p></label>
 
