@@ -12,6 +12,8 @@ import CustomCard from "../../Components/CustomCard";
 import CustomButton from "../../Components/BackButton";
 import bgnewlybook from '../../Assets/images/bgnewlybooks.png'
 import newlybook from '../../Assets/images/newlybook.png'
+import newbookrel from '../../Assets/images/newbookrel.png'
+
 import {
   BannerBooks,
   Cart_icon_pink,
@@ -86,7 +88,7 @@ export const Beta = () => {
       centerMode: centerMode,
       responsive: [
         {
-          breakpoint: 1025,
+          breakpoint: 1024,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 5,
@@ -660,6 +662,17 @@ export const Beta = () => {
           </section>
 
           {/* Joins us and popular combine section */}
+          <section className="new_released">
+            <div className="container">
+              <div className="row">
+                <div className="col-ms-12">
+                  <h1 className="new_book_heading">Newly Released Books</h1>
+                  <img className="img-fluid" src={newbookrel}/>
+
+                </div>
+              </div>
+            </div>
+          </section>
 
         
           <section className="join-us mt-5 ">
@@ -741,13 +754,11 @@ export const Beta = () => {
                     <h2
                       className="jost-font"
                       data-aos="fade-left"
-                      data-aos-duration="3000"
-                    >
+                      data-aos-duration="3000">
                       Popular Tags
                     </h2>
                   </div>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
+                  <p> Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry Lorem Ipsum has been the industrys
                     standard dummy text ever since the when an unknown printer
                     took a galley of type and scrambled.

@@ -720,6 +720,21 @@
   padding: 15px 20px;
   margin-left: 30px;
 }
+.new_released{
+  background-image: url(../../Assets/images/newreleased.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 59px 0px;
+}
+.new_released h1.new_book_heading{
+  font-family: 'Jost';
+  font-size: 70px;
+  font-weight: 900;
+  line-height: 102.97px;
+  text-align: center;
+  color:#fff;
+}
 
 .harrypotter_books {
   background: #f3f3f3;
