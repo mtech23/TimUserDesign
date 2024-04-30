@@ -294,7 +294,7 @@ export const Beta = () => {
             </div>
           </div>
         </section>
-        <p>Test</p>
+ 
  
         <section className="social-section">
           <div className="container">

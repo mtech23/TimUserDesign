@@ -195,6 +195,11 @@ export const Header = (props) => {
                 </Link>
 
               </li>
+              <li className="main-navbar-list">
+                    <Link to="/author-listings/" className="main-navbar-link">
+                      Author Hub
+                    </Link>
+                  </li>
               {/* <li className="main-navbar-list">
                 <Link to="/shop/" className="main-navbar-link">
                 Shop
@@ -229,11 +234,7 @@ export const Header = (props) => {
                   Shop
                 </Link>
               </li>
-              <li className="main-navbar-list">
-                <Link to="/shop/" className="main-navbar-link">
-                  Shop
-                </Link>
-              </li>
+               
               
               <li className="main-navbar-list">
                 <Link to="/mission/" className="main-navbar-link">
@@ -243,7 +244,7 @@ export const Header = (props) => {
 
               {/* book-listing */}
               <li className="main-navbar-list ">
-                <Link to="/beta/" className="main-navbar-link ">
+                <Link to="/account" className="main-navbar-link ">
                   <span className=" d-flex ">Mana : {mana} </span>
 
                 </Link>
@@ -344,10 +345,11 @@ export const Header = (props) => {
                     </Link>
                   </li>
                   <li className="main-navbar-list">
-                    <Link to="/beta/" className="main-navbar-link">
+                    <Link to="/author-listings/" className="main-navbar-link">
                       Author Hub
                     </Link>
                   </li>
+                  
                   <li className="main-navbar-list">
                     <Link to="/beta/" className="main-navbar-link">
                       Forum
