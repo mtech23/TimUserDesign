@@ -892,7 +892,12 @@ export const Beta = () => {
 
                   {is_completed &&
                     is_completed?.map((item, index) => (
+                    
                       <div className="col-md-3 novel__card-boxshadow">
+                           <Link
+                      className="col-md-4"
+                      to={`/book-detail/${item?.id}`}
+                    > 
                         <div className="card completed__novel-card">
                           <img src={base_url + item?.image} className="card-img-top" />
                           <div className="card-body featured_books-body">
@@ -923,141 +928,14 @@ export const Beta = () => {
                               <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
                             </div>
                           </div>
-                        </div> </div>
+                        </div>
+                        
+                        </Link>
+                         </div>
+                     
                     ))}
            
-              {/* <div className="col-md-3 novel__card-boxshadow">
-                    <div className="card completed__novel-card">
-                      <img src={CompletedNovelB2} className="card-img-top" />
-                      <div className="card-body featured_books-body">
-                        <h3 className="card-title jost-font">
-                          Lorem Ipsume Doller
-                        </h3>
-                        <p className="author__name jost-font">Author Name</p>
-
-                        <div className="product__price-div">
-                          <h3 className="author__poduct_title">
-                            <div className="product__price">
-                              <span className="discount__price">$18.99</span>
-                              <span className="actual__price">$18.99</span>
-                            </div>
-                          </h3>
-                          <div class="product__icon">
-                            <FontAwesomeIcon
-                              icon={faCartShopping}
-                              className="primaryColor"
-                            />
-                          </div>
-                        </div>
-                        <div className="rating__div">
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-3 novel__card-boxshadow">
-                    <div className="card completed__novel-card">
-                      <img src={CompletedNovelB3} className="card-img-top" />
-                      <div className="card-body featured_books-body">
-                        <h3 className="card-title jost-font">
-                          Lorem Ipsume Doller
-                        </h3>
-                        <p className="author__name jost-font">Author Name</p>
-
-                        <div className="product__price-div">
-                          <h3 className="author__poduct_title">
-                            <div className="product__price">
-                              <span className="discount__price">$18.99</span>
-                              <span className="actual__price">$18.99</span>
-                            </div>
-                          </h3>
-                          <div class="product__icon">
-                            <FontAwesomeIcon
-                              icon={faCartShopping}
-                              className="primaryColor"
-                            />
-                          </div>
-                        </div>
-                        <div className="rating__div">
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-3 novel__card-boxshadow">
-                    <div className="card completed__novel-card">
-                      <img src={CompletedNovelB4} className="card-img-top" />
-                      <div className="card-body featured_books-body">
-                        <h3 className="card-title jost-font">
-                          Lorem Ipsume Doller
-                        </h3>
-                        <p className="author__name jost-font">Author Name</p>
-
-                        <div className="product__price-div">
-                          <h3 className="author__poduct_title">
-                            <div className="product__price">
-                              <span className="discount__price">$18.99</span>
-                              <span className="actual__price">$18.99</span>
-                            </div>
-                          </h3>
-                          <div class="product__icon">
-                            <FontAwesomeIcon
-                              icon={faCartShopping}
-                              className="primaryColor"
-                            />
-                          </div>
-                        </div>
-                        <div className="rating__div">
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-3 novel__card-boxshadow">
-                    <div className="card completed__novel-card">
-                      <img src={CompletedNovelB1} className="card-img-top" />
-                      <div className="card-body featured_books-body">
-                        <h3 className="card-title jost-font">
-                          Lorem Ipsume Doller
-                        </h3>
-                        <p className="author__name jost-font">Author Name</p>
-
-                        <div className="product__price-div">
-                          <h3 className="author__poduct_title">
-                            <div className="product__price">
-                              <span className="discount__price">$18.99</span>
-                              <span className="actual__price">$18.99</span>
-                            </div>
-                          </h3>
-                          <div class="product__icon">
-                            <FontAwesomeIcon
-                              icon={faCartShopping}
-                              className="primaryColor"
-                            />
-                          </div>
-                        </div>
-                        <div className="rating__div">
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
+           
             </Slider>
           </div>
         </div>

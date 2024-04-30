@@ -60,11 +60,11 @@
 
 .cover .nottext {
     font-family: Jost;
-    font-size: 18.45px;
+    font-size: 14.45px;
     font-weight: 400;
     line-height: 26.66px;
     text-align: center;
-    background: #000;
+    background: #360C55;
     color: #FFFFFF;
     border-radius: 38px;
     border: 1px solid #000;
@@ -97,12 +97,12 @@
 
 
 .syn {
-    background-image: linear-gradient(0deg, #1b0c55, #360c550d), url(../../Assets//images/p_4.png);
+    background-image: linear-gradient(0deg, #1b0c55, #360c550d), url(../../Assets//images/detailbg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 35px;
-    margin: 48px 0px;
+    /* margin: 48px 0px; */
 }
 
 .cover p.txt {
@@ -158,13 +158,30 @@
     align-items: start;
 }
 .top{
-    background-image: url(../../Assets//images/topbg.png);
+    /* background-image: url(../../Assets//images/topbg.png); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 50px 10px;
+    /* margin: 50px 10px; */
     border-radius: 10px;
     
+}
+#booknamedetail{
+    
+    color: #535353;
+    font-size: 42px;
+
+}
+.more{
+    font-size: 15px;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+#fans{
+    color: #9C9C9C;
+    font-size: small;
+
+
 }
 .top h3.fans{
     font-family: Jost;
@@ -566,14 +583,14 @@ margin: 0px
 
 }
 
-.syn {
+/* .syn {
     background-image: linear-gradient(0deg, #1b0c55, #360c550d), url(../../Assets//images/p_4.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 35px;
     margin: 48px 0px;
-}
+} */
 
 /* .cover h4{
     font-family: Century Gothic;
