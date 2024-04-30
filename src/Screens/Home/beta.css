@@ -27,6 +27,27 @@
   }
 }
 
+.card-img, .card-img-top {
+  border-top-left-radius: var(--bs-card-inner-border-radius);
+  border-top-right-radius: var(--bs-card-inner-border-radius);
+  height: 356px;
+}
+.strong::-webkit-scrollbar {
+  width: 5px;
+}
+
+.strong::-webkit-scrollbar-track {
+  background: #e7e7e7; 
+     border-radius: 10px;
+}
+
+.strong::-webkit-scrollbar-thumb {
+  background: #210d46; 
+     border-radius: 10px;
+}
+
+
+
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from,
@@ -95,7 +116,7 @@
   justify-content: start;
 }
 .main-navbar-2 {
-  justify-content: end;
+  justify-content: center;
 }
 .main-navbar-logo img {
   width: 140px;
@@ -1438,6 +1459,10 @@
   .footer__copyright p:after {
     width: 19%;
   }
+  .new_released h1.new_book_heading{
+
+    font-size: 50px;
+  }
 }
 
 @media (max-width: 736px) {
@@ -1474,7 +1499,7 @@
     font-size: 40px;
   }
   .banner-sec .banner__img-sec img {
-    max-width: 375px;
+    max-width: 337px;
   }
   .top-authors .section__heading h1 {
     font-size: 60px;
@@ -1569,6 +1594,10 @@
   }
   .join-us .section__heading h1 {
     font-size: 65px;
+  }
+  .new_released h1.new_book_heading{
+
+    font-size: 29px
   }
 }
 

@@ -122,15 +122,14 @@ export const Header = (props) => {
 
 
 
-console.log("manabal" , mana)
 
 
 
 
-
+  const LogoutData = localStorage.getItem('loginUser');
 
   const handleRedirect = () => {
-    const LogoutData = localStorage.getItem('login');
+    const LogoutData = localStorage.removeItem('loginUser');
     fetch(`https://custom.mystagingserver.site/Tim-WDLLC/public/api/user/logout`,
       {
         method: 'GET',
@@ -157,49 +156,50 @@ console.log("manabal" , mana)
   }
   return (
     <section className="header-navbar jost-font">
-      <div className="container">
-        <div className="row align-items-center d-none d-lg-flex">
-          <div className="col-5">
+      <div className="  ">
+        <div className="   justify-content-center  d-flex align-items-center d-none d-lg-flex">
+          <div className="">
             <ul className="main-navbar main-navbar-1">
               <li className="main-navbar-list">
-                <Link to="/" className="main-navbar-link navbar-active">
+                <Link to="/" className="main-navbar-link ">
                   Home
                 </Link>
               </li>
-              {/* <li className="main-navbar-list">
-                <Link to="/beta/" className="main-navbar-link">
-                  Browse
-                </Link>
-              </li> */}
-              {/* <li className="main-navbar-list">
-                <Link to="/beta/" className="main-navbar-link">
-                  Rankings
-                </Link>
-              </li> */}
+
+          
+
               <li className="main-navbar-list">
                 <Link to="/translation-request/" className="main-navbar-link">
-                Translation
+                  Translation
                 </Link>
               </li>
-              
-               
+
+
               <li className="main-navbar-list">
                 <Link to="/create-request/" className="main-navbar-link">
-                Creation
+                  Creation
 
                 </Link>
               </li>
               {/* create-request */}
               <li className="main-navbar-list">
                 <Link to="/competition/" className="main-navbar-link">
-                Competition
+                  Competition
                 </Link>
+
               </li>
+
               <li className="main-navbar-list">
+                <Link to="/book-listing/" className="main-navbar-link">
+                  Books
+                </Link>
+
+              </li>
+              {/* <li className="main-navbar-list">
                 <Link to="/shop/" className="main-navbar-link">
                 Shop
                 </Link>
-              </li>
+              </li> */}
               {/* <li className="main-navbar-list">
                 <Link to="/library/" className="main-navbar-link">
                   Library
@@ -209,14 +209,14 @@ console.log("manabal" , mana)
 
             </ul>
           </div>
-          <div className="col-1">
+          <div className="">
             <div className="main-navbar-logo">
               <Link to="/">
                 <img src={Logo} />
               </Link>
             </div>
           </div>
-          <div className="col-3">
+          <div className="">
             <ul className="main-navbar main-navbar-2">
               {/* <li className="main-navbar-list">
                 <Link to="/beta/" className="main-navbar-link">
@@ -225,11 +225,23 @@ console.log("manabal" , mana)
               </li>
               */}
               <li className="main-navbar-list">
-                <Link to="/beta/" className="main-navbar-link">
-                  Forum
+                <Link to="/shop/" className="main-navbar-link">
+                  Shop
                 </Link>
-              </li> 
+              </li>
+              <li className="main-navbar-list">
+                <Link to="/shop/" className="main-navbar-link">
+                  Shop
+                </Link>
+              </li>
+              
+              <li className="main-navbar-list">
+                <Link to="/mission/" className="main-navbar-link">
+                  Mission
+                </Link>
+              </li>
 
+              {/* book-listing */}
               <li className="main-navbar-list ">
                 <Link to="/beta/" className="main-navbar-link ">
                   <span className=" d-flex ">Mana : {mana} </span>
@@ -239,46 +251,35 @@ console.log("manabal" , mana)
               {/* Logintoken */}
             </ul>
           </div>
-          <div className="col-3">
+          <div className=" ">
             <div class="searchbox-and-icon-container">
-              <div class="input-group header__search">
-                <button
-                  className="btn btn-outline-secondary search__btn"
-                  type="button"
-                  id="button-addon1"
-                >
-                  <FontAwesomeIcon icon={faSearch} />
-                </button>
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Search Here..."
-                  aria-describedby="button-addon1"
-                />
-                <button
-                  className="btn btn-outline-secondary category__icon"
-                  type="button"
-                  id="button-addon2"
-                >
-                  <FontAwesomeIcon icon={faList} />
-                </button>
-              </div>
-              <div class="user__icon-container">
-                <Link className="nav-link user__icon" to="/account">
-                  {/* <FontAwesomeIcon icon={faUser} /> */}
-                  <img src={User_icon_white} />
-                </Link>
-                <Link onClick={handleRedirect} className="nav-link user__icon-plus" to="/account">
-                  {/* <FontAwesomeIcon icon={faUserPlus} /> */}
-                  {/* <img src={User_icon_plus} /> */}
-                  <FontAwesomeIcon
-                    className="me-1 yellow-text"
-                    icon={faSignOut}
+        
+              {!LogoutData ? (
 
-                  />{" "}
-                </Link>
 
-              </div>
+                <li className=" main-navbar-list  mx-auto w-100 ">
+                  <Link className="main-navbar-link    text-black-50      " to="/login" type="button">
+                    <i className="fa fa-user-circle-o" aria-hidden="true"></i> Login / Signup
+                  </Link>
+                </li>
+
+               
+              ) : (
+                <div class="user__icon-container">
+                  <Link className="nav-link user__icon" to="/account">
+                    {/* <FontAwesomeIcon icon={faUser} /> */}
+                    <img src={User_icon_white} />
+                  </Link>
+                  <Link onClick={handleRedirect} className="nav-link user__icon-plus"  >
+                 
+                    <FontAwesomeIcon
+                      className="me-1 yellow-text"
+                      icon={faSignOut}
+
+                    />{" "}
+                  </Link>
+
+                </div>)}
             </div>
 
 
@@ -286,9 +287,22 @@ console.log("manabal" , mana)
 
 
         </div>
+     
+
+
+
+
         <div className="row">
           <nav className="navbar navbar-expand-xl d-lg-none d-block">
+            
             <div className="container-fluid">
+            <a className="navbar-brand" href="#">
+                <div className="main-navbar-logo">
+                  <Link to="/">
+                    <img src={Logo} />
+                  </Link>
+                </div>
+              </a>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -313,11 +327,7 @@ console.log("manabal" , mana)
                       Home
                     </Link>
                   </li>
-                  {/* <li className="main-navbar-list">
-                    <Link to="/beta/" className="main-navbar-link">
-                      Browse
-                    </Link>
-                  </li> */}
+                 
                   <li className="main-navbar-list">
                     <Link to="/beta/" className="main-navbar-link">
                       Rankings
@@ -367,52 +377,8 @@ console.log("manabal" , mana)
                   </button>
                 </div>
               </div>
-              <a className="navbar-brand" href="#">
-                <div className="main-navbar-logo">
-                  <Link to="/">
-                    <img src={Logo} />
-                  </Link>
-                </div>
-              </a>
-              <div class="searchbox-and-icon-container">
-                {/* <div class="input-group header__search d-none d-md-block">
-            <button
-              className="btn btn-outline-secondary search__btn"
-              type="button"
-              id="button-addon1"
-            >
-              <FontAwesomeIcon icon={faSearch} />
-            </button>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Search Here..."
-              aria-describedby="button-addon1"
-            />
-            <button
-              className="btn btn-outline-secondary category__icon"
-              type="button"
-              id="button-addon2"
-            >
-              <FontAwesomeIcon icon={faList} />
-            </button>
-          </div> */}
-                <div class="user__icon-container">
-                  <Link className="nav-link user__icon" to="!#">
-                    {/* <FontAwesomeIcon icon={faUser} /> */}
-                    <img src={User_icon_white} />
-                  </Link>
-
-                  <Link to="#" className="userMenuItem" onClick={handleRedirect}>
-                    <FontAwesomeIcon
-                      className="me-1 yellow-text"
-                      icon={faSignOut}
-
-                    />{" "}
-                    Logout
-                  </Link>
-                </div>
-              </div>
+          
+            
             </div>
           </nav>
         </div>

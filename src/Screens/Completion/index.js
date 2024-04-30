@@ -416,9 +416,15 @@ console.log("currentItems" , currentItems)
                         <div className="bestBooks__list-img">
                           <img src={base_url + item?.image} />
                           <div className="bestBooks__list-overlay">
-                            <button className="bestBooks__purchase-btn">
+                            {/* <button className="bestBooks__purchase-btn">
                               Purchases
-                            </button>
+                            </button> */}
+                             <Link
+                                to={`/book-detail/${item?.id}`}
+                                className="bestBooks__purchase-btn"
+                              >
+                                Purchases
+                              </Link>
                           </div>
                         </div>
                         <div className="bestBooks__list-body">

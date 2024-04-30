@@ -47,8 +47,8 @@ import {
   TopAuthorCartoon,
   User_Icon,
   User_icon_pink,
-   
- 
+
+
 } from "../../Assets/images";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -215,6 +215,21 @@ export const Beta = () => {
     setBooks(filteredBooks);
   };
 
+
+
+  const isfeatured = books.filter((items) => (
+    items?.is_featured === true
+  ))
+
+   const istop = books.filter((items) => (
+    items?.is_top === true
+  ))
+
+  const is_completed = books.filter((items) => (
+    items?.is_completed === true
+  ))
+
+  console.log("isfeatured", isfeatured);
   console.log("book", books);
   return (
     <>
@@ -353,8 +368,8 @@ export const Beta = () => {
               <div className="author__products">
                 <div className="row">
                   <Slider {...settingsForFourItems}>
-                    {books &&
-                      books.map((item, index) => (
+                    {istop &&
+                      istop?.map((item, index) => (
                         <Link
                           to={`/book-detail/${item?.id}`}
                           className="author__products_link"
@@ -491,8 +506,8 @@ export const Beta = () => {
                 <div className="featured__books">
                   <div className="row popular_tabing">
                     <Slider {...settingsForFourItems}>
-                      {books &&
-                        books.map((item, index) => (
+                      {isfeatured &&
+                        isfeatured?.map((item, index) => (
                           <Link
                             className="col-md-4"
                             to={`/book-detail/${item?.id}`}
@@ -641,17 +656,17 @@ export const Beta = () => {
                           </div>
                           <div className="col-8">
                             <h3 className="harrypotter_books-title jost-font">
-                            {item?.name.slice(0, 15)}
+                              {item?.name.slice(0, 15)}
                             </h3>
                             <p className="harrypotter_books-body">
-                            {item?.description}
-                        </p>
+                              {item?.description}
+                            </p>
                             <h3 class="author__poduct_title harrypotter_books-price jost-font">
-                          <div class="product__price">
-                            <span class="discount__price">${item?.price}</span>
-                            <span class="actual__price">${item?.price}</span>
-                          </div>
-                        </h3>
+                              <div class="product__price">
+                                <span class="discount__price">${item?.price}</span>
+                                <span class="actual__price">${item?.price}</span>
+                              </div>
+                            </h3>
                           </div>
                         </div>
                       ))}
@@ -668,13 +683,12 @@ export const Beta = () => {
                 <div className="col-ms-12">
                   <h1 className="new_book_heading">Newly Released Books</h1>
                   <img className="img-fluid" src={newbookrel}/>
-
                 </div>
               </div>
             </div>
           </section>
 
-        
+
           <section className="join-us mt-5 ">
             <div className="container">
               <div className="row">
@@ -874,40 +888,45 @@ export const Beta = () => {
               </div>
               <div className="row completed__novel-cards">
                 <Slider {...settingsForFourItems}>
-                  <div className="col-md-3 novel__card-boxshadow">
-                    <div className="card completed__novel-card">
-                      <img src={CompletedNovelB1} className="card-img-top" />
-                      <div className="card-body featured_books-body">
-                        <h3 className="card-title jost-font">
-                          Lorem Ipsume Doller
-                        </h3>
-                        <p className="author__name jost-font">Author Name</p>
 
-                        <div className="product__price-div">
-                          <h3 className="author__poduct_title">
-                            <div className="product__price">
-                              <span className="discount__price">$18.99</span>
-                              <span className="actual__price">$18.99</span>
+
+                  {is_completed &&
+                    is_completed?.map((item, index) => (
+                      <div className="col-md-3 novel__card-boxshadow">
+                        <div className="card completed__novel-card">
+                          <img src={base_url + item?.image} className="card-img-top" />
+                          <div className="card-body featured_books-body">
+                            <h3 className="card-title jost-font">
+                              {item?.name.slice(0,5)}
+                            </h3>
+                            <p className="author__name jost-font">{item?.name}</p>
+
+                            <div className="product__price-div">
+                              <h3 className="author__poduct_title">
+                                <div className="product__price">
+                                  <span className="discount__price">${item?.price}</span>
+                                  <span className="actual__price">${item?.price}</span>
+                                </div>
+                              </h3>
+                              <div class="product__icon">
+                                <FontAwesomeIcon
+                                  icon={faCartShopping}
+                                  className="primaryColor"
+                                />
+                              </div>
                             </div>
-                          </h3>
-                          <div class="product__icon">
-                            <FontAwesomeIcon
-                              icon={faCartShopping}
-                              className="primaryColor"
-                            />
+                            <div className="rating__div">
+                              <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                              <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                              <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                              <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                              <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                            </div>
                           </div>
-                        </div>
-                        <div className="rating__div">
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                          <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-3 novel__card-boxshadow">
+                        </div> </div>
+                    ))}
+           
+              {/* <div className="col-md-3 novel__card-boxshadow">
                     <div className="card completed__novel-card">
                       <img src={CompletedNovelB2} className="card-img-top" />
                       <div className="card-body featured_books-body">
@@ -1038,14 +1057,14 @@ export const Beta = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                </Slider>
-              </div>
-            </div>
+                  </div> */}
+            </Slider>
           </div>
-        </section>
-        {/* Footer */}
-      </UserLayout>
+        </div>
+      </div>
+    </section >
+      {/* Footer */ }
+      </UserLayout >
     </>
   );
 };

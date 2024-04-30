@@ -8,6 +8,7 @@ import "./booklisting.css";
 //   NovalImage,
 // } from "../../Assets/images";
 import { UserLayout } from "../../Components/Layout/UserLayout";
+import CustomPagination from "../../Components/CustomPagination"
 import CustomInput from "../../Components/CustomInput";
 import {
   AuthorList1,
@@ -50,7 +51,7 @@ export const BookListing = () => {
   const [genre, setGenre] = useState();
   const base_url = "https://custom.mystagingserver.site/Tim-WDLLC/public/";
   const LoginToken = localStorage.getItem("loginUser");
-
+ 
   console.log("categories img", categories);
 
   const BookListing = () => {
@@ -222,6 +223,13 @@ export const BookListing = () => {
 
   const [inputValue, setInputValue] = useState("");
 
+
+
+  
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+  
   const filterData = books?.filter((item) =>
     item?.name.toLowerCase().includes(inputValue.toLowerCase())
   );
@@ -431,27 +439,29 @@ export const BookListing = () => {
                 </div>
               </div>
               <div className="row">
-                <div className="book__listing-pagination">
-                  <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                      <li class="page-item">
-                        <a class="page-link page_link-active" href="#">
-                          1
-                        </a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">
-                          2
-                        </a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">
-                          3
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
+              <div className="book__listing-pagination">
+                    <nav aria-label="Page navigation example">
+                      {/* <ul class="pagination">
+                        <li class="page-item">
+                          <a class="page-link page_link-active" href="#">
+                          {currentPage}
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">
+                          {userdata.length}
+                          </a>
+                        </li>
+                       
+                      </ul> */}
+                      <CustomPagination
+                          itemsPerPage={itemsPerPage}
+                          totalItems={books.length}
+                          currentPage={bookitems}
+                          onPageChange={handlePageChange}
+                        />
+                    </nav>
+                  </div>
               </div>
             </div>
           </div>

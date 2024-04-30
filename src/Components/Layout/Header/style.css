@@ -18,6 +18,11 @@
 }
 
 
+
+.user__icon-container a {
+    padding: 6px 17px !important;
+    color: #fff !important;
+}
 .customCollapse .navbar-nav {
     align-items: center;
 }
@@ -203,4 +208,21 @@
     }
 
 
+}
+
+@media (max-width: 600px){
+    .header-navbar.jost-font{
+        padding: 0px 16px !important;
+    }
+
+    .main-navbar-logo img{
+        width: 60px!important;
+    }
+    .navbar-toggler-icon{
+        height: 24px!important;
+        width: 27px!important;
+    }
+
+    
+    
 }

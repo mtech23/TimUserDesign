@@ -1258,7 +1258,7 @@
   resolved "https://registry.npmjs.org/@csstools/postcss-oklab-function/-/postcss-oklab-function-1.1.1.tgz"
   integrity sha512-nJpJgsdA3dA9y5pgyb/UfEzE7W5Ka7u0CX0/HIMVBNWzWemdcTH3XwANECU6anWv/ao4vVNLTMxhiPNZsTK6iA==
   dependencies:
-    "@csstools/postcss-progressive-custom-properties" "^1.1.0"
+    "@csstools/postcss-progressive-tom-properties" "^1.1.0"
     postcss-value-parser "^4.2.0"
 
 "@csstools/postcss-progressive-custom-properties@^1.1.0", "@csstools/postcss-progressive-custom-properties@^1.3.0":
