@@ -2,6 +2,8 @@ import { React, useState, useEffect } from "react";
 import { UserLayout } from "../../Components/Layout/UserLayout";
 import "./beta.css";
 import CustomCard from "../../Components/CustomCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 // import {
 //   AdertiseImage,
 //   BookImage,
@@ -51,7 +53,7 @@ import {
 
 } from "../../Assets/images";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+ 
 import {
   faArrowRight,
   faCartShopping,
@@ -292,6 +294,8 @@ export const Beta = () => {
             </div>
           </div>
         </section>
+        <p>Test</p>
+ 
         <section className="social-section">
           <div className="container">
             <div className="row">
