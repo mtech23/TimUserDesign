@@ -557,7 +557,7 @@ input.promo_number[type='number']::placeholder{
         margin-top: -181px;
     }
     .shop h1.head {
-            font-size: 22px;
+            font-size: 22px !important;
     }
     .shop {
         padding: 17px 0px 200px 0px;
