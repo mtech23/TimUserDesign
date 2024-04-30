@@ -41,6 +41,7 @@ import {
   User_icon_white,
 } from "../../Assets/images";
 import Ellipse4 from "../../Assets/images/Ellipse 44.png";
+import star_button from "../../Assets/images/star_button.png";
 import { UserLayout } from "../../Components/Layout/UserLayout";
 import "./style.css";
 import {
@@ -836,13 +837,15 @@ export const ProductDetail = ({ eventKey, children }) => {
                           <div class=" mt-5  col-md-6">
                             <h3 id="booknamedetail" className="">{data?.name}</h3>
                             <div className="   gap-4   d-flex g-3 mx-auto  mt-4 mb-4   ">
-                              <button className="nottext">
+                              {/* <button className="nottext">
                                 Vote Now <i class="fas fa-vote-yea icon"></i>
-                              </button>
-                              <button className="nottext    me-3    ">
+                              </button> */}
+                              <button className="all" ><span> Vote Now </span> <i class="fas fa-vote-yea alliconss"></i></button>
+                              {/* <button className="nottext    me-3    ">
                                 Notifications{" "}
                                 <i class="fa-solid fa-bell icon"></i>
-                              </button>
+                              </button> */}
+                              <button className="all" ><span> Notifications </span> <i class="fa-solid fa-bell alliconss"></i></button>
                             </div>
                           </div>
 
@@ -853,7 +856,7 @@ export const ProductDetail = ({ eventKey, children }) => {
                               </div>
                               <div>
                                 <p class="prof">Author Name </p>
-                                <p class="top" id="fans">Top Fans 11,442</p>
+                                <p class="top_fan" id="fans">Top Fans 11,442</p>
                                 <p class="more"> More By This Author</p>
                               </div>
 
@@ -861,9 +864,11 @@ export const ProductDetail = ({ eventKey, children }) => {
                             </div>
                             <div className="profile  mb-4 mt-2">
                               {" "}
+                              <img className="img-fluid star_btns" src={star_button}/>
                               <button className="nottext mt-4 ">
                                 Last Update 3 days ago
                               </button>
+                              <img className="img-fluid star_btn" src={star_button}/>
                             </div>
                         
                           </div>
@@ -910,7 +915,7 @@ export const ProductDetail = ({ eventKey, children }) => {
                       </div>
 
                       {CapterShow ? (
-                        <div className="row select">
+                        <div className="row select new-select_bg">
                           <div className="col-md-12">
                             <Accordion defaultActiveKey="0">
                               {currentItems &&
