@@ -833,13 +833,13 @@ export const ProductDetail = ({ eventKey, children }) => {
                     <div className="col-md-9 mb-4">
                       <div className="productInfo mb-4">
                         <div class="row">
-                          <div class="col-md-6">
-                            <h3>{data?.name}</h3>
-                            <div className="     ">
+                          <div class=" mt-5  col-md-6">
+                            <h3 id="booknamedetail" className="">{data?.name}</h3>
+                            <div className="   gap-4   d-flex g-3 mx-auto  mt-4 mb-4   ">
                               <button className="nottext">
                                 Vote Now <i class="fas fa-vote-yea icon"></i>
                               </button>
-                              <button className="nottext  ml ">
+                              <button className="nottext    me-3    ">
                                 Notifications{" "}
                                 <i class="fa-solid fa-bell icon"></i>
                               </button>
@@ -853,67 +853,19 @@ export const ProductDetail = ({ eventKey, children }) => {
                               </div>
                               <div>
                                 <p class="prof">Author Name </p>
-                                <p class="top">Top Fans 11,442</p>
+                                <p class="top" id="fans">Top Fans 11,442</p>
                                 <p class="more"> More By This Author</p>
                               </div>
+
+
                             </div>
-                            <div className="last_update mb-4">
+                            <div className="profile  mb-4 mt-2">
                               {" "}
-                              <button className="nottext">
+                              <button className="nottext mt-4 ">
                                 Last Update 3 days ago
                               </button>
                             </div>
-
-                            <div class="profile mb-2">
-                              {/* <img class="img-fluid imgicon " src={preview} /> */}
-
-                              <div className="playbtns d-flex gap-12">
-                                <div className="actionBtn">
-                                  <button
-                                    className="play"
-                                    onClick={handleStarts}
-                                    disabled={isPlay}
-                                  >
-                                    <i className="fa-solid fa-play"></i>
-                                  </button>
-                                </div>
-                                <div className="actionBtn">
-                                  <button
-                                    className="play"
-                                    onClick={updateSpeechRate}
-                                  >
-                                    {voice}X
-                                  </button>
-                                </div>
-
-                                <div className="actionBtn">
-                                  <button
-                                    className="pause"
-                                    onClick={handlePauses}
-                                    disabled={!isPlay || isPause}
-                                  >
-                                    <i className="fa-regular fa-circle-pause"></i>
-                                  </button>
-                                </div>
-                                <div className="actionBtn">
-                                  <button
-                                    className="resume"
-                                    onClick={handleResumes}
-                                    disabled={!isPause}
-                                  >
-                                    <i className="fa-solid fa-play"></i>
-                                  </button>
-                                </div>
-                                <div className="actionBtn">
-                                  <button
-                                    className="stop"
-                                    onClick={handleStops}
-                                    disabled={!isPlay && !isPause}>
-                                    <i className="fa-solid fa-stop"></i>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
+                        
                           </div>
                         </div>
 
@@ -941,11 +893,11 @@ export const ProductDetail = ({ eventKey, children }) => {
                             </div>
                           </div>
                         </div>
-                        <p className="mb-3">
+                        {/* <p className="mb-3">
                           <span className="font-weight-bold">Category:</span>{" "}
                           <span>{data?.category?.name}</span>
-                        </p>
-                        {currentItems?.length > 2 ? (
+                        </p> */}
+                        {/* {currentItems?.length > 2 ? (
                           <p className="text-center">
                             <span className="text-success">
                               Recently {data?.latest_chap?.length} new chaper
@@ -954,7 +906,7 @@ export const ProductDetail = ({ eventKey, children }) => {
                           </p>
                         ) : (
                           ""
-                        )}
+                        )} */}
                       </div>
 
                       {CapterShow ? (
@@ -1296,19 +1248,19 @@ export const ProductDetail = ({ eventKey, children }) => {
                       <section className="top">
                         <div className="container">
                           <div className="row">
-                          
+
                             <div className="col-lg-4 col-sm-12 p-4 parabtn">
-                        
+
                               <h3 className="fans">TOP FANS <sup >8,346</sup> </h3>
-                           
+
                             </div>
                             <div className="col-lg-3 col-sm-12 p-4 parabtn">
-                             
-                             <button className="all" ><span> View All </span> <i class="fa-solid fa-play allicon"></i></button>
-                            
+
+                              <button className="all" ><span> View All </span> <i class="fa-solid fa-play allicon"></i></button>
+
                             </div>
                             <div className="col-lg-5 col-sm-12">
-                            <img className="img-fluid cartoons" src={animated} />
+                              <img className="img-fluid cartoons" src={animated} />
                             </div>
                           </div>
                         </div>
@@ -1319,272 +1271,272 @@ export const ProductDetail = ({ eventKey, children }) => {
 
 
                       <div class="rate">
-                      
-                          <div class="container">
-                            <div class="ratebg">
-                              <div class="row justify-content-center">
-                                <div class="col-sm-12 col-lg-3 my-auto ">
-                                  <div class="star">
-                                    <h2>4.5</h2>
-                                    <img class="img-fluid" src={Star} />
-                                  </div>
-                                  <button>653 reviews</button> <br />
-                                  <button class="rev" onClick={handleshowcomment}>Add Review</button>
+
+                        <div class="container">
+                          <div class="ratebg">
+                            <div class="row justify-content-center">
+                              <div class="col-sm-12 col-lg-3 my-auto ">
+                                <div class="star">
+                                  <h2>4.5</h2>
+                                  <img class="img-fluid" src={Star} />
                                 </div>
-
-                                <div class="col-12 col-sm-12 col-lg-2 my-auto ">
-                                  <div class="num">
-                                    <p>5 </p>
-                                    <i class="fa-solid fa-star numstar"></i>
-                                    <div class="line"></div>
-                                  </div>
-                                  <div class="num">
-                                    <p>4 </p>
-                                    <i class="fa-solid fa-star numstar"></i>
-                                    <div class="line1"></div>
-                                  </div>
-                                  <div class="num">
-                                    <p>3 </p>
-                                    <i class="fa-solid fa-star numstar"></i>
-                                    <div class="line2"></div>
-                                  </div>
-                                  <div class="num">
-                                    <p>2 </p>
-                                    <i class="fa-solid fa-star numstar"></i>
-                                    <div class="line3"></div>
-                                  </div>
-                                  <div class="num">
-                                    <p>1 </p>
-                                    <i class="fa-solid fa-star numstar"></i>
-                                    <div class="line4"></div>
-                                  </div>
-                                </div>
-                                <div class="col-12 col-sm-12 col-lg-7">
-                                  <div class="strong">
-                                    {data?.reviews && data?.reviews.map((item, index) => (
-                                      <div>
-                                        <div class="num mb-2 ">
-                                          <div>
-                                            <img
-                                              class="img-fluid starimg"
-                                              src={Ellipse}
-                                            />
-                                          </div>
-                                          <div>
-                                            <p class="review mb-2 ">
-                                              {item?.user?.name}
-                                            </p>
-                                            <div className="bookdetail-date d-flex">
-                                              <span class="rev">13-Feb-2024</span>
-                                              <span class="rev">
-                                                Michael Anderson
-                                              </span>{" "}
-                                            </div>
-                                          </div>
-
-                                        </div>
-                                        <div>
-                                          <p class="revpara mb-3">
-                                            {item?.review}
-                                          </p>
-
-
-                                        </div>
-
-
-                                        <div className=" ">
-                                          <div className="reviewStar">
-                                            <label><p className="font-weight-bold">Writing Quality</p></label>
-
-                                            <ReactStars
-                                              value={item?.writing_quality}
-                                              edit={false}
-                                              size={18}
-                                              activeColor="#ffd700"
-                                            />
-
-                                          </div>
-                                          <div className="reviewStar">
-                                            <label><p className="font-weight-bold">Story Development</p></label>
-
-                                            <ReactStars
-                                              value={item?.story_development}
-                                              edit={false}
-                                              size={18}
-                                              activeColor="#ffd700"
-                                            />
-
-                                          </div>
-                                          <div className="reviewStar">
-                                            <label><p className="font-weight-bold">Character Design</p></label>
-                                            <ReactStars
-                                              value={item?.character_design}
-                                              edit={false}
-                                              size={18}
-                                              activeColor="#ffd700"
-                                            />
-
-                                          </div>
-                                          <div className="reviewStar">
-                                            <label><p className="font-weight-bold">Updating Stability</p></label>
-                                            <ReactStars
-                                              value={item?.updating_stability}
-                                              edit={false}
-                                              size={18}
-                                              activeColor="#ffd700"
-                                            />
-
-                                          </div>
-                                          <div className="reviewStar">
-                                            <label><p className="font-weight-bold">World Background</p></label>
-                                            <ReactStars
-                                              value={item?.world_background}
-                                              edit={false}
-                                              size={18}
-                                              activeColor="#ffd700"
-                                            />
-
-                                          </div>
-                                        </div>
-                                      </div>
-                                    ))
-                                    }
-
-                                  </div>
-
-                                </div>
+                                <button>653 reviews</button> <br />
+                                <button class="rev" onClick={handleshowcomment}>Add Review</button>
                               </div>
 
-
-
-
-
-
-
-
-
-
-                              <hr />
-
-                              <section class="      text-center text-lg-start shadow-1-strong rounded">
-                                <div class="row d-flex justify-content-center">
-                                  <div class="col-md-12">
-                                    <div class=" ">
-                                      <div class="card-body ">
-                                        <div class="row">
-                                          <div class="col-md-12">
-                                            {showcomments === true ? <div class=" ">
-                                              <div class="card-body ">
-                                                <div class="d-flex flex-start w-100">
-
-                                                  <img
-                                                    // class="img-fluid starimg"
-                                                    class="img-fluid starimg rounded-circle shadow-1-strong me-3"
-                                                    src={Ellipse}
-                                                  />
-                                                  <div class="w-100">
-                                                    <h5 className="mb-2">Add a comment</h5>
-
-                                                    <div className="reviewStar">
-                                                      <label><p>Writing Quality</p></label>
-                                                      <ReactStars
-                                                        count={5}
-                                                        onChange={ratingQuality}
-                                                        size={24}
-                                                        activeColor="#ffd700"
-                                                        name="abc"
-                                                      />
-
-                                                    </div>
-                                                    <div className="reviewStar">
-                                                      <label><p>Story Development</p></label>
-                                                      <ReactStars
-                                                        count={5}
-                                                        onChange={ratingStory}
-                                                        size={24}
-                                                        activeColor="#ffd700"
-                                                      />
-
-                                                    </div>
-                                                    <div className="reviewStar">
-                                                      <label><p>Character Design</p></label>
-                                                      <ReactStars
-                                                        count={5}
-                                                        onChange={ratingDesign}
-                                                        size={24}
-                                                        activeColor="#ffd700"
-                                                      />
-
-                                                    </div>
-                                                    <div className="reviewStar">
-                                                      <label><p>Updating Stability</p></label>
-                                                      <ReactStars
-                                                        count={5}
-                                                        onChange={ratingStability}
-                                                        size={24}
-                                                        activeColor="#ffd700"
-                                                      />
-
-                                                    </div>
-                                                    <div className="reviewStar">
-                                                      <label><p>World Background</p></label>
-                                                      <ReactStars
-                                                        count={5}
-                                                        onChange={ratingWorld}
-                                                        size={24}
-                                                        activeColor="#ffd700"
-                                                      />
-
-                                                    </div>
-
-                                                    <div class="form-outline">
-                                                      <textarea class="form-control" id="textAreaExample" rows="7" onChange={(e) => {
-                                                        setReviewData({
-                                                          ...reviewData, review: e.target.value
-                                                        })
-                                                        console.log(reviewData)
-                                                      }}></textarea>
-                                                      <label class="form-label" for="textAreaExample">What is your view?</label>
-                                                    </div>
-                                                    <div class="d-flex justify-content-between mt-3">
-                                                      <button type="button" class="btn btn-danger" onClick={reviewSubmit}>
-                                                        Send <i class="fas fa-long-arrow-alt-right ms-1"></i>
-                                                      </button>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div> : ''}
+                              <div class="col-12 col-sm-12 col-lg-2 my-auto ">
+                                <div class="num">
+                                  <p>5 </p>
+                                  <i class="fa-solid fa-star numstar"></i>
+                                  <div class="line"></div>
+                                </div>
+                                <div class="num">
+                                  <p>4 </p>
+                                  <i class="fa-solid fa-star numstar"></i>
+                                  <div class="line1"></div>
+                                </div>
+                                <div class="num">
+                                  <p>3 </p>
+                                  <i class="fa-solid fa-star numstar"></i>
+                                  <div class="line2"></div>
+                                </div>
+                                <div class="num">
+                                  <p>2 </p>
+                                  <i class="fa-solid fa-star numstar"></i>
+                                  <div class="line3"></div>
+                                </div>
+                                <div class="num">
+                                  <p>1 </p>
+                                  <i class="fa-solid fa-star numstar"></i>
+                                  <div class="line4"></div>
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-12 col-lg-7">
+                                <div class="strong">
+                                  {data?.reviews && data?.reviews.map((item, index) => (
+                                    <div>
+                                      <div class="num mb-2 ">
+                                        <div>
+                                          <img
+                                            class="img-fluid starimg"
+                                            src={Ellipse}
+                                          />
+                                        </div>
+                                        <div>
+                                          <p class="review mb-2 ">
+                                            {item?.user?.name}
+                                          </p>
+                                          <div className="bookdetail-date d-flex">
+                                            <span class="rev">13-Feb-2024</span>
+                                            <span class="rev">
+                                              Michael Anderson
+                                            </span>{" "}
                                           </div>
+                                        </div>
+
+                                      </div>
+                                      <div>
+                                        <p class="revpara mb-3">
+                                          {item?.review}
+                                        </p>
+
+
+                                      </div>
+
+
+                                      <div className=" ">
+                                        <div className="reviewStar">
+                                          <label><p className="font-weight-bold">Writing Quality</p></label>
+
+                                          <ReactStars
+                                            value={item?.writing_quality}
+                                            edit={false}
+                                            size={18}
+                                            activeColor="#ffd700"
+                                          />
+
+                                        </div>
+                                        <div className="reviewStar">
+                                          <label><p className="font-weight-bold">Story Development</p></label>
+
+                                          <ReactStars
+                                            value={item?.story_development}
+                                            edit={false}
+                                            size={18}
+                                            activeColor="#ffd700"
+                                          />
+
+                                        </div>
+                                        <div className="reviewStar">
+                                          <label><p className="font-weight-bold">Character Design</p></label>
+                                          <ReactStars
+                                            value={item?.character_design}
+                                            edit={false}
+                                            size={18}
+                                            activeColor="#ffd700"
+                                          />
+
+                                        </div>
+                                        <div className="reviewStar">
+                                          <label><p className="font-weight-bold">Updating Stability</p></label>
+                                          <ReactStars
+                                            value={item?.updating_stability}
+                                            edit={false}
+                                            size={18}
+                                            activeColor="#ffd700"
+                                          />
+
+                                        </div>
+                                        <div className="reviewStar">
+                                          <label><p className="font-weight-bold">World Background</p></label>
+                                          <ReactStars
+                                            value={item?.world_background}
+                                            edit={false}
+                                            size={18}
+                                            activeColor="#ffd700"
+                                          />
+
                                         </div>
                                       </div>
                                     </div>
-                                  </div>
+                                  ))
+                                  }
 
                                 </div>
 
-
-
-                              </section>
-
-
-
+                              </div>
                             </div>
 
 
 
 
-                            <section >
-                              <div class="container my-5 py-5 text-dark">
+
+
+
+
+
+
+                            <hr />
+
+                            <section class="      text-center text-lg-start shadow-1-strong rounded">
+                              <div class="row d-flex justify-content-center">
+                                <div class="col-md-12">
+                                  <div class=" ">
+                                    <div class="card-body ">
+                                      <div class="row">
+                                        <div class="col-md-12">
+                                          {showcomments === true ? <div class=" ">
+                                            <div class="card-body ">
+                                              <div class="d-flex flex-start w-100">
+
+                                                <img
+                                                  // class="img-fluid starimg"
+                                                  class="img-fluid starimg rounded-circle shadow-1-strong me-3"
+                                                  src={Ellipse}
+                                                />
+                                                <div class="w-100">
+                                                  <h5 className="mb-2">Add a comment</h5>
+
+                                                  <div className="reviewStar">
+                                                    <label><p>Writing Quality</p></label>
+                                                    <ReactStars
+                                                      count={5}
+                                                      onChange={ratingQuality}
+                                                      size={24}
+                                                      activeColor="#ffd700"
+                                                      name="abc"
+                                                    />
+
+                                                  </div>
+                                                  <div className="reviewStar">
+                                                    <label><p>Story Development</p></label>
+                                                    <ReactStars
+                                                      count={5}
+                                                      onChange={ratingStory}
+                                                      size={24}
+                                                      activeColor="#ffd700"
+                                                    />
+
+                                                  </div>
+                                                  <div className="reviewStar">
+                                                    <label><p>Character Design</p></label>
+                                                    <ReactStars
+                                                      count={5}
+                                                      onChange={ratingDesign}
+                                                      size={24}
+                                                      activeColor="#ffd700"
+                                                    />
+
+                                                  </div>
+                                                  <div className="reviewStar">
+                                                    <label><p>Updating Stability</p></label>
+                                                    <ReactStars
+                                                      count={5}
+                                                      onChange={ratingStability}
+                                                      size={24}
+                                                      activeColor="#ffd700"
+                                                    />
+
+                                                  </div>
+                                                  <div className="reviewStar">
+                                                    <label><p>World Background</p></label>
+                                                    <ReactStars
+                                                      count={5}
+                                                      onChange={ratingWorld}
+                                                      size={24}
+                                                      activeColor="#ffd700"
+                                                    />
+
+                                                  </div>
+
+                                                  <div class="form-outline">
+                                                    <textarea class="form-control" id="textAreaExample" rows="7" onChange={(e) => {
+                                                      setReviewData({
+                                                        ...reviewData, review: e.target.value
+                                                      })
+                                                      console.log(reviewData)
+                                                    }}></textarea>
+                                                    <label class="form-label" for="textAreaExample">What is your view?</label>
+                                                  </div>
+                                                  <div class="d-flex justify-content-between mt-3">
+                                                    <button type="button" class="btn btn-danger" onClick={reviewSubmit}>
+                                                      Send <i class="fas fa-long-arrow-alt-right ms-1"></i>
+                                                    </button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div> : ''}
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
                               </div>
+
+
+
                             </section>
 
+
+
                           </div>
+
+
+
+
+                          <section >
+                            <div class="container my-5 py-5 text-dark">
+                            </div>
+                          </section>
+
                         </div>
                       </div>
-
                     </div>
-                  
+
+                  </div>
+
                 </div>
               </div>
             </div>
