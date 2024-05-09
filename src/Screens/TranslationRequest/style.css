@@ -223,7 +223,7 @@
          
         }
     .nav-pills .nav-link.active.recentbtn {
-        font-size: 9px;
+        font-size: 9px !important;
         padding: 7px 38px;
         }
         .picked {
@@ -247,6 +247,41 @@
         }
 
 }
+        @media  (max-width: 950px){
+
+        .rankbook2 {
+            margin-top: 41px;
+        }
+        .rankbook3 {
+            margin-top: 41px;
+        }
+        .vote_actionBtn {
+            right: 20px !important;
+        }
+        .nav-pills .nav-link.recomend {
+                font-size: 10px;
+            }
+        .nav-pills .nav-link.active.recentbtn {
+            
+            font-size: 10px;
+            }
+        }
+        @media  (max-width: 1025px){
+        .bookboxes {
+            gap: 0px;
+            flex-wrap: wrap;
+        }
+        .vote_actionBtn {
+            right: -86px;
+        }
+        /* .rankbook2 {
+            margin-top: 41px;
+        }
+        .rankbook3 {
+            margin-top: 41px;
+        } */
+        }
+
 @media  (max-width: 425px){
 
   
@@ -267,7 +302,7 @@
   }
   @media only screen and (min-width: 1024px){
     .vote_actionBtn {
-        right: -19px;
+        right: -9px;
     
   }
   .profilename {
@@ -286,9 +321,8 @@
     gap: 0px;
 }
 }
-@media (min-width: 375px) and (max-width: 768px) {
-
+@media (min-width: 360px) and (max-width: 768px) {
     .vote_actionBtn {
-        right: -86px;
+        right: -86px !important;
     }
     }

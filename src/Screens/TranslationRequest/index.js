@@ -222,6 +222,8 @@ useEffect(() =>{
             </div>
           </div>
         </section>
+
+       
         <section className="bestSell__book-sec jost-font">
           <div className="container">
             <div className="row">

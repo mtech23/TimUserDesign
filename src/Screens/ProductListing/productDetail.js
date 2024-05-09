@@ -131,10 +131,10 @@ export const ProductDetail = ({ eventKey, children }) => {
   };
 
   const filterData = data?.chapters?.filter(item =>
-    item?.title.toLowerCase().includes(inputValue.toLowerCase())
+    item?.name?.toLowerCase().includes(inputValue.toLowerCase())
   );
   const currentItems = filterData?.slice(indexOfFirstItem, indexOfLastItem);
-  console.log("currentItems", currentItems)
+  console.log("currentItems", data)
 
   const { id } = useParams();
   const settingsForFourItems = reusableSetting(4, false);

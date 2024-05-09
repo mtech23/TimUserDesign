@@ -353,8 +353,8 @@ color: #169B00;
 
 @media only screen and (max-width: 768px){
  .bookk img.vote{
-  width: 26px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
 }
  .res{
   display: flex;
