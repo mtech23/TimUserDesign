@@ -488,24 +488,7 @@ export const Beta = () => {
                     standard dummy text ever since the when an unknown printer
                     took a galley of type and scrambled.
                   </p>
-                  {/* <div
-                    className="tags jost-font nav nav-pills mb-3 "
-                    id="pills-tab"
-                    role="tablist"
-                  >
-                    <button href="javascript:;" className="nav-link tag " value={item?.id} onClick={filterGenre}>
-                      Books{" "}
-                    </button>
-                    <button href="javascript:;" className="tag nav-link" value={item?.id} onClick={filterGenre}>
-                      novels
-                    </button>
-                    <button href="javascript:;" className="tag nav-link" value={item?.id} onClick={filterGenre}>
-                      Genre
-                    </button>
-                    <button href="javascript:;" className="tag nav-link"value={item?.id} onClick={filterGenre}>
-                      comics
-                    </button>
-                  </div> */}
+                  
                 </div>
                 <div className="featured__books">
                   <div className="row popular_tabing">
