@@ -195,11 +195,7 @@ export const Header = (props) => {
                 </Link>
 
               </li>
-              <li className="main-navbar-list">
-                    <Link to="/author-listings/" className="main-navbar-link">
-                      Author Hub
-                    </Link>
-                  </li>
+            
               {/* <li className="main-navbar-list">
                 <Link to="/shop/" className="main-navbar-link">
                 Shop
@@ -229,6 +225,11 @@ export const Header = (props) => {
                 </Link>
               </li>
               */}
+                 <li className="main-navbar-list">
+                    <Link to="/author-listings/" className="main-navbar-link">
+                      Author Hub
+                    </Link>
+                  </li>
               <li className="main-navbar-list">
                 <Link to="/shop/" className="main-navbar-link">
                   Shop

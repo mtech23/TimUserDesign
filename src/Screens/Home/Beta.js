@@ -15,6 +15,8 @@ import CustomButton from "../../Components/BackButton";
 import bgnewlybook from '../../Assets/images/bgnewlybooks.png'
 import newlybook from '../../Assets/images/newlybook.png'
 import newbookrel from '../../Assets/images/newbookrel.png'
+import wheel from '../../Assets/images/wheel.png'
+import carddd1 from '../../Assets/images/carddd1.png'
 
 import {
   BannerBooks,
@@ -417,7 +419,7 @@ export const Beta = () => {
                     data-aos="fade-left"
                     data-aos-duration="3000"
                   >
-                    Mana Coin
+                    MANA COIN
                   </h2>
                 </div>
                 <p>
@@ -450,14 +452,42 @@ export const Beta = () => {
                   </button>
                 </div>
               </div>
-              <div className="mana-display">
-                <img
-                  src={ManaDisplayImg}
-                  data-aos="fade-up"
-                  data-aos-duration="3000"
-                />
+              {/* <div className="mana-display">
+                <img src={ManaDisplayImg} data-aos="fade-up" data-aos-duration="3000"/>
+              </div> */}
+            </div>
+            
+            
+            
+            <div className="row">
+              <div className="col-lg-4 col-sm-12">
+                <div className="wheelImg">
+                  <img  src={wheel} data-aos="fade-up" data-aos-duration="3000"/>
+                </div>
+              </div>
+              <div className="col-lg-4 col-sm-12">
+                <div className="mana-display">
+                  <img src={ManaDisplayImg} data-aos="fade-up" data-aos-duration="3000"/>
+                </div>
+              </div>
+              <div className="col-lg-4 col-sm-12 align-self-center ">
+                <div className="card_boxes_">
+                <div className="cardImg">
+                  <img  src={carddd1} data-aos="fade-up" data-aos-duration="3000"/>
+                </div>
+                <div className="cardImg">
+                  <img  src={carddd1} data-aos="fade-up" data-aos-duration="3000"/>
+                </div>
+                <div className="cardImg">
+                  <img  src={carddd1} data-aos="fade-up" data-aos-duration="3000"/>
+                </div>
+                </div>
               </div>
             </div>
+
+
+
+
           </div>
         </section>
         {/* Features Book Section */}
@@ -488,7 +518,38 @@ export const Beta = () => {
                     standard dummy text ever since the when an unknown printer
                     took a galley of type and scrambled.
                   </p>
-                  
+                  <div className="tags jost-font">
+                    <a href="javascript:;" className="tag">
+                      Books
+                    </a>
+                    <a href="javascript:;" className="tag">
+                      novels
+                    </a>
+                    <a href="javascript:;" className="tag">
+                    authors
+                    </a>
+                    <a href="javascript:;" className="tag">
+                      comics
+                    </a>
+                  </div>
+                  {/* <div
+                    className="tags jost-font nav nav-pills mb-3 "
+                    id="pills-tab"
+                    role="tablist"
+                  >
+                    <button href="javascript:;" className="nav-link tag " value={item?.id} onClick={filterGenre}>
+                      Books{" "}
+                    </button>
+                    <button href="javascript:;" className="tag nav-link" value={item?.id} onClick={filterGenre}>
+                      novels
+                    </button>
+                    <button href="javascript:;" className="tag nav-link" value={item?.id} onClick={filterGenre}>
+                      Genre
+                    </button>
+                    <button href="javascript:;" className="tag nav-link"value={item?.id} onClick={filterGenre}>
+                      comics
+                    </button>
+                  </div> */}
                 </div>
                 <div className="featured__books">
                   <div className="row popular_tabing">

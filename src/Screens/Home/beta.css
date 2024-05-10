@@ -7,6 +7,10 @@
 .completed-novel {
   overflow: hidden;
 }
+html, body {
+  max-width:100%;
+  overflow-x:hidden;
+}
 
 /* Typing Effect Start */
 .typewriter {
@@ -325,7 +329,7 @@
   z-index: 99;
 }
 .section__heading h1 {
-  font-size: 207px;
+  font-size: 160px;
   font-weight: 900;
   -webkit-text-stroke: 1px #370c5585;
   -webkit-text-fill-color: transparent;
@@ -333,7 +337,7 @@
   line-height: 1;
 }
 .section__heading h2 {
-  font-size: 94px;
+  font-size: 78px ;
   font-weight: 900;
   margin-top: -121px;
   color: #360c55;
@@ -358,7 +362,7 @@
   gap: 10px;
 }
 .section__heading .tags .tag {
-  padding: 10px 20px;
+  padding: 5px 18px;
   background-color: #360c55;
   margin: 0 10px;
   color: #fff;
@@ -511,7 +515,7 @@
 
 /* Mana Coins Start */
 .mana-coin {
-  padding: 60px 0 0;
+  padding: 25px 0 0;
   background-image: url(../../../src/Assets/images/mana-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -520,10 +524,31 @@
 }
 .mana-display img {
   display: block;
-  max-width: 345px;
+  max-width: 260px;
   margin: 0 auto 0;
-  z-index: 999999;
+  /* z-index: 999999; */
 }
+.wheelImg img{
+  display: block;
+  max-width: 360px;
+  margin: 0 auto 0;
+  /* z-index: 999999; */
+}
+.card_boxes_{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.cardImg img{
+  display: block;
+  max-width:115px;
+  margin: 0 auto 0;
+  /* z-index: 999999; */
+}
+
+
 .mana-coin .section__heading h1 {
   -webkit-text-stroke: 2px #d1d1d185;
   -webkit-text-fill-color: transparent;
@@ -831,9 +856,9 @@
 .large-tags .large-tag {
   background-color: #360c55;
   color: #fff;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
-  padding: 15px 20px;
+  padding: 10px 20px;
   border-radius: 20px;
 }
 /* .joins-and-tags {
@@ -884,8 +909,8 @@
 .join__us-btns .offer__icon {
   background-color: #fff;
   color: #360c55;
-  font-size: 20px;
-  padding: 10px 20px 10px 10px;
+  font-size: 17px;
+  padding: 5px 20px 5px 10px;
   margin-left: 15px;
 }
 .popular-container {
@@ -1282,7 +1307,11 @@
     max-width: 900px;
   }
   .mana-display img {
-    max-width: 250px;
+    max-width: 271px
+  }
+  .cardImg img {
+  
+    max-width: 98px;
   }
   .mana-anime img {
     height: 250px;
@@ -1324,7 +1353,10 @@
   .main-navbar-list a {
     color: #333;
   }
-
+  .cardImg img {
+    margin-top: 27px;
+    max-width: 134px;
+  }
   .main-navbar-list {
     border-bottom: 1px solid #f3f3f3;
     margin-bottom: 5px;
@@ -1337,7 +1369,7 @@
     margin-bottom: 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .header__logo {
     margin-bottom: unset;
   }
@@ -1381,7 +1413,7 @@
     padding: 10px;
   }
   .featured__books h3.card-title {
-    font-size: 20px;
+    font-size: 18px;
   }
   .featured__books p {
     font-size: 14px;
@@ -1463,6 +1495,14 @@
 
     font-size: 50px;
   }
+  .wheelImg img {
+    max-width: 294px;
+  }
+  .cardImg img {
+    margin-top: 27px;
+    max-width: 134px;
+    gap: 24px
+}
 }
 
 @media (max-width: 736px) {
@@ -1598,6 +1638,10 @@
   .new_released h1.new_book_heading{
 
     font-size: 29px
+  }
+  .cardImg img {
+    margin-top: 18px;
+    max-width: 196px;
   }
 }
 

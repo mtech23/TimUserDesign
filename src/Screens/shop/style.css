@@ -18,10 +18,11 @@ color: #360C55;
 }
 .shop img.dragon_image{
     position: absolute;
-    left: 990px;
-    top: -273px;
-    /* width: 1157px;
-    height: 783px; */
+    /* left: 990px; */
+    right: 0px;
+    top: -245px;
+    /* width: 743px; */
+  
 }
 
 .second{
@@ -568,6 +569,14 @@ input.promo_number[type='number']::placeholder{
     }
     
 }
+@media only screen and (max-width: 1040px) {
+    /* .shop img.dragon_image {
+        left: 281px !important;
+        width: 759px;
+    	top: -251px;
+    } */
+
+}
 
 @media (max-width: 425px) {
     .basic {
@@ -601,16 +610,16 @@ input.promo_number[type='number']::placeholder{
 
 }
 @media only screen and (min-width: 2560px){
-    .shop img.dragon_image {
+    /* .shop img.dragon_image {
        
         left: 1646px;
     }
-       
+        */
     }
     @media only screen and (max-width: 1440px){
         .shop img.dragon_image {
            
-            left: 526px;
+            width: 768px;
            
         }
         }
