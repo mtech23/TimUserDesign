@@ -39,6 +39,9 @@ import {
 import book1 from "../../Assets/images/book1.png";
 import book2 from "../../Assets/images/book2.png";
 import Untitledbook2 from "../../Assets/images/Untitledbook2.png";
+import Ellipse44 from "../../Assets/images/Ellipse 44.png";
+import votefile from "../../Assets/images/votefile.png";
+import detailfile from "../../Assets/images/detailfile.png";
 import book3 from "../../Assets/images/book3.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -246,10 +249,7 @@ console.log("currentItems" , currentItems)
             </button>
           </div>
           <div class=" col-md-3 input-completion completion__search">
-            <Form.Select
-              className="completion-input-select"
-              aria-label="Default select example"
-            >
+            <Form.Select className="completion-input-select" aria-label="Default select example">
               <option>How To Participate</option>
               <option value="1">One</option>
               <option value="2">Two</option>
@@ -257,10 +257,7 @@ console.log("currentItems" , currentItems)
             </Form.Select>
           </div>
           <div class=" col-md-3 input-completion completion__search">
-            <Form.Select
-              className="completion-input-select"
-              aria-label="Default select example"
-            >
+            <Form.Select className="completion-input-select" aria-label="Default select example">
               <option>How To Participate</option>
               <option value="1">One</option>
               <option value="2">Two</option>
@@ -271,7 +268,7 @@ console.log("currentItems" , currentItems)
         <section className="bestselling_books">
           <section className="bestSell__book-sec jost-font">
             <div className="bestSell__book-cartoon1">
-              {/* <img src={SmallAnime1} /> */}
+            
             </div>
             <div className="container">
               <div className="row">
@@ -400,25 +397,20 @@ console.log("currentItems" , currentItems)
               </div>
             </div>
           </section>
-          <section className="bestSell__bookListing-sec1">
+          {/* <section className="bestSell__bookListing-sec1">
             <div className="bestSell__filters">
               <div className="container">
                 <div className="row align-items-center">
-                 
-              
-                 
                 </div>
                 <div className="bestBooks__listing">
                   <div className="row">
                    {currentItems?.map((item , index) =>(
- <div className="col-lg-3 col-md-4">
+                   <div className="col-lg-3 col-md-4">
                       <div className="bestBooks__list">
                         <div className="bestBooks__list-img">
                           <img src={base_url + item?.image} />
                           <div className="bestBooks__list-overlay">
-                            {/* <button className="bestBooks__purchase-btn">
-                              Purchases
-                            </button> */}
+                           
                              <Link
                                 to={`/book-detail/${item?.id}`}
                                 className="bestBooks__purchase-btn"
@@ -444,19 +436,7 @@ console.log("currentItems" , currentItems)
                 <div className="row">
                   <div className="book__listing-pagination">
                     <nav aria-label="Page navigation example">
-                      {/* <ul class="pagination">
-                        <li class="page-item">
-                          <a class="page-link page_link-active" href="#">
-                          {currentPage}
-                          </a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">
-                          {userdata.length}
-                          </a>
-                        </li>
-                       
-                      </ul> */}
+                      
                       <CustomPagination
                           itemsPerPage={itemsPerPage}
                           totalItems={userdata.length}
@@ -466,18 +446,299 @@ console.log("currentItems" , currentItems)
                     </nav>
                   </div>
 
-{/* 
-<CustomPagination
-                          itemsPerPage={itemsPerPage}
-                          totalItems={userdata.length}
-                          currentPage={currentPage}
-                          onPageChange={handlePageChange}
-                        /> */}
+
 
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
+        </section>
+
+        <section className="competition_bg">
+            <div className="container">
+              <div className="row mt-5 bookboxes">
+                    <div className="col-lg-3 col-sm-8 col-md-6">
+
+                        <div className="rankbook">
+                            <div className="authorprofile">
+                                <img className="img-fluid authorprof" src={Ellipse44}/>
+                                <div>
+                                        <p className="profilename">Author Name </p>
+                                    <div className="mainrating">
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                    </div>
+                                </div>
+                            <div className="vote_actionBtn">
+                           
+                            <button class="votebtn" > Vote &nbsp;&nbsp;&nbsp;&nbsp;<img className="img-fluid voteicon" src={votefile}/> </button>
+                            <button class="votebtn" > Details &nbsp; <img className="img-fluid voteicon" src={ detailfile}/> </button>
+
+                            </div>    
+                          </div>
+                        </div>
+                    </div> 
+                    <div className="col-lg-3 col-sm-8 col-md-6">
+                        <div className="rankbook1">
+                            <div className="authorprofile">
+                                <img className="img-fluid authorprof" src={Ellipse44}/>
+                                <div>
+                                        <p className="profilename">Author Name </p>
+                                    <div className="mainrating">
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                    </div>
+                                </div>
+                            <div className="vote_actionBtn">
+                           
+                            <button class="votebtn" > Vote &nbsp;&nbsp;&nbsp;&nbsp;<img className="img-fluid voteicon" src={votefile}/> </button>
+                            <button class="votebtn" > Details &nbsp; <img className="img-fluid voteicon" src={ detailfile}/> </button>
+
+                            </div>    
+                          </div>
+                        </div>
+                    </div> 
+                    <div className="col-lg-3 col-sm-8 col-md-6">
+                        <div className="rankbook2">
+                            <div className="authorprofile">
+                                <img className="img-fluid authorprof" src={Ellipse44}/>
+                                <div>
+                                        <p className="profilename">Author Name </p>
+                                    <div className="mainrating">
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                    </div>
+                                </div>
+                            <div className="vote_actionBtn">
+                           
+                            <button class="votebtn" > Vote &nbsp;&nbsp;&nbsp;&nbsp;<img className="img-fluid voteicon" src={votefile}/> </button>
+                            <button class="votebtn" > Details &nbsp; <img className="img-fluid voteicon" src={ detailfile}/> </button>
+
+                            </div>    
+                          </div>
+                        </div>
+                    </div>  
+                    <div className="col-lg-3 col-sm-8 col-md-6">
+                        <div className="rankbook3">
+                            <div className="authorprofile">
+                                <img className="img-fluid authorprof" src={Ellipse44}/>
+                                <div>
+                                        <p className="profilename">Author Name </p>
+                                    <div className="mainrating">
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                    </div>
+                                </div>
+                            <div className="vote_actionBtn">
+                           
+                            <button class="votebtn" > Vote &nbsp;&nbsp;&nbsp;&nbsp;<img className="img-fluid voteicon" src={votefile}/> </button>
+                            <button class="votebtn" > Details &nbsp; <img className="img-fluid voteicon" src={ detailfile}/> </button>
+                            </div>    
+                          </div>
+                        </div>
+                    </div>   
+                </div>
+                <div className="row mt-5 bookboxes">
+                    <div className="col-lg-3 col-sm-8 col-md-6">
+
+                        <div className="rankbook">
+                            <div className="authorprofile">
+                                <img className="img-fluid authorprof" src={Ellipse44}/>
+                                <div>
+                                        <p className="profilename">Author Name </p>
+                                    <div className="mainrating">
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                    </div>
+                                </div>
+                            <div className="vote_actionBtn">
+                           
+                            <button class="votebtn" > Vote &nbsp;&nbsp;&nbsp;&nbsp;<img className="img-fluid voteicon" src={votefile}/> </button>
+                            <button class="votebtn" > Details &nbsp; <img className="img-fluid voteicon" src={ detailfile}/> </button>
+
+                            </div>    
+                          </div>
+                        </div>
+                    </div> 
+                    <div className="col-lg-3 col-sm-8 col-md-6">
+                        <div className="rankbook1">
+                            <div className="authorprofile">
+                                <img className="img-fluid authorprof" src={Ellipse44}/>
+                                <div>
+                                        <p className="profilename">Author Name </p>
+                                    <div className="mainrating">
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                    </div>
+                                </div>
+                            <div className="vote_actionBtn">
+                           
+                            <button class="votebtn" > Vote &nbsp;&nbsp;&nbsp;&nbsp;<img className="img-fluid voteicon" src={votefile}/> </button>
+                            <button class="votebtn" > Details &nbsp; <img className="img-fluid voteicon" src={ detailfile}/> </button>
+
+                            </div>    
+                          </div>
+                        </div>
+                    </div> 
+                    <div className="col-lg-3 col-sm-8 col-md-6">
+                        <div className="rankbook2">
+                            <div className="authorprofile">
+                                <img className="img-fluid authorprof" src={Ellipse44}/>
+                                <div>
+                                        <p className="profilename">Author Name </p>
+                                    <div className="mainrating">
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                    </div>
+                                </div>
+                            <div className="vote_actionBtn">
+                           
+                            <button class="votebtn" > Vote &nbsp;&nbsp;&nbsp;&nbsp;<img className="img-fluid voteicon" src={votefile}/> </button>
+                            <button class="votebtn" > Details &nbsp; <img className="img-fluid voteicon" src={ detailfile}/> </button>
+
+                            </div>    
+                          </div>
+                        </div>
+                    </div>  
+                    <div className="col-lg-3 col-sm-8 col-md-6">
+                        <div className="rankbook3">
+                            <div className="authorprofile">
+                                <img className="img-fluid authorprof" src={Ellipse44}/>
+                                <div>
+                                        <p className="profilename">Author Name </p>
+                                    <div className="mainrating">
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                    </div>
+                                </div>
+                            <div className="vote_actionBtn">
+                           
+                            <button class="votebtn" > Vote &nbsp;&nbsp;&nbsp;&nbsp;<img className="img-fluid voteicon" src={votefile}/> </button>
+                            <button class="votebtn" > Details &nbsp; <img className="img-fluid voteicon" src={ detailfile}/> </button>
+                            </div>    
+                          </div>
+                        </div>
+                    </div>   
+                </div>
+                <div className="row mt-5 bookboxes">
+                    <div className="col-lg-3 col-sm-8 col-md-6">
+
+                        <div className="rankbook">
+                            <div className="authorprofile">
+                                <img className="img-fluid authorprof" src={Ellipse44}/>
+                                <div>
+                                        <p className="profilename">Author Name </p>
+                                    <div className="mainrating">
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                    </div>
+                                </div>
+                            <div className="vote_actionBtn">
+                           
+                            <button class="votebtn" > Vote &nbsp;&nbsp;&nbsp;&nbsp;<img className="img-fluid voteicon" src={votefile}/> </button>
+                            <button class="votebtn" > Details &nbsp; <img className="img-fluid voteicon" src={ detailfile}/> </button>
+
+                            </div>    
+                          </div>
+                        </div>
+                    </div> 
+                    <div className="col-lg-3 col-sm-8 col-md-6">
+                        <div className="rankbook1">
+                            <div className="authorprofile">
+                                <img className="img-fluid authorprof" src={Ellipse44}/>
+                                <div>
+                                        <p className="profilename">Author Name </p>
+                                    <div className="mainrating">
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                    </div>
+                                </div>
+                            <div className="vote_actionBtn">
+                           
+                            <button class="votebtn" > Vote &nbsp;&nbsp;&nbsp;&nbsp;<img className="img-fluid voteicon" src={votefile}/> </button>
+                            <button class="votebtn" > Details &nbsp; <img className="img-fluid voteicon" src={ detailfile}/> </button>
+
+                            </div>    
+                          </div>
+                        </div>
+                    </div> 
+                    <div className="col-lg-3 col-sm-8 col-md-6">
+                        <div className="rankbook2">
+                            <div className="authorprofile">
+                                <img className="img-fluid authorprof" src={Ellipse44}/>
+                                <div>
+                                        <p className="profilename">Author Name </p>
+                                    <div className="mainrating">
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                    </div>
+                                </div>
+                            <div className="vote_actionBtn">
+                           
+                            <button class="votebtn" > Vote &nbsp;&nbsp;&nbsp;&nbsp;<img className="img-fluid voteicon" src={votefile}/> </button>
+                            <button class="votebtn" > Details &nbsp; <img className="img-fluid voteicon" src={ detailfile}/> </button>
+
+                            </div>    
+                          </div>
+                        </div>
+                    </div>  
+                    <div className="col-lg-3 col-sm-8 col-md-6">
+                        <div className="rankbook3">
+                            <div className="authorprofile">
+                                <img className="img-fluid authorprof" src={Ellipse44}/>
+                                <div>
+                                        <p className="profilename">Author Name </p>
+                                    <div className="mainrating">
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                            <i class="fa-solid fa-star starRate"></i>
+                                    </div>
+                                </div>
+                            <div className="vote_actionBtn">
+                           
+                            <button class="votebtn" > Vote &nbsp;&nbsp;&nbsp;&nbsp;<img className="img-fluid voteicon" src={votefile}/> </button>
+                            <button class="votebtn" > Details &nbsp; <img className="img-fluid voteicon" src={ detailfile}/> </button>
+                            </div>    
+                          </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
         </section>
 
         {/* Footer */}

@@ -75,6 +75,7 @@
   background-color: #fff;
   margin-top: 50px;
   margin-bottom: 85px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .bookk img.bookcover{
   margin-top: -20px;
@@ -137,7 +138,7 @@ margin-bottom: 0px;
 }
 .bookk p.detail{
   font-family: 'Poppins';
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 28.85px;
     color: #2C2C2C;
@@ -166,7 +167,7 @@ span.view{
 }
 .bookk p.numm{
   font-family: 'Poppins';
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 27px;
   text-align: left;
@@ -176,7 +177,7 @@ span.view{
 }
 span.numb{
   font-family: 'Poppins';
-font-size: 13px;
+font-size: 12px;
 font-weight: 700;
 line-height: 27px;
 text-align: left;
@@ -184,7 +185,7 @@ color: #AD0000;}
 
 span.dropp{
   font-family: 'Poppins';
-font-size: 13px;
+font-size: 12px;
 font-weight: 700;
 line-height: 27px;
 text-align: left;
@@ -194,7 +195,7 @@ color: #360C55;
 }
 span.pickk{
   font-family: 'Poppins';
-font-size: 13px;
+font-size: 12px;
 font-weight: 700;
 line-height: 27px;
 text-align: left;
@@ -209,7 +210,7 @@ color: #169B00;
   font-size: 11px;
   font-weight: 400;
   text-align: center;
-  background: #FFFFFF;
+  background: #000;
   color: #FFFFFF;
   border-radius: 38px;
   border: #fff;
@@ -368,10 +369,8 @@ color: #169B00;
       gap: 12px;
   
   } */
-  .polygoon {
-    
-    left: 494px;
-
+.polygoon { 
+    left: 582px;
   }
 }
 @media only screen and (min-width: 2560px){

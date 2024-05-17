@@ -303,10 +303,10 @@ export const Library = () => {
                             </div>
                             <div class="lines"></div>
                             <div class="row mt-3">
-                                <div class="col-md-3">
+                                <div class="col-lg-3">
                                     <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-9 ">
+                                <div class="col-lg-9 ">
                                     <div class="btnrww">
                                             <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
                                             <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
@@ -353,10 +353,10 @@ export const Library = () => {
                             </div>
                             <div class="lines"></div>
                             <div class="row mt-3">
-                            <div class="col-md-3">
+                            <div class="col-lg-3">
                                     <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-9 ">
+                                <div class="col-lg-9 ">
                                     <div class="btnrww">
                                     <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
                                             <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
@@ -403,10 +403,10 @@ export const Library = () => {
                             </div>
                             <div class="lines"></div>
                             <div class="row mt-3">
-                            <div class="col-md-3">
+                            <div class="col-lg-3">
                                     <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-9 ">
+                                <div class="col-lg-9 ">
                                     <div class="btnrww">
                                     <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
                                             <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
@@ -453,10 +453,10 @@ export const Library = () => {
                             </div>
                             <div class="lines"></div>
                             <div class="row mt-3">
-                            <div class="col-md-3">
+                            <div class="col-lg-3">
                                     <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-9 ">
+                                <div class="col-lg-9 ">
                                     <div class="btnrww">
                                     <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
                                             <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
@@ -503,10 +503,10 @@ export const Library = () => {
                             </div>
                             <div class="lines"></div>
                             <div class="row mt-3">
-                            <div class="col-md-3">
+                            <div class="col-lg-3">
                                     <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-9 ">
+                                <div class="col-lg-9 ">
                                     <div class="btnrww">
                                     <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
                                             <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
@@ -563,10 +563,10 @@ export const Library = () => {
                             </div>
                             <div class="lines"></div>
                             <div class="row mt-3">
-                            <div class="col-md-3">
+                            <div class="col-lg-3">
                                     <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-9 ">
+                                <div class="col-lg-9 ">
                                     <div class="btnrww">
                                     <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
                                             <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
@@ -613,10 +613,10 @@ export const Library = () => {
                             </div>
                             <div class="lines"></div>
                             <div class="row mt-3">
-                            <div class="col-md-3">
+                            <div class="col-lg-3">
                                     <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-9 ">
+                                <div class="col-lg-9 ">
                                     <div class="btnrww">
                                     <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
                                             <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
@@ -662,10 +662,10 @@ export const Library = () => {
                                 </div>
                                 <div class="lines"></div>
                                 <div class="row mt-3">
-                                <div class="col-md-3">
+                                <div class="col-lg-3">
                                     <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-9 ">
+                                <div class="col-lg-9 ">
                                     <div class="btnrww">
                                     <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
                                             <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
@@ -712,10 +712,10 @@ export const Library = () => {
                             </div>
                             <div class="lines"></div>
                             <div class="row mt-3">
-                            <div class="col-md-3">
+                            <div class="col-lg-3">
                                     <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-9 ">
+                                <div class="col-lg-9 ">
                                     <div class="btnrww">
                                     <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
                                             <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
@@ -762,10 +762,10 @@ export const Library = () => {
                             </div>
                             <div class="lines"></div>
                             <div class="row mt-3">
-                            <div class="col-md-3">
+                            <div class="col-lg-3">
                                     <p class="nums">10/ <span class="numberr">1032</span></p>
                                 </div>
-                                <div class="col-md-9 ">
+                                <div class="col-lg-9 ">
                                     <div class="btnrww">
                                     <button class="reads" ><span> Add To Favorites </span><i class="fa-solid fa-heart iconn"></i></button>
                                             <button class="reads" ><span> Continue Reading </span><i class="fa-solid fa-book-open iconn"></i></button>
