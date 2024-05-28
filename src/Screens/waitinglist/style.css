@@ -41,8 +41,8 @@
 .polygoon{
   position: absolute;
   top: 489px;
-  left: 813px;
-  width: 35px;
+  left: 819px;
+  width: 31px;
 
 }
 .coverr button.history{
@@ -369,9 +369,9 @@ color: #169B00;
       gap: 12px;
   
   } */
-.polygoon { 
-    left: 582px;
-  }
+  .polygoon {
+    left: 496px;
+}
 }
 @media only screen and (min-width: 2560px){
   .polygoon {

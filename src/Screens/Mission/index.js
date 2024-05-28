@@ -11,6 +11,7 @@ import { UserLayout } from "../../Components/Layout/UserLayout";
 import redio from "../../Assets/images/radio.png";
 import spiner from "../../Assets/images/spinerimg.png";
 import spinerpercentage from "../../Assets/images/spinerpercentage.png";
+import missionbox from "../../Assets/images/missionbox.png";
 import missionbg from "../../Assets/images/missionbg.png";
 import coin from "../../Assets/images/coin.png";
 
@@ -310,7 +311,12 @@ const spinDuration = 1.0;
                 
             />
 </div>
-<button onClick={handleSpinClick}  className="spincolor mb-4 " >SPIN</button>
+<button onClick={handleSpinClick}  className="spincolor mb-4" >SPIN</button>
+              </div>
+              <div className="row text-right">
+                <div className="col-md-12 mission_box_div">
+                  <img className="img-fluid mission_box" src={missionbox}/>
+                </div>
               </div>
 
               <div className="row">
@@ -320,33 +326,33 @@ const spinDuration = 1.0;
                   </div>
 
                   <div className="missionimg1">
-                    <div className=" connect row ms-2 mb-2 color-white">
-                      <div className="col-md-5">
+                    <div className="row connect ms-2  color-white">
+                      <div className="col-6 col-md-5 col-sm-6">
                         <p className="cnt">Connect Social: </p>
                       </div>
-                      <div className="col-md-6    d-flex  gap-3 align-items-center">
+                      <div className="col-6 col-md-6 col-sm-6   d-flex  gap-3 align-items-center">
                         <img className="coinimg" src={coin} />
                         <p className="mana">5 MANA</p>
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
 
-                    <div className=" connect row  ms-2  mb-2 color-white">
-                      <div className="col-md-5">
+                    <div className="row connect  ms-2   color-white">
+                      <div className="col-6 col-md-5 col-sm-6">
                         <p className="cnt">Purchase Mana Pack: </p>
                       </div>
-                      <div className="col-md-6   d-flex  gap-3 ">
+                      <div className="col-6 col-md-6  col-sm-6 d-flex  gap-3 ">
                         <img className="coinimg" src={coin} />
                         <p className="mana">5 MANA</p>
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
 
-                    <div className=" connect row  ms-2  mb-2 color-white">
-                      <div className="col-md-5">
+                    <div className="row connect  ms-2   color-white">
+                      <div className="col-6 col-md-5 col-sm-6">
                         <p className="cnt">Purchase Subscription:</p>
                       </div>
-                      <div className="col-md-6   d-flex  gap-3 ">
+                      <div className="col-6 col-md-6  col-sm-6 d-flex  gap-3 ">
                         <img className="coinimg" src={coin} />
                         <p className="mana">5 MANA</p>
                         <img src={redio} className="radioimg" />
@@ -361,7 +367,7 @@ const spinDuration = 1.0;
                     </span>
                   </div>
                 </div>
-                <div className="col-md-4 spiner-time">
+                <div className="col-md-4 spiner-time">                
                   <div className="spiner-ione-time">
                     <p className="reading">DAILY</p>
                     <p className="missionpara"> Mission resets In 12hr</p>
@@ -372,54 +378,54 @@ const spinDuration = 1.0;
                      
                   
                   
-                    <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
-                      <div className="col-md-8  ">
+                    <div className=" connect row    ms-3 mx-auto  color-white justify-content-cente">
+                      <div className="col-8 col-md-8  ">
                         <p className="cnt">Login </p>
                       </div>
-                      <div className="col-md-4    d-flex  gap-2 ">
+                      <div className="col-4 col-md-4    d-flex  gap-2 ">
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
 
 
 
-                    <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
-                      <div className="col-md-8  ">
+                    <div className=" connect row   ms-3 mx-auto  color-white justify-content-cente">
+                      <div className="col-8 col-md-8  ">
                         <p className="cnt">Vote for a book you like </p>
                       </div>
-                      <div className="col-md-2    d-flex  gap-2 ">
+                      <div className="col-4 col-md-2    d-flex  gap-2 ">
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
-                    <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
-                      <div className="col-md-8  ">
+                    <div className=" connect row   ms-3 mx-auto  color-white justify-content-cente">
+                      <div className="col-8 col-md-8  ">
                         <p className="cnt" >Post One Comment </p>
                       </div>
-                      <div className="col-md-4    d-flex  gap-2 ">
+                      <div className="col-4 col-md-4    d-flex  gap-2 ">
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
 
-                    <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
-                      <div className="col-md-8  ">
+                    <div className=" connect row   ms-3 mx-auto  color-white justify-content-cente">
+                      <div className="col-8 col-md-8  ">
                         <p className="cnt" >Spend 5 or more coins </p>
                       </div>
-                      <div className="col-md-4    d-flex  gap-2 ">
+                      <div className="col-4 col-md-4    d-flex  gap-2 ">
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
 
-                    <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
-                      <div className="col-md-8  ">
+                    <div className=" connect row   ms-3 mx-auto  color-white justify-content-cente">
+                      <div className="col-8 col-md-8  ">
                         <p className="cnt">Like A review</p>
                       </div>
-                      <div className="col-md-4    d-flex  gap-2 ">
+                      <div className="col-4 col-md-4    d-flex  gap-2 ">
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
                     <div
-                      className="completespercent  mb-4  mx-auto">
-                      <p className="cnt">4/5 Completed</p>
+                      className="completed_div  mx-auto">
+                      <p className="cnt completespercent">4/5 Completed</p>
                     </div>
                     <div className="complete-all   ">
                       <p>COMPLETE ALL DAILY MISSION TO GET</p>
@@ -429,7 +435,8 @@ const spinDuration = 1.0;
                     </div>
                   </div>
                 </div>
-                <div className="col-md-4 spiner-time">
+                <div className="col-md-4 spiner-time animated_mission_image">
+               
                   <div className="spiner-ione-time">
                     <p className="reading">READING/WEEKLY</p>
 
@@ -437,63 +444,63 @@ const spinDuration = 1.0;
                   </div>
 
                   <div className="missionimg3">
-                    <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
-                      <div className="col-md-10  ">
+                    <div className="row connect  ms-2 mx-auto  color-white justify-content-cente">
+                      <div className="col-10 col-md-10  ">
                         <p className="cnt" >Read for 60 more mins this week: </p>
                       </div>
-                      <div className="col-md-2    d-flex   ">
+                      <div className="col-2 col-md-2 d-flex">
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
-                    <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
-                      <div className="col-md-10  ">
+                    <div className="row  connect ms-2 mx-auto  color-white justify-content-cente">
+                      <div className="col-10 col-md-10  ">
                         <p className="cnt">Read for 60 more mins this week: </p>
                       </div>
-                      <div className="col-md-2    d-flex   ">
+                      <div className="col-2 col-md-2 d-flex">
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
-                    <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
-                      <div className="col-md-10  ">
+                    <div className="row connect ms-2 mx-auto  color-white justify-content-cente">
+                      <div className="col-10 col-md-10  ">
                         <p className="cnt">Read for 60 more mins this week: </p>
                       </div>
-                      <div className="col-md-2    d-flex   ">
+                      <div className="col-2 col-md-2 d-flex   ">
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
-                    <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
-                      <div className="col-md-10  ">
+                    <div className="row connect  ms-2 mx-auto  color-white justify-content-cente">
+                      <div className="col-10 col-md-10  ">
                         <p className="cnt">Read for 60 more mins this week: </p>
                       </div>
-                      <div className="col-md-2    d-flex   ">
+                      <div className="col-2 col-md-2 d-flex   ">
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
 
-                    <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
-                      <div className="col-md-10  ">
+                    <div className="row connect ms-2 mx-auto  color-white justify-content-cente">
+                      <div className="col-10 col-md-10  ">
                         <p className="cnt">Read for 60 more mins this week: </p>
                       </div>
-                      <div className="col-md-2    d-flex   ">
+                      <div className="col-2 col-md-2 d-flex   ">
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
 
                     
-                    <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
-                      <div className="col-md-10  ">
+                    <div className="row connect ms-2 mx-auto  color-white justify-content-cente">
+                      <div className="col-10 col-md-10  ">
                         <p className="cnt">Read for 60 more mins this week: </p>
                       </div>
-                      <div className="col-md-2    d-flex   ">
+                      <div className="col-2 col-md-2 d-flex   ">
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>
                     
-                    <div className=" connect row   mb-4  ms-5 mx-auto   mb-2 color-white justify-content-cente">
-                      <div className="col-md-10  ">
+                    <div className="row connect ms-2 mx-auto  color-white justify-content-cente">
+                      <div className="col-10 col-md-10  ">
                         <p className="cnt">Read for 60 more mins this week: </p>
                       </div>
-                      <div className="col-md-2    d-flex   ">
+                      <div className="col-2 col-md-2 d-flex   ">
                         <img src={redio} className="radioimg" />
                       </div>
                     </div>

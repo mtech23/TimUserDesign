@@ -1,4 +1,4 @@
-.bestselling_books {
+.bestselling_bookss {
   background-image: url(../../Assets/images/book-listing-bg.jpg);
   background-size: cover;
   background-position: top center;
@@ -115,7 +115,74 @@
   background: transparent;
   color: #000;
 }
+.completion-input_two {
+  font-size: 11px;
+  width: 50%;
+  background-color: #fff !important;
+  border-radius: 0px !important;
+  color: #fff !important;
+    
+}
+.completion-input_two::placeholder{
+  color: #747474 !important;
+}
+.completion_btn_two {
+  border-radius: 0px !important;
+  border: var(--bs-border-width) solid var(--bs-border-color) !important;
+  border-width: 1px 0px 1px 1px !important;
+  color: #747474 !important;
+  border-top-left-radius: 37px !important;
+  border-bottom-left-radius: 37px !important;
+  background-color: #fff!important;
+}
+.filters {
+  font-family: 'Poppins';
+  font-size: 11px;
+  font-weight: 400;
+  text-align: center;
+  background: #000;
+  color: #FFFFFF;
+  border-radius: 38px;
+  border: #000;
+  padding-right: 0px;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 45px;
+  padding-right: 0px;
+  }
 
+.filters_icon {
+      background: #360C55;
+      border-radius: 1px 30px 30px 0px;
+      padding: 17px 21px 17px 24px;
+      margin-left: 20px;
+      color: #fff;
+  }    
+.creates {
+  font-family: 'Poppins';
+  font-size: 11px;
+  font-weight: 400;
+  text-align: center;
+  background: #000;
+  color: #FFFFFF;
+  border-radius: 38px;
+  border: #000;
+  padding-right: 0px;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 45px;
+  padding-right: 0px;
+}
+    
+.creates_icon {
+  background: #360C55;
+  border-radius: 1px 30px 30px 0px;
+  padding: 12px 20px 12px 23px;
+  margin-left: 20px;
+  color: #fff;
+}   
 /* Best Books Listing Start Here */
 .bestBooks__listing {
   margin-top: 60px;
@@ -236,6 +303,7 @@
     padding: 40px 0px;
 }
 
+
 }
 
 @media (max-width: 480px) {
@@ -251,13 +319,36 @@
     width: 23%;
     bottom: -10px;
   }
+  .filters{
+    margin-top: 20px;
+  }
+  .creates{
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+  
+.filters {
+  font-size: 10px !important;
+  padding-left: 10px !important;
+}
+.filters_icon {
+  padding: 13px 10px 13px 10px !important;
+}
+.creates {
+  padding-left: 8px !important;
 }
 
-.bookvote {
-  padding: 2px 33px;
-  border: 2px solid;
-  border-radius: 30px;
+.creates_icon {
+  padding: 9px 10px 9px 16px;
+  margin-left: 5px;
 }
+.compition-category__icon_one {
+  padding: 9px 28px;
+}
+}
+
+
 
 .bookdetail {
   padding: 2px 33px;

@@ -343,7 +343,22 @@
 
 @media (max-width: 768px){
   
-    
+    .rankbook {
+        padding: 396px 0px 20px 28px !important;
+        background-size: 86% 90% !important;
+    }
+    .rankbook1{
+        padding: 396px 0px 20px 28px !important;
+        background-size: 86% 90% !important;
+    }
+    .rankbook2{
+        padding: 396px 0px 20px 28px !important;
+        background-size: 86% 90% !important;
+    }
+    .rankbook3{
+        padding: 396px 0px 20px 28px !important;
+        background-size: 86% 90% !important;
+    }
     /* .bookboxes{
         flex-wrap: wrap;
     } */
@@ -404,7 +419,27 @@
        
             
         }
+
         @media  (max-width: 990px){
+            .vote_actionBtn {
+                right: 53px !important;
+            }
+            .rankbook {
+                padding: 396px 0px 20px 51px;
+                background-size: 82% 100%;
+            }
+            .rankbook1{
+                padding: 396px 0px 20px 51px;
+                background-size: 82% 100%;
+            }
+            .rankbook2{
+                padding: 396px 0px 20px 51px;
+                background-size: 82% 100%;
+            }
+            .rankbook3{
+                padding: 396px 0px 20px 51px;
+                background-size: 82% 100%;
+            }
         .star_row {
          margin-bottom: 37px;
             }
@@ -459,11 +494,11 @@
         font-size: 13px;
     }
     .top_five_book {
-        width: 120px !important;
+        width: 156px !important;
     }
-    .rankbook {
+    /* .rankbook {
         background-size: 90% 100%;
-    }
+    } */
     .rankbook1 {
         background-size: 90% 100%;
     }
@@ -509,8 +544,13 @@
     width: 100px;
 }
 }
+@media (max-width:600px){
+    .create_icon {
+        padding: 12px 15px 12px 17px;
+      }
+}
 @media (min-width: 360px) and (max-width: 768px) {
     .vote_actionBtn {
-        right: -86px !important;
+            right: -78px !important;
     }
     }

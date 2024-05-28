@@ -251,7 +251,7 @@ useEffect(() =>{
         <section className="recent">
           <div className="container">
           <div className="row">
-                <div className="col-md-6">
+                <div className="col-12 col-md-6">
                     <div class="input-completion completion__search">
                       <button className="completion_btn_one btn btn-outline-secondary " type="button" id="button-addon1">
                         <FontAwesomeIcon icon={faSearch} />
@@ -260,12 +260,12 @@ useEffect(() =>{
                       <button className="btn btn-outline-secondary  compition-category__icon_one" type="button" id="button-addon2"> search </button>
                     </div>
                  </div>
-                 <div className="col-md-3">
+                 <div className="col-6 col-md-3">
                    <div class="input-completion completion__search">
                       <button class="filter" ><span> Filter </span> <img className="img-fluid filter_icon" src={dropdown} /></button>
                    </div>
                  </div>
-                 <div className="col-md-3">
+                 <div className="col-6 col-md-3">
                    <div class="input-completion completion__search">
                       <button class="create" ><span> Create </span><img className="img-fluid create_icon"  src={Manual}/></button>
                    </div>

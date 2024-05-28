@@ -242,7 +242,7 @@ useEffect(() =>{
               
             <div class="col-lg-3 col-sm-6 ">
               <div class="box">
-                <img class="img-fluid mana" src={mana}/>
+                <img class="img-fluid mana_image" src={mana}/>
                </div>
                <div class="rect">
                 <h3 class="recthe">250 MANA PACK</h3>
@@ -255,7 +255,7 @@ useEffect(() =>{
 
               <div class="col-lg-3 col-sm-6 ">
               <div class="box">
-                <img class="img-fluid mana" src={mana}/>
+                <img class="img-fluid mana_image" src={mana}/>
                </div>
                <div class="rect">
                 <h3 class="recthe">250 MANA PACK</h3>
@@ -268,7 +268,7 @@ useEffect(() =>{
 
               <div class="col-lg-3 col-sm-6 ">
               <div class="box">
-                <img class="img-fluid mana" src={mana}/>
+                <img class="img-fluid mana_image" src={mana}/>
                </div>
                <div class="rect">
                 <h3 class="recthe">250 MANA PACK</h3>
@@ -281,7 +281,7 @@ useEffect(() =>{
 
               <div class="col-lg-3 col-sm-6 ">
               <div class="box">
-                <img class="img-fluid mana" src={mana}/>
+                <img class="img-fluid mana_image" src={mana}/>
                </div>
                <div class="rect">
                 <h3 class="recthe">250 MANA PACK</h3>
@@ -302,37 +302,12 @@ useEffect(() =>{
           </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
         <section className="harry-potter">
             <div className="container">
               <div className="row">
-                <div className="col-lg-9 harry-potter-bg">
+                <div className="col-lg-9">
+                  <h5 className="clearnce_sale">LIMITED TIME CLEARANCE SALE</h5>
+                <div className="harry-potter-bg">
                   <div className="harry__potter-section">
                     <div className="row align-items-center">
                       <div className="col-md-4">
@@ -380,6 +355,7 @@ useEffect(() =>{
                       </div>
                     </div>
                   </div>
+                </div>
                 </div>
                 <div className="col-lg-3 harrypotter_books-col">
                   <div className="harrypotter_book">
@@ -630,32 +606,32 @@ useEffect(() =>{
         <section className="gift_cards_bg">
           <div className="container">
             <div className="row coinMain">
-              <div className="col-lg-2 col-sm-12 col-md-4">
+              <div className="col-2 col-lg-2 col-sm-12 col-md-4">
                <div className="gift_coins_one">
                   <img className="img-fluid promoCards" src={carddd1}/>
                </div>
 
               </div>
-              <div className="col-lg-2 col-sm-12 col-md-4">
-               <div className="gift_coins">
+              <div className="col-2 col-lg-2 col-sm-12 col-md-4">
+               <div className="gift_coins_one">
                   <img className="img-fluid promoCards" src={carddd1}/>
                </div>
 
               </div>
-              <div className="col-lg-2 col-sm-12 col-md-4">
-               <div className="gift_coins">
+              <div className="col-2 col-lg-2 col-sm-12 col-md-4">
+               <div className="gift_coins_one">
                   <img className="img-fluid promoCards" src={carddd1}/>
                </div>
 
               </div>
-              <div className="col-lg-2 col-sm-12 col-md-4">
-               <div className="gift_coins">
+              <div className="col-2 col-lg-2 col-sm-12 col-md-4">
+               <div className="gift_coins_one">
                   <img className="img-fluid promoCards" src={carddd1}/>
                </div>
 
               </div>
-              <div className="col-lg-2 col-sm-12 col-md-4">
-               <div className="gift_coins">
+              <div className="col-2 col-lg-2 col-sm-12 col-md-4">
+               <div className="gift_coins_one">
                   <img className="img-fluid promoCards" src={carddd1}/>
                </div>
 
@@ -726,35 +702,6 @@ useEffect(() =>{
           </div>
         </section>
         
-
-
-        
-        
-        
-
-
-       
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

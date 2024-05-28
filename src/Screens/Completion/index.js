@@ -43,6 +43,8 @@ import Ellipse44 from "../../Assets/images/Ellipse 44.png";
 import votefile from "../../Assets/images/votefile.png";
 import detailfile from "../../Assets/images/detailfile.png";
 import book3 from "../../Assets/images/book3.png";
+import Manual from "../../Assets/images/Manual.png";
+import dropdown from "../../Assets/images/dropdown.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faList, faSearch, faStar } from "@fortawesome/free-solid-svg-icons";
@@ -225,8 +227,8 @@ console.log("currentItems" , currentItems)
             </div>
           </div>
         </sectionc>
-        <div className="sectioncompletion gap-3   py-3  px-5  row justify-content-center  mx-auto ">
-          <div class=" col-md-4 input-completion completion__search">
+        {/* <div className="sectioncompletion gap-3   py-3  px-5  row justify-content-center  mx-auto "> */}
+          {/* <div class=" col-md-4 input-completion completion__search">
             <button
               className="completion_btn btn btn-outline-secondary  "
               type="button"
@@ -247,25 +249,57 @@ console.log("currentItems" , currentItems)
             >
               search
             </button>
-          </div>
-          <div class=" col-md-3 input-completion completion__search">
+          </div> */}
+          <section>
+            <div className="container">
+              <div className="row mt-5 mb-5 align-items-center">
+                     <div className="col-md-5">
+                            <div class="input-completion completion__search">
+                              <button className="completion_btn_two btn btn-outline-secondary " type="button" id="button-addon1">
+                                <FontAwesomeIcon icon={faSearch} />
+                              </button>
+                              <input type="text" className="completion-input_two form-control "placeholder="Search Here..." aria-describedby="button-addon1" />
+                              <button className="btn btn-outline-secondary  compition-category__icon_one" type="button" id="button-addon2"> search </button>
+                            </div>
+                      </div>
+                      <div className="col-md-2">
+                            <div class="input-completion completion__search">
+                                <button class="filters" ><span> Contest </span> <img className="img-fluid filters_icon" src={dropdown} /></button>
+                            </div>
+                      </div>
+                      <div className="col-md-2">
+                              <div class="input-completion completion__search">
+                                  <button class="filters" ><span> Filter </span> <img className="img-fluid filters_icon" src={dropdown} /></button>
+                              </div>
+                      </div>
+                      <div className="col-md-3">
+                            <div class="input-completion completion__search">
+                                <button class="creates" ><span> How To Participate </span><img className="img-fluid creates_icon"  src={Manual}/></button>
+                            </div>
+                      </div>
+              </div>
+            </div>
+          </section>
+             
+          {/* <div class=" col-md-3 input-completion completion__search">
             <Form.Select className="completion-input-select" aria-label="Default select example">
               <option>How To Participate</option>
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
             </Form.Select>
-          </div>
-          <div class=" col-md-3 input-completion completion__search">
+          </div> */}
+            
+          {/* <div class=" col-md-3 input-completion completion__search">
             <Form.Select className="completion-input-select" aria-label="Default select example">
               <option>How To Participate</option>
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
             </Form.Select>
-          </div>
-        </div>
-        <section className="bestselling_books">
+          </div> */}
+        {/* </div> */}
+        <section className="bestselling_bookss">
           <section className="bestSell__book-sec jost-font">
             <div className="bestSell__book-cartoon1">
             
@@ -282,7 +316,7 @@ console.log("currentItems" , currentItems)
                     <div className="row mb-5">
                       <div className="col-md-4">
                         <div className=" d-flex gap-2 justify-content-center  ">
-                          <span className="bookvote bg-white color-blacl ">
+                          <span className="bookdetail bg-white color-blacl ">
                             Vote
                           </span>
                           <span className="bookdetail bg-white color-blacl">
@@ -293,7 +327,7 @@ console.log("currentItems" , currentItems)
                       </div>
                       <div className="col-md-4">
                         <div className="completion-book d-flex gap-2 justify-content-center  ">
-                          <span className="bookvote bg-white color-black ">
+                          <span className="bookdetail bg-white color-black ">
                             Vote
                           </span>
                           <span className="bookdetail bg-white color-blacl">
@@ -304,7 +338,7 @@ console.log("currentItems" , currentItems)
                       </div>
                       <div className="col-md-4">
                         <div className="completion-book d-flex gap-2  justify-content-center ">
-                          <span className="bookvote bg-white color-black ">
+                          <span className="bookdetail bg-white color-black ">
                             Vote
                           </span>
                           <span className="bookdetail bg-white color-blacl">

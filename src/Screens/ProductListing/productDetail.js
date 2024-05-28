@@ -68,6 +68,8 @@ import Form from "react-bootstrap/Form";
 
 import { Container, Row, Col } from "react-bootstrap";
 import Star from "../../Assets/images/Star 1.png";
+import showmoreicon from "../../Assets/images/showmoreicon.png";
+
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import AccordionContext from "react-bootstrap/AccordionContext";
@@ -793,14 +795,14 @@ export const ProductDetail = ({ eventKey, children }) => {
                         <div className=" d-flex gap-4 mb-2  justify-content-center mb-4 m-auto text-center "></div>
                       </div>
 
-                      <span className="mb-2    justify-content-center  m-auto text-center">
+                      <span className="mb-2 justify-content-center  m-auto text-center">
                         <p className="mb-2 ">Affiliated Group</p>
                         <p className=" tabtags w-100 mx-auto p-2 text-center">
                           {" "}
                           Lorem Ispurm
                         </p>
                       </span>
-                      <span className="mb-2    justify-content-center  m-auto text-center">
+                      <span className="mb-2 justify-content-center  m-auto text-center">
                         <p className="mb-2 "> Original Publisher </p>
                         <p className=" tabtags mb-2 w-100 mx-auto p-2 text-center">
                           {" "}
@@ -815,7 +817,7 @@ export const ProductDetail = ({ eventKey, children }) => {
                         </p>
                       </span>
 
-                      <span className="mb-2    justify-content-center  m-auto text-center">
+                      <span className="mb-2 justify-content-center  m-auto text-center">
                         <p className="mb-2 ">Affiliated Series</p>
                         <p className=" tabtags mb-2 w-100 mx-auto p-2 text-center">
                           {" "}
@@ -864,11 +866,11 @@ export const ProductDetail = ({ eventKey, children }) => {
                             </div>
                             <div className="profile  mb-4 mt-2">
                               {" "}
-                              <img className="img-fluid star_btns" src={star_button}/>
+                              {/* <img className="img-fluid star_btns" src={star_button}/> */}
                               <button className="nottext mt-4 ">
                                 Last Update 3 days ago
                               </button>
-                              <img className="img-fluid star_btn" src={star_button}/>
+                              {/* <img className="img-fluid star_btn" src={star_button}/> */}
                             </div>
                         
                           </div>
@@ -891,10 +893,12 @@ export const ProductDetail = ({ eventKey, children }) => {
                         <div class="row">
                           <div class="col-md-12">
                             <div class="syn">
-                              <h4>Synopsis</h4>
+                              <h4 className="syn_heading">Synopsis</h4>
                               <p class="txt">
                                 {data?.description?.slice(0, 300)}
                               </p>
+                              {/* <button className="all" ><span> Show More </span> <i class="fa-solid fa-book  alliconss"></i> </button> */}
+                              <button className="all" ><span> Show More </span> <img className="img-fluid  alliconss" src={showmoreicon}/> </button>
                             </div>
                           </div>
                         </div>
