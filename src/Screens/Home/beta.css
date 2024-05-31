@@ -822,7 +822,7 @@ html, body {
 .harrypotter_books-col {
   background: #f3f3f3;
   overflow-y: scroll;
-  border-left: 20px solid #fff;
+  /* border-left: 20px solid #fff; */
   height: 513px;
 }
 /* width */
@@ -1025,7 +1025,7 @@ html, body {
 
 /* Footer Start */
 .footer-sec {
-  background-image: url(../../../src/Assets/images/footer-bg.png);
+  background-image: url(../../../src/Assets/images/updatefooter.png);
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
@@ -1327,9 +1327,9 @@ html, body {
   .harry__potter-section {
     padding: 50px 40px 60px 30px;
   }
-  .harrypotter_books-col {
+  /* .harrypotter_books-col {
     border-left: 10px solid #fff;
-  }
+  } */
   .footer__copyright p:before,
   .footer__copyright p:after {
     width: 27%;
@@ -1364,9 +1364,12 @@ html, body {
   }
   .input-group.header__search {
     display: flex !important;
+    /* width: 30%; */
   }
   .main-navbar-logo img {
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
+    width: 95px;
+    margin-bottom: -30%;
   }
 }
 @media (max-width:768px) {
@@ -1643,6 +1646,9 @@ html, body {
     margin-top: 18px;
     max-width: 196px;
   }
+  .header__search .category__icon {
+    padding: 6px;
+}
 }
 
 

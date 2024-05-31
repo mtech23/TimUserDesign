@@ -226,3 +226,24 @@
     
     
 }
+@media (max-width: 991px){
+.navbar .container-fluid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* nav.navbar.navbar-expand-xl.d-lg-none.d-block {
+
+} */
+
+.input-group.header__search {
+    width: 100%;
+}
+.navbar-toggler {
+    width: 60px;
+}
+
+.main-navbar-logo {
+    display: flex;
+    justify-content: center;
+}
+}

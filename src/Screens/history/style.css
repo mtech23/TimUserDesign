@@ -374,9 +374,8 @@ color: #169B00;
       gap: 12px;
   
   } */
-  .polygons {
-    
-    left: 319px;
+.polygons {
+    left: 406px;
   }
 }
 @media only screen and (min-width: 2560px){

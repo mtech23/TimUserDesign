@@ -167,7 +167,17 @@
   flex-direction: row-reverse;
 }
 /* Author List End */
+@media (max-width:600px){
+  
+  .authors__carousel-title h2 {
+    padding: 0px;
+  }
+  .authors__carousel .carousel-image img {
+    width: 60%;
+    margin-top: 7px;
+}
 
+}
 @media (max-width: 1024px) {
   .herro__title h1 {
     font-size: 50px;
@@ -193,6 +203,9 @@
 }
 
 @media (max-width: 768px) {
+  .authors__list{
+    padding: 0px;
+  }
   .author__img img {
     width: 140px;
   }
@@ -212,6 +225,10 @@
   .author__list-bgCartoon img {
     transform: translateX(-60%);
     height: 70%;
+  }
+  .authors__carousel-title h2 {
+    font-size: 30px;
+   
   }
 }
 

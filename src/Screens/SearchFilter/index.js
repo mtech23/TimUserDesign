@@ -784,7 +784,7 @@ export const SearchFilter = () => {
 
               <div className="col-md-8">
                 <p className="book-release-title mb-2 ">Select Book Genre</p>
-                <div className="book-release-genre-dropdown  mb-5  gap-3 bookGenre ">
+                <div className="book-release-genre-dropdown  mb-5  bookGenre ">
                   <span className="book-release-genre">Lorem Ipsume</span>
 
                   <span className="book-release-genre">Lorem Ipsume</span>
@@ -796,9 +796,9 @@ export const SearchFilter = () => {
               </div>
 
               <div className="col-md-8">
-                <div className="main_cartoon_image">
+                {/* <div className="main_cartoon_image">
                   <img src={cartoon} />
-                </div>
+                </div> */}
                 <div className="  row">
                   <div className="    mb-2 gap-5  col-md-5 ">
                     <p className="book-release-title mb-4 ">

@@ -39,7 +39,12 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 padding: 106px 50px;
+text-align: center;
 
+}
+.mana_iamge{
+    height: 218px;
+    width: 177px;
 }
 .rect{
     background-image: url(../../Assets//images/textbg.png);
@@ -105,6 +110,15 @@ text-decoration:  line-through;
     position: relative;
     padding-bottom: 10px;
 }
+.clearnce_sale{
+    font-family: 'Jost';
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 46.51px;
+    text-align: center;
+    color:#360C55;
+    background: #fff;
+}
 .second h2.limit{
     font-family: 'Jost';
 font-size: 32.18px;
@@ -150,7 +164,6 @@ color: #DEDEDE;
 font-size: 28.17px;
 font-weight: 700;
 line-height: 42.25px;
-
 color:#fff;
 background-color: transparent;
 }
@@ -450,7 +463,7 @@ position: relative;
 } */
 input.promo_number[type='number']{
     font-family: 'Jost';
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 400;
     text-align: left;
     width: 100%;
@@ -477,7 +490,8 @@ input.promo_number[type='number']::placeholder{
 @media (max-width: 1024px) {
 
     .shop img.dragon_image {
-        display: none;
+        width: 579px !important;
+        top: -96px;
     }
 
 
@@ -489,14 +503,39 @@ input.promo_number[type='number']::placeholder{
 
 
 @media (max-width: 768px) {
-
+    /* .box {
+        padding: 63px 38px;
+    } */
+    .price p.ecohead {
+        font-size: 20px;
+        line-height: 42.84px;
+    }
+    .price p.ecohead1 {
+        font-size: 22px;
+        line-height: 35.4px;
+    }
+    .price p.point {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        padding: 0;
+        font-size: 12px;
+    }
+    .gift_coins_one {
+        margin-top: -290px;
+    }
+    .gift_coins {
+        margin-top: -290px;
+    }
     .shop_two {
         padding: 27px 0px 141px 0px;
     }
+    
 
-    .price p.point {
+    /* .price p.point {
         font-size: 11px;  
-    }
+    } */
     .price p.plan {       
         font-size: 15px;
     }
@@ -528,13 +567,13 @@ input.promo_number[type='number']::placeholder{
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
-        height: 238px;
+        width: 50% !important;
+        height: 220px !important;
     }
    
     
     .subscription h1.subs {
-        font-size: 22.93px !important;
+        font-size: 35px !important;
     }
     .subscription {
         padding: 23px 0px 200px 0px;
@@ -558,7 +597,7 @@ input.promo_number[type='number']::placeholder{
         margin-top: -181px;
     }
     .shop h1.head {
-            font-size: 22px !important;
+            font-size: 35px !important;
     }
     .shop {
         padding: 17px 0px 200px 0px;
@@ -568,6 +607,28 @@ input.promo_number[type='number']::placeholder{
         font-size: 30px;
     }
     
+}
+@media (max-width:991px){
+    .shop img.dragon_image {
+        display: none;
+    }
+    .box {
+        padding: 98px 62px;
+    }
+    .mana_image {
+        width: 64%;
+    }
+    .rect {
+
+        background-size: 87% 100%;
+    }
+    .box{
+        background-size: 87% 100%;
+    }
+    .gift_cards_bg img.promoCards {
+        height: 248px;
+        width: 41%;
+    }
 }
 @media only screen and (max-width: 1040px) {
     /* .shop img.dragon_image {
@@ -586,7 +647,7 @@ input.promo_number[type='number']::placeholder{
         margin-top: 20px; 
     }
     .gift_coins_one {
-        margin-top: -100px;
+        margin-top: -59px;
     }
 
     .gift_cards_bg {
@@ -598,13 +659,17 @@ input.promo_number[type='number']::placeholder{
        
     }
     .shop_two {
-        padding: 55px 0px 97px 0px;
+        padding: 31px 0px 60px 0px;
     }
     .shop_two h1.gift {
-        font-size: 22px !important;
+        font-size: 27px !important;
     }
     .diccount_nums{
         margin-top: 3rem;
+    }
+    .gift_cards_bg img.promoCards {
+        width: 100% !important;
+        height: 93px !important;
     }
    
 
@@ -650,5 +715,15 @@ input.promo_number[type='number']::placeholder{
     }
     .promo_card_box h3.promo_heading {
         font-size: 20.49px;
+    }
+    .eco {
+        padding: 18px 20px 156px 20px
+    }
+    .basic {
+        padding: 18px 20px 153px 20px;
+    
+    }
+    .pre {
+        padding: 18px 20px 3px 20px;
     }
  }

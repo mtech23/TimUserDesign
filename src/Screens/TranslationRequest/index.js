@@ -28,6 +28,13 @@ import Notification from '../../Assets/images/Notification.png'
 import Vote from '../../Assets/images/Vote.png'
 import { UserLayout } from "../../Components/Layout/UserLayout";
 import board1 from "../../Assets/images/board1.png";
+import Manual from "../../Assets/images/Manual.png";
+import dropdown from "../../Assets/images/dropdown.png";
+import book_filter1 from "../../Assets/images/book_filter1.png";
+import filter2 from "../../Assets/images/filter2.png";
+import filter3 from "../../Assets/images/filter3.png";
+import filter4 from "../../Assets/images/filter4.png";
+
 import {
   AuthorList1,
   Logo,
@@ -224,7 +231,7 @@ useEffect(() =>{
         </section>
 
        
-        <section className="bestSell__book-sec jost-font">
+        {/* <section className="bestSell__book-sec jost-font">
           <div className="container">
             <div className="row">
               <div className="col-12">
@@ -238,8 +245,840 @@ useEffect(() =>{
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+        {/* new section */}
+     
         <section className="recent">
+          <div className="container">
+          <div className="row">
+                <div className="col-12 col-md-6">
+                    <div class="input-completion completion__search">
+                      <button className="completion_btn_one btn btn-outline-secondary " type="button" id="button-addon1">
+                        <FontAwesomeIcon icon={faSearch} />
+                      </button>
+                      <input type="text" className="completion-input_one form-control "placeholder="Search Here..." aria-describedby="button-addon1" />
+                      <button className="btn btn-outline-secondary  compition-category__icon_one" type="button" id="button-addon2"> search </button>
+                    </div>
+                 </div>
+                 <div className="col-6 col-md-3">
+                   <div class="input-completion completion__search">
+                      <button class="filter" ><span> Filter </span> <img className="img-fluid filter_icon" src={dropdown} /></button>
+                   </div>
+                 </div>
+                 <div className="col-6 col-md-3">
+                   <div class="input-completion completion__search">
+                      <button class="create" ><span> Create </span><img className="img-fluid create_icon"  src={Manual}/></button>
+                   </div>
+                 </div>
+            </div>
+            <div className="row mt-5 image_row_center">
+              <div className="col-md-6">
+                <h3 className="top_five">Top 5 Voted Novels Of All Time</h3>
+                  <div className="row mt-4">
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={book_filter1}/>
+                      <h6 className="book_name">Book Name Here</h6>
+                      <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={filter2}/>
+                      <h6 className="book_name" >Book Name Here</h6>
+                      <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={filter3}/>
+                      <h6 className="book_name" >Book Name Here</h6>
+                      <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={filter4}/>
+                      <h6 className="book_name" >Book Name Here</h6>
+                      <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                 </div>
+
+              </div>
+              <div className="col-md-6">
+                <h3 className="top_five">Top 5 Voted Novels Of All Time</h3>
+                  <div className="row mt-4">
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={book_filter1}/>
+                      <h6 className="book_name" >Book Name Here</h6>
+                      <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={filter2}/>
+                      <h6 className="book_name" >Book Name Here</h6>
+                      <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={filter3}/>
+                      <h6 className="book_name" >Book Name Here</h6>
+                      <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={filter4}/>
+                      <h6 className="book_name" >Book Name Here</h6>
+                      <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                 </div>
+              </div>
+            </div>
+            <div className="row mt-5 image_row_center">
+              <div className="col-md-12">
+                  <h3 className="top_five">Recommendation</h3>
+                  <div className="row mt-5">
+                    <div className="col">
+                       <img  className="top_five_book" src={book_filter1}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                      <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col">
+                       <img  className="top_five_book" src={filter2}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                      <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col">
+                       <img  className="top_five_book" src={filter3}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col">
+                       <img  className="top_five_book" src={filter4}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                      <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col">
+                       <img  className="top_five_book" src={book_filter1}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                      <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col">
+                       <img  className="top_five_book" src={filter2}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                      <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col">
+                       <img  className="top_five_book" src={filter3}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                      <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col">
+                       <img  className="top_five_book" src={filter4}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                      <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <div className="row mt-5 image_row_center">
+              <div className="col-md-6">
+                <h3 className="top_five">Top 5 Voted Novels Of All Genre</h3>
+                  <div className="row mt-4">
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={book_filter1}/>
+                      <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={filter2}/>
+                      <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={filter3}/>
+                      <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={filter4}/>
+                      <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                 </div>
+                 
+              </div>
+              <div className="col-md-6">
+                <h3 className="top_five">NEWLY REQUESTED</h3>
+                  <div className="row mt-4">
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={book_filter1}/>
+                      <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={filter2}/>
+                      <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={filter3}/>
+                      <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col-6 col-sm-6 col-lg-3">
+                      <img  className="top_five_book" src={filter4}/>
+                      <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                 </div>
+              </div>
+            </div>
+
+            <div className="row mt-5 image_row_center">
+              <div className="col-md-12">
+                  <h3 className="top_five">Recommendation</h3>
+                  <div className="row mt-5">
+                    <div className="col">
+                       <img  className="top_five_book" src={book_filter1}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col">
+                       <img  className="top_five_book" src={filter2}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col">
+                       <img  className="top_five_book" src={filter3}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col">
+                       <img  className="top_five_book" src={filter4}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col">
+                       <img  className="top_five_book" src={book_filter1}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col">
+                       <img  className="top_five_book" src={filter2}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col">
+                       <img  className="top_five_book" src={filter3}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                    <div className="col">
+                       <img  className="top_five_book" src={filter4}/>
+                       <h6 className="book_name">Book Name Here</h6>
+                       <div className="star_row">
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                          <i class="fa-solid fa-star top_five_stars"></i>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div className="row mt-5">
+                    <div className="col-md-6">
+                    <div class="bookk">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-12">
+                                      <div class="watch">
+                                        <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                      </div>
+                                </div>
+                                <div class="col-lg-9 col-sm-12">
+                                   <div class="description">
+                                    <h3 class="name">Book Name Here</h3>
+                                    <div class="p-3 res">
+                                    <img class="img-fluid vote" src={Vote}/>
+                                        <img class="img-fluid vote" src={Notification}/>
+                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    </div>
+                                   </div>
+                                   <div class="mainly">
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   </div>
+                                   <div class="raate">
+                                    <span class="fa fa-star checked star" ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star "></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <p class="rating">(4.82)</p>
+                                  </div>
+                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="view" > View More </span></p>
+                                        
+                                </div>
+                            </div>
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col-lg-4">
+                                    <p class="numm">Status: <span class="numb">Requested </span></p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="btnrrw">
+                                        <button class="readbtns" ><span> Add To Waiting List &nbsp;&nbsp;</span> <i class="fa-solid fa-clock iicon"></i></button>
+                                    <button class="readbtns" >Book Details &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                    <div class="bookk">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="watch">
+                                    <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                       </div>
+                                    
+                                </div>
+                                <div class="col-lg-9 col-sm-12">
+                                   <div class="description">
+                                    <h3 class="name">Book Name Here</h3>
+                                    <div class="p-3 res">
+                                    <img class="img-fluid vote" src={Vote}/>
+                                        <img class="img-fluid vote" src={Notification}/>
+                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    </div>
+                                   </div>
+                                   <div class="mainly">
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   </div>
+                                   <div class="raate">
+                                    <span class="fa fa-star checked star" ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star "></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <p class="rating">(4.82)</p>
+                                  </div>
+                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="view" > View More </span></p>
+                                        
+                                </div>
+                            </div>
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col-lg-4">
+                                    <p class="numm">Status: <span class="pickk"> PICKED UP </span></p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="btnrrw">
+                                        <button class="readbtns" ><span> Add To Waiting List &nbsp;&nbsp;</span> <i class="fa-solid fa-clock iicon"></i></button>
+                                    <button class="readbtns" >Book Details &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-md-6">
+                    <div class="bookk">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="watch">
+                                        <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                      </div> 
+                                </div>
+                                <div class="col-lg-9 col-sm-12">
+                                   <div class="description">
+                                    <h3 class="name">Book Name Here</h3>
+                                    <div class="p-3 res">
+                                    <img class="img-fluid vote" src={Vote}/>
+                                        <img class="img-fluid vote" src={Notification}/>
+                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    </div>
+                                   </div>
+                                   <div class="mainly">
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   </div>
+                                   <div class="raate">
+                                    <span class="fa fa-star checked star" ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star "></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <p class="rating">(4.82)</p>
+                                  </div>
+                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="view" > View More </span></p>
+                                        
+                                </div>
+                            </div>
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col-lg-4">
+                                    <p class="numm">Status: <span class="numb">Requested </span></p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="btnrrw">
+                                        <button class="readbtns" ><span> Add To Waiting List &nbsp;&nbsp;</span> <i class="fa-solid fa-clock iicon"></i></button>
+                                    <button class="readbtns" >Book Details &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                    <div class="bookk">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="watch">
+                                    <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                       </div>
+                                    
+                                </div>
+                                <div class="col-lg-9 col-sm-12">
+                                   <div class="description">
+                                    <h3 class="name">Book Name Here</h3>
+                                    <div class="p-3 res">
+                                    <img class="img-fluid vote" src={Vote}/>
+                                        <img class="img-fluid vote" src={Notification}/>
+                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    </div>
+                                   </div>
+                                   <div class="mainly">
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   </div>
+                                   <div class="raate">
+                                    <span class="fa fa-star checked star" ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star "></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <p class="rating">(4.82)</p>
+                                  </div>
+                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="view" > View More </span></p>
+                                        
+                                </div>
+                            </div>
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col-lg-4">
+                                    <p class="numm">Status: <span class="numb"> Requested </span></p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="btnrrw">
+                                        <button class="readbtns" ><span> Add To Waiting List &nbsp;&nbsp;</span> <i class="fa-solid fa-clock iicon"></i></button>
+                                    <button class="readbtns" >Book Details &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-md-6">
+                    <div class="bookk">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="watch">
+                                    <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                       </div>
+                                    
+                                </div>
+                                <div class="col-lg-9 col-sm-12">
+                                   <div class="description">
+                                    <h3 class="name">Book Name Here</h3>
+                                    <div class="p-3 res">
+                                    <img class="img-fluid vote" src={Vote}/>
+                                        <img class="img-fluid vote" src={Notification}/>
+                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    </div>
+                                   </div>
+                                   <div class="mainly">
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   </div>
+                                   <div class="raate">
+                                    <span class="fa fa-star checked star" ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star "></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <p class="rating">(4.82)</p>
+                                  </div>
+                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="view" > View More </span></p>
+                                        
+                                </div>
+                            </div>
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col-lg-4">
+                                    <p class="numm">Status: <span class="numb">Requested </span></p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="btnrrw">
+                                        <button class="readbtns" ><span> Add To Waiting List &nbsp;&nbsp;</span> <i class="fa-solid fa-clock iicon"></i></button>
+                                    <button class="readbtns" >Book Details &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                    <div class="bookk">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="watch">
+                                    <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                       </div>
+                                    
+                                </div>
+                                <div class="col-lg-9 col-sm-12">
+                                   <div class="description">
+                                    <h3 class="name">Book Name Here</h3>
+                                    <div class="p-3 res">
+                                    <img class="img-fluid vote" src={Vote}/>
+                                        <img class="img-fluid vote" src={Notification}/>
+                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    </div>
+                                   </div>
+                                   <div class="mainly">
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   </div>
+                                   <div class="raate">
+                                    <span class="fa fa-star checked star" ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star "></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <p class="rating">(4.82)</p>
+                                  </div>
+                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="view" > View More </span></p>
+                                        
+                                </div>
+                            </div>
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col-lg-4">
+                                    <p class="numm">Status: <span class="pickk"> PICKED UP </span></p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="btnrrw">
+                                        <button class="readbtns" ><span> Add To Waiting List &nbsp;&nbsp;</span> <i class="fa-solid fa-clock iicon"></i></button>
+                                    <button class="readbtns" >Book Details &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-md-6">
+                    <div class="bookk">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="watch">
+                                    <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                       </div>
+                                    
+                                </div>
+                                <div class="col-lg-9 col-sm-12">
+                                   <div class="description">
+                                    <h3 class="name">Book Name Here</h3>
+                                    <div class="p-3 res">
+                                    <img class="img-fluid vote" src={Vote}/>
+                                        <img class="img-fluid vote" src={Notification}/>
+                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    </div>
+                                   </div>
+                                   <div class="mainly">
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   </div>
+                                   <div class="raate">
+                                    <span class="fa fa-star checked star" ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star "></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <p class="rating">(4.82)</p>
+                                  </div>
+                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="view" > View More </span></p>
+                                        
+                                </div>
+                            </div>
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col-lg-4">
+                                    <p class="numm">Status: <span class="numb">Requested </span></p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="btnrrw">
+                                        <button class="readbtns" ><span> Add To Waiting List &nbsp;&nbsp;</span> <i class="fa-solid fa-clock iicon"></i></button>
+                                    <button class="readbtns" >Book Details &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                    <div class="bookk">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="watch">
+                                    <img class="img-fluid clock" src={Clock}/>
+                                        <img class="img-fluid bookcover" src={lcimg}/>
+                                       </div>
+                                    
+                                </div>
+                                <div class="col-lg-9 col-sm-12">
+                                   <div class="description">
+                                    <h3 class="name">Book Name Here</h3>
+                                    <div class="p-3 res">
+                                    <img class="img-fluid vote" src={Vote}/>
+                                        <img class="img-fluid vote" src={Notification}/>
+                                        <img class="img-fluid vote" src={Trashcan}/>
+                                    </div>
+                                   </div>
+                                   <div class="mainly">
+                                   <button class="category" >Category </button>
+                                   <button class="category" >Category </button>
+                                   </div>
+                                   <div class="raate">
+                                    <span class="fa fa-star checked star" ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <span class="fa fa-star checked star "></span>
+                                    <span class="fa fa-star checked star " ></span>
+                                    <p class="rating">(4.82)</p>
+                                  </div>
+                                    <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                        <span class="view" > View More </span></p>
+                                        
+                                </div>
+                            </div>
+                            <div class="linee"></div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col-lg-4">
+                                    <p class="numm">Status: <span class="numb"> Requested </span></p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="btnrrw">
+                                        <button class="readbtns" ><span> Add To Waiting List &nbsp;&nbsp;</span> <i class="fa-solid fa-clock iicon"></i></button>
+                                    <button class="readbtns" >Book Details &nbsp;&nbsp;<i class="fa-solid fa-calendar-week iicon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+          </div>
+        </section>
+        {/* new section end */}
+        {/* <section className="recent">
             <div className="container">
                 <div className="row">
                     <div className="col-md-8">
@@ -559,9 +1398,9 @@ useEffect(() =>{
                     </div>   
                 </div> */}
 
-            </div>
-        </section>
-        <section className="topfive__book-sec jost-font">
+            {/* </div>
+        </section> */} 
+        {/* <section className="topfive__book-sec jost-font">
           <div className="container">
             <div className="row">
               <div className="col-12">
@@ -575,9 +1414,9 @@ useEffect(() =>{
               </div>
             </div>
           </div>
-        </section>
-        <section className="recent">
-            <div className="container">
+        </section> */}
+        {/* <section className="recent">
+            <div className="container"> */}
                 {/* <div className="row">
                     <div className="col-md-8">
                         <h3 className="picked">Recently Picked Up</h3>
@@ -686,7 +1525,7 @@ useEffect(() =>{
                         </div>
                     </div>   
                 </div> */}
-                  <div className="row">
+                  {/* <div className="row">
                     <div className="col-md-8">
                         <h3 className="picked">Recently Picked Up</h3>
                     </div>
@@ -706,9 +1545,9 @@ useEffect(() =>{
                     </div>
                     <div className="divider"></div>
                     <div className="dividerr"></div>                  
-                </div>
+                </div> */}
 
-                <div class="tab-content" id="pills-tabContent">
+                {/* <div class="tab-content" id="pills-tabContent">
                       <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 
                   
@@ -907,10 +1746,10 @@ useEffect(() =>{
 
                       </div>
                  
-                    </div>
+                    </div> */}
                 
 
-                <div className="row mt-5">
+                {/* <div className="row mt-5">
                     <div className="col-md-6">
                     <div class="bookk">
                             <div class="row">
@@ -1117,7 +1956,7 @@ useEffect(() =>{
                 </div>
                 
             </div>
-        </section>
+        </section> */}
 
         
 

@@ -156,8 +156,8 @@ export const Header = (props) => {
   }
   return (
     <section className="header-navbar jost-font">
-      <div className="  ">
-        <div className="   justify-content-center  d-flex align-items-center d-none d-lg-flex">
+      <div className="">
+        <div className="justify-content-center  d-flex align-items-center d-none d-lg-flex">
           <div className="">
             <ul className="main-navbar main-navbar-1">
               <li className="main-navbar-list">
@@ -165,8 +165,6 @@ export const Header = (props) => {
                   Home
                 </Link>
               </li>
-
-          
 
               <li className="main-navbar-list">
                 <Link to="/translation-request/" className="main-navbar-link">
@@ -294,17 +292,17 @@ export const Header = (props) => {
 
 
 
-        <div className="row">
+        <div className="row mx-auto">
           <nav className="navbar navbar-expand-xl d-lg-none d-block">
             
             <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+            {/* <a className="navbar-brand" href="#">
                 <div className="main-navbar-logo">
                   <Link to="/">
                     <img src={Logo} />
                   </Link>
                 </div>
-              </a>
+              </a> */}
               <button
                 className="navbar-toggler"
                 type="button"
@@ -357,7 +355,37 @@ export const Header = (props) => {
                     </Link>
                   </li>
                 </ul>
-                <div class="input-group header__search">
+                {/* <div class="input-group header__search">
+                  <button
+                    className="btn btn-outline-secondary search__btn"
+                    type="button"
+                    id="button-addon1"
+                  >
+                    <FontAwesomeIcon icon={faSearch} />
+                  </button>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Search Here..."
+                    aria-describedby="button-addon1"
+                  />
+                  <button
+                    className="btn btn-outline-secondary category__icon"
+                    type="button"
+                    id="button-addon2"
+                  >
+                    <FontAwesomeIcon icon={faList} />
+                  </button>
+                </div> */}
+              </div>
+              <a className="navbar-brand" href="#">
+                <div className="main-navbar-logo">
+                  <Link to="/">
+                    <img src={Logo} />
+                  </Link>
+                </div>
+              </a>
+              <div class="input-group header__search">
                   <button
                     className="btn btn-outline-secondary search__btn"
                     type="button"
@@ -379,8 +407,6 @@ export const Header = (props) => {
                     <FontAwesomeIcon icon={faList} />
                   </button>
                 </div>
-              </div>
-          
             
             </div>
           </nav>

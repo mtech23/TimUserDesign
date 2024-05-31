@@ -104,6 +104,13 @@
     padding: 35px;
     /* margin: 48px 0px; */
 }
+.syn_heading{
+color: #fff;
+text-align: center;
+font-size: 30px;
+font-weight: 500;
+padding-bottom: 20px;
+}
 
 .cover p.txt {
     font-family: Century Gothic;
@@ -160,10 +167,11 @@
 .top{
     background-image: url(../../Assets/images/topbg.png);
     background-position: center;
-    background-size: cover;
+    /* background-size: cover; */
     background-repeat: no-repeat;
     margin: 50px 10px;
     border-radius: 10px;
+    background-size: 100% 100%;
     
 }
 #booknamedetail{
