@@ -1,12 +1,6 @@
 import { React, useState, useEffect } from "react";
 import "./booklisting.css";
-// import {
-//   AdertiseImage,
-//   BookImage,
-//   Fancy,
-//   MainNoval,
-//   NovalImage,
-// } from "../../Assets/images";
+
 import { UserLayout } from "../../Components/Layout/UserLayout";
 import CustomPagination from "../../Components/CustomPagination"
 import CustomInput from "../../Components/CustomInput";
