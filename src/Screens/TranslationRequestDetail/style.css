@@ -1,0 +1,103 @@
+.new_comment_section_bg{
+    background: #fff;
+    padding: 30px 5px;
+    margin: 15px 0px 53px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.timer_countdown{
+
+}
+
+#countdown {
+    text-align: center;
+  }
+  
+  #timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #161620;
+    border: 5px solid #8030CC;
+    border-radius: 22px;
+    padding: 3px 0px;
+  }
+  
+  #timer div {
+    margin: 0 10px;
+  }
+  
+  .day_hr_mint_seconds_numbers {
+    display: block;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 35.91px;
+    text-align: center;
+    color: #fff;
+
+  }
+
+  .day_hr_mint_seconds_text{
+    font-family: 'Jost';
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 11.48px;
+    text-align: center;
+    color: #fff;
+  }
+  .day_before_drop{
+    font-family: 'Jost';
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 37.66px;
+    text-align: center;
+    color: #360C55;
+    text-transform: uppercase;
+  }
+  .last_hope_heading{
+  
+    color: #535353;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 73.83px;
+    text-align: left;
+    text-transform: uppercase;
+
+  }
+  .colon_img{
+    height: 10px;
+    width: 10px;
+  }
+  .second_comments_heading{
+    font-family: 'Jost';
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 31.37px;
+    text-align: left;
+    color: #360C55;
+
+  }
+  .comments_section_divider{
+    height: 1px;
+    background-color: #000000;
+    margin: 20px 0px;
+  }
+  @media (max-width:1180px){
+    .day_before_drop {
+
+        font-size: 18px;
+    }
+    .last_hope_heading {
+        font-size: 39px;
+    }   
+    #timer div {
+        margin: 0 7px;
+    } 
+  }
+  @media (max-width: 600px) {
+    .day_before_drop {
+        font-size: 18px;
+        text-align: left;
+        margin-top: 23px;
+    }
+}
