@@ -27,10 +27,12 @@ import { ProtectedRoutes } from "./ProtectedRoutes";
 import { Beta } from "../Screens/Home/Beta";
 
 import { AuthorModule } from "../Screens/AuthorModule";
+import { Blogs } from "../Screens/Blogs";
 import { BookListing } from "../Screens/BookListing";
 import { BookName } from "../Screens/BookName";
 import { AboutAuthor } from "../Screens/AboutAuthor";
 import { SearchFilter } from "../Screens/SearchFilter/index";
+import { Forum } from "../Screens/Forum";
 export default function UserRouter() {
   return (
     <BrowserRouter basename="/TimUser">
@@ -60,11 +62,13 @@ export default function UserRouter() {
         <Route path="/book-listing" element={<ProductListing />}></Route>
         <Route path="/novel-listing" element={<Novel />}></Route>
         <Route path="/BookName" element={<BookName />}></Route>
+        <Route path="/Forum" element={<Forum />}></Route>
        
         <Route path="/AboutAuthor" element={<AboutAuthor />}></Route>
         <Route path="/search-filter" element={<SearchFilter />}></Route>
         <Route path="/competition" element={<Completion />}></Route>
         <Route path="/mission" element={<Mission />}></Route>
+        <Route path="/Blogs" element={<Blogs />}></Route>
         <Route
           path="/book-detail/:id"
           element={<ProductDetail />}

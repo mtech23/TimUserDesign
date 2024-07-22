@@ -123,12 +123,12 @@ html, body {
   justify-content: center;
 }
 .main-navbar-logo img {
-  width: 140px;
+  width: 128px;
   margin: auto;
   background: transparent;
   border: none;
   border-radius: 50%;
-  margin-bottom: -58%;
+  margin-bottom: -45%;
   z-index: 9999;
   position: relative;
 }

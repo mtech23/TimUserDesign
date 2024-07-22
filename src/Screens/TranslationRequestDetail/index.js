@@ -739,7 +739,7 @@ export const TranslationRequestDetail = ({ eventKey, children }) => {
           <div className="container">
             <div className="row">
               <div className="herro__title">
-                <h1 className="typewriter"> Book Detail </h1>
+                <h1 className="typewriter"> Translation Request </h1>
               </div>
             </div>
           </div>

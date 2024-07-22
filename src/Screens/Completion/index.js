@@ -263,13 +263,32 @@ console.log("currentItems" , currentItems)
                             </div>
                       </div>
                       <div className="col-md-2">
-                            <div class="input-completion completion__search">
-                                <button class="filters" ><span> Contest </span> <img className="img-fluid filters_icon" src={dropdown} /></button>
+                        
+                           <div class="input-completion completion__search">
+                            <div className="dropdown">
+                                <button class="filters"  type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" >
+                                  <span> Contest </span> <img className="img-fluid filters_icon" src={dropdown} />
+                                </button>
+                                <ul class="dropdown-menu filter_dropdown" aria-labelledby="dropdownMenuButton2">
+                                    <li><a class="dropdown-item filter_dropdown_list" href="#">Action</a></li>
+                                    <li><a class="dropdown-item filter_dropdown_list" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item filter_dropdown_list" href="#">Contest</a></li>
+                                </ul>
                             </div>
+                           </div>
                       </div>
                       <div className="col-md-2">
                               <div class="input-completion completion__search">
-                                  <button class="filters" ><span> Filter </span> <img className="img-fluid filters_icon" src={dropdown} /></button>
+                                 <div className="dropdown">
+                                 <button class="filters"  type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false" >
+                                    <span> Filter </span> <img className="img-fluid filters_icon" src={dropdown} />
+                                  </button>
+                                  <ul class="dropdown-menu filter_dropdown" aria-labelledby="dropdownMenuButton2">
+                                    <li><a class="dropdown-item filter_dropdown_list" href="#">Action</a></li>
+                                    <li><a class="dropdown-item filter_dropdown_list" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item filter_dropdown_list" href="#">Filter</a></li>
+                                </ul>
+                                 </div>
                               </div>
                       </div>
                       <div className="col-md-3">

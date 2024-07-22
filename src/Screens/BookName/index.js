@@ -16,6 +16,7 @@ import Group1000002083 from '../../Assets/images/Group1000002083.png'
 import Polygon6 from '../../Assets/images/Polygon6.png'
 import Form from "react-bootstrap/Form";
 import medal from "../../Assets/images/Medal.png";
+import readChapCoin from "../../Assets/images/readChapCoin.png";
 
 
 import cup from "../../Assets/images/cupimg.png";
@@ -49,6 +50,7 @@ import bookreport from "../../Assets/images/bookreport.png";
 import next from "../../Assets/images/next.png";
 import bookchaplocked from "../../Assets/images/bookchaplocked.png";
 import ManaFrame from "../../Assets/images/ManaFrame.png";
+import rotateManaCoin from "../../Assets/images/rotateManaCoin.png";
 
 
 
@@ -447,214 +449,177 @@ export const BookName = () => {
                         </div>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark cancel_mark"></i></button>
                 </div>
-                <div class="modal-body custom_modal_body">
+                   <div class="modal-body custom_modal_body">
 
 
-                <div className="chapter_numbers_box">
-                     
-                     <div className="d-flex gap-3 ">
-                         <p className="chap_no"> 1 </p>
-                           <div>
-                             <p className="chap_title">Lorem Ipsum</p>
-                             <p className="chapter_year"> 3yr </p>
-                           </div>
+                        <div className="chapter_numbers_box">
+                      
+                      <div className="d-flex gap-3 ">
+                          <p className="chap_no"> 1 </p>
+                            <div>
+                              <p className="chap_title">Lorem Ipsum</p>
+                              <p className="chapter_year"> 3yr </p>
+                            </div>
+                          </div>
                         </div>
-                     </div>
-                    <div className="chapter_numbers_box">
-                     
-                     <div className="d-flex gap-3 align-items-center">
-                         <p className="chap_no"> 2</p>
-                           <div>
-                             <p className="chap_title">Lorem Ipsum</p>
-                             <p className="chapter_year"> 3yr </p>
-                           </div>
+                        <div className="chapter_numbers_box">
+                      
+                      <div className="d-flex gap-3 ">
+                          <p className="chap_no"> 2</p>
+                            <div>
+                              <p className="chap_title">Lorem Ipsum</p>
+                              <p className="chapter_year"> 3yr </p>
+                            </div>
+                          </div>
                         </div>
-                     </div>
-                    <div className="chapter_numbers_box">
-                     
-                     <div className="d-flex gap-3 align-items-center">
-                         <p className="chap_no"> 3</p>
-                           <div>
-                             <p className="chap_title">Lorem Ipsum</p>
-                             <p className="chapter_year"> 3yr </p>
-                           </div>
+                        <div className="chapter_numbers_box">
+                      
+                      <div className="d-flex gap-3 ">
+                          <p className="chap_no"> 3</p>
+                            <div>
+                              <p className="chap_title">Lorem Ipsum</p>
+                              <p className="chapter_year"> 3yr </p>
+                            </div>
+                          </div>
                         </div>
-                     </div>
-            
-                    <div className="chapter_numbers_box">
-                          <div className="d-flex gap-3 align-items-center">
-                              <p className="chap_no"> 4 </p>
+              
+                        <div className="chapter_numbers_box">
+                            <div className="d-flex gap-3 ">
+                                <p className="chap_no"> 4 </p>
+                                  <div>
+                                    <p className="chap_title">Lorem Ipsum</p>
+                                    <p className="chapter_year"> 3yr </p>
+                                  </div>
+                              </div>
+
+                              <div>
+                                <img src={bookchaplocked} className="img-fluid book_chap_lock" />
+                              </div>
+                        </div>
+                        <div className="chapter_numbers_box">
+                            <div className="d-flex gap-3 ">
+                                <p className="chap_no"> 5 </p>
                                 <div>
                                   <p className="chap_title">Lorem Ipsum</p>
                                   <p className="chapter_year"> 3yr </p>
                                 </div>
-                             </div>
-
+                              </div>
                             <div>
                               <img src={bookchaplocked} className="img-fluid book_chap_lock" />
                             </div>
-                      </div>
-                      <div className="chapter_numbers_box">
-                           <div className="d-flex gap-3 align-items-center">
-                              <p className="chap_no"> 5 </p>
-                              <div>
-                                <p className="chap_title">Lorem Ipsum</p>
-                                <p className="chapter_year"> 3yr </p>
-                              </div>
-                            </div>
-                          <div>
-                             <img src={bookchaplocked} className="img-fluid book_chap_lock" />
-                          </div>
-                      </div>
+                        </div>
 
-                      <div className="chapter_numbers_box">
-                           <div className="d-flex gap-3 align-items-center">
-                              <p className="chap_no"> 6 </p>
-                              <div>
-                                <p className="chap_title">Lorem Ipsum</p>
-                                <p className="chapter_year"> 3yr </p>
+                        <div className="chapter_numbers_box">
+                            <div className="d-flex gap-3 ">
+                                <p className="chap_no"> 6 </p>
+                                <div>
+                                  <p className="chap_title">Lorem Ipsum</p>
+                                  <p className="chapter_year"> 3yr </p>
+                                </div>
                               </div>
+                            <div>
+                              <img src={bookchaplocked} className="img-fluid book_chap_lock" />
                             </div>
-                          <div>
-                             <img src={bookchaplocked} className="img-fluid book_chap_lock" />
-                          </div>
-                      </div>
+                        </div>
 
-                      <div className="chapter_numbers_box">
-                           <div className="d-flex gap-3 align-items-center">
-                              <p className="chap_no"> 7 </p>
-                              <div>
-                                <p className="chap_title">Lorem Ipsum</p>
-                                <p className="chapter_year"> 3yr </p>
+                        <div className="chapter_numbers_box">
+                            <div className="d-flex gap-3 ">
+                                <p className="chap_no"> 7 </p>
+                                <div>
+                                  <p className="chap_title">Lorem Ipsum</p>
+                                  <p className="chapter_year"> 3yr </p>
+                                </div>
                               </div>
+                            <div>
+                              <img src={bookchaplocked} className="img-fluid book_chap_lock" />
                             </div>
-                          <div>
-                             <img src={bookchaplocked} className="img-fluid book_chap_lock" />
-                          </div>
-                      </div>
-                      <div className="chapter_numbers_box">
-                           <div className="d-flex gap-3 align-items-center">
-                              <p className="chap_no"> 8 </p>
-                              <div>
-                                <p className="chap_title">Lorem Ipsum</p>
-                                <p className="chapter_year"> 3yr </p>
+                        </div>
+                        <div className="chapter_numbers_box">
+                            <div className="d-flex gap-3 ">
+                                <p className="chap_no"> 8 </p>
+                                <div>
+                                  <p className="chap_title">Lorem Ipsum</p>
+                                  <p className="chapter_year"> 3yr </p>
+                                </div>
                               </div>
+                            <div>
+                              <img src={bookchaplocked} className="img-fluid book_chap_lock" />
                             </div>
-                          <div>
-                             <img src={bookchaplocked} className="img-fluid book_chap_lock" />
-                          </div>
-                      </div>
+                        </div>
 
-                      <div className="chapter_numbers_box">
-                           <div className="d-flex gap-3 align-items-center">
-                              <p className="chap_no"> 9 </p>
-                              <div>
-                                <p className="chap_title">Lorem Ipsum</p>
-                                <p className="chapter_year"> 3yr </p>
+                        <div className="chapter_numbers_box">
+                            <div className="d-flex gap-3 ">
+                                <p className="chap_no"> 9 </p>
+                                <div>
+                                  <p className="chap_title">Lorem Ipsum</p>
+                                  <p className="chapter_year"> 3yr </p>
+                                </div>
                               </div>
+                            <div>
+                              <img src={bookchaplocked} className="img-fluid book_chap_lock" />
                             </div>
-                          <div>
-                             <img src={bookchaplocked} className="img-fluid book_chap_lock" />
-                          </div>
-                      </div>
-                      <div className="chapter_numbers_box">
-                           <div className="d-flex gap-3 align-items-center">
-                              <p className="chap_no"> 10 </p>
-                              <div>
-                                <p className="chap_title">Lorem Ipsum</p>
-                                <p className="chapter_year"> 3yr </p>
+                        </div>
+                        <div className="chapter_numbers_box">
+                            <div className="d-flex gap-3 ">
+                                <p className="chap_no"> 10 </p>
+                                <div>
+                                  <p className="chap_title">Lorem Ipsum</p>
+                                  <p className="chapter_year"> 3yr </p>
+                                </div>
                               </div>
+                            <div>
+                              <img src={bookchaplocked} className="img-fluid book_chap_lock" />
                             </div>
-                          <div>
-                             <img src={bookchaplocked} className="img-fluid book_chap_lock" />
-                          </div>
-                      </div>
-                      <div className="chapter_numbers_box">
-                           <div className="d-flex gap-3 align-items-center">
-                              <p className="chap_no"> 11 </p>
-                              <div>
-                                <p className="chap_title">Lorem Ipsum</p>
-                                <p className="chapter_year"> 3yr </p>
+                        </div>
+                        <div className="chapter_numbers_box">
+                            <div className="d-flex gap-3 ">
+                                <p className="chap_no"> 11 </p>
+                                <div>
+                                  <p className="chap_title">Lorem Ipsum</p>
+                                  <p className="chapter_year"> 3yr </p>
+                                </div>
                               </div>
+                            <div>
+                              <img src={bookchaplocked} className="img-fluid book_chap_lock" />
                             </div>
-                          <div>
-                             <img src={bookchaplocked} className="img-fluid book_chap_lock" />
-                          </div>
-                      </div>
-                      <div className="chapter_numbers_box">
-                           <div className="d-flex gap-3 align-items-center">
-                              <p className="chap_no"> 12 </p>
-                              <div>
-                                <p className="chap_title">Lorem Ipsum</p>
-                                <p className="chapter_year"> 3yr </p>
+                        </div>
+                        <div className="chapter_numbers_box">
+                            <div className="d-flex gap-3 ">
+                                <p className="chap_no"> 12 </p>
+                                <div>
+                                  <p className="chap_title">Lorem Ipsum</p>
+                                  <p className="chapter_year"> 3yr </p>
+                                </div>
                               </div>
+                            <div>
+                              <img src={bookchaplocked} className="img-fluid book_chap_lock" />
                             </div>
-                          <div>
-                             <img src={bookchaplocked} className="img-fluid book_chap_lock" />
-                          </div>
-                      </div>
-                      <div className="chapter_numbers_box">
-                           <div className="d-flex gap-3 align-items-center">
-                              <p className="chap_no"> 13 </p>
-                              <div>
-                                <p className="chap_title">Lorem Ipsum</p>
-                                <p className="chapter_year"> 3yr </p>
+                        </div>
+                        <div className="chapter_numbers_box">
+                            <div className="d-flex gap-3 ">
+                                <p className="chap_no"> 13 </p>
+                                <div>
+                                  <p className="chap_title">Lorem Ipsum</p>
+                                  <p className="chapter_year"> 3yr </p>
+                                </div>
                               </div>
+                            <div>
+                              <img src={bookchaplocked} className="img-fluid book_chap_lock" />
                             </div>
-                          <div>
-                             <img src={bookchaplocked} className="img-fluid book_chap_lock" />
-                          </div>
-                      </div>
-                      <div className="chapter_numbers_box">
-                           <div className="d-flex gap-3 align-items-center">
-                              <p className="chap_no"> 14 </p>
-                              <div>
-                                <p className="chap_title">Lorem Ipsum</p>
-                                <p className="chapter_year"> 3yr </p>
-                              </div>
-                            </div>
-                          <div>
-                             <img src={bookchaplocked} className="img-fluid book_chap_lock" />
-                          </div>
-                      </div>
-                      <div className="chapter_numbers_box">
-                           <div className="d-flex gap-3 align-items-center">
-                              <p className="chap_no"> 15 </p>
-                              <div>
-                                <p className="chap_title">Lorem Ipsum</p>
-                                <p className="chapter_year"> 3yr </p>
-                              </div>
-                            </div>
-                          <div>
-                             <img src={bookchaplocked} className="img-fluid book_chap_lock" />
-                          </div>
-                      </div>
-                      <div className="chapter_numbers_box">
-                           <div className="d-flex gap-3 align-items-center">
-                              <p className="chap_no"> 16 </p>
-                              <div>
-                                <p className="chap_title">Lorem Ipsum</p>
-                                <p className="chapter_year"> 3yr </p>
-                              </div>
-                            </div>
-                          <div>
-                             <img src={bookchaplocked} className="img-fluid book_chap_lock" />
-                          </div>
-                      </div>
-            
-            
-            
-                 
+                        </div>
+                    </div>
 
+                    <div className="purchased_bg">
+                      <h4 className="more_chap">MORE ADVANCED CHAPTERS</h4>
+                      <h4 className="more_chap more_chap_two">Excited for more? <span className="great"> Great! </span></h4>
+                      <p className="program_text more_chap_two">The author has many chapters in store and has joined the program</p>
+                      <h4 className="prices_notes more_chap_two">NOTE: Chapters will be released at the usual rate and standard prices.</h4>
+                      <h4 className="warning_note more_chap_two">CONSIDER THIS YOUR WARNING!</h4>
+                      <div className="text-center"> <button  className="advanced_purchased_btn" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdropPurchased"> 
+                        Purchase advanced </button></div>
 
-
-
-
-                </div>
-                {/* <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Understood</button>
-                </div> */}
+                    </div>
+              
               </div>
             </div>
           </div>
@@ -689,14 +654,16 @@ export const BookName = () => {
                               </div>
                                 <div className="row mt-5">
                                     <div className="col-md-12">
-                                      <div className="chapters_with_checkbox">
+                                    <div className="chapters_with_checkbox">
+                                     
+                                    
                                         <div>
                                           <h6 className="locked_chapters_text">Next 10 Locked Chapters</h6>
                                           <p className="locked_chapters_number"> Ch 73 - Ch 82</p>
                                         </div>
 
                                         <div class="checkbox-wrapper-31">
-                                           <input type="checkbox"/>
+                                           <input type="checkbox" id="exampleRadios1" name="exampleRadios"/>
                                               <svg viewBox="0 0 35.6 35.6">
                                                 <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
                                                 <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
@@ -704,6 +671,8 @@ export const BookName = () => {
                                               </svg>
                                           </div>
 
+                                    
+                                    
                                       </div>
                                     </div>
 
@@ -711,6 +680,7 @@ export const BookName = () => {
                                     
 
                                     <div className="col-md-12">
+                                    
                                       <div className="chapters_with_checkbox">
                                         <div>
                                           <h6 className="locked_chapters_text">Next 50 Locked Chapters</h6>
@@ -718,7 +688,7 @@ export const BookName = () => {
                                         </div>
 
                                         <div class="checkbox-wrapper-31">
-                                           <input type="checkbox"/>
+                                           <input type="checkbox" id="exampleRadios2" name="exampleRadios"/>
                                               <svg viewBox="0 0 35.6 35.6">
                                                 <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
                                                 <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
@@ -727,11 +697,13 @@ export const BookName = () => {
                                           </div>
 
                                       </div>
+                                     
                                     </div>
 
                                     <div className="checkbox_div" ></div>
 
                                     <div className="col-md-12">
+                                  
                                       <div className="chapters_with_checkbox">
                                         <div>
                                           <h6 className="locked_chapters_text">Next 100 Locked Chapters</h6>
@@ -739,7 +711,7 @@ export const BookName = () => {
                                         </div>
 
                                         <div class="checkbox-wrapper-31">
-                                           <input type="checkbox"/>
+                                           <input type="checkbox"  id="exampleRadios3" name="exampleRadios"/>
                                               <svg viewBox="0 0 35.6 35.6">
                                                 <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
                                                 <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
@@ -748,19 +720,21 @@ export const BookName = () => {
                                           </div>
 
                                       </div>
+                                      
                                     </div>
 
                                     <div className="checkbox_div" ></div>
 
                                     <div className="col-md-12">
+                                   
                                       <div className="chapters_with_checkbox">
                                         <div>
-                                          <h6 className="locked_chapters_text">Remaining Locked Chapters <span className="locked_chapter_buy">10% OFF</span></h6>
+                                          <h6 className="locked_chapters_text"> Remaining Locked Chapters <span className="locked_chapter_buy"> 10% OFF </span></h6>
                                           <p className="locked_chapters_number">  Ch 73 - Ch 906 </p>
                                         </div>
 
                                         <div class="checkbox-wrapper-31">
-                                           <input type="checkbox"/>
+                                           <input type="checkbox"   id="exampleRadios4" name="exampleRadios"/>
                                               <svg viewBox="0 0 35.6 35.6">
                                                 <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
                                                 <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
@@ -769,6 +743,7 @@ export const BookName = () => {
                                           </div>
 
                                       </div>
+                                      
                                     </div>
 
 
@@ -778,7 +753,7 @@ export const BookName = () => {
                                   <div className="col-md-6">
                                     <p className="unlock_cost">Unlock Cost</p>
                                     <div className="discount_coins_div">
-                                    <p className="unlock_cost_amount" >- 8332  <sub className="unlock_cost_discount" > 9257 </sub></p>
+                                    <p className="unlock_cost_amount" > - 8332  <sub className="unlock_cost_discount" > 9257 </sub></p>
                                     <img src={ManaFrame} className="img-fluid mana_discount_frame" />
                                     </div>
                                   </div>
@@ -1149,6 +1124,182 @@ export const BookName = () => {
            
 
            {/* <!-- Modal End --> */}
+
+
+              {/* <!-- purchased Modal --> */}
+    
+          <div class="modal fade" id="staticBackdropPurchased" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog custom_modal_dailog">
+              <div class="modal-content purchased_modal-content">
+                <div class="modal-header">
+                      <div className="plan_with_mark">
+                          <h3 className="choose_plan_para"> Choose a plan </h3>
+                          <i class="fa-solid fa-question batch_unlock_mark"></i>
+                        </div>
+                      
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark cancel_mark"></i></button>
+                </div>
+                   <div class="modal-body modal_body_spacing">
+                     <p className="time_left">Time left before Advanced expires: <span className="expire_date">  16d 19h 07m 47s </span></p>
+
+                  {/* raed chapter card start */}
+                     <div className="purchased_chap_cards">
+                        <p className="read_ahead"> Read 2 chapters ahead </p>
+                        <div className="read_ahead_main_div">
+                          <p className="read_ahead_para">Purchase to unlock 2 chapters in advance</p>
+                          <div className="read_ahead_child_div" >
+                            <p className="read_ahead_num">1</p>
+                            <img src={readChapCoin} className="img-fluid read_chap_coin_img"/>
+                          </div>
+                        </div>
+                        <div className="read_ahead_main_div">
+                          <p className="read_ahead_para">Unlock to Ch.813</p>
+                          <div className="read_ahead_child_div" >
+                            <p className="read_ahead_num">28</p>
+                            <img src={readChapCoin} className="img-fluid read_chap_coin_img"/>
+                          </div>
+                        </div>
+                        <div className="purchased_chap_divider"></div>
+                        <div className="read_ahead_main_div">
+                          <div className="read_ahead_child_div" >
+                            <img src={rotateManaCoin} className="img-fluid purchased_mana_fram_img"/>
+                            <p className="purchased_mana_num">26</p>
+                          </div>
+                          <button className="purchased_mana_card_btn">Purchase</button>
+                        </div>
+                     </div>
+                     {/* raed chapter card end */}
+                     {/* raed chapter card start */}
+                     <div className="purchased_chap_cards">
+                        <p className="read_ahead"> Read 5 chapters in 2 days ahead </p>
+                        <div className="read_ahead_main_div">
+                          <p className="read_ahead_para">Purchase to unlock 2 chapters in advance</p>
+                          <div className="read_ahead_child_div" >
+                            <p className="read_ahead_num">399</p>
+                            <img src={readChapCoin} className="img-fluid read_chap_coin_img"/>
+                          </div>
+                        </div>
+                        <div className="read_ahead_main_div">
+                          <p className="read_ahead_para">Unlock to Ch.813</p>
+                          <div className="read_ahead_child_div" >
+                            <p className="read_ahead_num">633</p>
+                            <img src={readChapCoin} className="img-fluid read_chap_coin_img"/>
+                          </div>
+                        </div>
+                        <div className="purchased_chap_divider"></div>
+                        <div className="read_ahead_main_div">
+                          <div className="read_ahead_child_div" >
+                            <img src={rotateManaCoin} className="img-fluid purchased_mana_fram_img"/>
+                            <p className="purchased_mana_num">462</p>
+                          </div>
+                          <button className="purchased_mana_card_btn">Purchase</button>
+                        </div>
+                     </div>
+                    {/* raed chapter card end */}
+
+                      {/* raed chapter card start */}
+                      <div className="purchased_chap_cards">
+                        <p className="read_ahead"> Read 10 chapters in 6 days ahead </p>
+                        <div className="read_ahead_main_div">
+                          <p className="read_ahead_para">Purchase to unlock 2 chapters in advance</p>
+                          <div className="read_ahead_child_div" >
+                            <p className="read_ahead_num">899</p>
+                            <img src={readChapCoin} className="img-fluid read_chap_coin_img"/>
+                          </div>
+                        </div>
+                        <div className="read_ahead_main_div">
+                          <p className="read_ahead_para">Unlock to Ch.813</p>
+                          <div className="read_ahead_child_div" >
+                            <p className="read_ahead_num">166</p>
+                            <img src={readChapCoin} className="img-fluid read_chap_coin_img"/>
+                          </div>
+                        </div>
+                        <div className="purchased_chap_divider"></div>
+                        <div className="read_ahead_main_div">
+                          <div className="read_ahead_child_div" >
+                            <img src={rotateManaCoin} className="img-fluid purchased_mana_fram_img"/>
+                            <p className="purchased_mana_num">1065</p>
+                          </div>
+                          <button className="purchased_mana_card_btn">Purchase</button>
+                        </div>
+                     </div>
+                  {/* raed chapter card end */}
+                   {/* raed chapter card start */}
+                   <div className="purchased_chap_cards">
+                        <p className="read_ahead"> Read 15 chapters ahead </p>
+                        <div className="read_ahead_main_div">
+                          <p className="read_ahead_para">Purchase to unlock 2 chapters in advance</p>
+                          <div className="read_ahead_child_div" >
+                            <p className="read_ahead_num">1</p>
+                            <img src={readChapCoin} className="img-fluid read_chap_coin_img"/>
+                          </div>
+                        </div>
+                        <div className="read_ahead_main_div">
+                          <p className="read_ahead_para">Unlock to Ch.813</p>
+                          <div className="read_ahead_child_div" >
+                            <p className="read_ahead_num">28</p>
+                            <img src={readChapCoin} className="img-fluid read_chap_coin_img"/>
+                          </div>
+                        </div>
+                        <div className="purchased_chap_divider"></div>
+                        <div className="read_ahead_main_div">
+                          <div className="read_ahead_child_div" >
+                            <img src={rotateManaCoin} className="img-fluid purchased_mana_fram_img"/>
+                            <p className="purchased_mana_num">26</p>
+                          </div>
+                          <button className="purchased_mana_card_btn">Purchase</button>
+                        </div>
+                     </div>
+                  {/* raed chapter card end */}
+                   {/* raed chapter card start */}
+                   <div className="purchased_chap_cards">
+                        <p className="read_ahead"> Read 20 chapters in 2 days ahead </p>
+                        <div className="read_ahead_main_div">
+                          <p className="read_ahead_para">Purchase to unlock 2 chapters in advance</p>
+                          <div className="read_ahead_child_div" >
+                            <p className="read_ahead_num">399</p>
+                            <img src={readChapCoin} className="img-fluid read_chap_coin_img"/>
+                          </div>
+                        </div>
+                        <div className="read_ahead_main_div">
+                          <p className="read_ahead_para">Unlock to Ch.813</p>
+                          <div className="read_ahead_child_div" >
+                            <p className="read_ahead_num">63</p>
+                            <img src={readChapCoin} className="img-fluid read_chap_coin_img"/>
+                          </div>
+                        </div>
+                        <div className="purchased_chap_divider"></div>
+                        <div className="read_ahead_main_div">
+                          <div className="read_ahead_child_div" >
+                            <img src={rotateManaCoin} className="img-fluid purchased_mana_fram_img"/>
+                            <p className="purchased_mana_num">462</p>
+                          </div>
+                          <button className="purchased_mana_card_btn">Purchase</button>
+                        </div>
+                     </div>
+                  {/* raed chapter card end */}
+                  <div className="unlocked_mana_card_div">
+                    <p className="unclocked_chap_content"> Unlock Remaining Chapters</p>
+                     <div className="read_ahead_main_div_two">
+                       <div className="read_ahead_child_div " >
+                          <img src={rotateManaCoin} className="img-fluid purchased_mana_fram_img_two"/>
+                          <p className="purchased_mana_num">600</p>
+                        </div>
+                        <button className="purchased_mana_card_btn_two">Unlock</button>
+                     </div>
+                  </div>
+
+
+                   
+                    
+                    </div>
+
+                    
+              </div>
+            </div>
+          </div>
+                  
+          {/* <!-- Modal end --> */}
 
 
 

@@ -200,7 +200,7 @@
     height: 20px;
 }
 .modal-body.custom_modal_body{
-    height: 500px ;
+    height: 300px ;
     overflow-x: auto;
 }
 .modal-body.custom_modal_body::-webkit-scrollbar {
@@ -227,6 +227,237 @@
 
 
 /* side bar modal css end*/
+
+ /* side modal second section css start */
+
+
+ .purchased_bg{
+  background-image: url(../../Assets/images/purchsedBg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 25px;
+  border-top: 3px solid #FFF;
+ }
+ .more_chap{
+  font-family: 'Jost';
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+ }
+ .more_chap_two{
+  margin-bottom: 10px;
+ }
+
+ .great{
+  color: #FBD5C7;
+ }
+.program_text{
+  font-family: 'Jost';
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18.91px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+
+}
+.prices_notes{
+  font-family: 'Jost';
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24.61px;
+  text-align: center;
+  color: #FFB1EE;
+  text-transform: uppercase;
+
+}
+.warning_note{
+  font-family: 'Jost';
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 31.46px;
+  text-align: center;
+  color: #FF5A5A;
+
+}
+.advanced_purchased_btn{
+  font-family: 'Jost';
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18.91px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(91.01deg, #8030CC 2.15%, #401866 95.72%);
+  border-radius: 30px;
+  border: none;
+  width: 90%;
+  padding: 9px
+
+}
+
+
+  /* side modal second section css end */
+
+/* purchased modal css start */
+.modal-content.purchased_modal-content{
+  background-color: #101010;
+  padding: 21px 10px;
+
+
+}
+.plan_with_mark{
+  display: flex;
+  flex-wrap: wrap;
+  gap:16px;
+  align-items: center;
+}
+.choose_plan_para{
+  color: #FFFBEF;
+  font-family: 'Jost';
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+}
+.time_left{
+  font-family: 'Century Gothic';
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 33.28px;
+  text-align: left;
+  color: #fff;
+}
+.expire_date{
+  color:  #BC76FF;
+}
+.read_ahead{
+  font-family: 'Century Gothic';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  color: #B59EFF;
+
+}
+.read_ahead_para{
+  font-family: 'Century Gothic';
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 29px;
+  text-align: left;
+  color: #fff;
+}
+
+.read_ahead_num{
+  font-family: 'Century Gothic';
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 31px;
+  text-align: left;
+  color: #B66EFB;
+}
+
+.read_ahead_main_div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.read_ahead_child_div{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* gap: 5px; */
+}
+.purchased_chap_cards{
+  background-color: #222222;
+  border-radius: 11px;
+  padding: 0px 12px;
+  margin: 10px 0px;
+}
+.purchased_chap_divider{
+  background-color: #6c757d8f;
+  height: 1px;
+  width: 100%;
+}
+.purchased_mana_fram_img{
+  width: 45%;
+  height: 45%;
+  transform: rotate(339deg);
+}
+.purchased_mana_num{
+  color: #B66EFB;
+  font-family: 'Century Gothic';
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 44px;
+  text-align: left;
+
+}
+.purchased_mana_card_btn{
+  background: #8030CC;
+  font-family: 'Century Gothic';
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 19px;
+  text-align: center;
+  color: #fff;
+  border-radius: 18px;
+  border: none;
+  padding: 2px 22px;
+}
+.unclocked_chap_content{
+  color: #fff;
+  font-family: 'Century Gothic';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 41px;
+  text-align: center;
+
+}
+.unlocked_mana_card_div{
+  background-color: #360C55;
+  border-radius: 12px;
+}
+.purchased_mana_fram_img_two{
+  transform: rotate(339deg);
+  width: 50%;
+  height: 50%;
+}
+
+.read_ahead_main_div_two {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+.purchased_mana_card_btn_two {
+  background: #8030CC;
+  font-family: 'Century Gothic';
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 19px;
+  text-align: center;
+  color: #fff;
+  border-radius: 18px;
+  border: none;
+  padding: 2px 40px;
+}
+
+.modal_body_spacing{
+  margin-top: -18px;
+}
+
+/* purchased modal css end */
+
+
+
 .book_name_icons_btn{
     background: transparent;
     border: none;
@@ -249,10 +480,10 @@
  .batch_unlock_mark {
     color: #000;
     background-color: #fff;
-    font-size: 15px;
+    font-size: 13px;
     border-radius: 50%;
-    width: 22px;
-    height: 22px;
+    width: 19px;
+    height: 19px;
     text-align: center;
     align-items: center;
     display: flex;
@@ -293,8 +524,8 @@ color: #A7A7A7;
   .checkbox-wrapper-31 {
     position: relative;
     display: inline-block;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     fill: #000;
     outline: 1px solid #8030CC;
     border-radius: 50%;
@@ -1077,6 +1308,52 @@ align-items: center;
 
 
 @media ( max-width:1440px){
+  .choose_plan_para { 
+    font-size: 22px;
+  }
+  .read_ahead_para {
+      font-size: 10px;
+  }
+  .time_left {
+    font-size: 10px;
+  }
+  .modal-content.purchased_modal-content {
+    width: 120%;
+}
+  .purchased_mana_fram_img {
+    width: 40%;
+  }
+  .purchased_mana_card_btn {
+    font-size: 11px;
+    padding: 1px 16px;
+}
+  .more_chap_two {
+    margin-bottom: 3px;
+}
+  .more_chap {
+   
+    font-size: 10px;
+  }
+  .program_text {
+      font-size: 10px;
+  }
+  .prices_notes {
+      font-size: 10px;
+  }.warning_note {
+  
+    font-size: 11px;
+  }
+  .purchased_mana_num {
+    
+    font-size: 17px;
+  }
+  .unclocked_chap_content {
+    font-size: 13px;
+  }
+  .purchased_mana_card_btn_two {
+    font-size: 11px;
+    padding: 0px 25px;
+}
 
     .more_icons_box {
     
@@ -1092,15 +1369,71 @@ align-items: center;
 }
 
 @media ( max-width:1280px){
+  .modal-content.purchased_modal-content {
+    width: 100%;
+}
+  .batch_unlock_mark {
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+  }
+  .choose_plan_para {
+  
+    font-size: 17px;
+  }
+  .modal-content.purchased_modal-content {
+
+    padding: 21px 0px;
+}
+.time_left {
+
+  font-size: 8px;
+}
+.read_ahead {
+
+  font-size: 10px;
+}
+.read_ahead_para {
+
+  font-size: 7px;
+}
+.read_ahead_num {
+
+  font-size: 7px;
+}
+.purchased_mana_card_btn {
+  font-size: 9px;
+  padding: 0px 15px;
+}
+.unclocked_chap_content {
+  font-size: 10px;
+}
+.purchased_mana_num {
+  font-size: 14px;
+}
+.purchased_mana_fram_img_two {
+  width: 40%;
+
+}
+.purchased_mana_fram_img {
+  width: 32%;
+}
+.read_chap_coin_img{
+  width: 50%;
+}
+.purchased_mana_card_btn_two {
+  font-size: 9px;
+  padding: 0px 20px;
+}
 .comment_raiting_numbers{
-    font-size: 14px;
-    }
+font-size: 14px;
+}
 .comment_raiting_signs {
-            font-size: 9px;
-    }
+ font-size: 9px;
+}
 .comments_heading {
-    font-size: 18px;
-    }
+font-size: 18px;
+}
 
 
 .comments_filters {
@@ -1175,6 +1508,9 @@ align-items: center;
   .modal-dialog.second_custom_modal_dailog{
     width: 70%;
   }
+  .modal-content.purchased_modal-content {
+    width: 120%;
+}
 
 }
 
@@ -1191,8 +1527,25 @@ align-items: center;
     .comment_raiting_signs{
 
     }
+    .modal-content.purchased_modal-content {
+      width: 74%;
+  }
+  .time_left {
+    font-size: 9px;
+}
+.read_ahead_para {
+  font-size: 8px;
+}
+.read_ahead_num {
+  font-size: 8px;
+}
     
     
+}
+@media (max-width: 768px) {
+  .modal-content.purchased_modal-content {
+    width: 87%;
+  }
 }
 @media (max-width: 600px) {
     .icons_box {
@@ -1240,6 +1593,52 @@ align-items: center;
 }
 .custom_dropdown_menu_container {
     width: 311px !important;
+}
+.more_chap {
+  font-size: 12px;
+}
+.program_text {
+  font-size: 10px;
+}
+.prices_notes {
+  font-size: 9px;
+}
+.warning_note {
+  font-size: 11px;
+}
+.read_ahead_para{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  padding: 0;
+  font-size: 9px;
+}
+.read_ahead {
+  /* font-family: 'Century Gothic'; */
+  font-size: 12px;
+}
+.purchased_mana_fram_img {
+  width: 29%;
+  height: 37%;
+}
+.purchased_mana_num {
+  font-size: 15px;
+}
+.purchased_mana_card_btn {
+  font-size: 10px;
+  padding: 1px 12px;
+}
+.modal-content.purchased_modal-content {
+
+  width: 127%;
+}
+.unclocked_chap_content {
+  font-size: 12px;
+}
+.modal-content.custom_modal-content {
+
+  width: 127%;
 }
 }
 

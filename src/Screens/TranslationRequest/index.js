@@ -262,8 +262,18 @@ useEffect(() =>{
                  </div>
                  <div className="col-6 col-md-6">
                    <div class="input-completion completion__search translation_request_buttons_div">
-                      <button class="filter" ><span> Filter </span> <img className="img-fluid filter_icon" src={dropdown} /></button>
-                      <button class="create" ><span> Create </span><img className="img-fluid create_icon"  src={Manual}/></button>
+                        <div  className="dropdown">
+                            <button class="filter" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span> Filter </span> <img className="img-fluid filter_icon" src={dropdown} />
+                            </button>
+
+                                <ul class="dropdown-menu filter_dropdown" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item filter_dropdown_list" href="#">Action</a></li>
+                                    <li><a class="dropdown-item filter_dropdown_list" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item filter_dropdown_list" href="#">Filter</a></li>
+                                </ul>
+                        </div>
+                      <button class="create" ><span> Create </span><img className="img-fluid create_icon"  src={Manual} /></button>
                    </div>
                  </div>
                  {/* <div className="col-6 col-md-3">

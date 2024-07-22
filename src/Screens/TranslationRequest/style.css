@@ -275,7 +275,18 @@
         padding: 17px 21px 17px 24px;
         margin-left: 20px;
         color: #fff;
-    }    
+    }  
+    
+.filter_dropdown{
+    background-color: #161616;
+}
+.filter_dropdown_list{
+color: #fff;
+}
+.filter_dropdown_list:hover{
+    color: #fff;
+    background: #360C55;
+}
 .create {
     font-family: 'Poppins';
     font-size: 11px;

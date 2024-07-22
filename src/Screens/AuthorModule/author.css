@@ -171,6 +171,12 @@
   flex-direction: row-reverse;
 }
 /* Author List End */
+@media (max-width:1280px){
+  .herro__title h1 {
+    font-size: 64px;
+  }
+
+}
 @media (max-width:600px){
   
   .authors__carousel-title h2 {
