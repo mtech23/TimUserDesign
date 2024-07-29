@@ -31,8 +31,19 @@ import T_A_book_1 from "../../Assets/images/T_A_book_1.png";
 import colon from "../../Assets/images/colon.png";
 import comments_profile from "../../Assets/images/comments_profile.png";
 import line_timer  from "../../Assets/images/line_timer.png";
-
+import arrow_right from "../../Assets/images/arrow_right.png";
 import add_comments from "../../Assets/images/add_comments.png";
+import recent_msg from "../../Assets/images/recent_msg.png";
+import huru from "../../Assets/images/huru.png";
+import me from "../../Assets/images/me.png";
+import active from "../../Assets/images/active.png";
+import appy from "../../Assets/images/appy.png";
+import online from "../../Assets/images/online.png";
+import laverna from "../../Assets/images/laverna.png";
+import club from "../../Assets/images/club.png";
+import msg from "../../Assets/images/msg.png";
+import startconversation from "../../Assets/images/start conversation.png";
+import noti from "../../Assets/images/noti.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
@@ -93,6 +104,9 @@ import Form from "react-bootstrap/Form";
 
 import { Container, Row, Col } from "react-bootstrap";
 import Star from "../../Assets/images/Star 1.png";
+import addfriend from "../../Assets/images/add_friend.png";
+
+
 import showmoreicon from "../../Assets/images/showmoreicon.png";
 
 import Tab from "react-bootstrap/Tab";
@@ -199,10 +213,6 @@ export const Forum = ({ eventKey, children }) => {
       rating: newRating,
     });
   };
-
-
-
-
 
   const ratingQuality = (newRating) => {
     console.log(newRating);
@@ -711,19 +721,593 @@ export const Forum = ({ eventKey, children }) => {
           </div>
         </section>
 
-        <section>
+        <section className="forum_first_section">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-4 col-sm-12">
-                        <div>
-                            <form class="example" action="/action_page.php" >
-                            <input type="text" placeholder="Search.." name="search2"/>
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>
+                    <div className="col-6 col-lg-4 col-sm-6 col-md-4">
+                        <div className="">
+                            <form class="example custom_searchbar" action="/action_page.php" >
+                              <input type="text" placeholder="Search For User" name="search2"/>
+                              <button type="submit" className="custom_search_btn"><i class="fa fa-search"></i></button>
+                            </form>
                         </div>
                     </div>
+
+                    <div className="col-6 col-lg-4 col-sm-6 col-md-4">
+                        <div className="friend_list_div">
+                            <div className="dropdown">
+                              <img src={addfriend} className="img-fluid add_friend_img"  type="button" id="dropdownMenuButton04" data-bs-toggle="dropdown"
+                               aria-expanded="false"/>
+                              
+                                <ul class="dropdown-menu adduser_dropdown_menu_container add_friend_container" aria-labelledby="dropdownMenuButton04">
+                                  <div className="dropdown_list_bg add_friend_list_bg">
+                                    <li className="custom_dropdown_username" >Add by Username</li>
+                                    <div className="dropdown_list_divider"></div>
+                                    <li className="custom_dropdown_add_friend " > Who would you like to add as Friend?</li>
+                                    <input type="text" className="username_input mt-2" placeholder="Enter a Username" id="name" name="name" required />
+                                    <li className="custom_dropdown_your_name mt-3" > By the way, your username is 
+                                      <span className="justcallmefox_text"> justcallmefox_ </span> </li>
+                                  </div>
+                                </ul>
+                            </div>
+
+                            <div class="dropdown">
+                              <button class="friend_list_btn dropdown-toggle first_toggle" type="button" id="dropdownMenuButton07" data-bs-toggle="dropdown" aria-expanded="false">
+                              Friend List
+                              </button>
+                              <ul class="dropdown-menu friend_request_menu_container add_friend_container" aria-labelledby="dropdownMenuButton07">
+                                  <div className="dropdown_list_bg add_friend_list_bg">
+                                    <li className="custom_dropdown_username" > 
+                                      <div className="friend_request_div">
+                                          <button type="submit" className="request_search_icon"><i class="fa fa-search"></i></button>
+                                          <button className="friend_request"> View Friend Request </button>
+                                      </div>
+                                    </li>
+                                    <div className="dropdown_list_divider"></div>
+                                    <li className="custom_dropdown_add_friend"> 
+                                      <div className="recently_msg_div">
+                                        <img src={recent_msg} className="recent_msg_img"/>
+                                        <div>
+                                          <p className="recent_msg_text">Recently Messaged</p>
+                                          <p className="braindean_text">Braindean B33</p>
+                                          <p className="rock_text">Recently killing my enemies with a rock</p>
+                                        </div>
+                                      </div>
+                                    </li>
+                                    <li className="custom_dropdown_add_friend"> 
+                                      <div className="discord_updates_div">
+                                        <div className="profile_name_with_msg">
+                                            <button className="refresh_icon"> <i class="fa-solid fa-arrows-rotate "></i></button>
+                                              <div>
+                                                  <div className="child_discord_updates_div">
+                                                    <p className="discord_updates_text">Discord Updates</p>
+                                                    <div className="officail_updates_div"> <i class="fa-solid fa-check check_mark_update"></i> <p className="officail_updates">OFFICIAL</p>  </div>
+                                                  </div>
+                                                  <p className="product_updates_text">Discord product Updates</p>
+                                              </div>
+                                        </div>
+                                        <p className="days_number">12d</p>
+                                      </div>
+                                    </li>
+
+                                    <li className=""> 
+                                      <div className="discord_updates_div discord_updates_div_active_class">
+                                          <div className="profile_name_with_msg"> 
+                                            <img src={huru} className="recent_msg_img"/>
+                                              <div>
+                                                  <p className="discord_updates_text">huru</p>
+                                                  <p className="product_updates_text">You: Hey</p>
+                                              </div>
+                                          </div>
+                                        <p className="days_number">15d</p>
+                                      </div>
+                                    </li>
+
+                                    <li className=""> 
+                                      <div className="discord_updates_div">
+                                          <div className="profile_name_with_msg"> 
+                                            <img src={me} className="recent_msg_img position-relative"/>
+                                            <img src={active} className="activ_friend_img "/>
+                                              <div>
+                                                  <p className="discord_updates_text">Me</p>
+                                                  <p className="product_updates_text">wave</p>
+                                              </div>
+                                          </div>
+                                        <p className="days_number">15d</p>
+                                      </div>
+                                    </li>
+
+                                    <li className=""> 
+                                      <div className="discord_updates_div">
+                                          <div className="profile_name_with_msg"> 
+                                            <img src={appy} className="recent_msg_img position-relative"/>
+                                            <img src={online} className="activ_friend_img_one "/>
+                                              <div>
+                                                  <p className="discord_updates_text">Appy</p>
+                                                  <p className="product_updates_text">You: the button only on computer</p>
+                                              </div>
+                                          </div>
+                                        <p className="days_number">6d</p>
+                                      </div>
+                                    </li>
+
+                                    <li className=""> 
+                                      <div className="discord_updates_div">
+                                          <div className="profile_name_with_msg"> 
+                                            <img src={laverna} className="recent_msg_img position-relative"/>
+                                            <img src={active} className="activ_friend_img_two "/>
+                                              <div>
+                                                  <p className="discord_updates_text">Laverna</p>
+                                                  <p className="product_updates_text">You: Hello</p>
+                                              </div>
+                                          </div>
+                                        <p className="days_number">3mo</p>
+                                      </div>
+                                    </li>
+
+                                    <li className=""> 
+                                      <div className="discord_updates_div">
+                                          <div className="profile_name_with_msg"> 
+                                            <img src={club} className="recent_msg_img position-relative"/>
+                                            <img src={active} className="activ_friend_img_three "/>
+                                              <div>
+                                                  <p className="discord_updates_text">Little Club</p>
+                                                  <p className="product_updates_text">wave</p>
+                                              </div>
+                                          </div>
+                                        <p className="days_number">5mo</p>
+                                      </div>
+                                    </li>
+
+                                    <li className=""> 
+                                      <div className="discord_updates_div">
+                                          <div className="profile_name_with_msg"> 
+                                            <img src={club} className="recent_msg_img position-relative"/>
+                                            <img src={active} className="activ_friend_img_four "/>
+                                              <div>
+                                                  <p className="discord_updates_text">Little Club</p>
+                                                  <p className="product_updates_text">wave</p>
+                                              </div>
+                                          </div>
+                                        <p className="days_number">5mo</p>
+                                      </div>
+                                    </li>
+
+
+                                    <li className=""> 
+                                      <div className="discord_updates_div">
+                                          <div className="profile_name_with_msg"> 
+                                            <img src={club} className="recent_msg_img position-relative"/>
+                                            <img src={active} className="activ_friend_img_five "/>
+                                              <div>
+                                                  <p className="discord_updates_text">Little Club</p>
+                                                  <p className="product_updates_text">wave</p>
+                                              </div>
+                                          </div>
+                                        <p className="days_number">5mo</p>
+                                      </div>
+                                    </li>
+
+                                   
+                                  </div>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="col-12 col-lg-4 col-sm-12 col-md-4">
+                      <div className="third_dropdown_div">
+                          <div class="dropdown">
+                            <button class="dropdown-toggle second_toggle saincofox" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              saincofox
+                            </button>
+                              <ul class="dropdown-menu msg_menu_container add_friend_container" aria-labelledby="dropdownMenuButtonnote">
+                                <div className="dropdown_list_bg add_friend_list_bg">
+                                <li className="msg_heading"> 
+                                Saincofox
+                                </li>
+                                <div className="dropdown_list_divider"></div>
+                                <li className="new_notifications"> 
+                                Action
+                                </li>
+                                </div>
+                              </ul>
+                          </div>
+
+                        
+                          <div class="dropdown">
+                                <button class="msg_dropdown_btn" type="button" id="dropdownMenuButtonmsg" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <img src={msg} className="msg_img"/>
+                                </button>
+                                <ul class="dropdown-menu msg_menu_container add_friend_container" aria-labelledby="dropdownMenuButtonmsg">
+                                    <div className="dropdown_list_bg add_friend_list_bg">
+                                        <li className="msg_heading"> 
+                                          Messages
+                                        </li>
+                                        <div className="dropdown_list_divider"></div>
+                                        <li className="no_recent_msg"> 
+                                        You have no recent messages
+                                        </li>
+                                        <div className="dropdown_list_divider"></div>
+                                        <li className="msg_footer_btn"> 
+                                          <button className="show_msg_btn"> Show All </button>
+                                          <button className="show_msg_btn">
+                                            <img src={startconversation} className="startconversation_img" />
+                                            <span> Start A New Conversation </span>
+                                          </button>
+                                        </li>
+                                    </div>
+                                  </ul>
+                              </div>
+                              <div class="dropdown">
+                                <button class="msg_dropdown_btn" type="button" id="dropdownMenuButtonnote" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <img src={noti} className="msg_img"/>
+                                </button>
+                                <ul class="dropdown-menu notification_menu_container  add_friend_container" aria-labelledby="dropdownMenuButtonnote">
+                                    <div className="dropdown_list_bg add_friend_list_bg">
+                                        <li className="msg_heading"> 
+                                        Notification
+                                        </li>
+                                        <div className="dropdown_list_divider"></div>
+                                        <li className="new_notifications"> 
+                                        You have no new notifications
+                                        </li>
+                                    </div>
+                                  </ul>
+                              </div>
+
+                      </div>
+                    </div>
+
+
+
+
+
+
+
+
+
                 </div>
             </div>
+
+        </section>
+
+        <section className="tabs_section_spacing">
+       
+          <div className="row ">
+            <div className="col-md-12 ">
+            <ul class="nav nav-pills mb-3 forum_tabs_box " id="pills-tab" role="tablist ">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link forum_tab_links active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link forum_tab_links" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">General Chat</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link forum_tab_links" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Recommendations</button>
+              </li>
+              <li class="nav-item" role="presentation">
+              <button class="nav-link forum_tab_links" id="pills-contact1-tab" data-bs-toggle="pill" data-bs-target="#pills-contact1" type="button" role="tab" aria-controls="pills-contact1" aria-selected="false">Novel Discussions</button>
+              </li>
+              <li class="nav-item" role="presentation">
+              <button class="nav-link forum_tab_links" id="pills-contact2-tab" data-bs-toggle="pill" data-bs-target="#pills-contact2" type="button" role="tab" aria-controls="pills-contact2" aria-selected="false">Translator Corner</button>
+              </li>
+              <li class="nav-item" role="presentation">
+              <button class="nav-link forum_tab_links" id="pills-contact3-tab" data-bs-toggle="pill" data-bs-target="#pills-contact3" type="button" role="tab" aria-controls="pills-contact3" aria-selected="false">Bugs</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_newsletter_bg">Newsletter</h5>
+                    </div>
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_update_bg">Updates</h5>
+                      <div className="row mt-4">
+                        <div className="col-lg-6 col-sm-6 col-6 ">
+                          <h5 className="forum_change_future_text forum_change_future_bg">Future change</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg">Guidelines</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row mt-4">
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_newsletter_bg forum_popular_post_bg">A List of most popular posts</h5>
+                    </div>
+                    <div className="col-md-6 ">
+                      <div className="row post_list_row_screen">
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_change_future_bg forum_newest_post_bg">A List of newest posts</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg forum_list_post_bg">A List of newest posts</h5>
+                        </div>
+                      </div>
+                      <div className="row mt-4">
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_change_future_bg forum_author_post_bg">Author</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg forum_extras_bg">Extras</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+
+
+
+
+
+
+              </div>
+
+
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+              <div className="container">
+                  <div className="row">
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_newsletter_bg">Newsletter</h5>
+                    </div>
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_update_bg">Updates</h5>
+                      <div className="row mt-4">
+                        <div className="col-lg-6 col-sm-6 col-6 ">
+                          <h5 className="forum_change_future_text forum_change_future_bg">Future change</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg">Guidelines</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row mt-4">
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_newsletter_bg forum_popular_post_bg">A List of most popular posts</h5>
+                    </div>
+                    <div className="col-md-6 ">
+                      <div className="row post_list_row_screen">
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_change_future_bg forum_newest_post_bg">A List of newest posts</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg forum_list_post_bg">A List of newest posts</h5>
+                        </div>
+                      </div>
+                      <div className="row mt-4">
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_change_future_bg forum_author_post_bg">Author</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg forum_extras_bg">Extras</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </div>
+
+
+
+              <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+
+
+
+              <div className="container">
+                  <div className="row">
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_newsletter_bg">Newsletter</h5>
+                    </div>
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_update_bg">Updates</h5>
+                      <div className="row mt-4">
+                        <div className="col-lg-6 col-sm-6 col-6 ">
+                          <h5 className="forum_change_future_text forum_change_future_bg">Future change</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg">Guidelines</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row mt-4">
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_newsletter_bg forum_popular_post_bg">A List of most popular posts</h5>
+                    </div>
+                    <div className="col-md-6 ">
+                      <div className="row post_list_row_screen">
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_change_future_bg forum_newest_post_bg">A List of newest posts</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg forum_list_post_bg">A List of newest posts</h5>
+                        </div>
+                      </div>
+                      <div className="row mt-4">
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_change_future_bg forum_author_post_bg">Author</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg forum_extras_bg">Extras</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+
+
+              </div>
+
+
+              <div class="tab-pane fade" id="pills-contact1" role="tabpanel" aria-labelledby="pills-contact1-tab" tabindex="0">
+              <div className="container">
+                  <div className="row">
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_newsletter_bg">Newsletter</h5>
+                    </div>
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_update_bg">Updates</h5>
+                      <div className="row mt-4">
+                        <div className="col-lg-6 col-sm-6 col-6 ">
+                          <h5 className="forum_change_future_text forum_change_future_bg">Future change</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg">Guidelines</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row mt-4">
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_newsletter_bg forum_popular_post_bg">A List of most popular posts</h5>
+                    </div>
+                    <div className="col-md-6 ">
+                      <div className="row post_list_row_screen">
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_change_future_bg forum_newest_post_bg">A List of newest posts</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg forum_list_post_bg">A List of newest posts</h5>
+                        </div>
+                      </div>
+                      <div className="row mt-4">
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_change_future_bg forum_author_post_bg">Author</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg forum_extras_bg">Extras</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+
+              </div>
+
+
+              <div class="tab-pane fade" id="pills-contact2" role="tabpanel" aria-labelledby="pills-contact2-tab" tabindex="0">
+
+              <div className="container">
+                  <div className="row">
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_newsletter_bg">Newsletter</h5>
+                    </div>
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_update_bg">Updates</h5>
+                      <div className="row mt-4">
+                        <div className="col-lg-6 col-sm-6 col-6 ">
+                          <h5 className="forum_change_future_text forum_change_future_bg">Future change</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg">Guidelines</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row mt-4">
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_newsletter_bg forum_popular_post_bg">A List of most popular posts</h5>
+                    </div>
+                    <div className="col-md-6 ">
+                      <div className="row post_list_row_screen">
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_change_future_bg forum_newest_post_bg">A List of newest posts</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg forum_list_post_bg">A List of newest posts</h5>
+                        </div>
+                      </div>
+                      <div className="row mt-4">
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_change_future_bg forum_author_post_bg">Author</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg forum_extras_bg">Extras</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+
+              </div>
+              <div class="tab-pane fade" id="pills-contact3" role="tabpanel" aria-labelledby="pills-contact3-tab" tabindex="0">
+
+
+              <div className="container">
+                  <div className="row">
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_newsletter_bg">Newsletter</h5>
+                    </div>
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_update_bg">Updates</h5>
+                      <div className="row mt-4">
+                        <div className="col-lg-6 col-sm-6 col-6 ">
+                          <h5 className="forum_change_future_text forum_change_future_bg">Future change</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg">Guidelines</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row mt-4">
+                    <div className="col-md-6 ">
+                      <h5 className="forum_newsletter_text forum_newsletter_bg forum_popular_post_bg">A List of most popular posts</h5>
+                    </div>
+                    <div className="col-md-6 ">
+                      <div className="row post_list_row_screen">
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_change_future_bg forum_newest_post_bg">A List of newest posts</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg forum_list_post_bg">A List of newest posts</h5>
+                        </div>
+                      </div>
+                      <div className="row mt-4">
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_change_future_bg forum_author_post_bg">Author</h5>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 col-6">
+                          <h5 className="forum_change_future_text forum_guidlines_bg forum_extras_bg">Extras</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+
+
+
+
+              </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </div>
+          </div>
+     
 
         </section>
        

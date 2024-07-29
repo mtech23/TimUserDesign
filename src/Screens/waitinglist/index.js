@@ -239,7 +239,7 @@ export const Waitinglist = () => {
                             <button class="history">Library </button>
                             <button class="hist" >History </button>
                             <button class="lib" >Waiting List </button>
-                            <img class="img-fluid polygoon" src={Polygon6}/>
+                            {/* <img class="img-fluid polygoon" src={Polygon6}/> */}
                         </div>
                       
                         <div class="bookk">

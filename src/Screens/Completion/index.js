@@ -43,6 +43,9 @@ import Ellipse44 from "../../Assets/images/Ellipse 44.png";
 import votefile from "../../Assets/images/votefile.png";
 import detailfile from "../../Assets/images/detailfile.png";
 import book3 from "../../Assets/images/book3.png";
+import newbook2 from "../../Assets/images/newbook2.png";
+import newbook3 from "../../Assets/images/newbook3.png";
+import newbook1 from "../../Assets/images/newbbook1.png";
 import Manual from "../../Assets/images/Manual.png";
 import dropdown from "../../Assets/images/dropdown.png";
 import { Link } from "react-router-dom";
@@ -253,7 +256,7 @@ console.log("currentItems" , currentItems)
           <section>
             <div className="container">
               <div className="row mt-5 mb-5 align-items-center">
-                     <div className="col-md-5">
+                     <div className="col-md-5 col-sm-12 col-7">
                             <div class="input-completion completion__search">
                               <button className="completion_btn_two btn btn-outline-secondary " type="button" id="button-addon1">
                                 <FontAwesomeIcon icon={faSearch} />
@@ -262,11 +265,11 @@ console.log("currentItems" , currentItems)
                               <button className="btn btn-outline-secondary  compition-category__icon_one" type="button" id="button-addon2"> search </button>
                             </div>
                       </div>
-                      <div className="col-md-2">
+                      <div className="col-md-2 col-sm-4 col-5">
                         
                            <div class="input-completion completion__search">
                             <div className="dropdown">
-                                <button class="filters"  type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" >
+                                <button class="filters new_spacing_contest"  type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" >
                                   <span> Contest </span> <img className="img-fluid filters_icon" src={dropdown} />
                                 </button>
                                 <ul class="dropdown-menu filter_dropdown" aria-labelledby="dropdownMenuButton2">
@@ -277,11 +280,12 @@ console.log("currentItems" , currentItems)
                             </div>
                            </div>
                       </div>
-                      <div className="col-md-2">
+    
+                <div className="col-md-2 col-sm-4 col-5">
                               <div class="input-completion completion__search">
                                  <div className="dropdown">
-                                 <button class="filters"  type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false" >
-                                    <span> Filter </span> <img className="img-fluid filters_icon" src={dropdown} />
+                                 <button class="next_filters new_spacing_class"  type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false" >
+                                    <span> Filter </span> <img className="img-fluid next_filters_icon" src={dropdown} />
                                   </button>
                                   <ul class="dropdown-menu filter_dropdown" aria-labelledby="dropdownMenuButton2">
                                     <li><a class="dropdown-item filter_dropdown_list" href="#">Action</a></li>
@@ -291,13 +295,14 @@ console.log("currentItems" , currentItems)
                                  </div>
                               </div>
                       </div>
-                      <div className="col-md-3">
-                            <div class="input-completion completion__search">
+                      <div className="col-md-3 col-sm-4 col-7 ">
+                            <div class="input-completion completion__search new_spacing_class">
                                 <button class="creates" ><span> How To Participate </span><img className="img-fluid creates_icon"  src={Manual}/></button>
                             </div>
                       </div>
+                </div>
               </div>
-            </div>
+     
           </section>
              
           {/* <div class=" col-md-3 input-completion completion__search">
@@ -327,13 +332,13 @@ console.log("currentItems" , currentItems)
               <div className="row">
                 <div className="col-12">
                   <div className="bestSell__book-title">
-                    <h2> COMPETITION WINNERS</h2>
+                    <h2 className="bestSell__winners_book-title"> COMPETITION WINNERS</h2>
                   </div>
                 </div>
                 <div className="col-12">
-                  <div className="bestSelling__books">
-                    <div className="row mb-5">
-                      <div className="col-md-4">
+                  <div className="bestSelling__books ">
+                    <div className="row mb-5 justify-content-center text-center">
+                      <div className="col-md-3 competeion_books_columns">
                         <div className=" d-flex gap-2 justify-content-center  ">
                           <span className="bookdetail bg-white color-blacl ">
                             Vote
@@ -342,9 +347,9 @@ console.log("currentItems" , currentItems)
                             Details
                           </span>
                         </div>
-                        <img src={book1} className="img-fluid" />
+                        <img src={newbook2} className="img-fluid bestSelling__books_new" />
                       </div>
-                      <div className="col-md-4">
+                      <div className="col-md-3 competeion_center_column">
                         <div className="completion-book d-flex gap-2 justify-content-center  ">
                           <span className="bookdetail bg-white color-black ">
                             Vote
@@ -353,9 +358,9 @@ console.log("currentItems" , currentItems)
                             Details
                           </span>
                         </div>
-                        <img src={Untitledbook2} className="img-fluid" />
+                        <img src={newbook1} className="img-fluid bestSelling__books_center" />
                       </div>
-                      <div className="col-md-4">
+                      <div className="col-md-3 competeion_books_columns">
                         <div className="completion-book d-flex gap-2  justify-content-center ">
                           <span className="bookdetail bg-white color-black ">
                             Vote
@@ -365,18 +370,18 @@ console.log("currentItems" , currentItems)
                           </span>
                         </div>
                         <div className="completion-board">
-                          <img src={book3} className=" img-fluid" />
+                          <img src={newbook3} className=" img-fluid bestSelling__books_new" />
                         </div>
                       </div>
 
                       <img src={board1} className="board-compition" />
 
                       <div className="row sectioncompletion py-3  px-5   justify-content-center  mx-auto ">
-                        <div class="col-md-3 input-completion completion__search">
+                        <div class="col-md-3 col-sm-6 input-completion completion__search view_winner_space">
                           <button
                             className="completion_btn btn btn-outline-secondary" type="button" id="button-addon1"></button>
 
-                          <p className="completion-input form-control ">
+                          <p className="completion-input view_winner_text form-control ">
                             {" "}
                             View All Winners
                           </p>
@@ -386,33 +391,33 @@ console.log("currentItems" , currentItems)
                             <img src={medal} className="   " id="icon-img" />
                           </button>
                         </div>
-                        <div class="col-md-3 input-completion completion__search">
+                        <div class="col-md-3 col-sm-6 input-completion completion__search view_winner_space">
                           <button
                             className="completion_btn btn btn-outline-secondary  "
                             type="button"
                             id="button-addon1"
                           ></button>
 
-                          <p className="completion-input form-control ">
+                          <p className="completion-input view_winner_text form-control ">
                             {" "}
                             View All Winners
                           </p>
                           <button
-                            className="btn btn-outline-secondary  compition-category__icon"
+                            className="btn btn-outline-secondary  compition-category__icon "
                             type="button"
                             id="button-addon2"
                           >
-                            <img src={cup} className="   " id="icon-img" />
+                            <img src={cup} className="" id="icon-img" />
                           </button>
                         </div>
-                        <div class="col-md-3 input-completion completion__search">
+                        <div class="col-md-3 col-sm-6 input-completion completion__search view_winner_space">
                           <button
                             className="completion_btn btn btn-outline-secondary  "
                             type="button"
                             id="button-addon1"
                           ></button>
 
-                          <p className="completion-input form-control ">
+                          <p className="completion-input view_winner_text form-control ">
                             {" "}
                             View All Winners
                           </p>
@@ -424,14 +429,14 @@ console.log("currentItems" , currentItems)
                             <img src={docs} className="   " id="icon-img" />
                           </button>
                         </div>
-                        <div class=" col-md-3 input-completion completion__search">
+                        <div class=" col-md-3 col-sm-6 input-completion completion__search view_winner_space">
                           <button
                             className="completion_btn btn btn-outline-secondary  "
                             type="button"
                             id="button-addon1"
                           ></button>
 
-                          <p className="completion-input form-control ">
+                          <p className="completion-input view_winner_text form-control ">
                             {" "}
                             View All Winners
                           </p>
@@ -509,7 +514,7 @@ console.log("currentItems" , currentItems)
 
         <section className="competition_bg">
             <div className="container">
-              <div className="row mt-5 bookboxes">
+              <div className="row  bookboxes">
                     <div className="col-lg-3 col-sm-8 col-md-6">
 
                         <div className="rankbook">
@@ -603,7 +608,7 @@ console.log("currentItems" , currentItems)
                         </div>
                     </div>   
                 </div>
-                <div className="row mt-5 bookboxes">
+                <div className="row  bookboxes">
                     <div className="col-lg-3 col-sm-8 col-md-6">
 
                         <div className="rankbook">
@@ -697,7 +702,7 @@ console.log("currentItems" , currentItems)
                         </div>
                     </div>   
                 </div>
-                <div className="row mt-5 bookboxes">
+                <div className="row bookboxes">
                     <div className="col-lg-3 col-sm-8 col-md-6">
 
                         <div className="rankbook">

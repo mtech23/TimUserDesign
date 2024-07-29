@@ -258,7 +258,7 @@ export const Library = () => {
                     <div class="col-md-6">
                         <div class="btnrww">
                             <button class="libs" >Library </button>
-                            <img class="img-fluid poly" src={Polygon6}/>
+                            {/* <img class="img-fluid poly" src={Polygon6}/> */}
                             <button class="history"  >History </button>
                            
                             <button class="hist" >  Waiting List </button>

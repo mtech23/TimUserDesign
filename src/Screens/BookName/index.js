@@ -51,7 +51,7 @@ import next from "../../Assets/images/next.png";
 import bookchaplocked from "../../Assets/images/bookchaplocked.png";
 import ManaFrame from "../../Assets/images/ManaFrame.png";
 import rotateManaCoin from "../../Assets/images/rotateManaCoin.png";
-
+// import SingleSelectCheckbox from "../../Components/SingleSelectCheckbox";
 
 
 import {
@@ -115,6 +115,15 @@ export const BookName = () => {
     setIsActive(!isActive);
   };
 
+  const [selectedOption, setSelectedOption] = useState(null);
+  const handleCheckboxChange = (option) => {
+    // setSelectedOption(option);
+  }
+  const SingleSelectCheckbox = (option) => {
+    setSelectedOption(option);
+   
+  };
+
   const reusableSetting = (item, centerMode) => {
    
    
@@ -164,6 +173,9 @@ export const BookName = () => {
 
   const settingsForFourItems = reusableSetting(4, false);
   const settingsForOneItem = reusableSettingForOne(1, false);
+
+
+ 
   //   const adsListing = () => {
   //     document.querySelector(".loaderBox").classList.remove("d-none");
   //     fetch(
@@ -245,6 +257,8 @@ export const BookName = () => {
   useEffect(() => {
     Aos.init();
   }, []);
+
+ 
   return (
     <UserLayout>
       <>
@@ -352,11 +366,11 @@ export const BookName = () => {
                           <p className="book_name_icons_detail"> vote now</p>
                         </div>
                         <div className="text-center">
-                          <button className="book_name_icons_btn" data-bs-toggle="modal" data-bs-target="#BackdropTwo" ><img src={   bookreport } className="img-fluid book_name_icons"/></button>
+                          <button className="book_name_icons_btn" data-bs-toggle="modal" data-bs-target="#BackdropTwo" ><img src={bookreport} className="img-fluid book_name_icons"/></button>
                           <p className="book_name_icons_detail"> Report Chapter</p>
                         </div>
                         <div className="text-center dropup-center dropup">
-                          <button className="book_name_icons_btn  " type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src={   moreicon } className="img-fluid more_icons"/>
+                          <button className="book_name_icons_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src={moreicon} className="img-fluid more_icons"/>
                           
                           </button>
                          
@@ -654,26 +668,29 @@ export const BookName = () => {
                               </div>
                                 <div className="row mt-5">
                                     <div className="col-md-12">
+                                  
                                     <div className="chapters_with_checkbox">
                                      
                                     
-                                        <div>
-                                          <h6 className="locked_chapters_text">Next 10 Locked Chapters</h6>
-                                          <p className="locked_chapters_number"> Ch 73 - Ch 82</p>
-                                        </div>
+                                     <div>
+                                       <h6 className="locked_chapters_text">Next 10 Locked Chapters</h6>
+                                       <p className="locked_chapters_number"> Ch 73 - Ch 82</p>
+                                     </div>
 
-                                        <div class="checkbox-wrapper-31">
-                                           <input type="checkbox" id="exampleRadios1" name="exampleRadios"/>
-                                              <svg viewBox="0 0 35.6 35.6">
-                                                <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-                                                <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-                                                <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-                                              </svg>
-                                          </div>
+                                     <div class="checkbox-wrapper-31">
+                                        <input type="checkbox"  checked={selectedOption === 'option1'}
+                                          onChange={() => SingleSelectCheckbox('option1')}/>
+                                           <svg viewBox="0 0 35.6 35.6">
+                                             <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+                                             <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+                                             <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+                                           </svg>
+                                       </div>
 
-                                    
-                                    
-                                      </div>
+                                 
+                                 
+                                   </div>
+                               
                                     </div>
 
                                     <div className="checkbox_div" ></div>
@@ -681,14 +698,16 @@ export const BookName = () => {
 
                                     <div className="col-md-12">
                                     
-                                      <div className="chapters_with_checkbox">
+                                   
+                                     <div className="chapters_with_checkbox">
                                         <div>
                                           <h6 className="locked_chapters_text">Next 50 Locked Chapters</h6>
                                           <p className="locked_chapters_number"> Ch 73 - Ch 122</p>
                                         </div>
 
                                         <div class="checkbox-wrapper-31">
-                                           <input type="checkbox" id="exampleRadios2" name="exampleRadios"/>
+                                           <input type="checkbox"  checked={selectedOption === 'option2'}
+                                            onChange={() => SingleSelectCheckbox('option2')}  />
                                               <svg viewBox="0 0 35.6 35.6">
                                                 <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
                                                 <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
@@ -697,6 +716,7 @@ export const BookName = () => {
                                           </div>
 
                                       </div>
+                                
                                      
                                     </div>
 
@@ -704,14 +724,16 @@ export const BookName = () => {
 
                                     <div className="col-md-12">
                                   
-                                      <div className="chapters_with_checkbox">
+                                   
+                                     <div className="chapters_with_checkbox">
                                         <div>
                                           <h6 className="locked_chapters_text">Next 100 Locked Chapters</h6>
                                           <p className="locked_chapters_number"> Ch 73 - Ch 172</p>
                                         </div>
 
                                         <div class="checkbox-wrapper-31">
-                                           <input type="checkbox"  id="exampleRadios3" name="exampleRadios"/>
+                                           <input type="checkbox" checked={selectedOption === 'option3'}
+                                             onChange={() => SingleSelectCheckbox('option3')}/>
                                               <svg viewBox="0 0 35.6 35.6">
                                                 <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
                                                 <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
@@ -720,6 +742,7 @@ export const BookName = () => {
                                           </div>
 
                                       </div>
+                                  
                                       
                                     </div>
 
@@ -727,14 +750,16 @@ export const BookName = () => {
 
                                     <div className="col-md-12">
                                    
-                                      <div className="chapters_with_checkbox">
+                                   
+                                     <div className="chapters_with_checkbox">
                                         <div>
                                           <h6 className="locked_chapters_text"> Remaining Locked Chapters <span className="locked_chapter_buy"> 10% OFF </span></h6>
                                           <p className="locked_chapters_number">  Ch 73 - Ch 906 </p>
                                         </div>
 
                                         <div class="checkbox-wrapper-31">
-                                           <input type="checkbox"   id="exampleRadios4" name="exampleRadios"/>
+                                           <input type="checkbox" checked={selectedOption === 'option4'}
+                                             onChange={() => SingleSelectCheckbox('option4')} />
                                               <svg viewBox="0 0 35.6 35.6">
                                                 <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
                                                 <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
@@ -743,6 +768,7 @@ export const BookName = () => {
                                           </div>
 
                                       </div>
+                                     
                                       
                                     </div>
 
@@ -1300,23 +1326,6 @@ export const BookName = () => {
           </div>
                   
           {/* <!-- Modal end --> */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

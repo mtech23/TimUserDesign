@@ -217,7 +217,7 @@ export const History = () => {
                             <button class="history" > Library </button>
                             
                             <button class="libs"  > History </button>
-                            <img class="img-fluid polygons" src={Polygon6}/>
+                            {/* <img class="img-fluid polygons" src={Polygon6}/> */}
                             <button class="hist" >  Waiting List </button>
                            
                         </div>

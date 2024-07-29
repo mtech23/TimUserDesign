@@ -272,11 +272,11 @@ export const BookListing = () => {
           </div>
           <div className="container">
             <div className="row">
-              <div className="col-12">
+              {/* <div className="col-12">
                 <div className="bestSell__book-title">
                   <h2>BEST SELLING BOOKS OF THE MONTH</h2>
                 </div>
-              </div>
+              </div> */}
               <div className="col-12">
                 <div className="bestSelling__books">
                   <img src={BestSellingBooks} />

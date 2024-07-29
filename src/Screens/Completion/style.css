@@ -29,21 +29,26 @@
 .bestSell__book-title {
   margin-bottom: 30px;
 }
-.bestSell__book-title h2 {
-  font-size: 55px;
+.bestSell__winners_book-title {
+  font-family: 'Jost';
+  font-size: 53px;
   font-weight: 900;
-  -webkit-text-stroke: 2px #6100a8;
-  -webkit-text-fill-color: #fff;
+  line-height: 69.99px;
+  text-align: center;
   color: #fff;
   text-transform: uppercase;
-  line-height: 1;
-  text-align: center;
 }
 .bestSelling__books {
   position: relative;
 }
-.bestSelling__books img {
-  width: 100%;
+.bestSelling__books_new {
+  width: 75% !important;
+}
+.bestSelling__books_center{
+  width: 80% !important;
+}
+.competeion_books_columns{
+  margin-top: 19px !important;
 }
 .bestSell__book-cartoon2 img {
   position: absolute;
@@ -151,6 +156,29 @@
   padding-left: 20px;
   padding-right: 0px;
   }
+  .next_filters {
+    font-family: 'Poppins';
+    font-size: 11px;
+    font-weight: 400;
+    text-align: center;
+    background: #000;
+    color: #FFFFFF;
+    border-radius: 38px;
+    border: #000;
+    padding-right: 0px;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 0px;
+    }
+  .next_filters_icon {
+      background: #360C55;
+      border-radius: 1px 30px 30px 0px;
+      padding: 17px 17px 17px 14px;
+      margin-left: 15px;
+      color: #fff;
+  } 
 
 .filters_icon {
       background: #360C55;
@@ -175,7 +203,16 @@
   padding-left: 45px;
   padding-right: 0px;
 }
-    
+.compition-category__icon_one {
+  background-color: #360c55 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 0 !important;
+  border-top-right-radius: 37px !important;
+  border-bottom-right-radius: 37px !important;
+  font-size: 13px !important;
+  padding: 12px 28px;
+} 
 .creates_icon {
   background: #360C55;
   border-radius: 1px 30px 30px 0px;
@@ -273,67 +310,20 @@
 }
 /* Best Books Listing Ends Here */
 
-@media (max-width: 1024px) {
-  .filters__tabs .filters__tab {
-    padding: 7px 20px;
-  }
-  .bestSell__book-title h2 {
-    font-size: 40px;
-  }
-  .bestSell__book-cartoon2 img {
-    right: 50px;
-    width: 25%;
-  }
-  .bestSell__book-sec {
-    padding: 50px 0 0;
-  }
-  .bestSell__book-cartoon1 img {
-    width: 110px;
-  }
-}
-
-@media (max-width: 768px) {
-  .filters__search {
-    margin-top: 20px;
-  }
-  .bestSell__book-title h2 {
-    font-size: 33px;
-  }
-  .competition_bg {
-    padding: 40px 0px;
-}
 
 
-}
 
-@media (max-width: 480px) {
-  .filters__category,
-  .filters__pricing {
-    margin-top: 20px;
-  }
-  .bestSell__book-cartoon1 img {
-    width: 70px;
-  }
-  .bestSell__book-cartoon2 img {
-    right: 20px;
-    width: 23%;
-    bottom: -10px;
-  }
-  .filters{
-    margin-top: 20px;
-  }
-  .creates{
-    margin-top: 20px;
-  }
-}
+
 
 
 
 
 .bookdetail {
-  padding: 2px 33px;
-  border: 2px solid;
+  padding: 1px 29px;
+  border: 1px solid #360C55;
   border-radius: 30px;
+  color: #360C55;
+  font-size: 14px;
 }
 
 .board-completion {
@@ -367,6 +357,9 @@
   border-radius: 0px !important;
   border: none !important;
   color: #fff !important;
+}
+.view_winner_text{
+  font-size: 13px !important;
 }
 
 .completion-input::placeholder {
@@ -437,8 +430,71 @@
   width: -1px;
   height: 22px;
 } */
+@media  (max-width: 1024px){
+  
+  .filters {
+    font-size: 10px ;
+    padding-left: 17px ;
+  }
+  .filters_icon {
+    padding: 13px 13px 13px 13px ;
+    margin-left: 7px ;
+  }
+  .next_filters {
+    font-size: 10px ;
+    padding-left: 17px ;
+  }
+  .next_filters_icon {
+    padding: 13px 13px 13px 13px ;
+    margin-left: 7px ;
+  }
+  .creates {
+    padding-left: 15px !important;
+  }
+  
+  .creates_icon {
+    padding: 9px 10px 9px 16px;
+    margin-left: 5px;
+  }
+  .compition-category__icon_one {
+    padding: 9px 28px;
+  }
+  .filters__tabs .filters__tab {
+    padding: 7px 20px;
+  }
+  .bestSell__book-title h2 {
+    font-size: 40px;
+  }
+  .bestSell__book-cartoon2 img {
+    right: 50px;
+    width: 25%;
+  }
+  .bestSell__book-sec {
+    padding: 50px 0 0;
+  }
+  .bestSell__book-cartoon1 img {
+    width: 110px;
+  }
+  }
+
+
+  @media (max-width:991px){
+    .bookdetail {
+      padding: 1px 15px !important;
+    }
+  }
+
 
 @media (max-width: 768px) {
+  .filters__search {
+    margin-top: 20px;
+  }
+  .bestSell__book-title h2 {
+    font-size: 33px;
+  }
+  .competition_bg {
+    padding: 40px 0px;
+}
   .form-control {      
     font-size: 9px !important;
     padding: 9px !important;
@@ -459,35 +515,114 @@
   font-size: 14px !important;
 }
 }
+
+@media (max-width: 600px) {
+
+  .compition-category__icon_one {
+    padding: 5px 34px !important;
+    font-size: 10px !important;
+}
+.form-control {
+    font-size: 9px !important;
+    padding: 5px !important;
+}
+.filters {
+  font-size: 9px;
+  padding-left: 16px;
+}
+.filters_icon {
+ padding: 14px 14px 14px 14px;
+  margin-left: 7px;
+}
+.next_filters {
+  font-size: 9px;
+  padding-left: 37px;
+}
+.next_filters_icon {
+padding: 14px 19px 14px 19px;
+  margin-left: 7px;
+}
+.new_spacing_class{
+margin-top: 20px;
+
+}
+.new_spacing_contest{
+  margin-top: 20px;
+}
+.reverser_row_completetion{
+  Flex-direction: column-reverse;
+  display: flex;
+}
+.creates_icon {
+  padding: 9px 17px 9px 19px;
+}
+.creates {
+  padding-left: 23px !important;
+font-size: 9px;
+}
+.bestSell__winners_book-title {
+  font-size: 23px !important;
+}
+.bookdetail {
+  padding: 1px 20px !important;
+  font-size: 12px;
+}
+.bestSelling__books_new {
+  width: 36% !important;
+}
+.bestSelling__books_center {
+  width: 36% !important;
+}
+.view_winner_space{
+  margin-top: 20px !important;
+  }
+  .competeion_center_column{
+    margin-top: 20px !important;
+  }
+}
+@media (max-width:575px){
+  .new_spacing_contest{
+    margin-top: 0px;
+  }
+  .compition-category__icon_one {
+    padding: 5px 11px !important;
+    font-size: 10px !important;
+}
+}
+@media (max-width: 480px) {
+  .bestSelling__books_new {
+    width: 57% !important;
+  }
+  .bestSelling__books_center {
+    width: 57% !important;
+  }
+  .filters__category,
+  .filters__pricing {
+    margin-top: 20px;
+  }
+  .bestSell__book-cartoon1 img {
+    width: 70px;
+  }
+  .bestSell__book-cartoon2 img {
+    right: 20px;
+    width: 23%;
+    bottom: -10px;
+  }
+ 
+
+}
+
+
 @media (max-width: 425px) {
   .sectioncompletion {
     gap: 8px;
    
 }
+.view_winner_space{
+  margin-top: 0px !important;
+  }
 .completion-book{
   margin-top: 10px;
 }
 }
 
-@media  (max-width: 1024px){
-  
-  .filters {
-    font-size: 10px ;
-    padding-left: 10px ;
-  }
-  .filters_icon {
-    padding: 13px 10px 13px 10px ;
-    margin-left: 7px ;
-  }
-  .creates {
-    padding-left: 8px !important;
-  }
-  
-  .creates_icon {
-    padding: 9px 10px 9px 16px;
-    margin-left: 5px;
-  }
-  .compition-category__icon_one {
-    padding: 9px 28px;
-  }
-  }

@@ -1,0 +1,101 @@
+.discussion_section{
+    background-image: url(../../Assets/images/blogsBgImg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0px;
+    /* padding-bottom: 50px; */
+
+}
+.discussion_tab_border{
+    border: 2px solid #6100A8;
+    border-radius: 30px;
+    padding: 6px 38px;
+    background: #fff;
+    /* justify-content: space-between; */
+    gap: 35px;
+}
+.nav-link.discussion_tab_links{
+    font-family: 'Poppins';
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    color: #360C55;
+}
+.nav-link.discussion_tab_links.active{
+    background: #360C55;
+    color:#fff;
+    border-radius: 20px;
+    font-family: 'Jost';
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+.general_discussion_row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.general_discussion_btns_div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+
+}
+.createbtn_img{
+width:  48%;
+}
+.discussions_divider{
+    width: 250%;
+    height: 2px;
+    background-color:#000000 ;
+    opacity: 30%;
+    /* margin: 20px 0px; */
+
+}
+.discussion_annoucements_main_div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 29px;
+    align-items: center;
+    margin: 15px 0px;
+}
+.discussion_annoucements_child_div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 19px;
+    align-items: center;
+  
+}
+.annouced_img{
+    width: 10%;
+}
+.annouced_discussion_text{
+    font-family: 'Jost';
+    font-size: 18px;
+    font-weight: 400;
+    /* line-height: 39.51px; */
+    text-align: left;
+    color:  #2E2E2E;
+}
+.annouced_discussion_number{
+    font-family: 'Jost';
+    font-size: 18px;
+    font-weight: 600;
+    /* line-height: 39.51px; */
+    text-align: left;
+    color:  #2E2E2E;
+}
+.announcement_heading{
+    font-family: 'Jost';
+    font-size: 23px;
+    font-weight: 500;
+    /* line-height: 51.29px; */
+    text-align: left;
+    color: #2E2E2E;
+
+}

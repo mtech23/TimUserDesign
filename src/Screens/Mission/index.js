@@ -263,7 +263,7 @@ const spinDuration = 1.0;
             <div className="row">
               <div className="col-12">
                 <div className="bestSell__book-title">
-                  <h2> SPIN FOR FREE REWARD</h2>
+                  <h2 className="bestSell__spin_book-title "> SPIN FOR FREE REWARD</h2>
                 </div>
               </div>
               <div className="col-12">

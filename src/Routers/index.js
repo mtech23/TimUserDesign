@@ -22,6 +22,8 @@ import { CreateRequest } from "../Screens/CreateRequest/index.js";
 import { TranslationRequest } from "../Screens/TranslationRequest/index.js";
 import { TranslationRequestDetail } from "../Screens/TranslationRequestDetail/index.js";
 import { MyAccount } from "../Screens/MyAccount";
+
+
  
 import { ProtectedRoutes } from "./ProtectedRoutes";
 import { Beta } from "../Screens/Home/Beta";
@@ -33,6 +35,7 @@ import { BookName } from "../Screens/BookName";
 import { AboutAuthor } from "../Screens/AboutAuthor";
 import { SearchFilter } from "../Screens/SearchFilter/index";
 import { Forum } from "../Screens/Forum";
+import {Discussion } from "../Screens/Discussion/index.js"
 export default function UserRouter() {
   return (
     <BrowserRouter basename="/TimUser">
@@ -57,13 +60,14 @@ export default function UserRouter() {
         <Route path="/forget-password2" element={<ForgetPassword2 />} />
         <Route path="/forget-password3" element={<ForgetPassword3 />} />
         <Route path="/create-request" element={<CreateRequest />}></Route>
+        <Route path="/Discussion" element={<Discussion />}></Route>
 
 
         <Route path="/book-listing" element={<ProductListing />}></Route>
         <Route path="/novel-listing" element={<Novel />}></Route>
         <Route path="/BookName" element={<BookName />}></Route>
         <Route path="/Forum" element={<Forum />}></Route>
-       
+      
         <Route path="/AboutAuthor" element={<AboutAuthor />}></Route>
         <Route path="/search-filter" element={<SearchFilter />}></Route>
         <Route path="/competition" element={<Completion />}></Route>

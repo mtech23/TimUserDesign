@@ -289,6 +289,15 @@ html, body {
 }
 
 /* Banner Section End */
+.author__product_title{
+  font-family: 'Jost';
+  color: #2C2C2C;
+  font-size: 22.86px;
+  font-weight: 700;
+  line-height: 33.03px;
+  text-align: left;
+
+}
 
 /* Social Section Start */
 .social-section {

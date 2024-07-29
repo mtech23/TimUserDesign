@@ -251,16 +251,16 @@ useEffect(() =>{
         <section className="recent">
           <div className="container">
           <div className="row">
-                <div className="col-12 col-md-6">
+                <div className="col-12 col-md-6 col-sm-6">
                     <div class="input-completion completion__search">
                       <button className="completion_btn_one btn btn-outline-secondary " type="button" id="button-addon1">
                         <FontAwesomeIcon icon={faSearch} />
                       </button>
                       <input type="text" className="completion-input_one form-control "placeholder="Search Here..." aria-describedby="button-addon1" />
-                      <button className="btn btn-outline-secondary  compition-category__icon_one" type="button" id="button-addon2"> search </button>
+                      <button className="btn btn-outline-secondary  compition-category__icon_translate" type="button" id="button-addon2"> search </button>
                     </div>
                  </div>
-                 <div className="col-6 col-md-6">
+                 <div className="col-12 col-md-6 col-sm-6">
                    <div class="input-completion completion__search translation_request_buttons_div">
                         <div  className="dropdown">
                             <button class="filter" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
