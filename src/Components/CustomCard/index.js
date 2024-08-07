@@ -8,7 +8,7 @@ const CustomCard = (props) => {
     <>
       <div className="author__poduct">
         <div className="add_to_card"></div>
-        <div className="position-relative">
+        <div className="position-relative d-flex justify-content-center">
           <img src={props?.image} className={props?.className}/>
           <div className="cart_overlay">
             <div className="cart__box">

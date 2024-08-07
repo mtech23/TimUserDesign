@@ -43,6 +43,7 @@ import laverna from "../../Assets/images/laverna.png";
 import club from "../../Assets/images/club.png";
 import msg from "../../Assets/images/msg.png";
 import startconversation from "../../Assets/images/start conversation.png";
+import storyarrow from "../../Assets/images/story_arrow.png";
 import noti from "../../Assets/images/noti.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -1310,8 +1311,147 @@ export const Forum = ({ eventKey, children }) => {
      
 
         </section>
-       
+        
 
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+          <div class="modal-dialog form_modal_dailog modal-dialog-centered">
+            <div class="modal-content form_bg_one">
+              <div class="modal-header custom_form_header">
+                <h1 class="modal-title_form " id="exampleModalToggleLabel">tailor to your needs</h1>
+                <button type="button" class="form_btn_close" data-bs-dismiss="modal" aria-label="Close">Skip</button>
+              </div>
+              <div class="modal-body">
+                <div className="modal_form_divider"></div>
+                <p className="form_modal_para">choose your reading preference before digging in..</p>
+                <p className="form_modal_para">you can change it later</p>
+                <div className="row modal_forms_rows_spacing">
+                  <div className="col-md-6">
+                    <div className="female_stories">
+                      <h3 className="female_lead_heading">FEMALE LEAD STORIES</h3>
+                      <div className="lead_story_divider"></div>
+                      <div className="lead_story_text_div">
+                        <p className="story_detail_content">more Romance, LGBT +, Teen, History, Fantasy, Urban.</p>
+                        <img src={storyarrow} className="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="male_stories">
+                      <h3 className="female_lead_heading">MALE LEAD STORIES</h3>
+                      <div className="lead_story_divider"></div>
+                      <div className="lead_story_text_div">
+                        <p className="story_detail_content">more easter, Games, Horror, Sports, Action, War, Realistic..</p>
+                        <img src={storyarrow} className="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer custome_form_modal_footer">
+                <button class="second_modal_btn" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Next <i class="fa-solid fa-caret-right next_form_arrow"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog form_modal_dailog modal-dialog-centered">
+          <div class="modal-content form_bg_two">
+              <div class="modal-header custom_form_header">
+                <h1 class="modal-title_form " id="exampleModalToggleLabel">tailor to your needs</h1>
+                <button type="button" class="form_btn_close" data-bs-dismiss="modal" aria-label="Close">Skip</button>
+              </div>
+              <div class="modal-body">
+                <div className="modal_form_divider"></div>
+                <p className="form_modal_para">choose your reading preference</p>
+              
+                <div className="row modal_forms_rows_spacing">
+                  <div className="col-md-6">
+                    <div className="female_stories_two">
+                      <div className="lead_story_text_div">
+                        <h3 className="female_lead_heading">More Fantasy</h3>
+                        <img src={storyarrow} className="img-fluid"/>
+                      </div>
+                        <div className="lead_story_divider"></div>
+                        <p className="story_detail_content_two">#action    #adventure     #Reincarnation    #System    #Magic    #harem    #Cultivation    #Weakostrong    #Videogame    #Dragon</p>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="male_stories_two">
+                      <div className="lead_story_text_div">
+                        <h3 className="female_lead_heading">More Romance</h3>
+                        <img src={storyarrow} className="img-fluid"/>
+                      </div>
+                      <div className="lead_story_divider"></div>
+                        <p className="story_detail_content_two">#Vampire    #Warewolf    #rebirth    #teen    #LGBT+    #Billionaire    #Badboy    #mafia    #Sweetlove    #Revenge</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer custome_form_modal_footer">
+              <button class="second_modal_btn" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><i class="fa-solid fa-caret-left next_form_arrow"></i> Previous </button>
+              <button class="second_modal_btn" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Next <i class="fa-solid fa-caret-right next_form_arrow"></i></button>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog form_modal_dailog modal-dialog-centered">
+          <div class="modal-content form_bg_three">
+              <div class="modal-header custom_form_header">
+                <h1 class="modal-title_form " id="exampleModalToggleLabel">tailor to your needs</h1>
+                <button type="button" class="form_btn_close" data-bs-dismiss="modal" aria-label="Close">Skip</button>
+              </div>
+              <div class="modal-body">
+                <div className="modal_form_divider"></div>
+                <p className="form_modal_para">What type Of Book is Your Favorite</p>
+              
+                <div className="row modal_forms_rows_spacing">
+                  <div className="col-md-12">
+                    <div className="web_stories_bg">
+                        <h3 className="web_novel_heading">Web Novel</h3>
+                        <i class="fa-solid fa-caret-right web_novel_arrow_img"></i>
+                        <div className="web_story_form_divider"></div>
+                        <p className="web_novel_para">Please Choose Your Prefrerence</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-12">
+                    <div className="web_stories_bg_two">
+                        <h3 className="web_novel_heading">Light Novel</h3>
+                        <i class="fa-solid fa-caret-right web_novel_arrow_img"></i>
+                        <div className="web_story_form_divider"></div>
+                        <p className="web_novel_para">Please Choose Your Prefrerence</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-12">
+                    <div className="web_stories_bg_three">
+                        <h3 className="web_novel_heading">Manga</h3>
+                        <i class="fa-solid fa-caret-right web_novel_arrow_img"></i>
+                        <div className="web_story_form_divider"></div>
+                        <p className="web_novel_para">Please Choose Your Prefrerence</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer custome_form_modal_footer_two">
+              <button class="second_modal_btn" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"><i class="fa-solid fa-caret-left next_form_arrow"></i> Previous </button>
+              <button class="second_modal_btn" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Next <i class="fa-solid fa-caret-right next_form_arrow"></i></button>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button>
+
+      
+         
       </UserLayout>
     </>
   );

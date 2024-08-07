@@ -815,7 +815,7 @@ export const ProductDetail = ({ eventKey, children }) => {
                         <div className="d-flex  gap-4 mb-2 mt-4 justify-content-center mb-4 m-auto text-center ">
                           <div>
                             {" "}
-                            <p className="   mb-2">Author</p>
+                            <p className="   mb-2 author_language_date_text">Author</p>
                             <p className="textsha   ">
                               {data?.user_info?.name}
                             </p>
@@ -823,12 +823,12 @@ export const ProductDetail = ({ eventKey, children }) => {
 
                           <div>
                             {" "}
-                            <p className="mb-2">Original Language</p>{" "}
+                            <p className="mb-2 author_language_date_text">Original Language</p>{" "}
                             <p className="textsha">English </p>
                           </div>
                           <div>
                             {" "}
-                            <p className="mb-2">Release Date</p>{" "}
+                            <p className="mb-2 author_language_date_text">Release Date</p>{" "}
                             <p className="textsha"> {data?.release_date} </p>
                           </div>
                         </div>
@@ -904,7 +904,7 @@ export const ProductDetail = ({ eventKey, children }) => {
 
 
                             </div>
-                            <div className="profile  mb-4 mt-2">
+                            <div className="profile  mb-4 mt-3">
                               {" "}
                               <img className="img-fluid star_btns" src={star_button} />
                               <button className="nottext mt-4 ">
@@ -1310,7 +1310,7 @@ export const ProductDetail = ({ eventKey, children }) => {
                               ><span> View All </span> <i class="fa-solid fa-play allicon"></i></button>
 
                             </div>
-                            <div className="col-lg-5 col-sm-12">
+                            <div className="col-lg-5 col-sm-12 animate_img_space">
                               <img className="img-fluid cartoons" src={animated} />
                             </div>
                           </div>
@@ -1574,10 +1574,10 @@ export const ProductDetail = ({ eventKey, children }) => {
 
 
 
-                          <section >
+                          {/* <section >
                             <div class="container my-5 py-5 text-dark">
                             </div>
-                          </section>
+                          </section> */}
 
                         </div>
                       </div>

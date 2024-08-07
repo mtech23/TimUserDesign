@@ -1,10 +1,11 @@
 .book_name_bg{
-    background-image: url(../../Assets/images/booknameBg.png);
+    background-image: url(../../Assets/images/booknames.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding: 45px 0px;
     position: relative;
+    opacity: 76%;
 }
 .chap_short_description{
     font-family: 'Jost';
@@ -85,8 +86,8 @@
     flex-wrap: wrap;
 }
 .book_name_icons{
-    width: 22px;
-    height: 22px; 
+  width: 24px;
+  height: 26px;
 }
 .more_icons{
     height: 24px;
@@ -1378,17 +1379,22 @@ align-items: center;
     height: 15px;
   }
   .choose_plan_para {
-  
+
     font-size: 17px;
   }
   .modal-content.purchased_modal-content {
-
     padding: 21px 0px;
-}
-.time_left {
+  }
 
-  font-size: 8px;
-}
+  .time_left {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    padding: 0;
+    font-size: 11px;
+  }
+
 .read_ahead {
 
   font-size: 10px;
@@ -1516,7 +1522,7 @@ font-size: 18px;
 
 @media (max-width:991px) {
     .modal-dialog.custom_modal_dailog {
-        width: 40%;
+        width: 31%;
     }
     .icons_box {
         gap: 26px;
@@ -1528,11 +1534,12 @@ font-size: 18px;
 
     }
     .modal-content.purchased_modal-content {
-      width: 74%;
+      width: 90%;
+      /* height: 100%; */
   }
-  .time_left {
+  /* .time_left {
     font-size: 9px;
-}
+} */
 .read_ahead_para {
   font-size: 8px;
 }
@@ -1542,12 +1549,30 @@ font-size: 18px;
     
     
 }
+/* @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .modal-content.purchased_modal-content {
+    height: 963px;
+  }
+} */
+@media (max-width: 800px) {
+  .modal-dialog.custom_modal_dailog {
+      width: 40%;
+  }
+  .modal-content.purchased_modal-content {
+      width: 85%;
+      /* height: 100%; */
+    }
+}
 @media (max-width: 768px) {
   .modal-content.purchased_modal-content {
     width: 87%;
+    
   }
 }
 @media (max-width: 600px) {
+    .report_para{
+      font-size: 11px;
+    }
     .icons_box {
         gap: 30px;
     }
@@ -1566,12 +1591,11 @@ font-size: 18px;
     .discount_coins_div{
         margin-bottom: 20px;
     }
-    .checkbox-wrapper-31 {
-   
-        width: 17px;
-        height: 17px;
-    }
-    
+    /* .checkbox-wrapper-31 {
+        width: 29px;
+        height: 29px;
+    } */
+  
   .modal-dialog.second_custom_modal_dailog{
     width: 100%;
     /* max-width: none; */
@@ -1583,7 +1607,7 @@ font-size: 18px;
     width: 11%;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .icons_box {
        
         justify-content: center;

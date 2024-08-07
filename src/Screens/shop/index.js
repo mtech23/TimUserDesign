@@ -361,7 +361,7 @@ useEffect(() =>{
                   </div>
                 </div>
                 </div>
-                <div className="col-lg-3 harrypotter_books-col">
+                <div className="col-lg-3 shop_harrypotter_books-col">
                   <div className="harrypotter_book">
                     {/* <div class="row  harrypotter_book active">
                       <div className="col-4">

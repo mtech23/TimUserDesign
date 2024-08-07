@@ -334,6 +334,11 @@ export const Header = (props) => {
                     </Link>
                   </li>
                   <li className="main-navbar-list">
+                    <Link to="/create-request/" className="main-navbar-link">
+                      Creation
+                    </Link>
+                  </li>
+                  <li className="main-navbar-list">
                     <Link to="/competition/" className="main-navbar-link">
                       Competion
                     </Link>
@@ -352,6 +357,12 @@ export const Header = (props) => {
                   <li className="main-navbar-list">
                     <Link to="/shop/" className="main-navbar-link">
                     Shop
+                    </Link>
+                  </li>
+              
+                  <li className="main-navbar-list">
+                    <Link to="/mission/" className="main-navbar-link">
+                      Mission
                     </Link>
                   </li>
                 </ul>

@@ -226,7 +226,13 @@ console.log("currentItems" , currentItems)
             <div className="row">
               <div className="herro__title">
                 <h1 className="typewriter"> COMPETITION </h1>
+                <p className="competition_timer_text">Time remaining</p>
+                <div className="d-flex justify-content-center">
+                  <p className="competition_offer_remain_time poppins-font"> 2:59:59 </p>
+                </div>
               </div>
+                 
+                    
             </div>
           </div>
         </sectionc>

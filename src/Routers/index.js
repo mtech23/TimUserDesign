@@ -32,6 +32,7 @@ import { AuthorModule } from "../Screens/AuthorModule";
 import { Blogs } from "../Screens/Blogs";
 import { BookListing } from "../Screens/BookListing";
 import { BookName } from "../Screens/BookName";
+import { BookChapterDetail } from "../Screens/BookChapterDetail";
 import { AboutAuthor } from "../Screens/AboutAuthor";
 import { SearchFilter } from "../Screens/SearchFilter/index";
 import { Forum } from "../Screens/Forum";
@@ -66,6 +67,7 @@ export default function UserRouter() {
         <Route path="/book-listing" element={<ProductListing />}></Route>
         <Route path="/novel-listing" element={<Novel />}></Route>
         <Route path="/BookName" element={<BookName />}></Route>
+        <Route path="/BookChapterDetail" element={<BookChapterDetail />}></Route>
         <Route path="/Forum" element={<Forum />}></Route>
       
         <Route path="/AboutAuthor" element={<AboutAuthor />}></Route>

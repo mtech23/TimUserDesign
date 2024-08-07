@@ -64,11 +64,12 @@
   border-radius: 25px;
 }
 .filters__category_price{
-    border: 2px solid #360c55;
-    padding: 3px 20px;
-    border-radius: 25px;
-    margin-top: 13px;
-    width: 158px
+  border: 2px solid #360c55;
+  padding: 6px 20px;
+  border-radius: 25px;
+  margin-top: 13px;
+  width: 100%;
+  font-size: 12px;
 }
 
 
@@ -216,8 +217,12 @@
 /* Best Books Listing Ends Here */
 
 @media (max-width: 1024px) {
+  .filters__search .filters__search-input {
+    font-size: 11px;
+    padding: 3px 0px;
+}
   .filters__tabs .filters__tab {
-    padding: 7px 20px;
+    padding: 3px 15px;
   }
   .bestSell__book-title h2 {
     font-size: 40px;
@@ -233,9 +238,12 @@
     width: 110px;
   }
   .filters__tabs .filters__tab.filters__tab-active {
-    font-size: 10px;
+    font-size: 13px;
     
   }
+}
+@media (max-width: 991px) {
+ 
 }
 
 @media (max-width: 768px) {
@@ -247,7 +255,17 @@
   }
 }
 
+@media (max-width: 600px) {
+  .filters__tabs .filters__tab {
+    padding: 5px 13px;
+}
+.filters__tabs .filters__tab.filters__tab-active {
+  font-size: 10px;
+}
+}
+
 @media (max-width: 480px) {
+ 
   .filters__category,
   .filters__pricing {
     margin-top: 20px;

@@ -292,7 +292,7 @@ export const BookListing = () => {
           <div className="bestSell__filters">
             <div className="container">
               <div className="row align-items-center">
-                <div className="col-lg-6 col-md-6">
+                <div className="col-lg-6 col-md-8">
                   <div className="filters__tabs">
                     {/* <button className="filters__tab filters__tab-active">
                       Novels
@@ -351,7 +351,7 @@ export const BookListing = () => {
                       {/* <option value="1">Categories 1</option>
                       <option value="2">Categories 2</option>
                       <option value="3">Categories 3</option> */}
-                <div className="col-lg-2 col-md-3">
+                <div className="col-lg-2 col-md-4 ">
                   <div className="filters__pricing">
                     {/* <select
                       class="form-select"
@@ -372,7 +372,7 @@ export const BookListing = () => {
                     />
                   </div>
                 </div>
-                <div className="col-lg-4 col-md-12">
+                <div className="col-lg-4 col-md-6 ">
                   <div className="filters__search">
                     <div class="input-group">
                       <button
@@ -406,7 +406,7 @@ export const BookListing = () => {
                 <div className="row">
                   {bookitems &&
                     bookitems?.map((item, index) => (
-                      <div className="col-lg-3 col-md-4">
+                      <div className="col-lg-3 col-md-4 ">
                         <div className="bestBooks__list">
                           <div className="bestBooks__list-img">
                             <img

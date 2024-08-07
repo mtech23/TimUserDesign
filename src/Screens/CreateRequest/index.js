@@ -180,7 +180,7 @@ export const  CreateRequest= () => {
                     <div className='row'>
                             <div className='col-md-12'>
                             <h4 className="book-release-title">Type</h4>
-                                    <div className=" radbtns  gap-5 mt-3  ">
+                                    <div className=" radbtns   mt-3  ">
                                         <span className="filter_radioo  gap-2  d-flex ">
                                             {" "}
                                             <input type="radio" name="exampleRadiosss" id="exampleRadios011"/>
@@ -205,7 +205,7 @@ export const  CreateRequest= () => {
              <div className='row'>
                     <div className='col-md-12'>
                        <h4 className="book-release-title">Original Language</h4>
-                            <div className=" radbtns  gap-5 mt-3  ">
+                            <div className=" radbtns  mt-3  ">
                                 <span className="filter_radioo  gap-2  d-flex ">
                                     {" "}
                                     <input type="radio" name="exampleRadios" id="exampleRadios01" />

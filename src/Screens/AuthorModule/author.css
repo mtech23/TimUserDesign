@@ -183,7 +183,7 @@
     padding: 0px;
   }
   .authors__carousel .carousel-image img {
-    width: 60%;
+    width: 37%;
     margin-top: 7px;
 }
 }
@@ -210,7 +210,18 @@
     height: 9%;
   }
 }
+@media (max-width:991px){
+  .author__list-cartoon {
+    opacity: 0.5;
+}
+.author__img img {
+  width: 15%;
+}
+.author__list-row {
+  padding: 11px 0;
 
+}
+}
 @media (max-width: 768px) {
   .authors__list{
     padding: 0px;
@@ -253,13 +264,21 @@
   .author__list-bgCartoon img {
     height: 40%;
   }
+  .herro__title h1 {
+    font-size: 30px;
+  }
+  .authors__carousel-title h2 {
+    font-size: 22px;
+   
+  }
 }
-@media (max-width:425px){
+@media (max-width:428px){
+ 
+}
+@media (max-width:375px){
   .herro__title h1 {
     font-size: 22px;
   }
-}
-@media (max-width:375px){
   .genere__tags .genere__tag {
     padding: 0px 10px;
     font-size: 13px;
@@ -269,12 +288,4 @@
     font-size: 13px;
 }
 }
-@media (max-width:991px){
-  .author__list-cartoon {
-    opacity: 0.5;
-}
-.author__img img {
-  width: 15%;
-}
 
-}

@@ -358,27 +358,26 @@ color: #fff;
 }
 /* new section css end */
 
-
-        @media  (max-width: 991px){
-            .bookk img.clock {
-                left: 125px;
-            }
-            .bookk button.category {
-                font-size: 11px;
-            }
-            .mainly {
-               padding-left: 14px;
-            }
-            .vote_actionBtn {
-                right: 53px !important;
-            }
-            .rankbook {
-                padding: 396px 0px 20px 51px;
-                background-size: 82% 100%;
-            }
-            .rankbook1{
-                padding: 396px 0px 20px 51px;
-                background-size: 82% 100%;
+    @media  (max-width: 991px){
+        .bookk img.clock {
+          left: 125px;
+         }
+         .bookk button.category {
+            font-size: 11px;
+         }
+        .mainly {
+            padding-left: 14px;
+         }
+        .vote_actionBtn {
+            right: 53px !important;
+        }
+        .rankbook {
+            padding: 396px 0px 20px 51px;
+            background-size: 82% 100%;
+        }
+        .rankbook1{
+            padding: 396px 0px 20px 51px;
+            background-size: 82% 100%;
             }
             .rankbook2{
                 padding: 396px 0px 20px 51px;
@@ -499,80 +498,25 @@ color: #fff;
 
 
 
-        @media  (max-width: 1025px){
-        .bookboxes {
-            gap: 0px;
-            flex-wrap: wrap;
-        }
-        .vote_actionBtn {
-            right: -86px;
-        }
-        /* .rankbook2 {
-            margin-top: 41px;
-        }
-        .rankbook3 {
-            margin-top: 41px;
-        } */
-        }
-
-@media  (max-width: 425px){
-
-  
-    .picked {
-        font-size: 17px;
+@media  (max-width: 1025px){
+   .bookboxes {
+     gap: 0px;
+      flex-wrap: wrap;
+   }
+  .vote_actionBtn {
+    right: -86px;
     }
 
-    .vote_actionBtn {
-        position: relative;
-    }
-    /* .rankbook1 {
-        margin-top: 41px;
-    } */
-    .dualbtn {
-        margin-top: 9px;
-    }
-    .filter{
-    margin-top: 10px;
-    }
-    .create {
-     margin-top: 10px;
-    }
-    .star_row {
-    
-        margin-bottom: 37px;
-    }
-    .top_five {
-        font-size: 13px;
-    }
-    .top_five_book {
-        width: 156px !important;
-    }
-    /* .rankbook {
-        background-size: 90% 100%;
-    } */
-    .rankbook1 {
-        padding: 396px 0px 36px 28px !important;
-        background-size: 72% 83% !important;;
-    }
-    .rankbook2 {
-        padding: 396px 0px 36px 28px !important;
-        background-size: 72% 83% !important;
-    }
-    .rankbook3 {
-        padding: 396px 0px 36px 28px !important;
-        background-size: 72% 83% !important;
-    }
-    .authorprofile {
-        padding-left: 34px;
-    }
-    .vote_actionBtn {
-        right: -34px !important;
-    }
-    .rankbook {
-        padding: 396px 0px 36px 28px !important;
-        background-size: 72% 83% !important;
-    }
-  }
+}
+
+
+
+
+  /* @media  (max-width: 480px){
+    .bookk img.clock {
+       left: 107px;
+   }
+       } */
   @media only screen and (min-width: 1024px){
     .vote_actionBtn {
         right: -9px;
@@ -603,6 +547,12 @@ color: #fff;
 }
 }
 @media (max-width:600px){
+    .filter{
+        margin-top: 10px;
+        }
+        .create {
+         margin-top: 10px;
+        }
     
   .filter {
     font-size: 10px;
@@ -634,6 +584,7 @@ color: #fff;
         left: 79px;
     }
     }
+
     @media (max-width: 375px) {
         .vote_actionBtn {
             right: -47px !important;
@@ -671,3 +622,67 @@ color: #fff;
         justify-content: left;
       }
 }
+@media  (max-width: 480px){
+    .bookk img.clock {
+        left: 108px;
+    }
+    .picked {
+        font-size: 17px;
+    }
+
+    .vote_actionBtn {
+        position: relative;
+    }
+    /* .rankbook1 {
+        margin-top: 41px;
+    } */
+    .dualbtn {
+        margin-top: 9px;
+    }
+   
+    .star_row {
+    
+        margin-bottom: 37px;
+    }
+    .top_five {
+        font-size: 13px;
+    }
+    .top_five_book {
+        width: 156px !important;
+    }
+    /* .rankbook {
+        background-size: 90% 100%;
+    } */
+    .rankbook1 {
+        padding: 396px 0px 36px 28px !important;
+        background-size: 72% 83% !important;;
+    }
+    .rankbook2 {
+        padding: 396px 0px 36px 28px !important;
+        background-size: 72% 83% !important;
+    }
+    .rankbook3 {
+        padding: 396px 0px 36px 28px !important;
+        background-size: 72% 83% !important;
+    }
+    .authorprofile {
+        padding-left: 50px;
+    }
+    .vote_actionBtn {
+        right: -34px !important;
+    }
+    .rankbook {
+        padding: 396px 0px 36px 28px !important;
+        background-size: 72% 83% !important;
+    }
+  }
+  @media (max-width: 428px) {
+    .authorprofile {
+        padding-left: 35px;
+    }
+    }
+    @media (max-width: 375px) {
+        .authorprofile {
+            padding-left: 26px;
+        }
+        }

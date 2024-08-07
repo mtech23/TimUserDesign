@@ -249,6 +249,7 @@ const spinDuration = 1.0;
           <div className="row">
             <div className="herro__title">
               <h1 className="typewriter">MISSIONS </h1>
+              <p className="mission_disclaimer">Disclaimer: Rewards are available once a week</p>
             </div>
           </div>
         </div>

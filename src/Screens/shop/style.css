@@ -24,7 +24,12 @@ color: #360C55;
     /* width: 743px; */
   
 }
-
+.shop_harrypotter_books-col {
+    background: #f3f3f3;
+    /* overflow-y: scroll; */
+    /* border-left: 20px solid #fff; */
+    height: 549px;
+}
 .second{
     background-image: url(../../Assets//images/second.png);
 background-size: cover;
@@ -507,18 +512,107 @@ input.promo_number[type='number']::placeholder{
 }
 @media (max-width: 1024px) {
 
-    .shop img.dragon_image {
-        width: 579px !important;
-        top: -96px;
-    }
-
+.shop img.dragon_image {
+    width: 579px !important;
+    top: -96px;
+}
 
 .rect {
    
     margin-bottom: 30px;
 }
+.promo_image {
+     
+    top: -144px;
+
+    width: 200px;
+}
+.gift_cards_bg h1.promos {
+    font-size: 42px;
+}
+.shop_two h1.gift {
+    font-size: 42px;
+}
+.shop h1.head {
+    font-size: 42px;
+}
+.subscription h1.subs {
+    font-size: 42px;
+}
+.promo_card_box h3.promo_heading {
+    font-size: 20.49px;
+}
+.eco {
+    padding: 18px 20px 156px 20px
+}
+.basic {
+    padding: 18px 20px 153px 20px;
+
+}
+.pre {
+    padding: 18px 20px 3px 20px;
+}
 }
 
+@media (max-width:991px){
+    .shop_harrypotter_books-col {
+        height: 100%;
+    }
+    .price p.point {
+        font-size: 12px;
+    }
+    .shop img.dragon_image {
+        display: none;
+    }
+    .box {
+        padding: 98px 62px;
+    }
+    .mana_image {
+        width: 64%;
+    }
+    .rect {
+
+        background-size: 87% 100%;
+    }
+    .box{
+        background-size: 92% 100%;
+    }
+    .bg_particle_img{
+        width: 71%;
+        left: 20px;
+    }
+
+    .bg_particle_gift_img {
+        width: 44%;
+        height: 80%;
+        left: 65px;
+    }
+    .gift_cards_bg img.promoCards {
+        height: 182px;
+        width: 41%;
+    }
+    .gift_cards_bg {
+        padding: 100px 0px 50px 0px;
+    }
+    .gift_coins_one {
+        margin-top: -217px;
+    }
+    .shop_two {
+        padding: 55px 0px 195px 0px;
+    }
+    .shop_two h1.gift {
+        font-size: 36px;
+    }
+    .subscription h1.subs {
+        font-size: 36px;
+    }
+    .shop h1.head {
+        font-size: 36px;
+    }
+    .clearnce_sale{
+        font-size: 19px;
+    }
+}
 
 @media (max-width: 768px) {
     /* .box {
@@ -577,7 +671,7 @@ input.promo_number[type='number']::placeholder{
    
     .gift_cards_bg h1.promos {
 
-        font-size: 26px !important;
+        font-size: 22px !important;
        
     }
    
@@ -624,39 +718,10 @@ input.promo_number[type='number']::placeholder{
     .shop_two h1.gift {
         font-size: 30px;
     }
+    .shop_two h1.gift {
+        font-size: 22px;
+    }
     
-}
-@media (max-width:991px){
-    .shop img.dragon_image {
-        display: none;
-    }
-    .box {
-        padding: 98px 62px;
-    }
-    .mana_image {
-        width: 64%;
-    }
-    .rect {
-
-        background-size: 87% 100%;
-    }
-    .box{
-        background-size: 92% 100%;
-    }
-    .bg_particle_img{
-        width: 71%;
-        left: 20px;
-    }
-
-    .bg_particle_gift_img {
-        width: 44%;
-        height: 80%;
-        left: 65px;
-    }
-    .gift_cards_bg img.promoCards {
-        height: 248px;
-        width: 41%;
-    }
 }
 @media only screen and (max-width: 1040px) {
     /* .shop img.dragon_image {
@@ -666,7 +731,31 @@ input.promo_number[type='number']::placeholder{
     } */
 
 }
-
+@media (max-width:600px){
+   
+    .diccount_nums{
+        margin-top: 3rem;
+    }
+    .gift_cards_bg img.promoCards {
+        width: 623px !important;
+        height: 133px !important;
+    }
+    .shop_two {
+        padding: 12px 0px 136px 0px;
+    }
+    .gift_cards_bg {
+        padding: 61px 0px 50px 0px;
+    }
+    .gift_coins_one {
+        margin-top: -158px;
+    }
+    .pre {
+        margin-top: 20px;
+    }
+    .basic {
+        margin-top: 20px;
+    }
+}
 @media (max-width: 425px) {
     .basic {
         margin-top: 20px;
@@ -690,16 +779,22 @@ input.promo_number[type='number']::placeholder{
         padding: 31px 0px 60px 0px;
     }
     .shop_two h1.gift {
-        font-size: 27px !important;
+        font-size: 23px !important;
     }
-    .diccount_nums{
-        margin-top: 3rem;
+    .gift_cards_bg h1.promos {
+        font-size: 22px !important;
     }
+  
     .gift_cards_bg img.promoCards {
         width: 100% !important;
-        height: 93px !important;
+        height: 82px !important;
     }
-   
+    .shop h1.head {
+        font-size: 23px !important;
+    }
+    .subscription h1.subs {
+        font-size: 23px !important;
+    }
 
 }
 @media only screen and (min-width: 2560px){
@@ -723,35 +818,5 @@ input.promo_number[type='number']::placeholder{
  } */
 
  @media (max-width: 1024px){
-    .promo_image {
-     
-        top: -144px;
-
-        width: 200px;
-    }
-    .gift_cards_bg h1.promos {
-        font-size: 42px;
-    }
-    .shop_two h1.gift {
-        font-size: 42px;
-    }
-    .shop h1.head {
-        font-size: 42px;
-    }
-    .subscription h1.subs {
-        font-size: 42px;
-    }
-    .promo_card_box h3.promo_heading {
-        font-size: 20.49px;
-    }
-    .eco {
-        padding: 18px 20px 156px 20px
-    }
-    .basic {
-        padding: 18px 20px 153px 20px;
-    
-    }
-    .pre {
-        padding: 18px 20px 3px 20px;
-    }
+   
  }

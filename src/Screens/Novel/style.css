@@ -38,6 +38,8 @@ button.slick-arrow {
     color: #2c0657;
     visibility: visible;
     font-size: 36px;
+    /* position: absolute;
+    left: -8px; */
 }
 
 .novel_rated_card img {
@@ -77,22 +79,6 @@ button.slick-arrow {
 .playbtns.d-flex.gap-12 {
     gap: 4px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .accordion-button:not(.collapsed) {

@@ -495,24 +495,24 @@ export const Beta = () => {
           <section className="feature-books">
             <div className="container">
               <div className="row">
-                <div className="col-md-12 section__heading">
-                  <div class="special_heading">
+                <div className="col-md-12 new_feature ">
+                  <div class="">
                     <h1
-                      className="jost-font"
+                      className="jost-font new_special_heading"
                       data-aos="fade-right"
                       data-aos-duration="3000"
                     >
-                      Books
+                      Featured Books
                     </h1>
-                    <h2
+                    {/* <h2
                       className="jost-font"
                       data-aos="fade-left"
                       data-aos-duration="3000"
                     >
                       Featured Books
-                    </h2>
+                    </h2> */}
                   </div>
-                  <p>
+                  <p className="new_feature_para">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry Lorem Ipsum has been the industrys
                     standard dummy text ever since the when an unknown printer
@@ -551,8 +551,80 @@ export const Beta = () => {
                     </button>
                   </div> */}
                 </div>
-                <div className="featured__books">
+                {/* <div className="featured__books">
                   <div className="row popular_tabing">
+                    <Slider {...settingsForFourItems}>
+                      {isfeatured &&
+                        isfeatured?.map((item, index) => (
+                          <Link
+                            className="col-md-4"
+                            to={`/book-detail/${item?.id}`}
+                          >
+                            <div className="card product_hover-effect">
+                              <img
+                                src={base_url + item?.image}
+                                className="card-img-top"
+                                id="featured__books_img"
+                              />
+                              <div className="card-body featured_books-body">
+                                <h3 className="card-title jost-font">
+                                  {item?.name.slice(0, 15)}
+                                </h3>
+                                <p className="author__name jost-font">
+                                  Author Name
+                                </p>
+                                <p className="card-text featured__book-desc jost-font">
+                                  {item?.description}
+                                </p>
+                                <div className="product__price-div">
+                                  <h3 className="author__poduct_title jost-font">
+                                    <div className="product__price">
+                                      <span className="discount__price">
+                                        ${item?.price}
+                                      </span>
+                                      <span className="actual__price">
+                                        ${item?.price}
+                                      </span>
+                                    </div>
+                                  </h3>
+                                  <div class="product__icon">
+                                    <img src={Cart_icon_pink} />
+                                  </div>
+                                </div>
+                                <div className="rating__div">
+                                  <FontAwesomeIcon
+                                    icon={faStar}
+                                  ></FontAwesomeIcon>
+                                  <FontAwesomeIcon
+                                    icon={faStar}
+                                  ></FontAwesomeIcon>
+                                  <FontAwesomeIcon
+                                    icon={faStar}
+                                  ></FontAwesomeIcon>
+                                  <FontAwesomeIcon
+                                    icon={faStar}
+                                  ></FontAwesomeIcon>
+                                  <FontAwesomeIcon
+                                    icon={faStar}
+                                  ></FontAwesomeIcon>
+                                </div>
+                              </div>
+                            </div>
+                          </Link>
+                        ))}
+                    </Slider>
+                  </div>
+                </div> */}
+              </div>
+            </div>
+          </section>
+
+          {/* Harry Potter Section */}
+          <section className="harry-potter">
+            <div className="container">
+              <div className="row ">
+              <div className="featured__books new_feature_book_spacing ">
+                  <div className="row popular_tabing mx-auto">
                     <Slider {...settingsForFourItems}>
                       {isfeatured &&
                         isfeatured?.map((item, index) => (
@@ -616,13 +688,9 @@ export const Beta = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
 
-          {/* Harry Potter Section */}
-          <section className="harry-potter">
-            <div className="container">
-              <div className="row">
+
+              <div className="row mb-5">
                 <div className="col-lg-9 harry-potter-bg">
                   <div className="harry__potter-section">
                     <div className="row align-items-center">
@@ -710,7 +778,7 @@ export const Beta = () => {
                               {item?.description}
                             </p>
                             <h3 class="author__poduct_title harrypotter_books-price jost-font">
-                              <div class="product__price">
+                              <div class="product__price new_harrypotter_product__price">
                                 <span class="discount__price">${item?.price}</span>
                                 <span class="actual__price">${item?.price}</span>
                               </div>

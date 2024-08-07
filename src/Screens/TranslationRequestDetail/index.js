@@ -8,6 +8,7 @@ import CustomInput from "../../Components/CustomInput";
 import preview from "../../Assets/images/image_74-removebg-preview.png";
 import CustomPagination from '../../Components/CustomPagination'
 import CustomCard from "../../Components/CustomCard";
+import CountdownTimer from "../../Components/CountdownTimer";
 import backarrow from '../../Assets/images/backarrow.png'
 import fan1 from '../../Assets/images/fan1.png'
 import fan2 from '../../Assets/images/fan2.png'
@@ -118,7 +119,9 @@ export const TranslationRequestDetail = ({ eventKey, children }) => {
   const [books, setBooks] = useState([]);
 
   const reusableSetting = (item, centerMode) => {
-
+   
+  
+   
 
     return {
       dots: false,
@@ -199,19 +202,6 @@ export const TranslationRequestDetail = ({ eventKey, children }) => {
       rating: newRating,
     });
   };
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -896,43 +886,40 @@ export const TranslationRequestDetail = ({ eventKey, children }) => {
                             
                             <div className="timer_countdown mb-4 mt-2">
                               
-                            <div id="countdown">
-                                <h2 className="day_before_drop">Days Before Dropped</h2>
+                            <div id="countdown App">
+                                {/* <h2 className="day_before_drop">Days Before Dropped</h2>
                                 <div id="timer">
                                   <div>
-                                    <span className="day_hr_mint_seconds_numbers">0   </span>                                 
-                                    <span className="day_hr_mint_seconds_text">Days</span>
+                                    <span className="day_hr_mint_seconds_numbers"> 0   </span>                                 
+                                    <span className="day_hr_mint_seconds_text"> Days </span>
                                   </div>
                                   <div>
-                                    <span className="day_hr_mint_seconds_numbers "><img src={colon} /> </span>                                
-                                    <span className="day_hr_mint_seconds_numbers "><img src={line_timer } /> </span>
+                                    <span className="day_hr_mint_seconds_numbers "> <img src={colon} /> </span>                                
+                                    <span className="day_hr_mint_seconds_numbers "> <img src={line_timer } /> </span>
                                   </div>
                                   <div>
-                                    <span className="day_hr_mint_seconds_numbers">0</span>
-                                    <span  className="day_hr_mint_seconds_text">Hours</span>
+                                    <span className="day_hr_mint_seconds_numbers"> 0 </span>
+                                    <span  className="day_hr_mint_seconds_text"> Hours </span>
                                   </div>
                                   <div>
-                                    <span className="day_hr_mint_seconds_numbers"><img src={colon} /> </span>                                
-                                    <span className="day_hr_mint_seconds_numbers"><img src={line_timer } /> </span>
+                                    <span className="day_hr_mint_seconds_numbers"> <img src={colon} /> </span>                                
+                                    <span className="day_hr_mint_seconds_numbers"> <img src={line_timer } /> </span>
                                   </div>
                                   <div>
-                                    <span className="day_hr_mint_seconds_numbers">0</span>
-                                    <span  className="day_hr_mint_seconds_text"> Minutes</span>
+                                    <span className="day_hr_mint_seconds_numbers"> 0 </span>
+                                    <span  className="day_hr_mint_seconds_text"> Minutes </span>
                                   </div>
                                   <div>
-                                    <span className="day_hr_mint_seconds_numbers"><img src={colon} /> </span>                                
-                                    <span className="day_hr_mint_seconds_numbers"><img src={line_timer } /> </span>
+                                    <span className="day_hr_mint_seconds_numbers"> <img src={colon} /> </span>                                
+                                    <span className="day_hr_mint_seconds_numbers"> <img src={line_timer } /> </span>
                                   </div>
                                   <div>
-                                    <span className="day_hr_mint_seconds_numbers">0</span>
-                                    <span  className="day_hr_mint_seconds_text">Seconds</span>
+                                    <span className="day_hr_mint_seconds_numbers"> 0 </span>
+                                    <span  className="day_hr_mint_seconds_text"> Seconds </span>
                                   </div>
-                                </div>
+                                </div> */}
+                                  <CountdownTimer />
                               </div>
-
-
-
-
 
 
 

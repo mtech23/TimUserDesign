@@ -100,6 +100,22 @@ html, body {
   font-size: 16px;
 }
 
+.popular_tabing .slick-next::before {
+  color: #2c0657;
+  visibility: visible;
+  font-size: 36px;
+  position: absolute;
+  left: -8px;
+}
+.popular_tabing .slick-prev::before {
+  color: #2c0657;
+  visibility: visible;
+  font-size: 36px;
+  position: absolute;
+  left: -6px;
+}
+
+
 /* Navigation  End*/
 
 /* Update Navbar Start */
@@ -129,7 +145,7 @@ html, body {
   border: none;
   border-radius: 50%;
   margin-bottom: -45%;
-  z-index: 9999;
+  /* z-index: 9999; */
   position: relative;
 }
 .main-navbar-logo {
@@ -290,15 +306,19 @@ html, body {
 
 /* Banner Section End */
 .author__product_title{
-  font-family: 'Jost';
+  /* font-family: 'Jost'; */
   color: #2C2C2C;
-  font-size: 22.86px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 33.03px;
   text-align: left;
 
 }
 
+
+#featured__books_img{
+  height: 400px;
+}
 /* Social Section Start */
 .social-section {
   padding: 40px 0;
@@ -332,6 +352,46 @@ html, body {
   right: 0;
   width: 500px;
 }
+.new_feature_para {
+  font-size: 15px;
+  margin: 30px auto;
+  max-width: 790px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28.8px;
+  text-align: center;
+  color: #fff;
+}
+.new_special_heading{
+  color: #fff;
+  font-family: 'Jost';
+  font-size: 70px;
+  font-weight: 900;
+  line-height: 45.97px;
+  text-align: center;
+
+}
+.tags {
+  margin: 30px 0;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.tags .tag {
+  padding: 5px 18px;
+  background-color: #360c55;
+  margin: 0 10px;
+  color: #fff;
+  border-radius: 30px;
+}
+
 .section__heading {
   text-align: center;
   margin-bottom: 40px;
@@ -352,6 +412,10 @@ html, body {
   color: #360c55;
   position: relative;
 }
+
+
+
+
 .section__heading p {
   font-size: 15px;
   margin: 30px auto;
@@ -490,13 +554,13 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 0;
+  margin-top: 10px;
 }
 .author__poduct_title {
-  font-size: 22px;
+  /* font-size: 22px;
   text-align: left;
   font-weight: 700;
-  margin-right: 25px;
+  margin-right: 25px; */
 }
 /* .product__icon {
   font-size: 22px;
@@ -505,20 +569,42 @@ html, body {
   width: 20px;
 }
 .product__price {
-  text-align-last: left;
+  font-family: 'Aeriast';
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 40.01px;
+  text-align: left;
+  color: #000000;
 }
 .product__price span {
   margin-right: 5px;
   line-height: 1;
+  font-family: 'Aeriast';
+  font-size: 15px;
+  font-weight: 400;
+  text-align: left;
+
 }
 .product__price .discount__price {
-  font-size: 34px;
-  font-family: "aeriast";
+  /* font-size: 25px; */
+  /* font-family: "aeriast"; */
+  font-family: 'Jost';
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 38.71px;
+  text-align: left;
+  color:#360C55;
+
 }
 .product__price .actual__price {
-  font-size: 23px;
+  /* font-size: 19px; */
   text-decoration: line-through;
-  font-family: "aeriast";
+  font-family: 'Jost';
+  font-size: 14.43px;
+  font-weight: 700;
+  line-height: 20.84px;
+  text-align: left;
+  color: #360C55;
 }
 /* Top Auther End Here */
 
@@ -602,7 +688,7 @@ html, body {
 /* Combine Sec BG Start */
 .combine-section {
   background-image: url(../../../src/Assets/images/mul-sec-bg.jpg);
-  background-size: 100% 85%;
+  background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
 }
@@ -615,8 +701,12 @@ html, body {
   background-image: url(../../../src/Assets/images/featured-bg-1.png);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 60px 0 0;
+  padding: 60px 0 200px;
   /* padding: 60px 0px 250px 0px; */
+}
+.new_feature_book_spacing{
+  margin-bottom: 87px;
+  margin-top: -198px;
 }
 .feature-books .section__heading p,
 .feature-books .section__heading h2 {
@@ -630,11 +720,11 @@ html, body {
   opacity: 0.3;
 }
 .featured__books h3.card-title {
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 700;
 }
 .featured__books p {
-  font-size: 17px;
+  font-size: 13px;
   color: #535353;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -659,15 +749,18 @@ html, body {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+  align-items: center;
 }
 .feature-books .discount__price {
-  font-size: 26px;
+  font-size: 23px;
   font-weight: 700;
   color: #360c55;
+  font-family: 'jost';
 }
 .feature-books .actual__price {
-  font-size: 14px;
+  font-size: 13px;
   color: #360c55;
+  font-family: 'jost';
 }
 .feature-books .product__price-div {
   margin: 12px 0;
@@ -705,7 +798,7 @@ html, body {
 /* Hary Potter Section Start Here */
 
 .harry-potter {
-  margin: 50px 0;
+  /* margin: 50px 0; */
 }
 .harry-potter-bg {
   background-image: url(../../../src/Assets/images/harrypotter-bg.png);
@@ -866,11 +959,12 @@ html, body {
 .large-tags .large-tag {
   background-color: #360c55;
   color: #fff;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 7px 18px;
+  border-radius: 10px;
 }
+
 /* .joins-and-tags {
   background-image: url(../../../src/Assets/images/joins-and-tags-bg.jpg);
   background-size: cover;
@@ -967,14 +1061,15 @@ html, body {
   padding: 16px 0 0;
 }
 .completed__novel-card .card-title {
-  font-size: 28px;
+  font-size: 23px;
   font-weight: 700;
 }
 .completed__novel-card .product__price-div {
   color: #360c55;
 }
 .completed__novel-card .product__price-div .discount__price {
-  font-size: 28px;
+  font-size: 22px;
+  font-weight: 700;
   margin-right: 5px;
   font-family: "Jost", sans-serif;
   font-style: normal;
@@ -1171,7 +1266,13 @@ html, body {
     max-width: 950px;
   }
   .completed__novel-card .card-title {
-    font-size: 23px;
+    font-size: 18px;
+  }
+  .completed__novel-card .product__price-div .discount__price {
+    font-size: 17px;
+  }
+  .completed__novel-card .product__price-div .actual__price {
+    font-size: 12px;
   }
   .completed__novel-cards {
     max-width: 1280px;
@@ -1216,7 +1317,21 @@ html, body {
     width: 320px;
   }
 }
+@media (max-width:1180px){
+  .popular_tabing .slick-next::before {
+    left: -24px;
+}
+.popular_tabing .slick-prev::before {
+    left: 10px;
+}
+}
 @media (max-width: 1024px) {
+  .featured__books h3.card-title {
+    font-size: 16px;
+  }
+  .card-img, .card-img-top {
+    height: 248px;
+  }
   .main-navbar-logo img {
     width: 110px;
     margin-bottom: -58%;
@@ -1284,8 +1399,14 @@ html, body {
     margin-right: 1px;
   }
   .large-tags .large-tag {
-    padding: 15px 20px;
+    padding: 7px 20px;
+    font-size: 12px;
   }
+
+  #featured__books_img {
+    height: 311px;
+}
+ 
   .join-us .section__heading h1 {
     font-size: 120px;
   }
@@ -1296,9 +1417,20 @@ html, body {
     font-size: 24px;
   }
   .product__price .actual__price {
-    font-size: 15px;
+    font-size: 12px;
     margin-right: 5px;
   }
+  .featured__books .card-body {
+    padding: 10px;
+}
+  .product__icon img {
+    width: 16px;
+}
+.product__price-div {
+
+  margin: 5px 0;
+
+}
   .completed-novel .section__heading h1 {
     font-size: 130px;
   }
@@ -1307,17 +1439,17 @@ html, body {
     margin-top: -74px;
   }
   .featured__books p {
-    font-size: 16px;
+    font-size: 12px;
     color: #535353;
   }
   .harry-potter .product__price .discount__price {
-    font-size: 20px;
+    font-size: 15px;
   }
   .completed__novel-cards {
     max-width: 900px;
   }
   .mana-display img {
-    max-width: 271px
+    max-width: 253px
   }
   .cardImg img {
   
@@ -1344,8 +1476,44 @@ html, body {
   .footer__copyright p:after {
     width: 27%;
   }
+ 
 }
 @media (max-width: 991px) {
+  .card-img, .card-img-top {
+    height: 308px;
+}
+  .offer-remain-time,
+  .offer-lable {
+    font-size: 22px;
+  }
+  .offer-remain-time {
+    padding: 16px;
+}
+.offer__icon {
+  padding: 8px 20px;
+
+}
+.offer-btn-group button {
+  padding: 0px 0px 0px 28px;
+  font-size: 14px;
+}
+  .harrypotter_book img {
+    width: 100%;
+    transform: unset;
+}
+  .popular_tabing .slick-next::before {
+    left: -24px;
+}
+.popular_tabing .slick-prev::before {
+    left: 4px;
+}
+  #featured__books_img {
+    height: 394px;
+}
+  .new_feature_book_spacing {
+
+    margin-top: -37px;
+}
   .header-navbar {
     padding: 0px 0 !important;
   }
@@ -1355,9 +1523,11 @@ html, body {
     top: 100%;
     background-color: #fff;
     left: 0;
-    min-height: 30rem;
+    min-height: 26rem;
     z-index: 999;
     padding: 15px;
+    border: solid #6100a8;;
+    border-width: 0px 2px 2px 2px;
   }
 
   .main-navbar-list a {
@@ -1379,8 +1549,19 @@ html, body {
   .main-navbar-logo img {
     /* margin-bottom: 0; */
     width: 95px;
-    margin-bottom: -48%;
+    margin-bottom: 0px;
+    /* margin-bottom: -48%; */
   }
+  .banner-sec .section__heading h2 {
+    /* margin-top: -58px; */
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width:768px) and (max-width:991px){
+  /* .main-navbar-logo img {
+    z-index: 9999;
+    position: relative;
+  } */
 }
 @media (max-width:768px) {
   .header__logo {
@@ -1393,10 +1574,7 @@ html, body {
   .banner-sec .section__heading h1 {
     font-size: 64px;
   }
-  .banner-sec .section__heading h2 {
-    /* margin-top: -58px; */
-    font-size: 40px;
-  }
+
   .banner-sec .section__heading p {
     max-width: 540px;
   }
@@ -1425,9 +1603,7 @@ html, body {
   .featured__books .card-body {
     padding: 10px;
   }
-  .featured__books h3.card-title {
-    font-size: 18px;
-  }
+
   .featured__books p {
     font-size: 14px;
   }
@@ -1486,13 +1662,10 @@ html, body {
     margin-left: 15px;
   }
   .large-tags .large-tag {
-    padding: 12px 15px;
-    font-size: 17px;
+    padding: 6px 15px;
+    font-size: 14px;
   }
-  .offer-remain-time,
-  .offer-lable {
-    font-size: 28px;
-  }
+
   .footer__first > div {
     margin-bottom: 40px;
   }
@@ -1542,6 +1715,9 @@ html, body {
 }
 
 @media (max-width: 480px) {
+  .new_released h1.new_book_heading {
+    font-size: 35px;
+}
   .banner-sec .section__heading h1 {
     font-size: 40px;
   }
@@ -1607,9 +1783,9 @@ html, body {
     margin-left: 20px;
   }
   .section__heading .tags .tag {
-    padding: 7px 15px;
+    padding: 5px 12px;
     margin: 0 4px;
-    font-size: 14px;
+    font-size: 11px;
   }
   .banner-sec .join__us-btns,
   .mana-coin .join__us-btns {
@@ -1622,6 +1798,38 @@ html, body {
 }
 
 @media (max-width: 428px) {
+  .harrypotter_books-title {
+    font-size: 15px;
+    max-width: 14ch;
+}
+.harry-potter .product__price .discount__price {
+  font-size: 18px;
+}
+.product__price .actual__price {
+  font-size: 12px;
+}
+.harrypotter_books-body {
+  font-size: 13px;
+}
+  .tags .tag {
+    padding: 3px 16px;
+    margin: 0px 3px;
+    font-size: 10px;
+}
+  .new_feature_book_spacing {
+    margin-top: -56px;
+    margin-bottom: 0px;
+}
+.new_special_heading {
+  font-size: 34px;
+}
+.new_feature_para {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 12px;
+}
   .completed__novel-cards {
     max-width: 320px;
   }
@@ -1659,13 +1867,15 @@ html, body {
 }
 }
 
-#featured__books_img{
-  height: 400px;
-}
 @media (max-width: 414px) {
   .banner-sec .join__us-btns,
   .mana-coin .join__us-btns {
     gap: 15px;
+  }
+}
+@media (max-width: 390px) {
+  #featured__books_img {
+    height: 335px;
   }
 }
 

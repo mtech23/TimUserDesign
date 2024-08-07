@@ -314,15 +314,19 @@ input[type=range] {
   height: 700px;
   right: -450px;
 }
-
-@media (max-width: 768px) {
+@media (max-width:1024px){
+  .rangepara {
+    font-size: 18px;
+  }
+}
+@media (max-width: 991px) {
   .rangepara {
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     padding: 0;
-    font-size: 13px;
+    font-size: 14px;
 }
 .book-release-title {
   font-size: 14px;
@@ -331,7 +335,8 @@ input[type=range] {
   padding: 3px 13px;
 }
 .book-release-genre-dropdown {
-  padding: 4px 1px;
+  padding: 4px 12px;
+  justify-content: left;
 }
 .search-title {
   font-size: 15px;

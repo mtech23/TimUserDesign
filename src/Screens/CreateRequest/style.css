@@ -119,10 +119,12 @@
 .radbtns{
     display: flex;
     flex-wrap: wrap;
+    gap: 26px;
   }
 .filter_radio{
     color: #360C55;
     font-size: large;
+    align-items: center;
 }   
 .form-control:focus-within {
     color: var(--form-control-color);
@@ -220,7 +222,7 @@ input[type="radio"]:focus {
         padding: 25px 0px 220px 0px;
     }
 }
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     
     .book-release-genree {
         font-size: 6px;
@@ -237,11 +239,26 @@ input[type="radio"]:focus {
         width: 50%;
        
     }
+    .radbtns {
+
+        gap: 23px;
+    }
     .addsyn {
         margin-top: 30px;
     }
     .novinfo h1.novel {
-        font-size: 27px;
+        font-size: 22px;
+    }
+    .novinfo .addsyn h2.add {
+ 
+        font-size: 22px;
+    }
+    .novinfo h4.book-release-title {
+        font-size: 22px;
+    }
+    .filter_radioo {
+        font-size: 13px;
+        line-height: 14.49px;
     }
    
 }

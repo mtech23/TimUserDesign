@@ -36,7 +36,6 @@ import comments_profile from "../../Assets/images/comments_profile.png";
 import line_timer  from "../../Assets/images/line_timer.png";
 import arrow_right from "../../Assets/images/arrow_right.png";
 import add_comments from "../../Assets/images/add_comments.png";
-import recent_msg from "../../Assets/images/recent_msg.png";
 import huru from "../../Assets/images/huru.png";
 import me from "../../Assets/images/me.png";
 import active from "../../Assets/images/active.png";
@@ -45,8 +44,10 @@ import online from "../../Assets/images/online.png";
 import laverna from "../../Assets/images/laverna.png";
 import club from "../../Assets/images/club.png";
 import msg from "../../Assets/images/msg.png";
+import recent_msg from "../../Assets/images/recent_msg.png";
 import startconversation from "../../Assets/images/start conversation.png";
 import noti from "../../Assets/images/noti.png";
+import showmore from "../../Assets/images/showmore.png";
 import annoucedcomments from "../../Assets/images/annoucedcomments.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -105,18 +106,13 @@ import "bootstrap/dist/css/bootstrap.min.css"; // Make sure to import Bootstrap 
 import Ellipse from "../../Assets/images/Ellipse 1.png";
 import animated from "../../Assets/images/animated.png";
 import Form from "react-bootstrap/Form";
-
 import { Container, Row, Col } from "react-bootstrap";
 import Star from "../../Assets/images/Star 1.png";
 import addfriend from "../../Assets/images/add_friend.png";
-
-
 import showmoreicon from "../../Assets/images/showmoreicon.png";
-
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import AccordionContext from "react-bootstrap/AccordionContext";
-
 import { BookListingCover } from "../../Assets/images";
 import { useContext } from "react";
 import { useAccordionButton } from "react-bootstrap/AccordionButton";
@@ -749,8 +745,8 @@ export const Discussion = ({ eventKey, children }) => {
                                     <div className="row">
                                         <div className="col-md-12">
                                             <div className="discussions_divider"></div>
-                                              <div className="discussion_annoucements_main_div">
-                                                <img src={annouced} className="img-fluid annouced_img" />
+                                              <div className="discussion_annoucements_main_div">                    
+                                                <img src={annouced} className="img-fluid annouced_img" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrops" /> 
                                                 <div>
                                                     <p className="announcement_heading" >Announcements</p>
                                                     <div className="discussion_annoucements_child_div">
@@ -760,24 +756,24 @@ export const Discussion = ({ eventKey, children }) => {
                                                     <p className="annouced_discussion_text">Latest:  <span> Apr 15,2024 </span></p>
                                                 </div>
                                             </div>
-                                          <div className="discussions_divider"></div>
+                                          {/* <div className="discussions_divider"></div> */}
                                         </div>
                                     </div>
                                     <div className="row">
                                         <div className="col-md-12">
                                             <div className="discussions_divider"></div>
                                               <div className="discussion_annoucements_main_div">
-                                                <img src={annoucedcomments} className="img-fluid annouced_img" />
+                                                <img src={annoucedcomments} className="img-fluid annouced_img" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrops" />
                                                 <div>
-                                                    <p className="announcement_heading" >Announcements</p>
+                                                    <p className="announcement_heading" >Novel Updates Site Discussion</p>
                                                     <div className="discussion_annoucements_child_div">
-                                                        <p className="annouced_discussion_text"> Discussion: <span className="annouced_discussion_number"> 42 </span></p>
-                                                        <p className="annouced_discussion_text"> Messages:  <span className="annouced_discussion_number" > 4,835 </span></p>
+                                                        <p className="annouced_discussion_text"> Discussion: <span className="annouced_discussion_number">  1,342 </span></p>
+                                                        <p className="annouced_discussion_text"> Messages:  <span className="annouced_discussion_number" > 30,385 </span></p>
                                                     </div>
                                                     <p className="annouced_discussion_text">Latest:  <span> Apr 15,2024 </span></p>
                                                 </div>
                                             </div>
-                                          <div className="discussions_divider"></div>
+                                          {/* <div className="discussions_divider"></div> */}
                                         </div>
                                     </div>
                              
@@ -785,12 +781,12 @@ export const Discussion = ({ eventKey, children }) => {
                                         <div className="col-md-12">
                                             <div className="discussions_divider"></div>
                                               <div className="discussion_annoucements_main_div">
-                                                <img src={annoucedcomments} className="img-fluid annouced_img" />
+                                                <img src={annoucedcomments} className="img-fluid annouced_img" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrops" />
                                                 <div>
-                                                    <p className="announcement_heading" >Announcements</p>
+                                                    <p className="announcement_heading" > Suggestions & Bug Reports </p>
                                                     <div className="discussion_annoucements_child_div">
-                                                        <p className="annouced_discussion_text"> Discussion: <span className="annouced_discussion_number"> 42 </span></p>
-                                                        <p className="annouced_discussion_text"> Messages:  <span className="annouced_discussion_number" > 4,835 </span></p>
+                                                        <p className="annouced_discussion_text"> Discussion: <span className="annouced_discussion_number">  3,216 </span></p>
+                                                        <p className="annouced_discussion_text"> Messages:  <span className="annouced_discussion_number" > 21,009 </span></p>
                                                     </div>
                                                     <p className="annouced_discussion_text">Latest:  <span> Apr 15,2024 </span></p>
                                                 </div>
@@ -828,10 +824,6 @@ export const Discussion = ({ eventKey, children }) => {
                                     </div>
 
 
-
-
-
-
                                 </div>
                                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
 
@@ -855,11 +847,6 @@ export const Discussion = ({ eventKey, children }) => {
                                     </div>
 
 
-
-
-
-
-
                                 </div>
                             </div>
                         </div>
@@ -877,7 +864,7 @@ export const Discussion = ({ eventKey, children }) => {
                                 <li><a class="dropdown-item filter_dropdown_list" href="#">Filter</a></li>
                             </ul>
                         </div>
-                        <div  className="dropdown">
+                        {/* <div  className="dropdown">
                             <button class="create"  type="button" id="dropdownMenuButtoncreate" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span> Create </span><img className="img-fluid create_icon createbtn_img"  src={createbtn} />
                             </button>
@@ -886,7 +873,10 @@ export const Discussion = ({ eventKey, children }) => {
                                 <li><a class="dropdown-item filter_dropdown_list" href="#">Create</a></li>
                                 <li><a class="dropdown-item filter_dropdown_list" href="#">Create action</a></li>
                             </ul>
-                        </div>
+                        </div> */}
+                        <button class="create">
+                          <span> Create </span><img className="img-fluid create_icon createbtn_img"  src={createbtn} />
+                        </button>
                     </div>
                     
 
@@ -897,6 +887,103 @@ export const Discussion = ({ eventKey, children }) => {
             </div>
           </div>
         </section>
+
+
+
+          {/* <!-- Modal --> */}    
+          
+          <div class="modal fade" id="staticBackdrops" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered cust_modal_dailog">
+                    <div class="modal-content new_comnt_modal_bg">
+                      <div className="another_modal_bg">
+                          <div class="modal-header">
+                              <div>
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel" className="modal_comments_titile">
+                                  Comments
+                                </h1>
+                                <div className="modal_comments_btn_div">
+                                  <button className="comment_top_btn"> TOP </button>
+                                  <button className="comment_top_btn"> NEWEST </button>
+                                </div>
+                              </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark cancel_mark"></i></button>
+                                    
+                          </div>
+                          <div class="modal-body">
+                              <div className="row">
+                                <div className="col-md-12">
+                                 <div className="cmnts_modal_divider"></div>   
+                                    <div className="modal_comment_detail_box">
+                                      <img src={recent_msg} className="recent_msg_img"/>
+                                      <div className="cmnts_custom_width">
+                                            <div className="user_name_with_cmnts_details_div">
+                                              <p className="cmnt_user_name">@Braindean B33</p>
+                                              <p className="cmnt_edit_history">5min ago  (edited)</p>
+                                            </div>
+                                            <p className="modal_user_cmts_para"> Would have been kinda cool if chuck lost his powers after wiping out the last humans across 
+                                              the multiverse who believed in him and realized he was also just another story.</p>
+                                            <div className="user_name_with_cmnts_details_div">
+                                              <i class="fa-solid fa-thumbs-up like_comnts_icon"></i>
+                                              <p className="number_of_likes"> 684 </p>
+                                              <i class="fa-solid fa-thumbs-down  fa-flip-horizontal like_comnts_icon"></i>
+                                              <i class="fa-solid fa-message like_comnts_icon"></i>
+                                            </div>
+                                            <p className="cmnts_replies"> 19 Replies </p>
+                                        </div>
+                                      <i class="fa-solid fa-ellipsis-vertical view_more_comnts_icon"></i>
+                                    </div>
+                                  </div>
+                              </div> 
+
+                              <div className="row mt-4">
+                                <div className="col-md-12">
+                               
+                                    <div className="modal_comment_detail_box">
+                                      <img src={me} className="recent_msg_img"/>
+                                      <div className="cmnts_custom_width">
+                                            <div className="user_name_with_cmnts_details_div">
+                                              <p className="cmnt_user_name">@emilatariq1271</p>
+                                              <p className="cmnt_edit_history">5min ago</p>
+                                            </div>
+                                            <p className="modal_user_cmts_para"> Would have been kinda cool if chuck lost his powers after wiping out the last humans across the multiverse. </p>
+                                            <div className="user_name_with_cmnts_details_div">
+                                              <i class="fa-solid fa-thumbs-up like_comnts_icon"></i>
+                                              <p className="number_of_likes"> 637 </p>
+                                              <i class="fa-solid fa-thumbs-down  fa-flip-horizontal like_comnts_icon"></i>
+                                              <i class="fa-solid fa-message like_comnts_icon"></i>
+                                            </div>
+                                            <p className="cmnts_replies"> 13 Replies </p>
+                                        </div>
+                                      <i class="fa-solid fa-ellipsis-vertical view_more_comnts_icon"></i>
+                                    </div>
+                                  </div>
+                              </div> 
+
+                              <div className="row mt-4">
+                                <div className="col-md-12">
+                                  <div className="type_cmnts_box">
+                                     <img src={club} className="recent_msg_img"/>
+                                     <input type="text" name="firstname" placeholder="Add a Comment" className="add_cmnt_input"/>
+                                  </div>
+                                </div>
+                              </div>
+
+
+
+
+
+
+                          </div>
+                       </div>
+                    </div>
+
+
+                </div>
+                </div>
+           
+
+           {/* <!-- Modal End --> */}
+
        
 
       </UserLayout>
