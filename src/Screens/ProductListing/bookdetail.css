@@ -968,6 +968,8 @@
 }
 /* Completed Novels End */
 
+
+
 /* Footer Start */
 .footer-sec {
   background-image: url(../../../src/Assets/images/footer-bg.png);
@@ -1572,52 +1574,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .stats {
     margin-bottom: 1rem;
     border-right: 2px solid #fff0;
@@ -1678,29 +1634,7 @@
     box-shadow: none !important;
 }
 
-/* .tableDropdownMenu {
-    border: 1px solid #e0e0e0 !important;
-    border-radius: 0.3rem !important;
-    min-width: auto !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    text-align: left !important;
-} */
 
-/* .tableAction {
-    background: #fff0;
-    border: none;
-    color: #333;
-    display: block;
-    font-size: 15px;
-    font-weight: 600;
-    outline: none;
-    padding: 0.5rem 1rem;
-    text-align: left;
-    text-decoration: none;
-    transition: .3s linear;
-    width: 100%;
-} */
 
 .listingBooks div#accordion .card, .card-header {
     border: none !important;
@@ -1763,136 +1697,6 @@ color: #fff;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .cover{
-    background-image: url(../../Assets//images/banner.png);
-    background-position: center;
-    background-size:  cover;
-    background-repeat: no-repeat;
-    padding: 65px;
-
-} */
-/* .cover p{
-    font-family: Century Gothic;
-font-size: 28.72px;
-font-weight: 700;
-line-height: 35.21px;
-text-align: center;
-color: #360C55;
-
-}
-.rating{
-    color:gold;
-   
-
-}
-.rate{
-    color:#A4A4A4;}
-.rev{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 10px;
-}   
-
-.cover p.review{
-    font-family: Inter;
-font-size: 18.33px;
-font-weight: 500;
-line-height: 22.18px;
-letter-spacing: -0.05em;
-text-align:center;
-color: #B7B7B7;
-
-}
-.cover button {
-  font-family: Jost;
-  font-size: 18.45px;
-  font-weight: 400;
-  line-height: 26.66px;
-  text-align: center;
-  background: #000;
-  color: #FFFFFF;
-  border-radius: 38px;
-  border: 1px solid #000;
-  padding-right: 10px 21px;
-  text-align: center;
-  padding: 5px 19px;
-}
-.btnrw{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 10px;
-    margin-top: 20px;
-}
-.imgrw{
-    display: flex;
-    justify-content: center;
-   
-} */
-  /* padding: 4px; */
 .icon{
 
   

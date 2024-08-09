@@ -357,7 +357,7 @@ export const BookName = () => {
                          
                         </div>
                         <div className="text-center">
-                        <buton  type="button" class="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> 
+                        <buton  type="button" class="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" > 
                           <img src={showmore} className="img-fluid book_name_icons"/>
                           </buton>
                       

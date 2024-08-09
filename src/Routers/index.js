@@ -34,6 +34,7 @@ import { BookListing } from "../Screens/BookListing";
 import { BookName } from "../Screens/BookName";
 import { BookChapterDetail } from "../Screens/BookChapterDetail";
 import { AboutAuthor } from "../Screens/AboutAuthor";
+import { Profile } from "../Screens/Profile";
 import { SearchFilter } from "../Screens/SearchFilter/index";
 import { Forum } from "../Screens/Forum";
 import {Discussion } from "../Screens/Discussion/index.js"
@@ -71,6 +72,7 @@ export default function UserRouter() {
         <Route path="/Forum" element={<Forum />}></Route>
       
         <Route path="/AboutAuthor" element={<AboutAuthor />}></Route>
+        <Route path="/Profile" element={<Profile />}></Route>
         <Route path="/search-filter" element={<SearchFilter />}></Route>
         <Route path="/competition" element={<Completion />}></Route>
         <Route path="/mission" element={<Mission />}></Route>

@@ -45,8 +45,9 @@ import msg from "../../Assets/images/msg.png";
 import startconversation from "../../Assets/images/start conversation.png";
 import storyarrow from "../../Assets/images/story_arrow.png";
 import noti from "../../Assets/images/noti.png";
+import completeform from "../../Assets/images/completeform.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+// const gifUrl = '../../Assets/images/completeform.gif';
 import {
   BannerBooks,
   Cart_icon_pink,
@@ -131,6 +132,12 @@ export const Forum = ({ eventKey, children }) => {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
 
   const [books, setBooks] = useState([]);
+
+  const [showGif, setShowGif] = useState(false);
+
+  const handleClick = () => {
+    setShowGif(prevShowGif => !prevShowGif);
+  };
 
   const reusableSetting = (item, centerMode) => {
 
@@ -1312,7 +1319,9 @@ export const Forum = ({ eventKey, children }) => {
 
         </section>
         
+        {/* form Modal start */}
 
+        
         <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
           <div class="modal-dialog form_modal_dailog modal-dialog-centered">
             <div class="modal-content form_bg_one">
@@ -1331,7 +1340,7 @@ export const Forum = ({ eventKey, children }) => {
                       <div className="lead_story_divider"></div>
                       <div className="lead_story_text_div">
                         <p className="story_detail_content">more Romance, LGBT +, Teen, History, Fantasy, Urban.</p>
-                        <img src={storyarrow} className="img-fluid"/>
+                        <img src={storyarrow} className="img-fluid story_arrow_right"/>
                       </div>
                     </div>
                   </div>
@@ -1440,15 +1449,197 @@ export const Forum = ({ eventKey, children }) => {
               </div>
               <div class="modal-footer custome_form_modal_footer_two">
               <button class="second_modal_btn" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"><i class="fa-solid fa-caret-left next_form_arrow"></i> Previous </button>
-              <button class="second_modal_btn" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Next <i class="fa-solid fa-caret-right next_form_arrow"></i></button>
+              <button class="second_modal_btn" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Next <i class="fa-solid fa-caret-right next_form_arrow"></i></button>
               
               </div>
             </div>
           </div>
         </div>
 
+        <div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog form_modal_dailog modal-dialog-centered">
+          <div class="modal-content form_bg_four">
+              <div class="modal-header custom_form_header">
+                <h1 class="modal-title_form " id="exampleModalToggleLabel">tailor to your needs</h1>
+                <button type="button" class="form_btn_close" data-bs-dismiss="modal" aria-label="Close">Skip</button>
+              </div>
+              <div class="modal-body">
+                <div className="modal_form_divider"></div>
+                <p className="form_modal_para">What type Of Book is Your Favorite</p>
+              
+                <div className="row modal_forms_rows_spacing">
+                  <div className="col-md-12">
+                    <div className="modal_form_book_selection_bg">
+                        <h3 className="modal_form_book_selection">what are your three favorite genres</h3>
+                        <i class="fa-solid fa-caret-right form_book_selection_arrow_img"></i>
+                        <div className="form_book_selection_divider"></div>
+                        <p className="modal_form_book_selection_para">please select Atleast Three</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="row modal_forms_rows_spacing">
+                  <div className="col-md-12">
+                    <div className="book_category_div">
+                      <button className="book_category_btns">Action</button>
+                      <button className="book_category_btns">Adventure</button>
+                      <button className="book_category_btns">Comedy</button>
+                      <button className="book_category_btns">Drama</button>
+                    </div>
+                    <div className="book_category_div modal_forms_rows_spacing">
+                      <button className="book_category_btns">Fantasy</button>
+                      <button className="book_category_btns">Horror</button>
+                      <button className="book_category_btns">Mystery</button>
+                      <button className="book_category_btns">Romance</button>
+                    </div>
+                    <div className="book_category_div modal_forms_rows_spacing">
+                      <button className="book_category_btns">Science</button>
+                      <button className="book_category_btns">Fiction</button>
+                      <button className="book_category_btns">Thriller</button>
+                      <button className="book_category_btns">Western</button>
+                    </div>
+                    <div className="book_category_div modal_forms_rows_spacing">
+                      <button className="book_category_btns">Historical</button>
+                      <button className="book_category_btns">Slice Of Life</button>
+                      <button className="book_category_btns">Wuxia</button>
+                      <button className="book_category_btns">Documentary</button>
+                    </div>
+                    <div className="book_category_div modal_forms_rows_spacing">
+                      <button className="book_category_btns">18+</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="row modal_forms_rows_spacing">
+                  <div className="col-md-12">
+                    <p className="higlighted_text">To Select, please Click on the genre until it is highlighted</p>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer custome_form_modal_footer_two">
+                <button class="second_modal_btn" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal"><i class="fa-solid fa-caret-left next_form_arrow"></i> Previous </button>
+                <button class="second_modal_btn" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal">Next <i class="fa-solid fa-caret-right next_form_arrow"></i></button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog form_modal_dailog modal-dialog-centered">
+          <div class="modal-content form_bg_five">
+              <div class="modal-header custom_form_header">
+                <h1 class="modal-title_form " id="exampleModalToggleLabel">tailor to your needs</h1>
+                <button type="button" class="form_btn_close" data-bs-dismiss="modal" aria-label="Close">Skip</button>
+              </div>
+              <div class="modal-body">
+                <div className="modal_form_divider"></div>
+                <p className="form_modal_para">select three tag best describe your favorite Books</p>
+              
+                <div className="row modal_forms_rows_spacing favorite_tag_height">
+                  <div className="col-md-4">
+                    <p className="form_book_tag_list">Ability Steal</p>
+                    <p className="form_book_tag_list">acting Adventure</p>
+                    <p className="form_book_tag_list">alchemy</p>
+                    <p className="form_book_tag_list">aliens</p>
+                    <p className="form_book_tag_list">alternate World</p>
+                    <p className="form_book_tag_list">Ability Steal</p>
+                    <p className="form_book_tag_list">acting Adventure</p>
+                    <p className="form_book_tag_list">alchemy</p>
+                    <p className="form_book_tag_list">aliens</p>
+                    <p className="form_book_tag_list">alternate World</p>
+                  </div>
+                  <div className="col-md-4">
+                    <p className="form_book_tag_list">apathetic protagonist</p>
+                    <p className="form_book_tag_list">Army Building</p>
+                    <p className="form_book_tag_list">blind protagonist</p>
+                    <p className="form_book_tag_list">exorcism</p>
+                    <p className="form_book_tag_list">braimaashing</p>
+                    <p className="form_book_tag_list">apathetic protagonist</p>
+                    <p className="form_book_tag_list">Army Building</p>
+                    <p className="form_book_tag_list">blind protagonist</p>
+                    <p className="form_book_tag_list">exorcism</p>
+                    <p className="form_book_tag_list">braimaashing</p>
+                  </div>
+                  <div className="col-md-4">
+                    <p className="form_book_tag_list">caring protagonist</p>
+                    <p className="form_book_tag_list">carefree protagonist</p>
+                    <p className="form_book_tag_list">captious protagonist</p>
+                    <p className="form_book_tag_list">cold protagonist</p>
+                    <p className="form_book_tag_list">cultivation</p>
+                    <p className="form_book_tag_list">caring protagonist</p>
+                    <p className="form_book_tag_list">carefree protagonist</p>
+                    <p className="form_book_tag_list">captious protagonist</p>
+                    <p className="form_book_tag_list">cold protagonist</p>
+                    <p className="form_book_tag_list">cultivation</p>
+                  </div>
+                </div>
+                
+                <div className="row modal_forms_rows_spacing">
+                  <div className="col-md-12">
+                   <div className="tag_input_div">
+                    <p className="form_tag_heading">Tag:</p>
+                    <input type="text" id="fname" name="fname" class="tag_input" />
+                   </div>
+                  </div>
+                </div>
+                <div className="row modal_forms_rows_spacing">
+                  <div className="col-md-12">
+                   <div className="tag_input_div">
+                    <p className="form_tag_heading">Tag:</p>
+                    <input type="text" id="fname" name="fname" class="tag_input" />
+                   </div>
+                  </div>
+                </div>
+                <div className="row modal_forms_rows_spacing">
+                  <div className="col-md-12">
+                   <div className="tag_input_div">
+                    <p className="form_tag_heading">Tag:</p>
+                    <input type="text" id="fname" name="fname" class="tag_input" />
+                   </div>
+                  </div>
+                </div>
+                <div className="row modal_forms_rows_spacing">
+                  <div className="col-md-12">
+                    <p className="higlighted_text">Please Drag and drop the tag into each box</p>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer custome_form_modal_footer_two">
+                <button class="second_modal_btn" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal"><i class="fa-solid fa-caret-left next_form_arrow"></i> Previous </button>
+                {/* <button class="second_modal_btn" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal">Next <i class="fa-solid fa-caret-right next_form_arrow"></i></button> */}
+                {/* <button class="second_modal_btn">Complete </button> */}
+                {/* <input class="complete_modal_btn" type="submit" value="Complete" /> */}
+                
+                
+                <button onClick={handleClick} className="complete_modal_btn"> Complete
+                  {showGif ? '' : ''}
+                </button>
+                {showGif && (
+                  <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0    
+                  }}>
+                    <img src={completeform} alt="Funny GIF" style={{ maxWidth: '100%', height: 'auto' }} />
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
 
         <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button>
+
+
+
+
+
+
+
+
+
+
+        {/* form Modal end */}
 
       
          

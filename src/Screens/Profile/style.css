@@ -1,0 +1,56 @@
+.prof_send_msg_btn{
+   background: linear-gradient(135.34deg, #8C421D 15.43%, #FBE67B 38.47%, #FCFBE7 53.36%, #F7D14E 69.97%, #D4A041 86.26%);
+   font-family: Jost;
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 25.96px;
+   text-align: center;
+   color: #000;
+   padding: 7px 43px;
+   border: none;
+   border-radius: 20px;
+   
+}
+.num_of_friends_div{
+    background: linear-gradient(135.34deg, #8C421D 15.43%, #FBE67B 38.47%, #FCFBE7 53.36%, #F7D14E 69.97%, #D4A041 86.26%);
+    text-align: center;
+    padding: 12px;
+    border-radius: 12px 12px 0px 0px;
+    margin-bottom: -7px;
+
+}
+.num_of_friends_text{
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25.96px;
+    text-align: center;
+    color: #000000;
+}
+.num_of_friends_count{
+    text-align: center;
+    color: #000000;
+    font-family: Jost;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 43.4px;
+}
+
+@media (max-width:600px){
+    .num_of_friends_div {
+       
+        margin-top: 20px;
+    }
+    .writing_points {
+        font-size: 16px;
+    }
+    .num_of_friends_text {
+        font-size: 16px;
+      
+    }
+    .num_of_friends_count {
+       
+        font-size: 26px;
+     
+    }
+}

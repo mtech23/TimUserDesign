@@ -27,8 +27,23 @@ import castle from '../../Assets/images/castle.png'
 import rocket from '../../Assets/images/rocket.png'
 import gold from '../../Assets/images/gold.png'
 import dropdown from "../../Assets/images/dropdown.png";
-
+import bookchaplocked from "../../Assets/images/bookchaplocked.png";
 import comments_profile from "../../Assets/images/comments_profile.png";
+import maryimg from "../../Assets/images/maryimg.png";
+import redstar from "../../Assets/images/redstar.png";
+import mission from "../../Assets/images/mission.png";
+import store from "../../Assets/images/store.png";
+import writer from "../../Assets/images/writer.png";
+import discord from "../../Assets/images/discord.png";
+import inboxmsg from "../../Assets/images/inboxmsg.png";
+import starimg from "../../Assets/images/starimg.png";
+import privilge from "../../Assets/images/privilge.png";
+import historyclock from "../../Assets/images/historyclock.png";
+import giftcode from "../../Assets/images/giftcode.png";
+import nightmode from "../../Assets/images/nightmode.png";
+import leavereview from "../../Assets/images/leavereview.png";
+import faqicon from "../../Assets/images/faqicon.png";
+import customerservice from "../../Assets/images/customerservice.png";
 
 
 import add_comments from "../../Assets/images/add_comments.png";
@@ -899,7 +914,8 @@ export const ProductDetail = ({ eventKey, children }) => {
                               <div>
                                 <p class="prof">Author Name </p>
                                 <p class="top_fan" id="fans">Top Fans 11,442</p>
-                                <p class="more"> More By This Author</p>
+                                {/* <p class="more"> More By This Author</p> */}
+                                <p class="more" type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdropside"> More By This Author</p>
                               </div>
 
 
@@ -2089,6 +2105,124 @@ export const ProductDetail = ({ eventKey, children }) => {
            
 
            {/* <!-- Modal End --> */}
+
+
+
+
+
+
+
+
+            {/* <!--Side Modal --> */}
+    
+        <div class="modal fade" id="staticBackdropside" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog sidebar_modal_dailog">
+              <div class="modal-content sidebar_detail_modal">
+                {/* <div class="modal-header sidebar_modal_header_space">
+                  <button type="button" class="new_sidebar_close_btn" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark cancel_mark"></i></button>
+                </div> */}
+                   <div class="modal-body sidebar_modal_body_space">
+                   <button type="button" class="new_sidebar_close_btn" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark cancel_mark"></i></button>
+                      <div className="user_profile_with_icon_div">
+                          <div className="new_sidebar_profile">
+                            <img src={maryimg} className="img-fluid mary_profile_img"/>
+                            <h3 className="mary_name_text"> Mary </h3>
+                          </div>
+                          <button className="prof_settings_icon"><i class="fa-solid fa-gear "></i></button>
+                      </div>
+                      <div className="mana_voucher_collection_bg">
+                        <p className="voucher_collection_text"> After 7 days of consecutive collections, you can draw your 7 Mana</p>
+                        <div className="mana_balance_topup_div">
+                          <div className="collect_mana_star_bg">
+                            <img src={redstar} className="img-fluid red_star_mana_img"/>
+                            <p className="collect_mana_text_number"> 6/7 </p>                       
+                          </div>
+                          <p className="mana_balance_num_text">MANA BALANCE: <span> 3 </span></p>
+                          <button className="mana_top_up_btn">Top Up</button>
+                        </div>
+                        <p className="mana_collect_points_text">Collect Mana</p>
+                        <div className="mana_balance_topup_div mt-2">
+                          <div className="sidebar_vocher_div">
+                            <p className="sidebar_vocher_text">Vouchers</p>
+                            <p className="sidebar_vocher_pnts_num">05</p>
+                          </div>
+                          <div className="sidebar_vocher_div">
+                            <p className="sidebar_vocher_text">Votes</p>
+                            <p className="sidebar_vocher_pnts_num">05</p>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div className="mission_store_div">
+                        <div className="sidebar_mission_text_img_div">
+                          <img src={mission} className="img-fluid sidebar_mission_img"  />
+                          <p className="sidebar_mission_text">Missions</p>
+                        </div>
+                        <div className="sidebar_store_text_img_div">
+                          <img src={store} className="img-fluid sidebar_mission_img"  />
+                          <p className="sidebar_mission_text">Store</p>
+                        </div>
+                      </div>
+                      <div className="sidebar_writer_div">
+                        <img src={writer} className="img-fluid sidebar_writer_img"/>
+                        <p className="become_writer_text">Become a writer</p>
+                      </div>
+                      <div className="join_discord_div">
+                        <img src={discord} className="discord_img"/>
+                        <p className="join_discord_text">Join Our Discord</p>
+                      </div>
+                      <div className="other_options_div">
+                        <div className="option_icons_text_div">
+                          <img src={inboxmsg} className="img-fluid inbox_msgicon"/>
+                          <p className="inbox_msg_text">Inbox</p>
+                        </div>
+                        <div className="option_icons_text_div">
+                          <img src={starimg} className="img-fluid inbox_msgicon"/>
+                          <p className="inbox_msg_text">Manage Subscription and Active Purchase</p>
+                        </div>
+                        <div className="option_icons_text_div">
+                          <img src={privilge} className="img-fluid inbox_msgicon"/>
+                          <p className="inbox_msg_text">Privilege</p>
+                        </div>
+                        <div className="option_icons_text_div">
+                          <img src={historyclock} className="img-fluid inbox_msgicon"/>
+                          <p className="inbox_msg_text">Purchase History</p>
+                        </div>
+
+                      </div>
+
+                      <div className="other_options_div">
+                        <div className="option_icons_text_div">
+                          <img src={giftcode} className="img-fluid inbox_msgicon"/>
+                          <p className="inbox_msg_text">Redeem Promo Code/Gift card</p>
+                        </div>
+                        <div className="option_icons_text_div">
+                          <img src={nightmode} className="img-fluid inbox_msgicon"/>
+                          <p className="inbox_msg_text">Night Mode</p>
+                        </div>
+                        <div className="option_icons_text_div">
+                          <img src={leavereview} className="img-fluid inbox_msgicon"/>
+                          <p className="inbox_msg_text">Enjoying Yourself? Leave us a review</p>
+                        </div>
+                        <div className="option_icons_text_div">
+                          <img src={faqicon} className="img-fluid inbox_msgicon"/>
+                          <p className="inbox_msg_text">FAQ</p>
+                        </div>
+                        <div className="option_icons_text_div">
+                          <img src={customerservice} className="img-fluid inbox_msgicon"/>
+                          <p className="inbox_msg_text">Customer Online Service</p>
+                        </div>
+
+                      </div>
+
+
+
+                   </div>
+            </div>
+          </div>
+        </div>
+                  
+          {/* <!-- Modal end --> */}
 
 
       </UserLayout>

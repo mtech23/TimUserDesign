@@ -968,6 +968,7 @@ color: #A7A7A7;
     display: flex;
     /* align-items: center; */
     gap: 11px;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
 
 }
@@ -1570,6 +1571,12 @@ font-size: 18px;
   }
 }
 @media (max-width: 600px) {
+  .comments_profile_div{
+    margin-top: 20px;
+  }
+  .comments_box_main_div{
+    flex-wrap: wrap;
+  }
     .report_para{
       font-size: 11px;
     }

@@ -381,6 +381,231 @@ button.next_form_arrow:hover{
 margin-top: 25px;
 }
 
+.form_bg_four{
+    background-image: url("../../Assets/images/webstorybg4.png"),  linear-gradient(#000, #34424c);
+    /* background: linear-gradient(#000, #fff); */
+    opacity: 97%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #6100A8;
+}
+.modal_form_book_selection{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    color: #360C55;
+    text-transform: capitalize;
+
+}
+
+.modal_form_book_selection_bg{
+    /* background-image: url("../../Assets/images/webformbg1.png"); */
+    background-color: #fff;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 7px;
+    border: 1px solid #6100A8;
+    position: relative;
+    padding: 12px 0px 20px;
+}
+
+.form_book_selection_arrow_img {
+    position: absolute;
+    top: 16px;
+    color: #6100A8;
+    font-size: 32px;
+    right: 10px;
+}
+
+.form_book_selection_divider{
+    background-color: #6100A8;
+    height: 1px;
+    width: 100%;
+    margin-top: 10px;
+}
+.modal_form_book_selection_para{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 46.9px;
+    text-align: center;
+    color: #212121;
+    text-transform: capitalize;
+
+}
+.book_category_div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 27px;
+}
+.book_category_btns{
+    background-color: #fff;
+    border: 1px solid #8030CC;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    /* line-height: 28.54px; */
+    text-align: center;
+    color: #212121;
+    padding: 6px 0px;
+    width: 20%;
+}
+.book_category_btns:hover{
+    background-color:  #8030CC;
+    color: #fff;
+}
+/* .book_category_btns:active{
+    background-color:  #8030CC;
+    color: #fff;
+} */
+
+
+.higlighted_text{
+    color: #fff;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26.56px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+.form_bg_five{
+    background-image: url("../../Assets/images/formbg5.png"),  linear-gradient(#000, #34424c);
+    /* background-image: url("../../Assets/images/webstorybg4.png"),  linear-gradient(#000, #34424c); */
+    /* background: linear-gradient(#000, #fff); */
+    opacity: 97%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #6100A8;
+}
+
+
+.form_book_tag_list{
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 34.6px;
+    text-align: left;
+    color: #fff;
+    text-transform: capitalize;
+}
+.tag_input_div{
+    background-color: #fff;
+    border: 1px solid #6100A8;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px ;
+}
+.tag_input{
+    border: none;
+    width: 100%;
+    }
+.tag_input:focus{
+    border: none ;
+ 
+}
+.tag_input:focus-visible{
+    border: none ;
+    outline: none;
+ 
+}
+.tag_input:focus{
+    border: none ;
+    outline: none;
+ 
+}
+
+
+.form_tag_heading{
+    font-family: Poppins;
+    font-size: 20.75px;
+    font-weight: 500;
+    line-height: 44.06px;
+    text-align: left;
+    color: #360C55;
+}
+.favorite_tag_height{
+    height: 150px;
+    overflow-x: auto;
+}
+.favorite_tag_height::-webkit-scrollbar {
+    width: 10px;
+  
+  }
+  
+  /* Track */
+  .favorite_tag_height::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #CDCDCD; 
+    background-color: #CDCDCD;
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  .favorite_tag_height::-webkit-scrollbar-thumb {
+    background:  #6100A8; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  .favorite_tag_height::-webkit-scrollbar-thumb:hover {
+    background: #6100A8; 
+  }
+
+.complete_modal_btn {
+    background-color:#FFFFFF;
+    color: #6100A8;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    border: 1px solid #6100A8 ;
+    padding: 7px 35px;
+    border-radius: 16px;
+
+}
+.complete_modal_btn:hover{
+    background-color:#6100A8;;
+    color: #fff;
+}
+
+/* .complete_modal_btn:active::after{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 900;
+    background-image: url('../../Assets/images/completeform.gif');
+    display: inline-block;
+    margin-right: 0.5em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+    position: absolute;
+    top: 0px;
+    left: 40%;
+} */
+.form_complete_img{
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+
+
+
+
+
+
 
 /* form modal css end*/
 
@@ -834,13 +1059,178 @@ display: none;
 .forum_extras_bg{
     background-image: url(../../Assets/images/forumextras.png);
 }
+@media (max-width:1440px){
+    .story_detail_content {
+        font-size: 11px;
+    }
+    .story_arrow_right {
+        width: 10px;
+    }
+    .female_lead_heading {
+        font-size: 14px;
+        /* padding: 0px; */
+    }
+    .form_modal_para {
+        font-size: 15px;
+        padding: 4px 0px;
+    }
+    .female_stories {
+        background-position: left;
+        background-size: cover;
+    }
+    .male_stories {
+        background-position: right;
+        background-size: cover;
+    }
+    .modal-title_form {  
+        font-size: 20px;
+    }
+    
+    .form_btn_close {
+        top: 11px;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 19.23px;
+        padding: 3px 31px;
+    }
+    .story_detail_content_two {
+        font-size: 11px;
+        /* padding: 5px; */
+    }
+    .web_novel_heading {
+        font-size: 18px;
+        padding: 4px;
+    }
+    .web_novel_para {
+        font-size: 16px;
+        line-height: 14px;
+        padding-top: 11px;
+    }
+    .web_novel_arrow_img {
+        font-size: 25px;
+    }
+    .modal_form_book_selection {
+        font-size: 18px;
 
+    }
+    .modal_form_book_selection_para {
+        font-size: 16px;
+        line-height: 35.9px;
+    }
+    .tag_input_div {
+        padding: 4px 10px;
+    }
+    /* .form_book_tag_list {
+        font-size: 12px;
+    } */
+    .modal-dialog.form_modal_dailog {
+        max-width: 40% !important;
+    }
+}
+@media (max-width: 1380px) {
+    .story_detail_content {
+        font-size: 10px;
+    }
+    .form_book_tag_list {
+        font-size: 12px;
+
+    }
+    .female_stories_two {
+
+        padding-bottom: 113px;
+    }
+    .male_stories_two {
+        
+        padding-bottom: 110px;
+    }
+    .story_detail_content_two {
+        font-size: 10px;
+
+    }
+}
+@media (max-width:1280px){
+    .lead_story_text_div {
+        padding: 7px 7px;
+    }
+    .story_detail_content_two {
+        font-size: 10px;
+        
+        /* padding: 4px; */
+    }
+
+    .female_stories_two {
+       
+        padding-bottom: 93px;
+    }
+}
 @media (max-width:1180px){
+    .modal-title_form {
+        font-size: 16px;
+    }
+    .form_btn_close {
+        top: 14px;
+        font-size: 12px;
+        line-height: 16.23px;
+        padding: 3px 25px;
+    }
+    .form_modal_para {
+        font-size: 13px;
+
+    }
+
+    .form_book_tag_list {
+        display: -webkit-box;
+            overflow: hidden;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            padding: 0;
+            font-size: 11px;
+    }
+    .tag_input_div {
+        padding: 1px 10px;
+    }
+
+    .higlighted_text {  
+        font-size: 13px;
+    }
+    .modal_form_book_selection {
+        font-size: 15px;
+    }
+    .form_book_selection_arrow_img {
+        font-size: 27px;
+    }
+    .modal_form_book_selection_para {
+        font-size: 13px;
    
+    }
+    .book_category_div {
+        gap: 20px;
+    }
+    .book_category_btns {
+        font-size: 11px;
+    }
+    .modal-dialog.form_modal_dailog {
+        max-width: 47% !important;
+    }
+    .web_novel_heading {
+        font-size: 16px;
+    }
+    .web_novel_para {
+        font-size: 14px;
+        line-height: 11px;
+        padding-top: 13px;
+    }
+
+
+
+
+
+
     .notification_menu_container {
     
         left: -221px !important;
     }
+
     }
 
 @media (max-width:1024px){
@@ -853,6 +1243,31 @@ display: none;
 } */
 }
 @media (max-width:991px){
+
+    .modal-dialog.form_modal_dailog {
+        max-width: 51% !important;
+    }
+    .form_tag_heading { 
+        font-size: 15px;
+    }
+    .female_lead_heading {
+        font-size: 12px;
+    }
+    .story_detail_content_two {
+        font-size: 10px;
+        padding: 2px 12px;
+    }
+    .female_stories_two {
+       
+        padding-bottom: 88px;
+    }
+
+
+
+
+
+
+
     .friend_list_btn {
         font-size: 13px;
     }
@@ -924,7 +1339,44 @@ display: none;
         top: 15px !important;
     }
 }
+
+@media (max-width:800px){
+    .modal-dialog.form_modal_dailog {
+        max-width: 59% !important;
+    }
+}
+@media (max-width:768px){
+    .modal-dialog.form_modal_dailog {
+        max-width: 63% !important;
+    }
+    .story_detail_content {
+        font-size: 9px;
+    }
+}
+
 @media (max-width:600px){
+    .modal-dialog.form_modal_dailog {
+        max-width: 100% !important;
+    }
+    .male_stories_two {
+        margin-top: 27px;
+    }
+    .male_stories{
+        margin-top: 27px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
     .third_dropdown_div {
         justify-content: center;
         margin-top: 11px;
@@ -1069,6 +1521,40 @@ display: none;
     }
 }
 @media (max-width:390px){
+
+    .modal-title_form {
+        font-size: 14px;
+    }
+    .form_btn_close {
+        top: 16px;
+        font-size: 11px;
+
+        padding: 2px 22px;
+    }
+    .form_modal_para {
+        font-size: 11px;
+    }
+    .modal_form_book_selection {
+        font-size: 13px;
+    }
+    .book_category_btns {
+        font-size: 10px;
+    }
+    .higlighted_text {
+        font-size: 11px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     .dropdown-toggle.first_toggle::after {
         margin-left: 1.5em;
         font-size: 13px;
